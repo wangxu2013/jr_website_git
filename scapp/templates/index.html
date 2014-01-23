@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>	
+	<meta charset="utf-8">
+	<title>乾康（上海）金融信息服务有限公司</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Charisma, a fully featured, responsive, HTML5, Bootstrap admin template.">
+	<meta name="author" content="Muhammad Usman">
+
+	<!-- The styles -->
+	<link href="../static/css/main.css" rel="stylesheet">
+	<style type="text/css">		
+		*{font-family:Arial;padding:0;margin:0;border:none;}
+		.banner{position:relative; width:1000px;height:308px;}
+		.banImgs li{ display:none; list-style:none;position:absolute;}
+
+		.jsNav{ position:absolute; right: 10px; bottom: 10px; height: 20px; z-index:99; overflow:hidden ;}
+		.jsNav a{ color:white; text-decoration:none; font-family:"微软雅黑"; font-size:12px; display:block;}
+		.jsNav a:hover{ text-decoration:none}
+		.trigger{ float:left; margin-right:5px; background:#2175D9; width:16px; height:16px; line-height:16px; text-align:center;}
+		.current{background:#004699; width:16px; height:16px; line-height:16px; text-align:center;}
+	</style>
+	<script type="text/javascript">
+		function imgs(){
+				var curr = 0;
+				var imglen = $(".banImgs li").length;
+				$("#jsNav .trigger").each(function(i){
+					$(this).click(function(){
+						this.blur();
+						curr = i;
+						$(".banImgs li").eq(i).css("z-index","10").siblings("li").css("z-index","1");
+						$(".banImgs li").eq(i).fadeIn(1000).siblings("li").fadeOut(1000);
+						$(this).siblings(".trigger").removeClass("current").end().addClass("current");
+						return false;
+					});
+				});
+				
+				var pg = function(flag){
+					//flag:true表示前翻， false表示后翻
+					if (flag) {
+						if (curr == 0) {
+							todo = (imglen-1);
+						} else {
+							todo = (curr - 1) % imglen;
+						}
+					} else {
+						
+						todo = (curr + 1) % imglen;
+					}
+					$("#jsNav .trigger").eq(todo).click();
+				};
+				
+				//前翻
+				$(".banPrev").click(function(){
+					pg(true);
+					return false;
+				});
+				
+				//后翻
+				$(".banNext").click(function(){
+					pg(false);
+					return false;
+				});
+				
+				//自动翻
+				var timer = setInterval(function(){
+					todo = (curr + 1) % imglen;
+					$("#jsNav .trigger").eq(todo).click();
+				},5000);
+				
+				//鼠标悬停在触发器上时停止自动翻
+				$("#jsNav a,.banPrev,.banNext").hover(function(){
+						clearInterval(timer);
+					},
+					function(){
+						timer = setInterval(function(){
+							todo = (curr + 1) % imglen;
+							$("#jsNav .trigger").eq(todo).click();
+						},5000);			
+					}
+				);
+		}
+	</script>
+</head>
+
+<body onload="imgs()">
+	<div class="main">
+	<!--**************************************************top***********************************************-->
+		<div class="logo">	
+			<img src="../static/img/images/logo.png"/>	
+			<div>
+				<a href="/index" style="color:#828282;">中文</a><span style="color:#828282;">|</span>
+				<a href="/index_En" style="color:#828282;">English</a>
+				<a href="http://profitinsight.com/" style="color:#828282;margin-left:8px;"><img src="../static/img/PROFI.png" style="height:30px;padding:13px 0;float:right;_display:none;"/></a>
+			</div>	
+		</div>
+		<div class="nav">
+			<ul>
+				<li class="active"><a href="/">网站首页</a></li>
+				<li><a href="/gsjj">关于我们</a></li>
+				<li><a href="/xwdt">新闻动态</a></li>
+				<li><a href="/jjfa">业务指南</a></li>
+				<li><a href="/yhnx">银行内训</a></li>
+				<li><a href="/cgal">成功案例</a></li>
+				<li><a href="/hzhb">合作伙伴</a></li>
+				<li><a href="/jrzx">金融咨询</a></li>
+				<li><a href="/zpxx">招聘信息</a></li>
+			</ul>
+		</div>
+		<!--<div class="flash-replaced">
+			<embed width="1000" height="308" type="application/x-shockwave-flash" src="..../static/img/index.swf" pluginspage="http://www.adobe.com/go/getflashplayer" onclick="http://qkcardpay.sinaapp.com/hzhb/"/>
+			<a href="/hzhb" style="z-index:2;position:absolute;top:0px;width:1000px;height:308px;"></a>
+		</div>-->
+		<div class="banner">
+			<ul class="banImgs">
+			  <li style="display:block"> <a href="/hzhb"><img src="../static/img/pag4.jpg" style="width:1000px;height:308px;"/></a></li>
+			  <li> <a href="#"><img src="../static/img/page1.gif" /></a></li>
+			  <li> <a href="#"><img src="../static/img/pag2.jpg"/></a></li>
+			  <li> <a href="#"><img src="../static/img/pag3.jpg"/></a></li>
+			</ul>
+			<div class="jsNav" id="jsNav"> 
+				<a href="javascript:void(0)" onfocus="this.blur();" class="trigger current">1</a>
+				<a href="javascript:void(0)" onfocus="this.blur();" class="trigger">2</a> 
+				<a href="javascript:void(0)" onfocus="this.blur();" class="trigger">3</a>
+				<a href="javascript:void(0)" onfocus="this.blur();" class="trigger">4</a>
+			</div>
+		</div>
+	<!--**************************************************content***********************************************-->
+		<div class="content-index">
+			<div class="left">
+				<img src="../static/img/images/qk_06.png"/>
+				<ul>
+					<li><a href="/jjfa">微贷技术导入</a></li>
+					<li><a href="/jjfa">信用卡运营咨询</a></li>
+					<li><a href="/jjfa">银行应用管理系统</a></li>
+					<li><a href="/jjfa">银行自助设备运营管理</a></li>
+				</ul>
+				<img src="../static/img/images/qk_11.png"/>
+			</div>
+			<div class="right1" style="_margin-left:-45px;">
+				<a href="/xwdt" style="position:relative;top:40px;margin-left:195px;padding:5px 10px;">&nbsp;</a>
+				<ul>
+					<li><a href="/xwdt">公司与美国PTC达成合作协议</a></li>
+				</ul>
+			</div>
+			<div class="right1" style="background: #ffffff url(../static/img/images/qk_08.png) no-repeat;">
+				<a href="/jjfa" style="position:relative;top:40px;margin-left:190px;padding:5px 10px;">&nbsp;</a>
+				<ul style="margin-left:45px;">
+					<li><a href="/jjfa">信用卡业务运营咨询</a></li>
+					<li><a href="/jjfa">商业银行自助设备管理服务外包</a></li>
+					<li><a href="/jjfa">乾康自助设备管理平台</a></li>
+					<li><a href="/jjfa">商业银行微小贷款培训</a></li>
+				</ul>
+			</div>
+			<div class="right1" style="background: #ffffff url(../static/img/images/qk_09.jpg) no-repeat;">
+				<a href="/jrzx" style="position:relative;top:40px;margin-left:190px;padding:5px 10px;">&nbsp;</a>
+				<ul style="margin-left:45px;">
+					<li><a href="/jrzx">互联网</a></li>
+					<li><a href="/jrzx">行业快讯</a></li>
+					<li><a href="/jrzx">银行动态</a></li>
+					<li><a href="/jrzx">政策要闻</a></li>
+				</ul>
+			</div>			
+		</div>
+	<!--**************************************************foot***********************************************-->
+		<div class="foot">
+			<img src="../static/img/images/qk_12.png"/>
+			<img src="../static/img/images/qk_15.png"/>
+			<span>Copyright(C)2011-2013 乾康（上海）金融信息服务有限公司</span><br/>
+			<span>沪ICP备13001462号</span>
+		</div>
+	</div>
+	<script type="text/javascript" src="../static/js/jquery-1.7.2.min.js"></script>
+	<script type="text/javascript" src="../static/js/script.js"></script>
+</body>
+</html>
