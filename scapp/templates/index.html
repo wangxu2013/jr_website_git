@@ -9,6 +9,7 @@
 
 	<!-- The styles -->
 	<link href="../static/css/main.css" rel="stylesheet">
+	 <link rel="stylesheet" type="text/css" href="../static/css/skitter.styles.css" media="all" />
 	<style type="text/css">		
 		*{font-family:Arial;padding:0;margin:0;border:none;}
 		.banner{position:relative; width:1000px;height:308px;}
@@ -19,66 +20,28 @@
 		.jsNav a:hover{ text-decoration:none}
 		.trigger{ float:left; margin-right:5px; background:#2175D9; width:16px; height:16px; line-height:16px; text-align:center;}
 		.current{background:#004699; width:16px; height:16px; line-height:16px; text-align:center;}
+		#outerslider{position:relative;top:-1px;}
+		#slidercontainer{position:relative; height:308px;}
+		.box_skitter_large {width:1000px; height:308px;}
+		.box_skitter_large .label_skitter{bottom:0px;left:0px ; padding:0; background:url(../static/img/opacity-slider-text.png) repeat;font-size:12px;padding:10px 30px;color:#fff;font-family:Arial, Helvetica, sans-serif;}
 	</style>
 	<script type="text/javascript">
 		function imgs(){
-				var curr = 0;
-				var imglen = $(".banImgs li").length;
-				$("#jsNav .trigger").each(function(i){
-					$(this).click(function(){
-						this.blur();
-						curr = i;
-						$(".banImgs li").eq(i).css("z-index","10").siblings("li").css("z-index","1");
-						$(".banImgs li").eq(i).fadeIn(1000).siblings("li").fadeOut(1000);
-						$(this).siblings(".trigger").removeClass("current").end().addClass("current");
-						return false;
-					});
-				});
-				
-				var pg = function(flag){
-					//flag:true表示前翻， false表示后翻
-					if (flag) {
-						if (curr == 0) {
-							todo = (imglen-1);
-						} else {
-							todo = (curr - 1) % imglen;
-						}
-					} else {
-						
-						todo = (curr + 1) % imglen;
-					}
-					$("#jsNav .trigger").eq(todo).click();
-				};
-				
-				//前翻
-				$(".banPrev").click(function(){
-					pg(true);
-					return false;
-				});
-				
-				//后翻
-				$(".banNext").click(function(){
-					pg(false);
-					return false;
-				});
-				
-				//自动翻
-				var timer = setInterval(function(){
-					todo = (curr + 1) % imglen;
-					$("#jsNav .trigger").eq(todo).click();
-				},5000);
-				
-				//鼠标悬停在触发器上时停止自动翻
-				$("#jsNav a,.banPrev,.banNext").hover(function(){
-						clearInterval(timer);
-					},
-					function(){
-						timer = setInterval(function(){
-							todo = (curr + 1) % imglen;
-							$("#jsNav .trigger").eq(todo).click();
-						},5000);			
-					}
-				);
+			//=================================== SLIDESHOW ===================================//
+			jQuery(".box_skitter_large").skitter({
+				animation: "random",
+				interval: 3000,
+				numbers: false, 
+				numbers_align: "right", 
+				hideTools: false,
+				controls: false,
+				focus: false,
+				focus_position: true,
+				width_label:'1000px', 
+				enable_navigation_keys: true,   
+				progressbar: false
+			});
+
 		}
 	</script>
 </head>
@@ -111,10 +74,10 @@
 			<embed width="1000" height="308" type="application/x-shockwave-flash" src="..../static/img/index.swf" pluginspage="http://www.adobe.com/go/getflashplayer" onclick="http://qkcardpay.sinaapp.com/hzhb/"/>
 			<a href="/hzhb" style="z-index:2;position:absolute;top:0px;width:1000px;height:308px;"></a>
 		</div>-->
-		<div class="banner">
+		<!-- <div class="banner">
 			<ul class="banImgs">
-			  <li style="display:block"> <a href="/hzhb"><img src="../static/img/pag4.jpg" style="width:1000px;height:308px;"/></a></li>
-			  <li> <a href="#"><img src="../static/img/page1.gif" /></a></li>
+			  <li style="display:block"> <a href="/hzhb"><img src="../static/img/pag4.jpg"/></a></li>
+			  <li> <a href="#"><img src="../static/img/pag1.jpg" /></a></li>
 			  <li> <a href="#"><img src="../static/img/pag2.jpg"/></a></li>
 			  <li> <a href="#"><img src="../static/img/pag3.jpg"/></a></li>
 			</ul>
@@ -124,7 +87,31 @@
 				<a href="javascript:void(0)" onfocus="this.blur();" class="trigger">3</a>
 				<a href="javascript:void(0)" onfocus="this.blur();" class="trigger">4</a>
 			</div>
-		</div>
+		</div> -->
+		<!-- SLIDER -->
+        <div id="outerslider">
+        	<div id="slidercontainer">
+            	<section id="slider">
+                <div class="box_skitter box_skitter_large">
+                    <ul>
+                        <li>
+                            <img src="../static/img/pag4.jpg" alt="" />                            
+                        </li>
+                        <li>
+                            <img src="../static/img/pag1.jpg" alt="" />
+                        </li>
+                        <li>
+                            <img src="../static/img/pag2.jpg" alt="" />
+                        </li>
+						<li>
+                            <img src="../static/img/pag3.jpg" alt="" />
+                        </li>
+                    </ul>
+                </div>
+                </section>
+            </div>
+        </div>
+        <!-- END SLIDER -->
 	<!--**************************************************content***********************************************-->
 		<div class="content-index">
 			<div class="left">
@@ -166,11 +153,15 @@
 		<div class="foot">
 			<img src="../static/img/images/qk_12.png"/>
 			<img src="../static/img/images/qk_15.png"/>
-			<span>Copyright(C)2011-2013 乾康（上海）金融信息服务有限公司</span><br/>
+			<span>Copyright(C)2011-2014 乾康（上海）金融信息服务有限公司</span><br/>
 			<span>沪ICP备13043724号</span>
 		</div>
 	</div>
 	<script type="text/javascript" src="../static/js/jquery-1.7.2.min.js"></script>
 	<script type="text/javascript" src="../static/js/script.js"></script>
+	<!-- Slider -->
+	<script type="text/javascript" src="../static/js/jquery.easing.1.3.js"></script>
+	<script type="text/javascript" src="../static/js/jquery.animate-colors-min.js"></script>
+	<script type="text/javascript" src="../static/js/jquery.skitter.js"></script>
 </body>
 </html>
