@@ -8,11 +8,13 @@
 	<meta name="author" content="Muhammad Usman">
 
 	<!-- The styles -->
-	<link href="/static/css/main.css" rel="stylesheet">
-	<style type="text/css">
-		*{font-family:Arial;}
+	<link href="../../static/css/main.css" rel="stylesheet">
+	 <link rel="stylesheet" type="text/css" href="../../static/css/skitter.styles.css" media="all" />
+	<style type="text/css">			
+		.list{width:100%;}
+		.list li{list-style:none;border-right:1px solid #dddddd;border-bottom:1px solid #dddddd;border-left:3px solid #666666;background:#fafafa;width:99.1%;text-align:center;cursor:pointer;line-height:40px;color:#666666;font-size:16px;}
+		.list .active{border-left:3px solid #0488cd;background:white;color:#0488cd;}
 	</style>
-	
 	<script type="text/javascript">
 		var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
 		document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3F980a47baa3b028fee8b94644df33e9b8' type='text/javascript'%3E%3C/script%3E"));
@@ -30,57 +32,166 @@
 	</script>
 </head>
 
-<body onload="datatable()">
+<body onload="datatable();imgs();">
 	<div class="main">
 	<!--**************************************************top***********************************************-->
-		<div class="logo">	
-			<img src="/static/img/images/logo.png"/>
-			<div>
-				<a href="/jrzx" style="color:#828282;">中文</a><span style="color:#828282;">|</span>
-				<a href="/jrzx_En" style="color:#828282;">English</a>
-				<a href="http://profitinsight.com/" style="color:#828282;margin-left:8px;"><img src="/static/img/PROFI.png" style="height:30px;padding:13px 0;float:right;_display:none;"/></a>
-			</div>			
-		</div>
-		<div class="nav">
-			<ul>
-				<li><a href="/">网站首页</a></li>
-				<li><a href="/gsjj">关于我们</a></li>
-				<li><a href="/xwdt">新闻动态</a></li>
-				<li><a href="/jjfa">解决方案</a></li>
-				<li><a href="/yhnx">银行内训</a></li>
+		<div class="logo" style="position:fixed;z-index:10000;">	
+			<a href="/"><img src="../../static/img/images/logo.png" style="height:60px;margin-top:15px;margin-left:30px;margin-right:150px;"/></a>
+			<ul class="newnav" style="margin-left:20px;z-index:10000;">
+				<!-- <li><a href="/">网站首页</a></li> -->				
+				<li><a href="/jjfa">业务指南</a></li>
 				<li><a href="/cgal">成功案例</a></li>
 				<li><a href="/hzhb">合作伙伴</a></li>
-				<li class="active"><a href="/jrzx">金融咨询</a></li>
+				<li><a href="/yhnx">银行内训</a></li>
+				<li class="active"><a href="/jrzx">金融咨询</a></li>				
+				<li><a href="/gsjj">关于我们</a></li>
+			<!-- 	<li><a href="/ygfc">员工风采</a></li> -->
 				<li><a href="/zpxx">招聘信息</a></li>
 			</ul>
 		</div>
-		<div class="flash-replaced">
-			<embed width="1000" height="188" type="application/x-shockwave-flash" src="../../static/img/content2.swf" pluginspage="http://www.adobe.com/go/getflashplayer" />
-    	</div>
-
-	<!--**************************************************content***********************************************-->
-		<div class="content">
-			<div class="left">
-				<img src="/static/img/images/lmdh.png"/>
-				<ul id="gywm-list">
-					<li class="active" onclick="change_div(this,'hlw')"><a href="#">互联网</a></li>
-					<li onclick="change_div(this,'hykx')"><a href="#">行业快讯</a></li>		
-					<li onclick="change_div(this,'yhdt')"><a href="#">银行动态</a></li>	
-					<li onclick="change_div(this,'zcyw')"><a href="#">政策要闻</a></li>	
-				</ul>
-				<img src="/static/img/images/qk_11.png"/>
+		<!-- SLIDER -->
+		<div id="outerslider" style="margin-top:90px;_margin-top:0;">
+        	<div id="slidercontainer">
+            	<section id="slider">
+                <div class="box_skitter box_skitter_large">					
+                    <ul >
+						<li>
+                            <img src="../../static/img/sub02.png" alt="" style="height:100%"/>                            
+                        </li>
+                        <li>
+                            <img src="../../static/img/sub01.png" alt="" style="height:100%"/>                            
+                        </li>                        
+						<li>
+                            <img src="../../static/img/sub03.png" alt="" style="height:100%"/>                            
+                        </li>
+						<li>
+                            <img src="../../static/img/sub04.png" alt="" style="height:100%"/>                            
+                        </li>
+						<li>
+                            <img src="../../static/img/sub05.png" alt="" style="height:100%"/>                            
+                        </li>
+                    </ul>
+                </div>
+                </section>
+            </div>
+        </div>
+        <!-- END SLIDER -->	
+		<!-- 切换语言 -->		
+		<div class="lanage" onclick="setLanage(this)">
+			<img src="../../static/img/yysz.png"/>
+			<div>
+				<a href="/index">中文</a><br/>
+				<a href="/index_En">English</a>
+			</div>
+		</div>
+	<!--**************************************************left***********************************************-->	
+		<div style="width:100%;float:left;_margin-top:-90px;">
+			<div class="left">				
+				<div>
+					<ul id="gywm-list" class="list">
+						<li class="active" onclick="$('.right').hide();change_div(this,'hlw')" style="border-top:1px solid #dddddd;border-radius:5px 5px 0 0;">互联网</li>
+						<li onclick="$('.right').hide();change_div(this,'hykx');">行业快讯</li>		
+						<li onclick="$('.right').hide();change_div(this,'yhdt')">银行动态</li>	
+						<li onclick="$('.right').hide();change_div(this,'zcyw')" style="border-radius:0 0 5px 5px;">政策要闻</li>	
+					</ul>
+				</div>
+			<!--**************************************************员工风采***********************************************************************-->
+				<div style="width:100%;margin-top:40px;border-top:3px dotted #dddddd;margin-bottom:40px;">
+					<span style="background:white;position:absolute;margin-top:-15px;font-weight:bold;font-size:20px;color:#666666;">员工风采</span>
+				</div>					
+				<div id="ifocus">
+					<div id="ifocus_pic">
+						<div id="ifocus_piclist">
+							<ul>
+								<li>
+									<div class="ygfc">
+										<div class="ygfcContent">
+											创建领先国际的金融专业咨询机构1
+											合力打造精英顾问团队
+											最大限度满足客户需求创建领先国际的金融专业咨询机构
+											合力打造精英顾问团队
+											最大限度满足客户需求
+											创建领先国际的金融专业咨询机构
+											合力打造精英顾问团队
+										</div>
+									</div>	
+									<img src="../../static/img/head.png" style="margin-top:-15px;margin-left:20px;float:left;"/>	
+									<div style="margin-top:3px;margin-left:25px;float:left;font-size:16px;color:#727272;"> 
+										<b style="color:#0488cd;font-size:16px;">周滨</b><br/>总经理
+									</div>
+								</li>
+								<li>
+									<div class="ygfc">
+										<div class="ygfcContent">
+											创建领先国际的金融专业咨询机构1
+											合力打造精英顾问团队
+											最大限度满足客户需求创建领先国际的金融专业咨询机构
+											合力打造精英顾问团队
+											最大限度满足客户需求
+											创建领先国际的金融专业咨询机构
+											合力打造精英顾问团队
+										</div>
+									</div>	
+									<img src="../../static/img/head.png" style="margin-top:-15px;margin-left:20px;float:left;"/>	
+									<div style="margin-top:3px;margin-left:25px;float:left;font-size:16px;color:#727272;"> 
+										<b style="color:#0488cd;font-size:16px;">刘学军</b><br/>副总经理
+									</div>
+								</li>
+								<li>
+									<div class="ygfc">
+										<div class="ygfcContent">
+											创建领先国际的金融专业咨询机构1
+											合力打造精英顾问团队
+											最大限度满足客户需求创建领先国际的金融专业咨询机构
+											合力打造精英顾问团队
+											最大限度满足客户需求
+											创建领先国际的金融专业咨询机构
+											合力打造精英顾问团队
+										</div>
+									</div>	
+									<img src="../../static/img/head.png" style="margin-top:-15px;margin-left:20px;float:left;"/>	
+									<div style="margin-top:3px;margin-left:25px;float:left;font-size:16px;color:#727272;"> 
+										<b style="color:#0488cd;font-size:16px;">马颖涵</b><br/>信用卡咨询部经理
+									</div>
+								</li>
+								<li>
+									<div class="ygfc">
+										<div class="ygfcContent">
+											创建领先国际的金融专业咨询机构1
+											合力打造精英顾问团队
+											最大限度满足客户需求创建领先国际的金融专业咨询机构
+											合力打造精英顾问团队
+											最大限度满足客户需求
+											创建领先国际的金融专业咨询机构
+											合力打造精英顾问团队
+										</div>
+									</div>	
+									<img src="../../static/img/head.png" style="margin-top:-15px;margin-left:20px;float:left;"/>	
+									<div style="margin-top:3px;margin-left:25px;float:left;font-size:16px;color:#727272;"> 
+										<b style="color:#0488cd;font-size:16px;">赵军扬</b><br/>客户经理
+									</div>
+								</li>
+							</ul>
+						</div>
+						
+					</div>
+					<div id="ifocus_btn" style="display:none;">
+						<ul>
+							<li class="current"></li>
+							<li class="normal"></li>
+							<li class="normal"></li>
+							<li class="normal"></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		<!--**************************************************title***********************************************-->		
+			<div class="title">
+				<h2>金融咨询</h2>
+				<span class="place">当前位置：乾康（上海）金融信息服务有限公司 > <font style="color:#0488cd">金融咨询</font></span>
 			</div>
 		<!--**************************************************互联网***********************************************-->
 			<div class="right" id="hlw">
-				<table width="100%">
-					<tr>
-						<td><img src="/static/img/tip.png"/><span class="title">互联网</span></td>
-						<td class="pull-right">
-							乾康（上海）金融信息服务有限公司 > 金融咨询 ><font color="#184554">互联网</font>
-						</td>
-					</tr>
-				</table>
-				<div class="fengge"></div>
 				<table width="100%" class="datatable">
 					<thead>
 						<tr>
@@ -234,18 +345,9 @@
 			</div>	
 			<!--**************************************************2013P2P投资者调查报告***********************************************-->		
 			<div class="right" id="hlw1" style="display:none">
-				<table width="100%">
-					<tr>
-						<td><img src="/static/img/tip.png"/><span class="title">互联网</span></td>
-						<td class="pull-right">
-							乾康（上海）金融信息服务有限公司 > <a onclick="show('hlw')" href="#">互联网</a> > <font color="#184554">2013P2P投资者调查报告</font>
-						</td>
-					</tr>
-				</table>
-				<div class="fengge"></div>
 				<div class="jtxx">
 					<h1 class="H1">2013P2P投资者调查报告</h1>
-					<div class="zz">作者：管理员&nbsp;&nbsp;&nbsp;发布于：2013-11-19 13:26:00&nbsp;&nbsp;&nbsp;文字：【大】【中】【小】</div>
+					<div class="zz">作者：管理员&nbsp;&nbsp;&nbsp;发布于：2013-11-19 13:26:00 </div>
 					<div class="xx">
 						<p class="step">1.中青年男性是P2P投资者群体的主力军</p>
 						<p>&nbsp;&nbsp;&nbsp;&nbsp;在P2P投资者群体中，男性占到了85%，男性的风险偏好更强一些，更愿意尝试新事物;20岁到40岁的占到整个投资者群体的80%，这是中青年群体，在工作中有了一定的积蓄，也是中国的主力网民，较容易接受互联网新事物。</p>
@@ -308,20 +410,11 @@
 			</div>		
 			<!--**************************************************O2O的全行业渗透***********************************************-->		
 			<div class="right" id="hlw2" style="display:none">
-				<table width="100%">
-					<tr>
-						<td><img src="/static/img/tip.png"/><span class="title">互联网</span></td>
-						<td class="pull-right">
-							乾康（上海）金融信息服务有限公司 > <a onclick="show('hlw')" href="#">互联网</a> > <font color="#184554">O2O的全行业渗透</font>
-						</td>
-					</tr>
-				</table>
-				<div class="fengge"></div>
 				<div class="jtxx">
 					<h1 class="H1">O2O的全行业渗透</h1>
-					<div class="zz">作者：管理员&nbsp;&nbsp;&nbsp;发布于：2013-11-19 13:26:00&nbsp;&nbsp;&nbsp;文字：【大】【中】【小】</div>
+					<div class="zz">作者：管理员&nbsp;&nbsp;&nbsp;发布于：2013-11-19 13:26:00 </div>
 					<div class="xx">
-						<img src="/static/img/jrzx/1.png"/>
+						<img src="../../static/img/jrzx/1.png"/>
 						<p>&nbsp;&nbsp;&nbsp;&nbsp;互联网的快速普及、智能手机的爆发、社交媒体的盛行……各种因素交织在一起，打造了人人都是互联网，人人都是自媒体的网络生态环境。互联网无孔不入地改变了人们的消费方式、创新了企业的商业模式，也催生了O2O商业模式的诞生、发展。</p>
 						<p>&nbsp;&nbsp;&nbsp;&nbsp;庞大的用户群体以及各行业企业的参与，使得O2O使用场景得到快速扩张。然而，在人们对O2O的到来欢呼雀跃的时候，在O2O的实践中也遇到各种问题：转化率太低、成本与收入难以平衡、部分行业的特性使其难以渗透….. </p>
 						<p>&nbsp;&nbsp;&nbsp;&nbsp;然而，不管怎样，O2O的滚滚浪潮已经来了，并且势不可挡。</p>
@@ -330,12 +423,12 @@
 						<p>&nbsp;&nbsp;&nbsp;&nbsp;O2O（OnlineToOffline），区别于B2C、B2B、C2C等电子商务模式，即把线上的消费者带到实体商店中去：在线支付线下商品、服务，再到线下去享受服务。通过打折、提供信息、服务预定等方式，把线下商店的消息推送给互联网用户，从而将他们转换为的线下客户。在此模式下，线下服务就可以用线上来揽客，消费者可以通过线上来筛选服务，还可以在线支付、点评。该模式最重要的特点是：推广效果可查，每笔交易可跟踪。 </p>
 						<p>&nbsp;&nbsp;&nbsp;&nbsp;O2O实现了用户行为可追踪、可衡量、可预测，让企业跨时间、跨地域接单，为三高一低（高人力成本、高房租、高税费、低利润）的传统行业带来了低成本推广、运营的新方法。</p>
 						<p>&nbsp;&nbsp;&nbsp;&nbsp;O2O本质上是一种模式，即通过PC互联网、移动互联网与传统行业结合，衍生出更多新的商业模式、消费模式。在offline这端，可以覆盖到人们日常的“吃喝玩乐住用行”诸多方面。</p>
-						<img src="/static/img/jrzx/2.png"/>
+						<img src="../../static/img/jrzx/2.png"/>
 						<p>&nbsp;&nbsp;&nbsp;&nbsp;李开复曾经说过，O2O将会改变中国，线上、线下一旦连起来，将形成巨大的爆发式力量。不过，对于企业来说，仍需谨慎。虽然目前O2O在中国看上去很美，但实际实施起来不是那么轻松如意。不时有打着光鲜O2O旗号的企业、网站难以为继，为什么？ </p>
 						<p>&nbsp;&nbsp;&nbsp;&nbsp;从行业的角度来分析，由于消费者接受度、行业IT化水平、行业管理特点等原因，实际上O2O在不同行业的应用、成熟度是不一样的。有些行业，如酒店、餐饮，很早就实现了O2O，并有成功案例。而有些行业，如家政服务、教育培训、维修服务等，其O2O意识、水平还不是很高，客户的消费习惯也还在建立，对这些行业来说，O2O还是一个神话。</p>
-						<img src="/static/img/jrzx/3.png"/>
+						<img src="../../static/img/jrzx/3.png"/>
 						<p>&nbsp;&nbsp;&nbsp;&nbsp;在online端，中国互联网行业三大家TAB（Tencent、Alibaba、Baidu）都已在此领域布局了平台，不敢落人之后。如Tencent的微信、SOSO地图；阿里的高德地图、美团、淘宝本地生活等；百度推出的百度地图。</p>
-						<img src="/static/img/jrzx/4.png"/>
+						<img src="../../static/img/jrzx/4.png"/>
 						<p>&nbsp;&nbsp;&nbsp;&nbsp;那么，在offline这端，O2O的情况究竟如何？从目前O2O发展相对比较成熟的餐饮业、酒店业中几个case即可见一斑。</p>
 						<p class="secondStep">O2O之餐饮业</p>
 						<p class="secondStep">地图式O2O：在线导航+消费 </p>
@@ -384,28 +477,19 @@
 			</div>		
 			<!--**************************************************O2O如何颠覆传统行业***********************************************-->		
 			<div class="right" id="hlw3" style="display:none">
-				<table width="100%">
-					<tr>
-						<td><img src="/static/img/tip.png"/><span class="title">互联网</span></td>
-						<td class="pull-right">
-							乾康（上海）金融信息服务有限公司 > <a onclick="show('hlw')" href="#">互联网</a> > <font color="#184554">O2O如何颠覆传统行业</font>
-						</td>
-					</tr>
-				</table>
-				<div class="fengge"></div>
 				<div class="jtxx">
 					<h1 class="H1">O2O如何颠覆传统行业</h1>
-					<div class="zz">作者：管理员&nbsp;&nbsp;&nbsp;发布于：2013-11-19 13:26:00&nbsp;&nbsp;&nbsp;文字：【大】【中】【小】</div>
+					<div class="zz">作者：管理员&nbsp;&nbsp;&nbsp;发布于：2013-11-19 13:26:00 </div>
 					<div class="xx">
-						<img src="/static/img/jrzx/5.png"/>
+						<img src="../../static/img/jrzx/5.png"/>
 						<p>&nbsp;&nbsp;&nbsp;&nbsp;什么是真正的O2O？<span class="secondStep">利用互联网的特质重构传统行业的供应链</span>，才算真正的O2O。而做到这一点（重构）的企业，才算真正的O2O企业。</p>
 						<p>&nbsp;&nbsp;&nbsp;&nbsp;什么叫重构？<span class="secondStep">就是将传统行业中的供应链节点上原本某个必须的点砍掉，或者颠倒前后某两个点的顺序，就称为重构。</span>在互联网出现之前，传统产业大部分已经发展达数千年之久，要重构任何一点都是几乎不可能完成的任务，它们已经被优化得不能再优化了，大家比拼的无非是各人手头上现有的资源，然后看谁在每一点上的效率做到最高。</p>
 						<p>&nbsp;&nbsp;&nbsp;&nbsp;但是互联网的出现，导致对传统产业的重构成为了可能。</p>
 						<p>&nbsp;&nbsp;&nbsp;&nbsp;第一波的互联网大潮做到了最基本的表层重构：<span class="secondStep">对信息的聚合与分发方式的重构</span>。最明显的例子是门户网站、百度和微博微信们在信息层面上对传统媒体行业进行的重构。<span class="secondStep">人们发现他们获取信息（信息聚合）的方式变了，过去一定要订报买报读报，包括各类期刊杂志等等，现在统统不需要了，PC或手机上就可以搞定</span>；人们发现他们的传播信息（信息分发）的方式也变了，<span class="secondStep">个人可以通过博客微博微信发出自己的声音，无需再投稿报纸杂志才能发表</span>；门户网站和百度们抢走了大量原本属于纸媒电视媒体等传统媒体的内容资源和广告资源，同时双方的信息传播速度也不可同日而语。这一波的重构已经基本接近完成，大量传统媒体从业人员加入新媒体自媒体、大量的街边零售报刊亭的关停倒闭，以及亚马逊收购华盛顿邮报等等皆是明证。</p>
-						<img src="/static/img/jrzx/6.png"/>
+						<img src="../../static/img/jrzx/6.png"/>
 						<p>&nbsp;&nbsp;&nbsp;&nbsp;而第二波的重构，也就是正在发生的，<span class="secondStep">对各行各业的采购、生产制造和交付等环节的供应链的重构</span>。大家可以看一下一个传统企业的全部商业经营活动，然后把它全部一一按顺序罗列出来。比如一家餐馆，它全部的经营活动包括：店面选址、店面装修、菜单设计、菜品创新、食材采购、接受和处理订单、烹饪和加工，以及厨师服务员招聘、服务流程标准化、中央厨房、分店和加盟、广告营销等等。这些活动里，哪些部分可以放到线上？哪些部分只能留在线下？利用互联网，把能放到线上的步骤尽量放到线上，把能省却的步骤省却，把某几个步骤前后交换顺序（时间顺序或逻辑顺序），这样就可以开始利用互联网的特质对传统行业的供应链进行重构了。</p>
 						<p>&nbsp;&nbsp;&nbsp;&nbsp;下面举三个具体例子：</p>
-						<img src="/static/img/jrzx/7.png"/>
+						<img src="../../static/img/jrzx/7.png"/>
 						<p class="step">1.当当：当当重构的是传统的新华书店模式的供应链。</p>
 						<p>&nbsp;&nbsp;&nbsp;&nbsp;举个例子，一本新书，首印5000册，从印厂出来以后，就分开发往各地的新华书店，有的城市有好几家新华书店，有的只有一家。怎么决定具体哪家新华书店拿到几本新书呢？根据过往销售业绩的预测。过去生意好的店多拿几本，生意差的店少拿几本。但就算如此，接下来仍然有两种情况可能发生：一. 某家新华书店销量非常好，迅速脱销，要从别的店调货，如果该城市有多家新华书店还好办，如果只此一家，就得从别的城市调过来。不管怎样，费时费力，增加成本。</p>
 						<p>&nbsp;&nbsp;&nbsp;&nbsp;另一种情况，这本新书在某家店大量滞销，只得调回仓库或者调往其他新华书店。同样的，费时费力，增加成本。这一块成本一般的消费者是很难意识到的。如果这本书卖到只剩一册，它静静躺在宁波的某家新华书店内，极有可能发生的情况是：宁波地区没有人想买它，宁波以外地区没有人能买到它。总之，传统新华书店模式的供应链无法解决上述配置效率低下带来的成本增加问题。但关键是，在过去，没有互联网前，没有人会觉得这一块成本是可以节省下来的。</p>
@@ -413,13 +497,13 @@
 						<p>&nbsp;&nbsp;&nbsp;&nbsp;所以大家可以看到，过去新华书店独霸全中国的书籍书场，扩张非常嚣张，营业员一般态度蛮横，反正你买书也只能来我新书书店，而且就得按书籍封底上的价格买。现在不行了，各种促销打折会员卡的活动，营业员态度也和蔼可亲起来，但还是挡不住颓势，开始各种减少楼层和店面，进行多元化尝试等等，靠着政府补贴，勉强维持生计。</p>
 						<p>&nbsp;&nbsp;&nbsp;&nbsp;当当其实就是一家互联网书店。</p>
 						<p class="step">2.淘宝：淘宝重构的是传统零售业。</p>
-						<img src="/static/img/jrzx/8.png"/>
+						<img src="../../static/img/jrzx/8.png"/>
 						<p>&nbsp;&nbsp;&nbsp;&nbsp;淘宝砍掉了传统零售想卖东西给别人必须先有实体店面这一环节，省下了近年来水涨船高的店面租金和人工成本。甚至你可以在淘宝上已经卖出名气后，再回过头来开一个实体店。这是前面讲的颠倒供应链节点顺序，这在过去是很难实现的。</p>
 						<p>&nbsp;&nbsp;&nbsp;&nbsp;淘宝扩张了传统零售的销售范围。传统零售的一家店只能卖货给周围几公里有限的顾客，它的生意来自于经过门口的自然人流和一定的老客户。你要是想卖给更多的人更多的商品，就要开更多的实体店面，考虑连锁店的问题，比如自营还是加盟。这是在供应链上增加了节点，但还不算重构。而在淘宝上天然就没有这些节点存在的必要，这些节点都被砍掉了。你的货可以卖给全国任何物流到达的地方，全国的人民也可以随时光顾你的网店。</p>
 						<p>&nbsp;&nbsp;&nbsp;&nbsp;淘宝扩大了传统零售的销售品类。过去在实体店面时代，一些冷门的商品，是不会有人专门开店来卖的；或者卖得不好的款式，也没有机会上架。因为如果要卖这些东西的话，肯定会入不敷出。但在淘宝上由于天然的销售范围就是全国，潜在客户数量呈几何级增长后，达成的销售量仍然足以使一家甚至好几家网店存活下来，而且都活得不错。比如之前一位网易编辑辞职后，专门在淘宝上卖印有草泥马LOGO的T恤。这个商品非常小众，但他生意火爆的程度已经远超某些繁华商业街上的服装店了。</p>
 						<p>&nbsp;&nbsp;&nbsp;&nbsp;淘宝其实就是一家互联网大卖场。</p>
 						<p class="step">3.小米：小米重构的是传统手机制造的供应链，并且它是到目前为止我观察到的对传统行业重构程度最深的企业了。</p>
-						<img src="/static/img/jrzx/9.png"/>
+						<img src="../../static/img/jrzx/9.png"/>
 						<p>&nbsp;&nbsp;&nbsp;&nbsp;在渠道环节，小米只走电商渠道，也就是只能在网上买到，而完全舍弃了过去传统手机销售的手机大卖场的渠道，把这些中间的层层代理环节都砍掉，省下一大块渠道铺货和销售的费用。但与此同时，销售范围没减少，产品可以直达三四五线城市。</p>
 						<p>&nbsp;&nbsp;&nbsp;&nbsp;在营销环节，小米舍弃任何传统的昂贵的展示性广告，只做新媒体自媒体等的社会化营销，并专注培育自己的的论坛。传统广告的模式粗放，而小米却可以直接和自己的粉丝互动，营销起来就精准得多。小米的营销预算这一项，据雷军自己说，是0。而华为，2012年的智能手机全球营销预算，是2亿美金。</p>
 						<p>&nbsp;&nbsp;&nbsp;&nbsp;在库存环节，小米类似于早些年戴尔的“零库存”概念。先有订单，才开始生产。这其实本质上就是颠倒了供应链节点的前后顺序，但在外界看来就是小米总是缺货，被指责过度“饥饿营销”。当然，的确有部分原因是小米的订单量超出预计，工厂的生产力不足导致。但有一点必须注意，<span class="secondStep">饥饿营销（“先订单再生产”或“零库存”）其实是互联网时代才能完美驾驭的一种营销方法。因为只有在生产商能够直接接触到终端用户（end user）的体系里，双方的信息才足够对称，生产商才能快速知道某件商品的需求到底是多少。</span></p>
@@ -428,7 +512,7 @@
 						<p>&nbsp;&nbsp;&nbsp;&nbsp;小米手机就是一部互联网手机。</p>
 						<p>&nbsp;&nbsp;&nbsp;&nbsp;通过上面的三个例子，大家会发现，但凡你重构原先的行业成功了的话，你必然会颠覆之前的行业老大，对它取而代之，这正式是哈佛大学终身教授克里斯坦森（Clayton Christensen）的颠覆式创新（Disruptive Innovation）。每一波重构，都是对原先被重构行业的颠覆。</p>
 						<p>&nbsp;&nbsp;&nbsp;&nbsp;但是，重构本身也分重构程度的深浅，更深一层的重构又会颠覆之前浅一层的重构。</p>
-						<img src="/static/img/jrzx/10.png"/>
+						<img src="../../static/img/jrzx/10.png"/>
 						<p>&nbsp;&nbsp;&nbsp;&nbsp;比如，京东开始卖书，就是对当当某种程度上的颠覆。京东的书籍供应链体系大致上和当当一样，唯一不同的是在最后一环，也就是把书最终交到消费者手上这个过程，京东用的是自己的物流。这时，当当原先面对新华书店时的那些优势都不在了。反而，配送服务的质量远逊京东。京东由3C产品起家，这类产品单价普遍千元甚至万元以上，值得京东自建物流以保证运送过程中货物的安然无恙。用这套高质量的配送体系送几本书简直是小菜一碟。反观当当，由于书的单价基本不高，它们一直是采取和第三方物流合作进行配送，导致交付体验极不稳定。京东重构了图书供应链的最后一环，又再颠覆了当当。表现出来就是当当股价持续走低，居然要跑去天猫上开店了。</p>
 						<p>&nbsp;&nbsp;&nbsp;&nbsp;同样的，淘宝和小米也都还不算“完全”重构了传统零售和手机行业的供应链，未来应该还会有做到更深层次重构的公司来颠覆他们，虽然我们现在很难想象出这样的公司到底会是什么样子。</p>
 						<p class="step">没有重构，没有O2O</p>
@@ -436,7 +520,7 @@
 						<p>&nbsp;&nbsp;&nbsp;&nbsp;点评、优惠券和团购等也是一样，它们的本质都是付费的广告。它们相比之前门户和搜索引擎的单纯的展示广告更进了一步，即帮助各行各业的公司，尤其是服务业的公司，结合自己产品的特点在互联网上更好地做营销。商家的让利可以算是一种按效果付费的广告方式，而且效果是可以记录、跟踪和预测的。但它们的本质还是借力互联网做营销，并没有在任何程度上重构这些行业基本的商业经营活动。</p>
 						<p>&nbsp;&nbsp;&nbsp;&nbsp;这也就是为什么，餐饮O2O类公司，比如在线订座、点餐、结账、会员管理、营销等等，其实一直都在外围打转，从来就未曾真正深入过餐饮业。因为他们做的，只是把餐饮企业常规经营活动上的某个环节拿出来，想方设法用互联网化的手段去提高这一点的运营效率而已。但正如我之前说过的，像餐饮这种发展了千年之久的行业，各个环节其实本身就已经发展得足够完善了，如果没有任何供应链上的重构，现在的餐饮业老板们是不会把互联网真正当回事的。因为在没有互联网的过去，他们就能生存得足够好了。如果你能锦上添花，那自然好，但没有你也没关系。这就是现在餐饮O2O面临的窘境：没有一家能切中真正雪中送炭的痛点。传统互联网几大巨头都在虎视眈眈摩拳擦掌，但就是出不了一家能和餐饮这个万亿级的市场规模匹配得上的巨头公司。</p>
 						<p>&nbsp;&nbsp;&nbsp;&nbsp;也许很多人认为线上线下的各种各样的结合都可以算是O2O，不一定非要那么“深入”地重构才算。这里再给大家一个判断的标准：一个企业是否算O2O企业，就看如果把两个O分离，它是否还能保持原来的商业模式经营下去。比如美团，如果没有互联网它会怎么办？它大可以把某家电影院的优惠信息通过电话推销和邮购手册的方式告知全城的人。这正是当年戴尔在互联网还没全面流行前的推广手法。这样子的话相比利用互联网来推广这些信息，当然显得效率低下，成本也会大幅增加。</p>
-						<img src="/static/img/jrzx/11.png"/>						 
+						<img src="../../static/img/jrzx/11.png"/>						 
 						<p>&nbsp;&nbsp;&nbsp;&nbsp;但是美团最主要的商业模式：提供给用户大量商家的大折扣优惠信息，并让用户能拿着这些优惠信息去到店消费，是不会变的。这就类似KFC在多年前就已经自己通过街头传单和随报刊邮寄等方式，发送到店才能使用的那种要撕下来的小优惠券给消费者了，其背后的营销原理何其相似。但是当当淘宝小米等，没有了互联网这一端，它们就没法按照原来的方式重构传统产业的供应链了，它们只能被迫回到原先新华书店卖书、传统零售商卖货和传统手机商卖手机的办法上去了。</p>
 						<p>&nbsp;&nbsp;&nbsp;&nbsp;还有些人会觉得，O2O应该起码会涉及到一个线下去享受服务的消费过程.一个现实状况是，网上销售标准化实物类商品比较容易起规模。在你重构供应链之后，还能把销售范围快速铺开到全国，因为这些商品都能被快递到全国。而如果是需要线上下单，然后线下去享受服务的行业，基本局限在本地领域，一个城市一个情况，到现在也没有出现比较引人注目的重构服务业供应链成功的案例，所以我才只能举了当当淘宝小米的例子。但是标准化品类电商（包括淘宝京东一号店等等），已经达到了它们的最顶点。</p>
 						<p>&nbsp;&nbsp;&nbsp;&nbsp;很多人也意识到了，下一波的大机遇会发生在本地服务业。线下服务体验性质的行业，如果有供应链被重构成功的，一样适用这个概念，一样是O2O的案例。就比如餐饮，前文有提到，大家都在盯着这一块，但没一家能做成，因为他们正在做的无非都是利用互联网来“完善”现有的餐饮供应链的节点，而非“重构”。如果你是第一家真正重构某个服务行业的公司，那你基本上会有一个非常光明的前景。</p>
@@ -447,20 +531,11 @@
 			</div>	
 			<!--**************************************************P2P5.0 网贷平台的中国式生长***********************************************-->		
 			<div class="right" id="hlw4" style="display:none">
-				<table width="100%">
-					<tr>
-						<td><img src="/static/img/tip.png"/><span class="title">互联网</span></td>
-						<td class="pull-right">
-							乾康（上海）金融信息服务有限公司 > <a onclick="show('hlw')" href="#">互联网</a> > <font color="#184554">P2P5.0 网贷平台的中国式生长</font>
-						</td>
-					</tr>
-				</table>
-				<div class="fengge"></div>
 				<div class="jtxx">
 					<h1 class="H1">P2P5.0 网贷平台的中国式生长</h1>
-					<div class="zz">作者：管理员&nbsp;&nbsp;&nbsp;发布于：2013-11-19 13:26:00&nbsp;&nbsp;&nbsp;文字：【大】【中】【小】</div>
+					<div class="zz">作者：管理员&nbsp;&nbsp;&nbsp;发布于：2013-11-19 13:26:00 </div>
 					<div class="xx">
-						<img src="/static/img/jrzx/12.png"/>
+						<img src="../../static/img/jrzx/12.png"/>
 						<p>&nbsp;&nbsp;&nbsp;&nbsp;截至今日，首创于英国的P2P网贷进入中国已6年有余，随着国内互联网的崛起和民间金融的繁荣，P2P网贷行业得到爆发式发展，在模式上产生巨大异化且发展速度已经赶超欧美。</p>
 						<p>&nbsp;&nbsp;&nbsp;&nbsp;2007年，国内第一家P2P机构拍拍贷诞生于上海，到目前为止全国已有数百家P2P机构，规模也已达到近千亿元。如此多的P2P机构为中国的互联网金融发展贡献巨大，也使中国的P2P衍生出多种模式。未来P2P不仅仅是规模之争，利润之争，更是模式之争。孰优孰劣，欢迎大家拍砖！</p>
 						<p class="step">1.0时代：纯线上无担保模式</p>
@@ -504,20 +579,11 @@
 			</div>	
 			<!--**************************************************传统金融互联网化***********************************************-->		
 			<div class="right" id="hlw5" style="display:none">
-				<table width="100%">
-					<tr>
-						<td><img src="/static/img/tip.png"/><span class="title">互联网</span></td>
-						<td class="pull-right">
-							乾康（上海）金融信息服务有限公司 > <a onclick="show('hlw')" href="#">互联网</a> > <font color="#184554">传统金融互联网化</font>
-						</td>
-					</tr>
-				</table>
-				<div class="fengge"></div>
 				<div class="jtxx">
 					<h1 class="H1">传统金融互联网化</h1>
-					<div class="zz">作者：管理员&nbsp;&nbsp;&nbsp;发布于：2013-11-19 13:26:00&nbsp;&nbsp;&nbsp;文字：【大】【中】【小】</div>
+					<div class="zz">作者：管理员&nbsp;&nbsp;&nbsp;发布于：2013-11-19 13:26:00 </div>
 					<div class="xx">
-						<img src="/static/img/jrzx/13.png"/>
+						<img src="../../static/img/jrzx/13.png"/>
 						<p>&nbsp;&nbsp;&nbsp;&nbsp;当传统的金融业务与新兴的互联网技术相结合，会产生什么样的化学反应？</p>
 						<p>&nbsp;&nbsp;&nbsp;&nbsp;回答这个问题最好用数据说话：2011年，中国网上银行市场全年交易额达到780.94万亿元；截至2011年底，网银注册用户数更是达到4.34亿。</p>
 						<p>&nbsp;&nbsp;&nbsp;&nbsp;4.34亿的注册用户相当于日本总人口的3.4倍，也是美国总人口的1.4倍；780.94万亿元的规模则相当于中国2011年47万亿元GDP的16.5倍。毫无疑问，这是一个巨大的市场。</p>
@@ -575,18 +641,9 @@
 			</div>	
 			<!--**************************************************海内外“互联网金融”模式大PK***********************************************-->		
 			<div class="right" id="hlw6" style="display:none">
-				<table width="100%">
-					<tr>
-						<td><img src="/static/img/tip.png"/><span class="title">互联网</span></td>
-						<td class="pull-right">
-							乾康（上海）金融信息服务有限公司 > <a onclick="show('hlw')" href="#">互联网</a> > <font color="#184554">海内外“互联网金融”模式大PK</font>
-						</td>
-					</tr>
-				</table>
-				<div class="fengge"></div>
 				<div class="jtxx">
 					<h1 class="H1">海内外“互联网金融”模式大PK</h1>
-					<div class="zz">作者：管理员&nbsp;&nbsp;&nbsp;发布于：2013-11-19 13:26:00&nbsp;&nbsp;&nbsp;文字：【大】【中】【小】</div>
+					<div class="zz">作者：管理员&nbsp;&nbsp;&nbsp;发布于：2013-11-19 13:26:00 </div>
 					<div class="xx">
 						<p>&nbsp;&nbsp;&nbsp;&nbsp;事情一旦到了中国，就有那么点意思。</p>
 						<p>&nbsp;&nbsp;&nbsp;&nbsp;Twitter在美国帮助奥巴马赢得了总统选举，微博在中国则俨然成了言论的古希腊广场，尽管被阉割得物是人非。亚马逊的贝索斯一门心思做物流，中国的电商早已经迫不及待进入金融行业了。互联网金融在中国的火热程度绝对让人吃惊，模式更是层出不穷，一方未唱罢，一方已登场。支付宝的余额宝、p2p、阿里和苏宁小贷，第三方支付(易宝支付、快钱等)供应链融资，随手拎一种模式都可以给到外界“极为诱惑”的商业前景。</p>
@@ -616,20 +673,11 @@
 			</div>	
 			<!--**************************************************互联网金融***********************************************-->		
 			<div class="right" id="hlw7" style="display:none">
-				<table width="100%">
-					<tr>
-						<td><img src="/static/img/tip.png"/><span class="title">互联网</span></td>
-						<td class="pull-right">
-							乾康（上海）金融信息服务有限公司 > <a onclick="show('hlw')" href="#">互联网</a> > <font color="#184554">互联网金融</font>
-						</td>
-					</tr>
-				</table>
-				<div class="fengge"></div>
 				<div class="jtxx">
 					<h1 class="H1">互联网金融</h1>
-					<div class="zz">作者：管理员&nbsp;&nbsp;&nbsp;发布于：2013-11-19 13:26:00&nbsp;&nbsp;&nbsp;文字：【大】【中】【小】</div>
+					<div class="zz">作者：管理员&nbsp;&nbsp;&nbsp;发布于：2013-11-19 13:26:00 </div>
 					<div class="xx">
-						<img src="/static/img/jrzx/14.png"/>
+						<img src="../../static/img/jrzx/14.png"/>
 						<p>&nbsp;&nbsp;&nbsp;&nbsp;近一段时间来，媒体对“余额宝”及阿里金融保持着持续的关注热度。引起人们如此关注的原因，并非只因这类金融服务或产品在创新性上多么领先，类似的金融产品已经是传统银行业的成熟业务，引起热议的根本原因主要是一家没有金融牌照的企业，却能够频繁地组合推出一些金融工具、金融产品。那么，除了支付宝以外，其他的互联网企业是否也可以做类似的行为扩展？互联网企业在金融业务方面拓展的边界在哪里？</p>
 						<p>&nbsp;&nbsp;&nbsp;&nbsp;概括而言，传统金融服务具有两个边界，即客户需求边界和监管边界。当前经济金融环境正处在互联网经济和传统金融业相互渗透的交叉点上，由此带来了对一些金融行为属性判断的模糊，相应的监管规则也较模糊。客观来看，这种模糊化并非人们刻意所为，更不是监管机构不去监管或放松监管，而是当前阶段这种互联网行为与金融行为的交织本身，很难简单判定其属性，这也正是当前互联网金融的特有属性之一。</p>
 						<p>&nbsp;&nbsp;&nbsp;&nbsp;要想理解和接受这种模糊性，需要我们暂时搁下互联网金融这个热门话题，先去思索一个关于新技术发展的命题：谁是主干，谁是枝叶？</p>
@@ -663,20 +711,11 @@
 			</div>	
 			<!--**************************************************互联网金融高端论坛会议纪要***********************************************-->		
 			<div class="right" id="hlw8" style="display:none">
-				<table width="100%">
-					<tr>
-						<td><img src="/static/img/tip.png"/><span class="title">互联网</span></td>
-						<td class="pull-right">
-							乾康（上海）金融信息服务有限公司 > <a onclick="show('hlw')" href="#">互联网</a> > <font color="#184554">互联网金融高端论坛会议纪要</font>
-						</td>
-					</tr>
-				</table>
-				<div class="fengge"></div>
 				<div class="jtxx">
 					<h1 class="H1">互联网金融高端论坛会议纪要</h1>
-					<div class="zz">作者：管理员&nbsp;&nbsp;&nbsp;发布于：2013-11-19 13:26:00&nbsp;&nbsp;&nbsp;文字：【大】【中】【小】</div>
+					<div class="zz">作者：管理员&nbsp;&nbsp;&nbsp;发布于：2013-11-19 13:26:00 </div>
 					<div class="xx">
-						<img src="/static/img/jrzx/15.png"/>
+						<img src="../../static/img/jrzx/15.png"/>
 						<p>&nbsp;&nbsp;&nbsp;&nbsp;海通非银团队11日组织了互联网金融高端论坛，特邀东方财富副董事长陆总、人人贷副总裁顾总，以及中国平安陆金所总经理助理黄总，为投资者进行了精彩的演讲，并在会后与投资者积极交流，以下为调研纪要：</p>
 						<p class="step">东方财富：成功的关键是以用户为主，未来将发展为一站式金融平台。</p>
 						<p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="secondStep">1）公司认为：互联网金融的生存要点是要以用户为主；</span>同时公司发展也是按照这个思路来进行的。东方财富网选择2005年这一历史拐点正式上线，此时恰逢资本市场进入空前牛市，财经网站真正热门起来，捕捉了行业的发展机遇，并逐步培养起了庞大的用户基础。</p>
@@ -707,33 +746,24 @@
 			</div>	
 			<!--**************************************************互联网金融空白区***********************************************-->		
 			<div class="right" id="hlw9" style="display:none">
-				<table width="100%">
-					<tr>
-						<td><img src="/static/img/tip.png"/><span class="title">互联网</span></td>
-						<td class="pull-right">
-							乾康（上海）金融信息服务有限公司 > <a onclick="show('hlw')" href="#">互联网</a> > <font color="#184554">互联网金融空白区</font>
-						</td>
-					</tr>
-				</table>
-				<div class="fengge"></div>
 				<div class="jtxx">
 					<h1 class="H1">互联网金融空白区</h1>
-					<div class="zz">作者：管理员&nbsp;&nbsp;&nbsp;发布于：2013-11-19 13:26:00&nbsp;&nbsp;&nbsp;文字：【大】【中】【小】</div>
+					<div class="zz">作者：管理员&nbsp;&nbsp;&nbsp;发布于：2013-11-19 13:26:00 </div>
 					<div class="xx">
-						<img src="/static/img/jrzx/16.png"/>
+						<img src="../../static/img/jrzx/16.png"/>
 						<p class="step">村镇银行的发展现状</p>
 						<p>&nbsp;&nbsp;&nbsp;&nbsp;村镇银行是由境内外金融机构、境内非金融机构企业法人、境内自然人出资，在农村地区设立的主要为当地农民、农业和农村经济发展提供金融服务的银行业金融机构。它的最大股东或唯一股东必须是银行业金融机构，最大银行金融机构股东持股比例不得低于村镇银行股本总额的15%，其他企业法人（含非银行金融机构）、自然人及其关联方持股比例不得超过村镇银行股本总额的10%。</p>
 						<p class="secondStep">1.地区分布</p>
 						<p>&nbsp;&nbsp;&nbsp;&nbsp;截至2011年年底，全国242家银行业金融机构共发起设立786家新型农村金融机构，其中村镇银行726家（已开业635家）。银监会的数据中既包含村镇银行总行机构，又包含村镇银行开设的分支机构，因此数量偏大。如果仅仅考虑村镇银行总行，截至2011年底，共批准成立了624家村镇银行。其中东部地区261家，中部地区190家，西部地区183家。</p>
-						<img src="/static/img/jrzx/17.png"/>
+						<img src="../../static/img/jrzx/17.png"/>
 						<p>&nbsp;&nbsp;&nbsp;&nbsp;图1：分地区的村镇银行数量与构成</p>
-						<img src="/static/img/jrzx/18.png"/>
+						<img src="../../static/img/jrzx/18.png"/>
 						<p>&nbsp;&nbsp;&nbsp;&nbsp;图2：各省批准成立的村镇隐含数量（截至2011年底）</p>
 						<p class="secondStep">2.机构类型</p>
 						<p>&nbsp;&nbsp;&nbsp;&nbsp;以村镇银行的公司形式划分，股有限份公司和有限责任公司两种形式，以股份有限公司居多；以村镇银行的机构形式分，有村镇银行总行和其开立的村镇银行支行两种形式。截至2012年8月底，银监会共批准成立村镇银行机构1176家，其中总行756家，分支行420家，分支行占总数量的36%。</p>
-						<img src="/static/img/jrzx/19.png"/>
+						<img src="../../static/img/jrzx/19.png"/>
 						<p>&nbsp;&nbsp;&nbsp;&nbsp;图3：07～11年分年度发起的村镇银行总行与支行数量</p>
-						<img src="/static/img/jrzx/20.png"/>
+						<img src="../../static/img/jrzx/20.png"/>
 						<p>&nbsp;&nbsp;&nbsp;&nbsp;图4：不同发起行类型发起的村镇银行数量比例（2012.07.31）</p>
 						<p class="secondStep">3.发起行类型</p>
 						<p>&nbsp;&nbsp;&nbsp;&nbsp;截至2012年7月31日，共有包括政策性银行及国家开发银行/大型商业银行/股份制商业银行/城市商业银行/农信社系统和外资银行等6类银行业金融系统机构的254家银行发起成立了村镇银行。其中，国家政策性银行和国家开发银行1家，大型商业银行5家，股份制商业银行7家，城市商业银行110家，农信社系统（包括农信社联社/农村合作银行和农村商业银行）120家和外资银行5家。截至2012年7月31日，不同类型发起行发起的村镇银行数量及构成如图所示。其中，城市商业银行发起的村镇银行占据了半壁江山。</p>
@@ -762,26 +792,17 @@
 						<p class="secondStep">4.快速推进城镇化的时代背景</p>
 						<p>&nbsp;&nbsp;&nbsp;&nbsp;城镇化的推进必然伴随着现代服务业的发展，在城镇化进程中发展金融服务业是题中之义。村镇银行作为土生土长的乡土银行，在城镇化进程中可以发挥自身的地缘优势，积极拓展辐射半径，提升自身实力。</p>
 						<p>&nbsp;&nbsp;&nbsp;&nbsp;表：几类中小金融机构比较</p>
-						<img src="/static/img/jrzx21.png"/>
+						<img src="../../static/img/jrzx/21.png"/>
 					</div>
 				</div>
 			</div>	
 			<!--**************************************************互联网金融下银行的历史机遇***********************************************-->		
 			<div class="right" id="hlw10" style="display:none">
-				<table width="100%">
-					<tr>
-						<td><img src="/static/img/tip.png"/><span class="title">互联网</span></td>
-						<td class="pull-right">
-							乾康（上海）金融信息服务有限公司 > <a onclick="show('hlw')" href="#">互联网</a> > <font color="#184554">互联网金融下银行的历史机遇</font>
-						</td>
-					</tr>
-				</table>
-				<div class="fengge"></div>
 				<div class="jtxx">
 					<h1 class="H1">互联网金融下银行的历史机遇</h1>
-					<div class="zz">作者：管理员&nbsp;&nbsp;&nbsp;发布于：2013-11-19 13:26:00&nbsp;&nbsp;&nbsp;文字：【大】【中】【小】</div>
+					<div class="zz">作者：管理员&nbsp;&nbsp;&nbsp;发布于：2013-11-19 13:26:00 </div>
 					<div class="xx">
-						<img src="/static/img/jrzx/22.png"/>
+						<img src="../../static/img/jrzx/22.png"/>
 						<p class="secondStep">央行观察按：本文是永隆银行董事长马蔚华9月14日在2013年第七届中国银行家高峰论坛上的讲话的原文实录。编者有小部分删节。</p>
 						<p>&nbsp;&nbsp;&nbsp;&nbsp;“我觉得网络银行在某种意义上说，是和传统的银行，对全社会服务的需求是相辅相成的，网络应该在一定程度上就在现实世界，我觉得网络越发达，特别是第三方支付越发达，相当于助力银行的支付、媒介的职能，从现实世界延伸到网络世界的边边角角。这是过去银行不能做到的。”</p>
 						<p>&nbsp;&nbsp;&nbsp;&nbsp;刚才关于互联网金融的定义，我很赞成我们吴行长的定义，实际上 <span class="secondStep">金融就是资金融通，基于互联网的这种资金融通</span>。</p>
@@ -825,20 +846,11 @@
 			</div>	
 			<!--**************************************************金融豪赌互联网***********************************************-->		
 			<div class="right" id="hlw11" style="display:none">
-				<table width="100%">
-					<tr>
-						<td><img src="/static/img/tip.png"/><span class="title">互联网</span></td>
-						<td class="pull-right">
-							乾康（上海）金融信息服务有限公司 > <a onclick="show('hlw')" href="#">互联网</a> > <font color="#184554">金融豪赌互联网</font>
-						</td>
-					</tr>
-				</table>
-				<div class="fengge"></div>
 				<div class="jtxx">
 					<h1 class="H1">金融豪赌互联网</h1>
-					<div class="zz">作者：管理员&nbsp;&nbsp;&nbsp;发布于：2013-11-19 13:26:00&nbsp;&nbsp;&nbsp;文字：【大】【中】【小】</div>
+					<div class="zz">作者：管理员&nbsp;&nbsp;&nbsp;发布于：2013-11-19 13:26:00 </div>
 					<div class="xx">
-						<img src="/static/img/jrzx/23.png"/>
+						<img src="../../static/img/jrzx/23.png"/>
 						<p>&nbsp;&nbsp;&nbsp;&nbsp;曾经喜欢随身带着英语小卡片、哪怕坐飞机也在学习的马明哲，如今有了新“爱好”。他时常手持iPad，言语中冒出“大数据”、“P2P”、“云计算”等网络语言，他在全球挖IT金融顶级高手，并派特别助理专门在硅谷等地搜集IT最新技术。</p>
 						<p>&nbsp;&nbsp;&nbsp;&nbsp;今年58岁的马明哲，驾驭着中国平安这艘传统金融的巨舰，以综合金融的模式特立独行，如今他赋予了平安新的目标——加速进军互联金融。</p>
 						<p>&nbsp;&nbsp;&nbsp;&nbsp;马云有支付宝，马化腾有财付通，如今马明哲也有了“平安付”，总部设于上海的平安付智能技术有限公司已经正式运营，此外，平安斥资10亿元打造的二手车电商平台上海平安汽车电子商务有限公司挂牌，除此之外，马明哲和网络巨头马云、马化腾“三马”合伙创办的保险公司“众安在线财险”也在运作中。</p>
@@ -885,20 +897,11 @@
 			</div>	
 			<!--**************************************************美国p2p信贷平台Prosper获红杉和黑石2500万美元投资***********************************************-->		
 			<div class="right" id="hlw12" style="display:none">
-				<table width="100%">
-					<tr>
-						<td><img src="/static/img/tip.png"/><span class="title">互联网</span></td>
-						<td class="pull-right">
-							乾康（上海）金融信息服务有限公司 > <a onclick="show('hlw')" href="#">互联网</a> > <font color="#184554">美国p2p信贷平台Prosper获红杉和黑石2500万美元投资</font>
-						</td>
-					</tr>
-				</table>
-				<div class="fengge"></div>
 				<div class="jtxx">
 					<h1 class="H1">美国p2p信贷平台Prosper获红杉和黑石2500万美元投资</h1>
-					<div class="zz">作者：管理员&nbsp;&nbsp;&nbsp;发布于：2013-11-19 13:26:00&nbsp;&nbsp;&nbsp;文字：【大】【中】【小】</div>
+					<div class="zz">作者：管理员&nbsp;&nbsp;&nbsp;发布于：2013-11-19 13:26:00 </div>
 					<div class="xx">
-						<img src="/static/img/jrzx/24.png"/>
+						<img src="../../static/img/jrzx/24.png"/>
 						<p>&nbsp;&nbsp;&nbsp;&nbsp;近日，个人对个人信贷（Peer to Peer）信贷平台Prosper宣布再获2500万美元投资。本轮投资由该公司长期投资方红杉资本领投，黑石投资参与。本次融资的时点似乎有些诡异，因为Prosper今年1月刚获得了一笔2000万美元的投资，该月他们重组了领导团队，并且任命了新的CEO。</p>
 						<p>&nbsp;&nbsp;&nbsp;&nbsp;2006年正式上线的Prosper在本次融资之前已经获得了9490万美元的投资，因此到现在他们获得的外部投资总额已达1亿1990万美元。Prosper称本次融资是今年年初开始的新发展方向的一个组成部分，并不是迫于压力。其实原因很简单：今年1月新上任的管理团队和2000万美元投资是探索Prosper商业模式的赌注，如果成功就会带来更多的资金。随着Prosper后续的强势增长，红杉资本将投入更多资金。</p>
 						<p>&nbsp;&nbsp;&nbsp;&nbsp;截至今年1月，Prosper平台上的信贷总额为900万美元，到8月这一数据暴涨至了3200万美元，几乎等于在不到一年的时间里翻了4番。Prosper预期该平台上的年交易额可能超过3.6亿美元。Prosper在官网上称自成立以来，该平台上已达成了6.3亿美元的借贷，今年的数额占到了其中的一半多。Prosper称此次融资的2500万美元将被用于“加速公司增长”。就其信贷率的激增来看，看似笼统的融资理由可能是事实。</p>
@@ -908,20 +911,11 @@
 			</div>	
 			<!--**************************************************日本互联网金融成功案例***********************************************-->		
 			<div class="right" id="hlw13" style="display:none">
-				<table width="100%">
-					<tr>
-						<td><img src="/static/img/tip.png"/><span class="title">互联网</span></td>
-						<td class="pull-right">
-							乾康（上海）金融信息服务有限公司 > <a onclick="show('hlw')" href="#">互联网</a> > <font color="#184554">日本互联网金融成功案例</font>
-						</td>
-					</tr>
-				</table>
-				<div class="fengge"></div>
 				<div class="jtxx">
 					<h1 class="H1">日本互联网金融成功案例</h1>
-					<div class="zz">作者：管理员&nbsp;&nbsp;&nbsp;发布于：2013-11-19 13:26:00&nbsp;&nbsp;&nbsp;文字：【大】【中】【小】</div>
+					<div class="zz">作者：管理员&nbsp;&nbsp;&nbsp;发布于：2013-11-19 13:26:00 </div>
 					<div class="xx">
-						<img src="/static/img/jrzx/25.png"/>
+						<img src="../../static/img/jrzx/25.png"/>
 						<p>&nbsp;&nbsp;&nbsp;&nbsp;阿里巴巴打造“阿里小微金融服务集团”，在战略和业务上和乐天有着众多的相似之处，那么，乐天的金融业务又是怎么构成的呢？</p>
 						<p>&nbsp;&nbsp;&nbsp;&nbsp;一个朋友给我们一个很专业的文章：“为什么超级电商平台都要做金融？看看日本排名第一的电商乐天的营收结构，金融证券占了三分之一，而卖商品的收入不到50%。”互联网上总有些关于日本第一大电商乐天搞金融的传闻。那么乐天的金融业务具体是什么样子的呢？揭开乐天金融的神秘面纱。</p>
 						<p>&nbsp;&nbsp;&nbsp;&nbsp; 互联网金融微信ID：iefinance  微信名：互联网金融 </p>
@@ -932,7 +926,7 @@
 						<p>&nbsp;&nbsp;&nbsp;&nbsp;日本2011年的互联网普及率已经高达79.1%，网民人数为9610万人。而截至2012年12月底，我国网民规模达5.64亿，互联网普及率为42.1%，存在极大的上升空间。中国是一个比日本更为巨大的市场，参考乐天的业绩，中国的互联网金融市场有巨大的想象空间。</p>
 						<p class="step">乐天金融拓展的第一步棋：证券</p>
 						<p>&nbsp;&nbsp;&nbsp;&nbsp;乐天向金融领域拓展的第一步是于2003年11月收购证券公司“DLJディレクトSFG证券”，此次收购乐天花费300亿日元，取得该证券公司96.67％的股份，并于2004年7月4日变更公司名称为“乐天证券”。收购当年９月开户数日本第三，开户数14.7万左右，现在乐天证券开户数超过130万。</p>
-						<img src="/static/img/jrzx/26.png"/>
+						<img src="../../static/img/jrzx/26.png"/>
 						<p class="step">日本乐天银行：一个开银行搞金融的电商</p>
 						<p>&nbsp;&nbsp;&nbsp;&nbsp;乐天希望收购的证券业务可以与乐天集团电商等业务形成相互促进，让证券业务为乐天带来更多的会员，让乐天在线零售平台“乐天市场”积累的大量会员转化为证券业务的消费者，通过互联网的方式，让证券投资变得更为方便，从小众变得逐渐普及，并通过提供金融服务扩大集团的业务范围，夯实乐天集团发展基石，增加收益机会。</p>
 						<p>&nbsp;&nbsp;&nbsp;&nbsp;乐天通过积分打通了证券和电商等各种业务，通过乐天证券投资可以获得乐天积分，而积分可以在“乐天市场”购物。2005年，乐天证券新增消费者中乐天会员占比达到6成，电商向网络证券的导流效果明显。</p>
@@ -941,7 +935,7 @@
 						<p>&nbsp;&nbsp;&nbsp;&nbsp;国内阿里旗下淘宝在2012年开通了理财平台，以平台的形式涉足基金、保险理财、贵金属等领域。在支付宝下面也设立了理财频道，可以开通支付宝理财专户和基金专户，同样涉及基金、贵金属、保险理财产品等领域。相信日后随着政策的逐渐放开以及市场的日趋成熟，上线的理财产品种类也会更为丰富，淘宝和支付宝积累的大量消费者资源和数据将是阿里的优势。</p>
 						<p class="step">乐天金融的绝对核心：信用卡</p>
 						<p>&nbsp;&nbsp;&nbsp;&nbsp;中国第三方支付火爆，支付宝占据了绝对的大头，是阿里集团的潜力股。而在日本，由于信用体系较为完善等原因，日本在线零售市场前三位的支付手段是信用卡、货到付款、银行转账。在日本，第三方支付工具目前几乎没有什么市场（日本经济产业省的统计结果）。对7成交易都是通过信用卡来支付的“乐天市场”而言，信用卡是把控消费资金来源的重要支付手段，与电商业务关系紧密，信用卡于乐天而言就好比支付宝在阿里的位置一样重要而不可或缺。同时，消费者在“乐天市场”的消费记录可以成为发行信用卡的授信依据；信用卡业务将为乐天带来手续费收入等营收增长点；另外，信用卡不仅可以在线上消费，也可以在线下消费，线上线下消费获得的积分可以共通使用，一张卡片打通了线上和线下的消费场景，势必成为乐天O2O部署的利器之一。因此，乐天将“乐天信用卡”作为其金融发展的绝对核心，投入了大量的资源。</p>
-						<img src="/static/img/jrzx/27.png"/>
+						<img src="../../static/img/jrzx/27.png"/>
 						<p class="step">日本乐天银行：一个开银行搞金融的电商</p>
 						<p>&nbsp;&nbsp;&nbsp;&nbsp;2004年9月，乐天以74亿日元收购信用卡贷款公司“AOZORA卡”，2005年6月又以120亿日元收购信用卡发卡公司“国内信贩”，开始发行信用卡“乐天卡”。近年来使用乐天信用卡购物的交易金额增幅明显，其中2012年为18020亿日元，比2011年增加了36%，增长主要得益于信用卡发行量的增加。2012年乐天信用卡营收697.37亿日元（面向外部消费者部分），在金融业务里占比超4成。</p>
 						<p>&nbsp;&nbsp;&nbsp;&nbsp;阿里旗下支付宝近期推出了“信用支付”，是阿里金融联合银行提供的首款网络消费金融服务，只要签约了信用支付，就会获得一个授信额度供用户循环使用。首批将于4月中旬在浙江和湖南率先开放，一期的使用范围是淘宝的交易，在手机、Pad购物时预支消费，未来会向内置支付宝的所有商家开放。</p>
@@ -951,7 +945,7 @@
 						<p>&nbsp;&nbsp;&nbsp;&nbsp;eBANKCorporation于2000年1月成立，2001年7月取得银行牌照，核心业务是互联网结算，当时没有融资业务。2005年11月开始涉足投资信托业务，2006年12月开展外币普通存款业务,汇兑等手续费业界最低，网络银行的低成本为其带来了竞争力。2006年eBANK开始发行借记卡。</p>
 						<p>&nbsp;&nbsp;&nbsp;&nbsp;2009年eBANK被乐天收购。乐天收购eBANK首先是看中其业界领先的支付结算能力，可为乐天数千万会员带来更为便利的支付结算体验；其次是可以充分利用乐天庞大的消费者群体，开发个人贷款、住宅贷款、电子货币等金融产品。依靠乐天庞大的用户优势，eBANK纳入乐天旗下一年便成功扭亏为盈。</p>
 						<p>&nbsp;&nbsp;&nbsp;&nbsp;目前乐天银行业务账户分为个人、个体业者、企业三类，业务涉及借记卡发行、境内外转账、支付、日元存款、外币存款、发卡、存取款、汇兑业务、个人贷款、住宅贷款等众多领域。乐天银行自己并没有设置ATM，但其发行的借记卡可以在日本全国大约60000台ATM上取款，且无需手续费。对于在乐天开店的店铺来讲，在乐天银行开户最大的好处就是可以每天收到乐天的结算款项，资金周转迅速。</p>
-						<img src="/static/img/jrzx/28.png"/>
+						<img src="../../static/img/jrzx/28.png"/>
 						<p class="step">日本乐天银行：一个开银行搞金融的电商</p>
 						<p>&nbsp;&nbsp;&nbsp;&nbsp;乐天银行的“超级贷款”是面向个人的融资信贷产品，2009年4月推出，申请人可以是消费者，也可以是个体户。乐天银行不提供面向法人的融资贷款，但是法人代表可以以个人的身份向乐天银行申请贷款。“超级贷款”不限制用途，最高可以获取500万日元的贷款，对除了个体户和法人代表以外的一般消费者，200万日元以下的贷款不需要提供收入证明，无论是否有正式工作都可以从乐天获取贷款。乐天集团曾于2006年与“东京都民银行”达成合作协议，面向中小企业和个人提供贷款，开设“东京都民银行乐天支店”，但该业务于2008年底关闭。</p>
 						<p>&nbsp;&nbsp;&nbsp;&nbsp;中国的金融环境下，中小企业获取贷款比较困难，所以阿里集团推出了面向淘宝卖家和B2B企业的金融信贷产品，但不排除日后阿里继“信用支付”之后推出面向消费者个人的贷款产品的可能性。</p>
@@ -964,20 +958,11 @@
 			</div>	
 			<!--**************************************************探秘天虹商场微信支付***********************************************-->		
 			<div class="right" id="hlw14" style="display:none">
-				<table width="100%">
-					<tr>
-						<td><img src="/static/img/tip.png"/><span class="title">互联网</span></td>
-						<td class="pull-right">
-							乾康（上海）金融信息服务有限公司 > <a onclick="show('hlw')" href="#">互联网</a> > <font color="#184554">探秘天虹商场微信支付</font>
-						</td>
-					</tr>
-				</table>
-				<div class="fengge"></div>
 				<div class="jtxx">
 					<h1 class="H1">探秘天虹商场微信支付</h1>
-					<div class="zz">作者：管理员&nbsp;&nbsp;&nbsp;发布于：2013-11-19 13:26:00&nbsp;&nbsp;&nbsp;文字：【大】【中】【小】</div>
+					<div class="zz">作者：管理员&nbsp;&nbsp;&nbsp;发布于：2013-11-19 13:26:00 </div>
 					<div class="xx">
-						<img src="/static/img/jrzx/29.png"/>
+						<img src="../../static/img/jrzx/29.png"/>
 						<p>&nbsp;&nbsp;&nbsp;&nbsp; 作为腾讯微生活O2O重要试点的连锁百货公司天虹商场正式引入微信支付，进而上线微信购物以及送礼功能。</p>
 						<p>&nbsp;&nbsp;&nbsp;&nbsp; 据悉，天虹微信借助微信5.0集成的支付系统，用户任何时候只要打开微信选择好商品就能直接使用微信支付完成付款，不用重复输银行卡号等信息。购买成功后，用户还可轻松转赠给好友，实现“空中送礼”。</p>
 						<p>&nbsp;&nbsp;&nbsp;&nbsp;天虹商场方面透露，此次微信送礼售卖的商品除不等额的优惠卡外，还有当季热卖的生鲜食品及家具用品等。“预计下周伴随宝安区购物中心的开业，还将有更多更丰富的商品上线销售。”</p>
@@ -986,10 +971,10 @@
 						<p>&nbsp;&nbsp;&nbsp;&nbsp;相比此前微信公众账号针对零售业提供的服务多集中在营销层，如今微信支付的上线正式打通了最后一环，集线上购买、转赠、线下取货于一体的全方面微信服务平台由此形成。</p>
 						<p>&nbsp;&nbsp;&nbsp;&nbsp;亿邦动力网发现，从整个微信购物、送礼的流程来看，不仅简化了购买赠送的流程，也更加便于天虹的后台管理和销售。如微信送礼时，一如转发微信消息，对方只需凭收到的微信礼券去到任意一家天虹实体门店，均可兑换成等额的礼卡进行消费。微信里全省去了人工发放和统计的环节，所有的礼品券发放、领取等全部在线上完成，并在后台自动生成数据，打造一个社交化的购券转赠的O2O闭环。</p>
 						<p>&nbsp;&nbsp;&nbsp;&nbsp;以下为整个购买流程演示：</p>
-						<img src="/static/img/jrzx/30.png"/>
-						<img src="/static/img/jrzx/31.png"/>
-						<img src="/static/img/jrzx/32.png"/>
-						<img src="/static/img/jrzx/33.png"/>
+						<img src="../../static/img/jrzx/30.png"/>
+						<img src="../../static/img/jrzx/31.png"/>
+						<img src="../../static/img/jrzx/32.png"/>
+						<img src="../../static/img/jrzx/33.png"/>
 						<p>&nbsp;&nbsp;&nbsp;&nbsp;由亿邦动力网主办的第八届中国网上零售年会11月28日将在南京举行，拟邀张近东、刘强东、李国庆等电商大佬畅谈分享，大会合作可咨询于宏13522454074。</p>
 						<p>&nbsp;&nbsp;&nbsp;&nbsp;关注亿邦动力网微信，获取独家新闻，可以点击右上角按钮，选择“查看官方账号”进行关注，或者搜索微信号“iebrun”。</p>
 					</div>
@@ -997,20 +982,11 @@
 			</div>	
 			<!--**************************************************微信O2O商家为什么要优惠***********************************************-->		
 			<div class="right" id="hlw17" style="display:none">
-				<table width="100%">
-					<tr>
-						<td><img src="/static/img/tip.png"/><span class="title">互联网</span></td>
-						<td class="pull-right">
-							乾康（上海）金融信息服务有限公司 > <a onclick="show('hlw')" href="#">互联网</a> > <font color="#184554">微信O2O商家为什么要优惠</font>
-						</td>
-					</tr>
-				</table>
-				<div class="fengge"></div>
 				<div class="jtxx">
 					<h1 class="H1">微信O2O商家为什么要优惠</h1>
-					<div class="zz">作者：管理员&nbsp;&nbsp;&nbsp;发布于：2013-11-19 13:26:00&nbsp;&nbsp;&nbsp;文字：【大】【中】【小】</div>
+					<div class="zz">作者：管理员&nbsp;&nbsp;&nbsp;发布于：2013-11-19 13:26:00 </div>
 					<div class="xx">
-						<img src="/static/img/jrzx/50.png"/>
+						<img src="../../static/img/jrzx/50.png"/>
 						<p>&nbsp;&nbsp;&nbsp;&nbsp;提问：现在有些商家餐桌上摆了微信二维码，第一次使用扫了以后就可以得到相关优惠（比如 一T可乐之类），但是对于商家而言，他为什么要这样做呢？</p>
 						<p>&nbsp;&nbsp;&nbsp;&nbsp;如果我是客户，我打算去一家餐馆吃饭，就是吃饭，但是不至于为了扫一罐可乐而去跑 到餐馆去，优惠本身是餐馆中暴露出来的，去了以后才能知道是否有优惠，所以对商家而言存在增加用户量的可能性还是很小的，但是每个来的用户只要用新账号扫 二维码， 就需要付出一罐可乐的成本，没想明白为什么商家要这样做呢？</p>
 						<p>&nbsp;&nbsp;&nbsp;&nbsp;麻烦请大家都讨论下各种可能性，或者也可以讨论下微信是用什么方法说服商家做这样 的优惠活动的？</p>
@@ -1048,20 +1024,11 @@
 			</div>	
 			<!--**************************************************微信银功能全接触***********************************************-->		
 			<div class="right" id="hlw18" style="display:none">
-				<table width="100%">
-					<tr>
-						<td><img src="/static/img/tip.png"/><span class="title">互联网</span></td>
-						<td class="pull-right">
-							乾康（上海）金融信息服务有限公司 > <a onclick="show('hlw')" href="#">互联网</a> > <font color="#184554">微信银功能全接触</font>
-						</td>
-					</tr>
-				</table>
-				<div class="fengge"></div>
 				<div class="jtxx">
 					<h1 class="H1">微信银功能全接触</h1>
-					<div class="zz">作者：管理员&nbsp;&nbsp;&nbsp;发布于：2013-11-19 13:26:00&nbsp;&nbsp;&nbsp;文字：【大】【中】【小】</div>
+					<div class="zz">作者：管理员&nbsp;&nbsp;&nbsp;发布于：2013-11-19 13:26:00 </div>
 					<div class="xx">
-						<img src="/static/img/jrzx/11.png"/>
+						<img src="../../static/img/jrzx/11.png"/>
 						<p>&nbsp;&nbsp;&nbsp;&nbsp;科技改变生活。从柜台出发，到网银、电话银行、手机银行再到微信银行，国内商业银行的IT技术正经历着“跳跃式的进化”。7月开始，一家又一家带着不同特色的“微信银行”相继上线令“登陆抢滩战”开打。对于众多银行客户来讲，更为关心的则是“微信银行”的使用方式、技巧，北京商报记者亲身体验了12家开通了微信银行及微信服务平台的商业银行，从功能丰富性以及使用便捷性方面给予大家建议。</p>
 						<p class="step">功能丰富性</p>
 						<p class="secondStep">● 信用卡</p>
@@ -1093,20 +1060,11 @@
 			</div>	
 			<!--**************************************************我国电商发展情况***********************************************-->		
 			<div class="right" id="hlw19" style="display:none">
-				<table width="100%">
-					<tr>
-						<td><img src="/static/img/tip.png"/><span class="title">互联网</span></td>
-						<td class="pull-right">
-							乾康（上海）金融信息服务有限公司 > <a onclick="show('hlw')" href="#">互联网</a> > <font color="#184554">我国电商发展情况</font>
-						</td>
-					</tr>
-				</table>
-				<div class="fengge"></div>
 				<div class="jtxx">
 					<h1 class="H1">我国电商发展情况</h1>
-					<div class="zz">作者：管理员&nbsp;&nbsp;&nbsp;发布于：2013-11-19 13:26:00&nbsp;&nbsp;&nbsp;文字：【大】【中】【小】</div>
+					<div class="zz">作者：管理员&nbsp;&nbsp;&nbsp;发布于：2013-11-19 13:26:00 </div>
 					<div class="xx">
-						<img src="/static/img/jrzx/52.png"/>
+						<img src="../../static/img/jrzx/52.png"/>
 						<p>&nbsp;&nbsp;&nbsp;&nbsp;日前，国家商务部新闻办公室在北京召开了主题为“电子商务”的专题新闻发布会。与会领导为商务部新闻发言人姚坚、电子商务和信息化司司长李晋奇以及北京市商务委员会副主任孙尧，三位领导分别做了简短讲话，并答记者问。其中姚坚主要向与会记者介绍了我国电子商务发展的总体情况、主要特点以及未来趋势，李晋奇和孙尧则是分别介绍了商务部和北京市政府对国内电子商务和北京电子商务市场的一些针对性研究以及政策上的引导和部署。</p>
 						<p>&nbsp;&nbsp;&nbsp;&nbsp; 据发布会介绍，今年上半年我国新增网购用户2889万，总数已达2.71亿人。2012年，我国网络零售交易额达1.31万亿元，同比增长67.5%，相当于社会消费品零售总额的6.3%。电子商务和信息化司司长李晋奇发言称，近年随着互联网和电子商务的普及应用，网络零售呈现出快速增长的态势，其主要有以下两个主要特点：一是网购群体和网络零售规模进一步扩大；二是企业更加重视网上业务，电子商务应用更为普及。截至2012年年底，在网上进行采购或销售的企业比例已达32%。中国连锁百强企业中已有62家开展网络零售，经营网店数量超过70家。</p>
 						<p>&nbsp;&nbsp;&nbsp;&nbsp; 限于篇幅，下面选登的是发布会姚坚讲话部分的文字实录。有关该发布会更多详情，如有兴趣可登陆商务部官网进行了解。
@@ -1133,18 +1091,9 @@
 			</div>
 			<!--**************************************************银行互联网金融O2O降成本***********************************************-->		
 			<div class="right" id="hlw20" style="display:none">
-				<table width="100%">
-					<tr>
-						<td><img src="/static/img/tip.png"/><span class="title">互联网</span></td>
-						<td class="pull-right">
-							乾康（上海）金融信息服务有限公司 > <a onclick="show('hlw')" href="#">互联网</a> > <font color="#184554">银行互联网金融O2O降成本</font>
-						</td>
-					</tr>
-				</table>
-				<div class="fengge"></div>
 				<div class="jtxx">
 					<h1 class="H1">银行互联网金融O2O降成本</h1>
-					<div class="zz">作者：管理员&nbsp;&nbsp;&nbsp;发布于：2013-11-19 13:26:00&nbsp;&nbsp;&nbsp;文字：【大】【中】【小】</div>
+					<div class="zz">作者：管理员&nbsp;&nbsp;&nbsp;发布于：2013-11-19 13:26:00 </div>
 					<div class="xx">
 						<p>&nbsp;&nbsp;&nbsp;&nbsp;2013-09-04 李张鲁</p>
 						<p>&nbsp;&nbsp;&nbsp;&nbsp;ING Direct：银行也开咖啡馆，看看互联网金融O2O有多炫！</p>
@@ -1191,20 +1140,11 @@
 			</div>
 			<!--**************************************************银行如何应对互联网时代***********************************************-->		
 			<div class="right" id="hlw21" style="display:none">
-				<table width="100%">
-					<tr>
-						<td><img src="/static/img/tip.png"/><span class="title">互联网</span></td>
-						<td class="pull-right">
-							乾康（上海）金融信息服务有限公司 > <a onclick="show('hlw')" href="#">互联网</a> > <font color="#184554">银行如何应对互联网时代</font>
-						</td>
-					</tr>
-				</table>
-				<div class="fengge"></div>
 				<div class="jtxx">
 					<h1 class="H1">银行如何应对互联网时代</h1>
-					<div class="zz">作者：管理员&nbsp;&nbsp;&nbsp;发布于：2013-11-19 13:26:00&nbsp;&nbsp;&nbsp;文字：【大】【中】【小】</div>
+					<div class="zz">作者：管理员&nbsp;&nbsp;&nbsp;发布于：2013-11-19 13:26:00 </div>
 					<div class="xx">
-						<img src="/static/img/jrzx/53.png"/>
+						<img src="../../static/img/jrzx/53.png"/>
 						<p>&nbsp;&nbsp;&nbsp;&nbsp;在汹涌而至的互联网大潮之下，不论是互联网企业从事金融业务，还是银行等金融企业进入互联网领域，谋求的都是协同效应，而非简单的多元化。事实上，由于企业文化和业务性质的巨大差异，两者进入对方的绝对优势领域反而都会有明显的不适应。因此，银行与互联网企业在两个优势领域的交叠部分才是双方直接冲突的战场。其中，双边平台的竞争处于最核心的地位，没有平台资源的企业想要构建自己的平台，而拥有平台资源的企业则谋求建立自己的支付、贷款等功能。</p>
 						<p>&nbsp;&nbsp;&nbsp;&nbsp;双方的争夺主要集中在交叠的部分</p>
 						<p>&nbsp;&nbsp;&nbsp;&nbsp;金融机构的优势领域</p>
@@ -1241,27 +1181,18 @@
 			</div>
 			<!--**************************************************中国线上P2P模式分类 影响及未来发展趋势***********************************************-->		
 			<div class="right" id="hlw22" style="display:none">
-				<table width="100%">
-					<tr>
-						<td><img src="/static/img/tip.png"/><span class="title">互联网</span></td>
-						<td class="pull-right">
-							乾康（上海）金融信息服务有限公司 > <a onclick="show('hlw')" href="#">互联网</a> > <font color="#184554">中国线上P2P模式分类 影响及未来发展趋势</font>
-						</td>
-					</tr>
-				</table>
-				<div class="fengge"></div>
 				<div class="jtxx">
 					<h1 class="H1">中国线上P2P模式分类 影响及未来发展趋势</h1>
-					<div class="zz">作者：管理员&nbsp;&nbsp;&nbsp;发布于：2013-11-19 13:26:00&nbsp;&nbsp;&nbsp;文字：【大】【中】【小】</div>
+					<div class="zz">作者：管理员&nbsp;&nbsp;&nbsp;发布于：2013-11-19 13:26:00 </div>
 					<div class="xx">
-						<img src="/static/img/jrzx/65.png"/>
+						<img src="../../static/img/jrzx/65.png"/>
 						<p class="step">P2P定义及模式分析</p>　
 						<p>&nbsp;&nbsp;&nbsp;&nbsp;P2P（PeertoPeer）原本是计算机网络中的概念，指互联网对等实体间的信息交互方式。2005年，应该出现了将这种信息交互方式运用到借贷方面的企业--由该企业在网络上提供平台，使零售贷款的供求信息能够交流，并促成交易。之后，该中模式得到迅速推广，成就了以Zopa、LengdingClub、Prosper等系列企业。随后，该种模式传入国内，其核心模式是有贷款需求的人和有借款需求的人通过平台企业交互供需信息，并达成交易，平台企业在整个交易过程中提供一系列辅助服务并收取服务费。线上P2P。其定义为：依靠资金中介通过互联网未借贷双方提供的居间服务，促进的借贷交易。</p>
 						<p>&nbsp;&nbsp;&nbsp;&nbsp;虽然P2P的本质是民间借贷，属于贷款范畴。但比起一般的民间借贷和银行贷款，有着其自生的特点，主要表现在以下四个方面：</p>
 						<p class="step">关系扁平化</p>
 						<p>&nbsp;&nbsp;&nbsp;&nbsp;相比传统的民间借贷，P2P的最大特点是点对点，即最终资金供给方和最终资金需求方直接建立借贷关系，资金链条较短，借贷关系扁平化。这又两个好处：第一，不存在多次的借贷关系，最终的资金供给方有可能取得更高的利率，最终的资金需求方有可能以较低的利率获得资金，提高了借贷低效率；第二，不存在参与到借贷关系中的信用中介，没有由于信用中介资金链断裂而触发的整个借贷体系的风险。</p>
-						<img src="/static/img/jrzx/66.png"/></p>
-						<img src="/static/img/jrzx/67.png"/></p>
+						<img src="../../static/img/jrzx/66.png"/></p>
+						<img src="../../static/img/jrzx/67.png"/></p>
 						<p>&nbsp;&nbsp;&nbsp;&nbsp;图表1：P2P与一般民间借贷模式比较</p>
 						<p class="step">信息透明化</p>
 						<p>&nbsp;&nbsp;&nbsp;&nbsp;P2P的第二个特点是以网络为中介，可以突破信息传递的时间和空间限制，其导致的最直接结果就是信息相对透明，借贷双方撮合效率提高，撮合时间缩短。并且，信息能在借贷双方之间直接传递，少去了中间环节，可以避免信息在传递过程中的失真。</p>
@@ -1274,7 +1205,7 @@
 						<p class="step">担保模式P2P</p>
 						<p class="step">模式成功案例</p>
 						<p>&nbsp;&nbsp;&nbsp;&nbsp;国内的担保模式P2P起步比无担保模式晚，但自2012年来发展迅猛。此种模式的代表便是平安集团旗下的陆家嘴金融交易所（以下简称"陆金所"）的"稳盈-安e贷"。其运作方式如下图：</p>
-						<img src="/static/img/jrzx/68.png"/></p>
+						<img src="../../static/img/jrzx/68.png"/></p>
 						<p>&nbsp;&nbsp;&nbsp;&nbsp;图表2：陆金所之模式运作图</p>
 						<p>&nbsp;&nbsp;&nbsp;&nbsp;平安融资担保是平安旗下专门为陆金所"稳盈-安e贷"业务提供连带责任担保的专业融资型担保公司。其主要靠项目评审、收取担保费维持运营。根据项目质量的不同，担保公司收取高低不等的担保费，而贷款人通过陆金所平台支付给贷款人的利息是一定的--目前都为基准贷款利率上浮40%。实际上，在此模式中，借款人相当于只获得了无风险报酬率。</p>
 						<p class="step">模式特征分析</p>
@@ -1301,7 +1232,7 @@
 						<p class="step">模式特征分析</p>
 						<p>&nbsp;&nbsp;&nbsp;&nbsp;无独立的担保措施</p>
 						<p>&nbsp;&nbsp;&nbsp;&nbsp;风险备用金账户看上去与担保公司作用相当，实际上则完全不同，具体表现在从资金的提供方、保障范围、资金来源、失效条件和法律性质等五个方面。虽然风险准备金账户能起到一定风险控制作用，但并不是典型意义上的担保措施，其对贷款人的保障力度也较小。</p>
-						<img src="/static/img/jrzx/69.png"/></p>
+						<img src="../../static/img/jrzx/69.png"/></p>
 						<p>&nbsp;&nbsp;&nbsp;&nbsp;图表2：风险备用金账户与连带责任担保的区别</p>
 						<p>&nbsp;&nbsp;&nbsp;&nbsp;此外，担保服务与居间业务都由平台公司提供，这有可能使平台公司在经营上处于两难：如果偏重业务，则风险准备金账户很可能被用罄，最终影响到业务的发展；如果偏重风控，则有可能将借款人的融资成本增加，最终也会影响到业务--实际上，此种模式将本应该属于两个企业提供的服务化为一个企业提供，对平台企业的定价能力、内部控制都提出更高要求。</p>
 						<p class="step">贷款利息完全归借款人所有</p>
@@ -1323,15 +1254,6 @@
 			</div>
 		<!--**************************************************行业快讯***********************************************-->
 			<div class="right" id="hykx" style="display:none">
-				<table width="100%">
-					<tr>
-						<td><img src="/static/img/tip.png"/><span class="title">行业快讯</span></td>
-						<td class="pull-right">
-							乾康（上海）金融信息服务有限公司 > 金融咨询 ><font color="#184554">行业快讯</font>
-						</td>
-					</tr>
-				</table>
-				<div class="fengge"></div>
 				<table width="100%" class="datatable">
 					<thead>
 						<tr>
@@ -1443,18 +1365,9 @@
 			</div>	
 			<!--**************************************************大数据时代来临了***********************************************-->		
 			<div class="right" id="hykx1" style="display:none">
-				<table width="100%">
-					<tr>
-						<td><img src="/static/img/tip.png"/><span class="title">行业快讯</span></td>
-						<td class="pull-right">
-							乾康（上海）金融信息服务有限公司 > <a onclick="show('hykx')" href="#">行业快讯</a> > <font color="#184554">大数据时代来临了</font>
-						</td>
-					</tr>
-				</table>
-				<div class="fengge"></div>
 				<div class="jtxx">
 					<h1 class="H1">大数据时代来临了</h1>
-					<div class="zz">作者：管理员&nbsp;&nbsp;&nbsp;发布于：2013-11-19 13:26:00&nbsp;&nbsp;&nbsp;文字：【大】【中】【小】</div>
+					<div class="zz">作者：管理员&nbsp;&nbsp;&nbsp;发布于：2013-11-19 13:26:00 </div>
 					<div class="xx">
 						<p class="step">一</p>
 						<p>&nbsp;&nbsp;&nbsp;&nbsp;PRADA在纽约的旗舰店。每件衣服上都有RFID码。每当一个顾客拿起一件PRADA进试衣间，RFID会被自动识别，试衣间里的屏幕会自动播放模特穿着这件衣服走台步的视频。人一看见模特，就会下意识里美化自己。</p>
@@ -1493,20 +1406,11 @@
 			</div>	
 			<!--**************************************************德国“直销银行”发展状况的分析及启示***********************************************-->		
 			<div class="right" id="hykx2" style="display:none">
-				<table width="100%">
-					<tr>
-						<td><img src="/static/img/tip.png"/><span class="title">行业快讯</span></td>
-						<td class="pull-right">
-							乾康（上海）金融信息服务有限公司 > <a onclick="show('hykx')" href="#">行业快讯</a> > <font color="#184554">德国“直销银行”发展状况的分析及启示</font>
-						</td>
-					</tr>
-				</table>
-				<div class="fengge"></div>
 				<div class="jtxx">
 					<h1 class="H1">德国“直销银行”发展状况的分析及启示</h1>
-					<div class="zz">作者：管理员&nbsp;&nbsp;&nbsp;发布于：2013-11-19 13:26:00&nbsp;&nbsp;&nbsp;文字：【大】【中】【小】</div>
+					<div class="zz">作者：管理员&nbsp;&nbsp;&nbsp;发布于：2013-11-19 13:26:00 </div>
 					<div class="xx">
-						<img src="/static/img/jrzx/54.png"/>
+						<img src="../../static/img/jrzx/54.png"/>
 						<p>&nbsp;&nbsp;&nbsp;&nbsp;【导读】互联网的出现，为“直销银行”的发展创造了巨大空间。随着互联网技术和电子商务模式的日益成熟，原本在德国一直“默默无闻”的“直销银行”近几年异军突起，市场份额迅速扩大，受到了业界内外广泛关注。本文从分析德国“直销银行”的发展状况和特点入手，阐述“直销银行”在中国已经具备了比较充分的业务基础和技术条件，探讨了中国银行业在未来发展“直销银行”的可能性，为银行界进行业务拓展、区域扩张和寻求利润增长提供新的思路。</p>
 						<p>&nbsp;&nbsp;&nbsp;&nbsp;【正文】“直销银行”（Direcktbank）在德国并非新生事物，只不过其业务规模较小，品牌影响力有限，多年来并未引起人们足够重视。近几年，随着互联网技术的日益成熟和电子商务模式被越来越多的人所接受，“直销银行”在德国迅猛发展，市场份额迅速扩大，已经成为传统实体银行不敢小觑的竞争对手。</p>
 						<p>&nbsp;&nbsp;&nbsp;&nbsp;所谓“直销银行”，是指几乎不设立实体业务网点，而是通过信件、电话、传真、互联网及互动电视等媒介工具，实现业务中心与终端客户直接进行业务往来的银行。尽管传统银行已经广泛采用了信件、电话、互联网等营销手段，设立了“电话银行”、“网上银行”等业务模式，但是这些营销方式对于传统实体银行而言，仅是其庞大实体网络的辅助和补充，并没有脱离实体网络而独立存在。“直销银行”，则是具有独立法人资格的组织，其业务拓展不以实体网点和物理柜台为基础，因此具有机构少、人员精、成本小等显著特点，而且通常能够为顾客提供比传统银行更优惠的利率和费用更低廉的金融产品及服务。</p>
@@ -1550,18 +1454,9 @@
 			</div>
 			<!--**************************************************第三方支付的机会外贸结汇代理***********************************************-->		
 			<div class="right" id="hykx3" style="display:none">
-				<table width="100%">
-					<tr>
-						<td><img src="/static/img/tip.png"/><span class="title">行业快讯</span></td>
-						<td class="pull-right">
-							乾康（上海）金融信息服务有限公司 > <a onclick="show('hykx')" href="#">行业快讯</a> > <font color="#184554">第三方支付的机会外贸结汇代理</font>
-						</td>
-					</tr>
-				</table>
-				<div class="fengge"></div>
 				<div class="jtxx">
 					<h1 class="H1">第三方支付的机会外贸结汇代理</h1>
-					<div class="zz">作者：管理员&nbsp;&nbsp;&nbsp;发布于：2013-11-19 13:26:00&nbsp;&nbsp;&nbsp;文字：【大】【中】【小】</div>
+					<div class="zz">作者：管理员&nbsp;&nbsp;&nbsp;发布于：2013-11-19 13:26:00 </div>
 					<div class="xx">
 						<p>&nbsp;&nbsp;&nbsp;&nbsp;随着跨境电子商务政策逐渐明朗，外贸收单业务渐成第三方支付公司的蓝海。一方面，以支付宝为首的公司开始大力引入境外品牌入驻淘宝；另一方面，诸如兰亭集序等外贸出口电商通过赴美上市扩大其境外影响力。</p>
 						<p>&nbsp;&nbsp;&nbsp;&nbsp;“我们认为后者的市场空间更大，这与中国目前的贸易顺差现状有关，因而我们将外贸收单市场的重点放在出口型电商。按照商务部统计口径，预计2015年我国对外贸易总额将达4.8万亿美元，分给B2C(商家对顾客)的按照1%算就有480亿美元的市场容量。”钱宝科技总经理王毅向证券时报记者表示。</p>
@@ -1579,18 +1474,9 @@
 			</div>
 			<!--**************************************************第三方支付行业报告***********************************************-->		
 			<div class="right" id="hykx4" style="display:none">
-				<table width="100%">
-					<tr>
-						<td><img src="/static/img/tip.png"/><span class="title">行业快讯</span></td>
-						<td class="pull-right">
-							乾康（上海）金融信息服务有限公司 > <a onclick="show('hykx')" href="#">行业快讯</a> > <font color="#184554">第三方支付行业报告</font>
-						</td>
-					</tr>
-				</table>
-				<div class="fengge"></div>
 				<div class="jtxx">
 					<h1 class="H1">第三方支付行业报告</h1>
-					<div class="zz">作者：管理员&nbsp;&nbsp;&nbsp;发布于：2013-11-19 13:26:00&nbsp;&nbsp;&nbsp;文字：【大】【中】【小】</div>
+					<div class="zz">作者：管理员&nbsp;&nbsp;&nbsp;发布于：2013-11-19 13:26:00 </div>
 					<div class="xx">
 						<p>&nbsp;&nbsp;&nbsp;&nbsp;第三方支付是指具备一定实力和信誉保障的非银行独立机构，通过与银行的商业合作，以银行的支付结算功能为基础，向政府、企业、事业单位提供中立的、公正的面向其用户的个性化支付结算与增值服务。随着电子商务的兴起，第三方支付行业作为一种新型的交易平台，经历了从无到有、逐步壮大的十年发展历程，已经形成较为完备的产业链结构。支付渠道、支付介质以及支付应用呈现多元化推进趋势。特别是自2010年纳入监管体系以来，中国第三方支付行业所处的政策环境、市场环境得到极大改善，第三方支付机构正迎来快速发展的黄金阶段。</p>
 						<p class="step">一、第三方支付发放数量和交易规模</p>
@@ -1641,20 +1527,11 @@
 			</div>
 			<!--**************************************************复活的支付宝POS机及其野心***********************************************-->		
 			<div class="right" id="hykx5" style="display:none">
-				<table width="100%">
-					<tr>
-						<td><img src="/static/img/tip.png"/><span class="title">行业快讯</span></td>
-						<td class="pull-right">
-							乾康（上海）金融信息服务有限公司 > <a onclick="show('hykx')" href="#">行业快讯</a> > <font color="#184554">复活的支付宝POS机及其野心</font>
-						</td>
-					</tr>
-				</table>
-				<div class="fengge"></div>
 				<div class="jtxx">
 					<h1 class="H1">复活的支付宝POS机及其野心</h1>
-					<div class="zz">作者：管理员&nbsp;&nbsp;&nbsp;发布于：2013-11-19 13:26:00&nbsp;&nbsp;&nbsp;文字：【大】【中】【小】</div>
+					<div class="zz">作者：管理员&nbsp;&nbsp;&nbsp;发布于：2013-11-19 13:26:00 </div>
 					<div class="xx">
-						<img src="/static/img/jrzx/55.png"/>
+						<img src="../../static/img/jrzx/55.png"/>
 						<p>&nbsp;&nbsp;&nbsp;&nbsp;还记得一个月前支付宝的声明吗？“由于某些众所周知的原因”，支付宝号称要停止所有线下POS业务。当时我还遗憾了半天，因为自己还没刷过支付宝的POS机，它们就要消失了。但是，在10月1日，我用亚马逊货到付款的时候，发现这里用的仍然是支付宝POS机，于是赶紧把小票收藏起来打算研究一下凑篇文章。结果呢，文章还没写完，新闻又更新了：</p>
 						<p>&nbsp;&nbsp;&nbsp;&nbsp;距离双11网购节时间越来越近，据悉此次“双11”消费者在部分合作实体店中产生的消费将通过“支付宝POS机”付费并纳入今年“双11”的销售额。这也意味着此前颇为低调的支付宝POS机将通过“双11”大举进军零售店。（摘自钛媒体报道）</p>
 						<p>&nbsp;&nbsp;&nbsp;&nbsp;这年头，资本的话真是不能信啊。关于阿里拒绝选择在香港上市那事儿，我劝大家也按这个思路理解。总之，我的心情就像《魔兽世界》里一个名为血色修道院中的剧情，你好不容易砍翻一个壮汉，突然就不能动了，后面走出一个美女高喊“复活吧，我的勇士”。于是壮汉跟着站起来高喊“为你而战，我的女士”，等着你继续再砍一遍。</p>
@@ -1664,7 +1541,7 @@
 						<p class="secondStep">3、银联在其中扮演什么角色？</p>
 						<p class="step">一、支付宝POS机到底是什么样子？</p>
 						<p>&nbsp;&nbsp;&nbsp;&nbsp;下图是我10月1日刷到的支付宝POS小票，手机渣画质请忍耐。</p>
-						<img src="/static/img/jrzx/56.png"/>
+						<img src="../../static/img/jrzx/56.png"/>
 						<p>&nbsp;&nbsp;&nbsp;&nbsp;可以看到，收单机构是支付宝，发卡机构是我刷的那张信用卡的发卡行（COMM是交行）。尽管这是在亚马逊买的东西，但是亚马逊在小票上并没有出现。商户名称很奇怪，是货到付款。后面还多了一个物流服务商的名称，我就是从这家快递业务员手里刷卡拿货。</p>
 						<p>&nbsp;&nbsp;&nbsp;&nbsp;这张小票最重要的信息是商户号：“999-1610-5411-0002”。我帮大家把不同含义的数字断开了，咱们从后往前看。
 						<p>&nbsp;&nbsp;&nbsp;&nbsp;“0002”没什么特别的意思，就是序号。</p>
@@ -1690,20 +1567,11 @@
 			</div>
 			<!--**************************************************管理层饥渴企业才能求变成功***********************************************-->		
 			<div class="right" id="hykx6" style="display:none">
-				<table width="100%">
-					<tr>
-						<td><img src="/static/img/tip.png"/><span class="title">行业快讯</span></td>
-						<td class="pull-right">
-							乾康（上海）金融信息服务有限公司 > <a onclick="show('hykx')" href="#">行业快讯</a> > <font color="#184554">管理层饥渴企业才能求变成功</font>
-						</td>
-					</tr>
-				</table>
-				<div class="fengge"></div>
 				<div class="jtxx">
 					<h1 class="H1">管理层饥渴企业才能求变成功</h1>
-					<div class="zz">作者：管理员&nbsp;&nbsp;&nbsp;发布于：2013-11-19 13:26:00&nbsp;&nbsp;&nbsp;文字：【大】【中】【小】</div>
+					<div class="zz">作者：管理员&nbsp;&nbsp;&nbsp;发布于：2013-11-19 13:26:00 </div>
 					<div class="xx">
-						<img src="/static/img/jrzx/57.png"/>
+						<img src="../../static/img/jrzx/57.png"/>
 						<p>&nbsp;&nbsp;&nbsp;&nbsp;与过去十五六年相比，最近这几年互联网市场变化非常快，我们怎么应变的？我们首先回顾一下最几次管理干部大会：去年“5•18”一次七年之痒之后的剧变，组织架构做了相当大的调整；在去年下半年我们又提出了精品战略；今年上半年对管理干部提出了激情、好学和开放等要求。在这一次管理干部大会，我们将坚持过去一年半的基本原则，也就是顺应“打造精品、拥抱移动互联网”这个非常明确的潮流。</p>
 						<p>&nbsp;&nbsp;&nbsp;&nbsp;面对这个潮流，最近这两年给我一个感觉，我们好像又回到了15年前激情燃烧的岁月，我发现我们做了15年，从零开始打造的工具、平台，从一个没有商业模式的产品，逐渐、逐渐成长为丰富的商业模式。从头推翻，重新来一次，这个过程也是很让人激动的。</p>
 						<p>&nbsp;&nbsp;&nbsp;&nbsp;对于在座的各位，今天是好的时机，让我们有机会重新来一次，这个过程是一辈子都很难轻易找到的，我希望大家能有更紧迫的使命感！</p>
@@ -1733,20 +1601,11 @@
 			</div>
 			<!--**************************************************管理层饥渴企业才能求变成功***********************************************-->		
 			<div class="right" id="hykx7" style="display:none">
-				<table width="100%">
-					<tr>
-						<td><img src="/static/img/tip.png"/><span class="title">行业快讯</span></td>
-						<td class="pull-right">
-							乾康（上海）金融信息服务有限公司 > <a onclick="show('hykx')" href="#">行业快讯</a> > <font color="#184554">看马云如何“抢劫”银行</font>
-						</td>
-					</tr>
-				</table>
-				<div class="fengge"></div>
 				<div class="jtxx">
 					<h1 class="H1">看马云如何“抢劫”银行</h1>
-					<div class="zz">作者：管理员&nbsp;&nbsp;&nbsp;发布于：2013-11-19 13:26:00&nbsp;&nbsp;&nbsp;文字：【大】【中】【小】</div>
+					<div class="zz">作者：管理员&nbsp;&nbsp;&nbsp;发布于：2013-11-19 13:26:00 </div>
 					<div class="xx">
-						<img src="/static/img/jrzx/70.png"/>
+						<img src="../../static/img/jrzx/70.png"/>
 						<p>&nbsp;&nbsp;&nbsp;&nbsp;马云的真实面目历来是以公益的名唱功利的戏而行走江湖的。</p>
 						<p>&nbsp;&nbsp;&nbsp;&nbsp;疯传阿里要进军银行业，这是个大新闻。这个新闻的重要的意义在于：阿里与几家银行并不甜蜜的合作期行将画上句号。马云将过河拆桥。自举大旗，砸破锁链，开立银行，特别是开立零售网络银行的新世界。</p>
 						<p>&nbsp;&nbsp;&nbsp;&nbsp;这厢，深圳企鹅大口喝着几大运营商的汤；那厢，马云即将强夺银行的盘中之肉。</p>
@@ -1786,20 +1645,11 @@
 			</div>
 			<!--**************************************************马化腾谈产品设计核心要做到极致***********************************************-->		
 			<div class="right" id="hykx8" style="display:none">
-				<table width="100%">
-					<tr>
-						<td><img src="/static/img/tip.png"/><span class="title">行业快讯</span></td>
-						<td class="pull-right">
-							乾康（上海）金融信息服务有限公司 > <a onclick="show('hykx')" href="#">行业快讯</a> > <font color="#184554">马化腾谈产品设计核心要做到极致</font>
-						</td>
-					</tr>
-				</table>
-				<div class="fengge"></div>
 				<div class="jtxx">
 					<h1 class="H1">马化腾谈产品设计核心要做到极致</h1>
-					<div class="zz">作者：管理员&nbsp;&nbsp;&nbsp;发布于：2013-11-19 13:26:00&nbsp;&nbsp;&nbsp;文字：【大】【中】【小】</div>
+					<div class="zz">作者：管理员&nbsp;&nbsp;&nbsp;发布于：2013-11-19 13:26:00 </div>
 					<div class="xx">
-						<img src="/static/img/jrzx/71.png"/>
+						<img src="../../static/img/jrzx/71.png"/>
 						<p>&nbsp;&nbsp;&nbsp;&nbsp;产品经理要把自己当一个挑剔的用户。我们做产品的精力是有限的，交互内容很多，所以要抓最常见的一块。流量、用量最大的地方都要考虑。规范到要让用户使用的舒服。要在感觉、触觉上都有琢磨，有困惑要想到去改善。如鼠标少移动、可快速点到等等。</p>
 						<p>&nbsp;&nbsp;&nbsp;&nbsp;为产品做设计最难的是订优先级和先后次序。判断功能的好坏不能写个报告统计下流量证明是完了。这是非常错误的，我们要看用户是不是需要这个功能。所以我希望我们的产品经理在产品设计之初就想得透彻一点。产品经理需要投入更多的关注度，关注度不一样，结果出来的很不一样。</p>
 						<p class="step">1. 核心能力</p>
@@ -1850,20 +1700,11 @@
 			</div>
 			<!--**************************************************浅谈卡卡联的发展方向 银联亲儿子也得自己长***********************************************-->		
 			<div class="right" id="hykx9" style="display:none">
-				<table width="100%">
-					<tr>
-						<td><img src="/static/img/tip.png"/><span class="title">行业快讯</span></td>
-						<td class="pull-right">
-							乾康（上海）金融信息服务有限公司 > <a onclick="show('hykx')" href="#">行业快讯</a> > <font color="#184554">浅谈卡卡联的发展方向 银联亲儿子也得自己长</font>
-						</td>
-					</tr>
-				</table>
-				<div class="fengge"></div>
 				<div class="jtxx">
 					<h1 class="H1">浅谈卡卡联的发展方向 银联亲儿子也得自己长</h1>
-					<div class="zz">作者：管理员&nbsp;&nbsp;&nbsp;发布于：2013-11-19 13:26:00&nbsp;&nbsp;&nbsp;文字：【大】【中】【小】</div>
+					<div class="zz">作者：管理员&nbsp;&nbsp;&nbsp;发布于：2013-11-19 13:26:00 </div>
 					<div class="xx">
-						<img src="/static/img/jrzx/22.png"/>
+						<img src="../../static/img/jrzx/22.png"/>
 						<p>&nbsp;&nbsp;&nbsp;&nbsp;现在大家都知道，第三方支付的崛起，使得支付界的竞争越来越大。其实个人感觉，技术都不是问题，主要是idea，你敢想，想到了别人之前，那你就是成功的。开始卡卡联更新到1.0.3的时候我参与了评测，当时说实话，不是很看好卡卡联的信用卡还款。虽然1.0.3的亮点就在于此。我不是给卡卡联泼冷水，试问说现在哪家第三方支付没有信用卡还款?移动端，支付宝，财付通等第三方支付，还有就是手机刷卡器类的，拉卡拉，同时有趣的是兄弟的左右互搏，银联商务的一盒宝和银联在线支付的卡乐付等等，太多了。要说在信用卡还款这方面取得成绩，就必须独到。支付宝可以余额宝还款，拉卡拉可以还花旗银行，银商的一盒宝新增了盛京银行这样的地方商业银行。别人家做不到，所以显得厉害。目前，卡卡联支持的应该是银联在线支付的一些银行，个人认为不算独到。那么将来，在未来的版本里，我们应该如何做到独到呢，或者说发展的方向是什么呢? </p>
 						<p>&nbsp;&nbsp;&nbsp;&nbsp;个人认为，当然是最近流行的020。我们知道，手机刷卡器带起来很麻烦，而且2015年央行要求整改IC卡，对于手机刷卡器还能存活多久，我不知道，但是一定会有瓶颈，就是两点，携带不便和IC卡的普及换代。那么IC卡遍地磁条卡消失的时候，通过时间计算，也是NFC手机遍地的时候，那么本身手机就不需要任何附属金融设备，就变成了支付神器。那么目前就是找一条最可行的方法实现020就可以了。可行意味着成本低，高效，快捷。那么成本这一点上，或许卡卡联就是先锋，千万要把握机会，否则一旦失去机会，就没有了任何优势，时间点上，就是从现在开始! </p>
 						<p>&nbsp;&nbsp;&nbsp;&nbsp;我们假想现在就是单芯片卡遍地的时代，那么拉卡拉类的支付公司肯定受到影响，但是支付宝类的不会。因为是线上支付，但是线上支付的缺点就在于，虽然支付宝现在具有庞大的用户群，网民的基数也庞大，但是会用支付宝，或者对网络金融安全有信心的人比例还不大。支付宝的各种绑定，这个环节注定很麻烦，快捷支付有多快捷呢，一旦手机号码更换或者银行方面的问题，很多绑卡都很麻烦。手机停机了，验证码过不来，都需要很大的时间成本处理。设想一个场景，一个朋友，邀请你帮他网购，他说他的卡里有钱，怎么买。和他说快捷支付云云，完全一头雾水啊，那好吧，我们理想化一下。我们用帐号帮他下单，付款选择卡卡联通道，输入我自己的手机号码，然后我们用自己手机开启卡卡联，看见订单，支付，拿过他的金融IC卡，刷卡，手机递给他输入密码，搞定。是不是太简单了?对咯，这就是我们要努力的方向了。谈到020，拍二维码，下单，各家都有自己的软件，只是支付通道上，选择卡卡联，然后拍卡，就可以直接成功。这种便捷，是支付宝做不到的，因为和朋友逛街，她要买就用她的卡付款，这不是很方便吗?而不是说她很麻烦的取现金给你，因为人家也可能喜欢信用卡消费呢，那成本不就不一样了吗? </p>
@@ -1884,20 +1725,11 @@
 			</div>
 			<!--************************************************** 腾讯1000亿美金下的成绩与危机感***********************************************-->		
 			<div class="right" id="hykx10" style="display:none">
-				<table width="100%">
-					<tr>
-						<td><img src="/static/img/tip.png"/><span class="title">行业快讯</span></td>
-						<td class="pull-right">
-							乾康（上海）金融信息服务有限公司 > <a onclick="show('hykx')" href="#">行业快讯</a> > <font color="#184554">腾讯1000亿美金下的成绩与危机感</font>
-						</td>
-					</tr>
-				</table>
-				<div class="fengge"></div>
 				<div class="jtxx">
 					<h1 class="H1">腾讯1000亿美金下的成绩与危机感</h1>
-					<div class="zz">作者：管理员&nbsp;&nbsp;&nbsp;发布于：2013-11-19 13:26:00&nbsp;&nbsp;&nbsp;文字：【大】【中】【小】</div>
+					<div class="zz">作者：管理员&nbsp;&nbsp;&nbsp;发布于：2013-11-19 13:26:00 </div>
 					<div class="xx">
-						<img src="/static/img/jrzx/73.png"/>
+						<img src="../../static/img/jrzx/73.png"/>
 						<p>&nbsp;&nbsp;&nbsp;&nbsp;虎嗅注：上周，我们发布了马化腾于10月10日在腾讯内部会上的讲话《干部要饥渴，不要做富二代》。总的来说，马化腾主要从文化与宏观战略方面讲得多一些。而今天发布的这篇腾讯总裁刘炽平的讲话，则从更具体的层面总结了腾讯现在的布局、移动互联网当下的发展，更实在，有助于我们了解腾讯如何盘点自己以及对产业的判断。</p>
 						<p>&nbsp;&nbsp;&nbsp;&nbsp;首先想问大家一个问题，昨天回到房间有没有冲动打飞机的？尤其是看到Pony 和Tony 巅峰对决？提醒一次，过多打飞机有害身体，尤其对眼睛不是太好，小心一点！</p>
 						<p>&nbsp;&nbsp;&nbsp;&nbsp;开个玩笑，我想说的是我们已经进入了全民移动游戏的时代！对此，我有一个比较深的感受，移动互联网有可能为我们未来带来10 倍的可能性，这个感受在过去几个月里面越来越深，尤其是看到移动游戏突然这样爆发，变成全民游戏的时代。所以，今天我希望进一步跟大家探讨一下，过去半年里到底这个行业的格局有什么变化？我们整体的执行是怎么样的？公司的战略思考是什么？</p>
@@ -1953,20 +1785,11 @@
 			</div>
 			<!--************************************************** 预付卡企业转战个人市场 信用卡与预付卡谋联合***********************************************-->		
 			<div class="right" id="hykx11" style="display:none">
-				<table width="100%">
-					<tr>
-						<td><img src="/static/img/tip.png"/><span class="title">行业快讯</span></td>
-						<td class="pull-right">
-							乾康（上海）金融信息服务有限公司 > <a onclick="show('hykx')" href="#">行业快讯</a> > <font color="#184554">预付卡企业转战个人市场 信用卡与预付卡谋联合</font>
-						</td>
-					</tr>
-				</table>
-				<div class="fengge"></div>
 				<div class="jtxx">
 					<h1 class="H1">预付卡企业转战个人市场 信用卡与预付卡谋联合</h1>
-					<div class="zz">作者：管理员&nbsp;&nbsp;&nbsp;发布于：2013-11-19 13:26:00&nbsp;&nbsp;&nbsp;文字：【大】【中】【小】</div>
+					<div class="zz">作者：管理员&nbsp;&nbsp;&nbsp;发布于：2013-11-19 13:26:00 </div>
 					<div class="xx">
-						<img src="/static/img/jrzx/74.png"/>
+						<img src="../../static/img/jrzx/74.png"/>
 						<p>&nbsp;&nbsp;&nbsp;&nbsp;首批第三方支付牌照发放两年后，以企业客户为主的预付卡市场环境正在发生变化，预付卡行业的整合和转型已见端倪。</p> 
 						<p>&nbsp;&nbsp;&nbsp;&nbsp;9月8日，拥有全国范围预付卡发行与受理牌照六巨头之一的裕福支付宣布与中信银行推出联名信用卡，推出其个人卡品牌—财卡，全面进军个人卡市场，打响预付卡行业进军个人市场第一枪。</p> 
 						<p>&nbsp;&nbsp;&nbsp;&nbsp;据了解，目前多家预付卡公司都在谋求转型，准备发力个人市场。裕福支付等公司正在逐步改变我国预付卡行业的形象。</p> 
@@ -2010,18 +1833,9 @@
 			</div>
 			<!--**************************************************支付宝与银联正面交火***********************************************-->		
 			<div class="right" id="hykx12" style="display:none">
-				<table width="100%">
-					<tr>
-						<td><img src="/static/img/tip.png"/><span class="title">行业快讯</span></td>
-						<td class="pull-right">
-							乾康（上海）金融信息服务有限公司 > <a onclick="show('hykx')" href="#">行业快讯</a> > <font color="#184554">支付宝与银联正面交火</font>
-						</td>
-					</tr>
-				</table>
-				<div class="fengge"></div>
 				<div class="jtxx">
 					<h1 class="H1">支付宝与银联正面交火</h1>
-					<div class="zz">作者：管理员&nbsp;&nbsp;&nbsp;发布于：2013-11-19 13:26:00&nbsp;&nbsp;&nbsp;文字：【大】【中】【小】</div>
+					<div class="zz">作者：管理员&nbsp;&nbsp;&nbsp;发布于：2013-11-19 13:26:00 </div>
 					<div class="xx">
 						<p>&nbsp;&nbsp;&nbsp;&nbsp;央行7月新规支持第三方支付机构线下POS收单业务绕过银联，但在中国具有垄断地位的银联却不允许。</p>
 						<p>&nbsp;&nbsp;&nbsp;&nbsp;支付宝近日宣布出于“某些众所周知的原因”停止线下POS收单业务。这一声明的背景是，中国银联董事会近期已提出动议，欲督促各成员银行统一行动,逐步将非金机构银联卡交易全面迁移至银联网络,并首次明确提出了实现该目标的时间节点。</p>
@@ -2065,20 +1879,11 @@
 			</div>
 			<!--**************************************************支付产品重启线下争夺战***********************************************-->		
 			<div class="right" id="hykx13" style="display:none">
-				<table width="100%">
-					<tr>
-						<td><img src="/static/img/tip.png"/><span class="title">行业快讯</span></td>
-						<td class="pull-right">
-							乾康（上海）金融信息服务有限公司 > <a onclick="show('hykx')" href="#">行业快讯</a> > <font color="#184554">支付产品重启线下争夺战</font>
-						</td>
-					</tr>
-				</table>
-				<div class="fengge"></div>
 				<div class="jtxx">
 					<h1 class="H1">支付产品重启线下争夺战</h1>
-					<div class="zz">作者：管理员&nbsp;&nbsp;&nbsp;发布于：2013-11-19 13:26:00&nbsp;&nbsp;&nbsp;文字：【大】【中】【小】</div>
+					<div class="zz">作者：管理员&nbsp;&nbsp;&nbsp;发布于：2013-11-19 13:26:00 </div>
 					<div class="xx">
-						<img src="/static/img/jrzx/75.png"/>
+						<img src="../../static/img/jrzx/75.png"/>
 						<p>&nbsp;&nbsp;&nbsp;&nbsp;再等不到一个月的时间，这个行业或许又要充斥着“移动支付”这个热门词汇。因为，微信支付有可能在本月底或下月初开启线下商家的微信支付结账模式。到那个时候，微信或将真的成为人们生活中的“钱包”。 </p> 
 						<p>&nbsp;&nbsp;&nbsp;&nbsp;虽然推出的时间点和合作商家都还未确定，但走向线下已经成为微信支付首要解决的问题之一。</p> 
 						<p>&nbsp;&nbsp;&nbsp;&nbsp;就在微信支付开始全力布局之时，包括国外的支付产品PayPal和国内的支付宝也都在加速优化产品形态，让各自的产品更贴近用户的线下消费模式。</p> 
@@ -2099,20 +1904,11 @@
 			</div>
 			<!--**************************************************专业解析线下支付和线上支付***********************************************-->		
 			<div class="right" id="hykx14" style="display:none">
-				<table width="100%">
-					<tr>
-						<td><img src="/static/img/tip.png"/><span class="title">行业快讯</span></td>
-						<td class="pull-right">
-							乾康（上海）金融信息服务有限公司 > <a onclick="show('hykx')" href="#">行业快讯</a> > <font color="#184554">专业解析线下支付和线上支付</font>
-						</td>
-					</tr>
-				</table>
-				<div class="fengge"></div>
 				<div class="jtxx">
 					<h1 class="H1">专业解析线下支付和线上支付</h1>
-					<div class="zz">作者：管理员&nbsp;&nbsp;&nbsp;发布于：2013-11-19 13:26:00&nbsp;&nbsp;&nbsp;文字：【大】【中】【小】</div>
+					<div class="zz">作者：管理员&nbsp;&nbsp;&nbsp;发布于：2013-11-19 13:26:00 </div>
 					<div class="xx">
-						<img src="/static/img/jrzx/76.png"/></p>
+						<img src="../../static/img/jrzx/76.png"/></p>
 						<p class="secondStep">1.线下支付：细分市场+平台推广</p>
 						<p>&nbsp;&nbsp;&nbsp;&nbsp; “线下支付”：细分市场+平台经营。“线下支付”90%份额被银联和银行分割，其他“第三方”经营模式：细分市场专业化及定制化服务；“平台经营”提升效率。其他“第三方”未来空间相对有限</p>
 						<p>&nbsp;&nbsp;&nbsp;&nbsp;固有市场结构：长久以来，银行是支付的主体，银行具有客户、信用、金融产品和网络等诸多优势，而作为第三方支付机构在无法提供额外价值的情况下难以同银行抢夺市场份额。</p>
@@ -2120,7 +1916,7 @@
 						<p>&nbsp;&nbsp;&nbsp;&nbsp;因此，第三方支付机构在线下领域须另辟蹊径，主要有两个方面：</p>
 						<p>&nbsp;&nbsp;&nbsp;&nbsp;发展细分市场，走专业化道路：无论是银联还是商业银行，受制于业务重心和经营能力，在线下支付领域主要还是提供同质化的基础服务，不能根据行业和企业特点提供专业和定制化的产品，也没有进一步挖掘客户的更深层次的需求。这就给第三方支付提供了生存和发展的空间。</p>
 						<p>&nbsp;&nbsp;&nbsp;&nbsp;表1：线下第三方支付的专业化特点</p>
-						<img src="/static/img/jrzx/77.png"/>
+						<img src="../../static/img/jrzx/77.png"/>
 						<p>&nbsp;&nbsp;&nbsp;&nbsp;平台型拓展和经营，提升潜在价值：尽管在线下银联与银行很强大，但也有业务死角。例如，处于风险和成本的考虑，银联和银行对收单商户有着较高的要求，如四证一照、营业额、经营场所面积等，这就把众多小微的商户拒之门外。</p>
 						<p>&nbsp;&nbsp;&nbsp;&nbsp;同时，第三方公司通过“互联网”和“平台”的模式，业务复制成本低，提升管理和营运效率，在细分市场超越银联等强大竞争对手。而第三方支付可以借助外部团队，积极拓展形成平台经济，在衍生出其他盈利模式如广告、理财销售、小额贷款等。</p>
 						 <p>&nbsp;&nbsp;&nbsp;&nbsp;随着银行卡交易的普及，线下支付应用的增速正逐步放缓，而第三方支付机构也难以打破以银联和银行为核心的交易结构。尽管一些机构通过细分市场、客户结构下沉和附加值服务来提升市场份额，但很难打破目前传统金融机构主导的格局。</p>
@@ -2129,7 +1925,7 @@
 						<p>&nbsp;&nbsp;&nbsp;&nbsp;电商平台是线上第三方支付发展的基础：线上支付最大应用在于网购，占到总规模的42%。电商平台的出现和发展不但打破传统商业的格局，也彻底打破旧有的支付和交易的格局。</p>
 						<p>&nbsp;&nbsp;&nbsp;&nbsp;银行在线下支付中积累的优势在线上无法体现。线下支付体系是以银行和银联为基础的封闭体系，并且商户在成本、便捷性和安全性的考量下很难接受第三方支付作 为收单机构。但线上支付是一个开放体系，体现在：①基于互联网技术的支付可以高效的实现收单机构和发卡机构的多对多，而不需要银联转接，从而使体系的开放 性大大增强。②在线下支付中，商户很难同时接受多个收单机构，一方面是因为法规限制，另一方面是收单机构的终端成本。但在线上支付中，收单机构的终端就是 支付网关，成本几乎为零，所以商家可以选择使用多个收单机构，这降低了第三方支付的进入壁垒。</p>
 						<p>&nbsp;&nbsp;&nbsp;&nbsp;图1：线上支付的应用方向</p>
-						<img src="/static/img/jrzx/78.png"/>
+						<img src="../../static/img/jrzx/78.png"/>
 						<p>&nbsp;&nbsp;&nbsp;&nbsp;虚拟账户解决了线上支付的最大障碍。线上支付和线下支付最大的区别在于空间的不对称。线下支付可以当面做到钱货两清，但线上支付由于空间的距离，难以做到 一手交钱一手交货，在传统支付体系中必然有一方要承担额外风险。而虚拟账户（支付宝、财付通等）的出现就解决了这个问题，通过虚拟账户交易，由第三方支付 承担信用中介的责任，从而促成交易的完成。</p>
 						<p>&nbsp;&nbsp;&nbsp;&nbsp;虚拟账户和银行账户的关系。虚拟账户是互联网支付的核心（解决了网络消费的信用中介的问题），也是第三方支付机构的主要盈利模式之一。其具体的操作模式如下：</p>
 						<p>&nbsp;&nbsp;&nbsp;&nbsp;第三方支付成立的虚拟账户（如支付宝等），必须在银行成立一个总的备付金账户。虚拟账户的资金统一在这个备付金账户中处理。</p>
@@ -2138,21 +1934,12 @@
 						<p>&nbsp;&nbsp;&nbsp;&nbsp;国内前三大第三方支付平台是：支付宝、财付通和银联，占到市场份额的90%以上。支付宝和财付通的备付金管理模式一致，但银联有所不同。由于银联是人民银 行下属国有企业，因此银联的备付金账户设在人民银行而非商业银行，其备付金账户的资金是得不到利息收入的。银联的盈利模式主要依靠交易手续费。</p>
 						<p>&nbsp;&nbsp;&nbsp;&nbsp;目前线上支付成三足鼎立态势。支付宝、财付通都是同事具有电商平台和虚拟账户着两大法宝。而银联在线则主要依靠其特殊背景在公共事业等领域和垄断部门有较 大的市场份额。所以，总体上支付宝、财付通和银联的市场占有率超过80%。而网络领域依赖平台经济往往有赢者通吃、强者恒强的结果，除非革命性的技术或应 用的诞生，领先者和追赶者的差距可能越拉越大。并且随着互联网支付渗透率的提升，行业增速也会缓慢下滑。</p>
 						<p>&nbsp;&nbsp;&nbsp;&nbsp;图2：线上第三方支付的市场份额</p>
-						<img src="/static/img/jrzx/79.png"/>
+						<img src="../../static/img/jrzx/79.png"/>
 					</div>
 				</div>
 			</div>
 		<!--**************************************************银行动态***********************************************-->
 			<div class="right" id="yhdt" style="display:none">
-				<table width="100%">
-					<tr>
-						<td><img src="/static/img/tip.png"/><span class="title">银行动态</span></td>
-						<td class="pull-right">
-							乾康（上海）金融信息服务有限公司 > 金融咨询 ><font color="#184554">银行动态</font>
-						</td>
-					</tr>
-				</table>
-				<div class="fengge"></div>
 				<table width="100%" class="datatable">
 					<thead>
 						<tr>
@@ -2257,18 +2044,9 @@
 			</div>	
 			<!--**************************************************17家第三方支付企业获得跨境支付牌照***********************************************-->		
 			<div class="right" id="yhdt1" style="display:none">
-				<table width="100%">
-					<tr>
-						<td><img src="/static/img/tip.png"/><span class="title">银行动态</span></td>
-						<td class="pull-right">
-							乾康（上海）金融信息服务有限公司 > <a onclick="show('yhdt')" href="#">银行动态</a> > <font color="#184554">17家第三方支付企业获得跨境支付牌照</font>
-						</td>
-					</tr>
-				</table>
-				<div class="fengge"></div>
 				<div class="jtxx">
 					<h1 class="H1">17家第三方支付企业获得跨境支付牌照</h1>
-					<div class="zz">作者：管理员&nbsp;&nbsp;&nbsp;发布于：2013-11-19 13:26:00&nbsp;&nbsp;&nbsp;文字：【大】【中】【小】</div>
+					<div class="zz">作者：管理员&nbsp;&nbsp;&nbsp;发布于：2013-11-19 13:26:00 </div>
 					<div class="xx">
 						<p>&nbsp;&nbsp;&nbsp;&nbsp;上证报记者昨日获悉，支付宝等17家第三方支付公司已获得跨境电子商务外汇支付业务试点资格。</p>
 						<p>&nbsp;&nbsp;&nbsp;&nbsp;昨日一位消息人士向记者透露，近日，支付宝、汇付天下等多家企业接到国家外汇局的口头通知，被告知他们已获得跨境支付业务试点资格，“不过纸质的文件还没拿到手。”</p>
@@ -2287,20 +2065,11 @@
 			</div>
 			<!--**************************************************单位卡创新产品宁波银行单位结算卡***********************************************-->		
 			<div class="right" id="yhdt2" style="display:none">
-				<table width="100%">
-					<tr>
-						<td><img src="/static/img/tip.png"/><span class="title">银行动态</span></td>
-						<td class="pull-right">
-							乾康（上海）金融信息服务有限公司 > <a onclick="show('yhdt')" href="#">银行动态</a> > <font color="#184554">单位卡创新产品宁波银行单位结算卡</font>
-						</td>
-					</tr>
-				</table>
-				<div class="fengge"></div>
 				<div class="jtxx">
 					<h1 class="H1">单位卡创新产品宁波银行单位结算卡</h1>
-					<div class="zz">作者：管理员&nbsp;&nbsp;&nbsp;发布于：2013-11-19 13:26:00&nbsp;&nbsp;&nbsp;文字：【大】【中】【小】</div>
+					<div class="zz">作者：管理员&nbsp;&nbsp;&nbsp;发布于：2013-11-19 13:26:00 </div>
 					<div class="xx">
-						<img src="/static/img/jrzx/58.png"/>
+						<img src="../../static/img/jrzx/58.png"/>
 						<p class="step">产品介绍 </p>
 						<p class="secondStep">单位结算卡</p>
 						<p>&nbsp;&nbsp;&nbsp;&nbsp;是针对企业客户发行的，以卡片为介质，凭密码为客户办理相关账户支付结算的工具，具有存取现金、转账等功能。</p>
@@ -2321,18 +2090,9 @@
 			</div>
 			<!--**************************************************富国银行的发展历程***********************************************-->		
 			<div class="right" id="yhdt3" style="display:none">
-				<table width="100%">
-					<tr>
-						<td><img src="/static/img/tip.png"/><span class="title">银行动态</span></td>
-						<td class="pull-right">
-							乾康（上海）金融信息服务有限公司 > <a onclick="show('yhdt')" href="#">银行动态</a> > <font color="#184554">富国银行的发展历程</font>
-						</td>
-					</tr>
-				</table>
-				<div class="fengge"></div>
 				<div class="jtxx">
 					<h1 class="H1">富国银行的发展历程</h1>
-					<div class="zz">作者：管理员&nbsp;&nbsp;&nbsp;发布于：2013-11-19 13:26:00&nbsp;&nbsp;&nbsp;文字：【大】【中】【小】</div>
+					<div class="zz">作者：管理员&nbsp;&nbsp;&nbsp;发布于：2013-11-19 13:26:00 </div>
 					<div class="xx">
 						<p>&nbsp;&nbsp;&nbsp;&nbsp;2013年7月24日，富国银行市值超越中国工商银行，把“宇宙行”从稳坐近6年之久的“全球市值第一银行”的宝座上拉了下来。在“市值第一”这样的虚名更迭背后，体现出的是市场对富国银行综合实力的充分肯定。</p>
 						<p>&nbsp;&nbsp;&nbsp;&nbsp;在最后一部分中，我们也将为您复盘富国银行成长的各个阶段，分析富国银行的转型升级之路，并探讨：富国银行的核心竞争力究竟是什么？国内银行应当向富国银行学习什么？</p>
@@ -2390,18 +2150,9 @@
 			</div>
 			<!--**************************************************工行拟10月上线电商平台***********************************************-->		
 			<div class="right" id="yhdt4" style="display:none">
-				<table width="100%">
-					<tr>
-						<td><img src="/static/img/tip.png"/><span class="title">银行动态</span></td>
-						<td class="pull-right">
-							乾康（上海）金融信息服务有限公司 > <a onclick="show('yhdt')" href="#">银行动态</a> > <font color="#184554">工行拟10月上线电商平台</font>
-						</td>
-					</tr>
-				</table>
-				<div class="fengge"></div>
 				<div class="jtxx">
 					<h1 class="H1">工行拟10月上线电商平台</h1>
-					<div class="zz">作者：管理员&nbsp;&nbsp;&nbsp;发布于：2013-11-19 13:26:00&nbsp;&nbsp;&nbsp;文字：【大】【中】【小】</div>
+					<div class="zz">作者：管理员&nbsp;&nbsp;&nbsp;发布于：2013-11-19 13:26:00 </div>
 					<div class="xx">
 						<p>&nbsp;&nbsp;&nbsp;&nbsp;工行大电商平台或10月上线，目前工行的网上商城主要以购物为主，新的电商平台将集网上购物、投资理财、网络融资、消费信贷于一体，增加的投资理财和“融资”功能将提升其服务能力。</p>
 						<p>&nbsp;&nbsp;&nbsp;&nbsp;推出电商平台，不仅仅是工行应对互联网金融大潮之策，也是其建设信息化银行的重要一步。</p>
@@ -2420,18 +2171,9 @@
 			</div>
 			<!--**************************************************金融危机的七步曲***********************************************-->		
 			<div class="right" id="yhdt5" style="display:none">
-				<table width="100%">
-					<tr>
-						<td><img src="/static/img/tip.png"/><span class="title">银行动态</span></td>
-						<td class="pull-right">
-							乾康（上海）金融信息服务有限公司 > <a onclick="show('yhdt')" href="#">银行动态</a> > <font color="#184554">金融危机的七步曲</font>
-						</td>
-					</tr>
-				</table>
-				<div class="fengge"></div>
 				<div class="jtxx">
 					<h1 class="H1">金融危机的七步曲</h1>
-					<div class="zz">作者：管理员&nbsp;&nbsp;&nbsp;发布于：2013-11-19 13:26:00&nbsp;&nbsp;&nbsp;文字：【大】【中】【小】</div>
+					<div class="zz">作者：管理员&nbsp;&nbsp;&nbsp;发布于：2013-11-19 13:26:00 </div>
 					<div class="xx">
 						<p>&nbsp;&nbsp;&nbsp;&nbsp;银行间同业拆借利率飙升是金融危机的第一步，这是《卢瑟经济学》之《纸牌大厦》中的内容。</p>
 						<p>&nbsp;&nbsp;&nbsp;&nbsp;商业银行玩的是十个坛子两个盖子的游戏。吸收2亿存款，放8亿贷款。于是，存款总数达到10亿，贷款总数达到8亿。8亿贷款按期顺利偿还的话，存款又会回到2亿。如果贷款放出去收不回来，那么贷款就会变成坏账，存款总数则不会消失。这时，如果有人提款的额度超过2亿，银行就会倒闭。</p>
@@ -2453,47 +2195,29 @@
 			</div>
 			<!--**************************************************民生社区银行***********************************************-->		
 			<div class="right" id="yhdt6" style="display:none">
-				<table width="100%">
-					<tr>
-						<td><img src="/static/img/tip.png"/><span class="title">银行动态</span></td>
-						<td class="pull-right">
-							乾康（上海）金融信息服务有限公司 > <a onclick="show('yhdt')" href="#">银行动态</a> > <font color="#184554">民生社区银行</font>
-						</td>
-					</tr>
-				</table>
-				<div class="fengge"></div>
 				<div class="jtxx">
 					<h1 class="H1">民生社区银行</h1>
-					<div class="zz">作者：管理员&nbsp;&nbsp;&nbsp;发布于：2013-11-19 13:26:00&nbsp;&nbsp;&nbsp;文字：【大】【中】【小】</div>
+					<div class="zz">作者：管理员&nbsp;&nbsp;&nbsp;发布于：2013-11-19 13:26:00 </div>
 					<div class="xx">
-						<img src="/static/img/jrzx/80.png"/>
+						<img src="../../static/img/jrzx/80.png"/>
 						<p>&nbsp;&nbsp;&nbsp;&nbsp;sunshine408：不一样的民生银行，小区门口的社区银行刚开业，两到三个工作人员，营业到晚上7点，为小区居民提供金融服 务，有点富国银行的味道！正好碰到视察工作支行行长，听行长说大连近期要筹建100家社区银行。工作人员亲和力也不错，唯一不足就是提供的金融服务还不是 太丰富，有待完善。</p> 
 						<p>&nbsp;&nbsp;&nbsp;&nbsp;看好股市的新人：目测这个网点的面积约50、60平方，年租金应该不高于10万，配备3个工作人员，人均年薪不高于10万，设备折旧费5万，合计一年支出 45万。民生2012年营业收入1031亿，扣除税金78亿和拨备92亿，余861亿，对应的2012年日均生息资产为26000亿，资产毛收益率为 3.3%。按此收益率，这家网点只要日均吸纳1500万资产，就可基本维持盈亏平衡，这应该不是难事。</p> 
 						<p>&nbsp;&nbsp;&nbsp;&nbsp;yy咪蒙尾遂：嘿嘿，多开，然后做物流端。理财端，彩票端。和阿里合作。社区。是消费主流终端。得屌丝得天下。当然具体要看执行。这个面向的是过日子的老 百姓。年轻人是很懒的。打通渠道。连配送生活用品都做了。对了。切记和物管和业委合作好哈。以后在家点要用的东东就好了。嘿嘿。执行，执行。执行。</p> 
 						<p>&nbsp;&nbsp;&nbsp;&nbsp;价值趋势技术派 ：这个社区银行估计是有擦边球的嫌疑。估计不算是正式的网点。至于人均利润，我前面说过一个想法，其实就和你末尾提到招商的事情一样。在高净值客户所在的 小区里开这种网点，绝对不是为了吸收多少存款，而是为了紧紧抓住零售业务的最源头。除非以后招商有本事让客户都在网络上玩，或者也去开一个社区网点。做得 到的话，民生两眼一摸黑了否则就是轮到招商跳脚了。比如，某个客户有金融服务的需求，直接下楼找民生业务员商量半小时就搞定了，用不着等明天招商开门了。</p> 
 						<p>&nbsp;&nbsp;&nbsp;&nbsp;下图则是，民生银行在昆明刚刚开业的社区银行：</p> 
-						<img src="/static/img/jrzx/81.png"/>
-						<img src="/static/img/jrzx/82.png"/>
-						<img src="/static/img/jrzx/83.png"/>
+						<img src="../../static/img/jrzx/81.png"/>
+						<img src="../../static/img/jrzx/82.png"/>
+						<img src="../../static/img/jrzx/83.png"/>
 					</div>
 				</div>
 			</div>
 			<!--**************************************************平安的绿金融***********************************************-->		
 			<div class="right" id="yhdt7" style="display:none">
-				<table width="100%">
-					<tr>
-						<td><img src="/static/img/tip.png"/><span class="title">银行动态</span></td>
-						<td class="pull-right">
-							乾康（上海）金融信息服务有限公司 > <a onclick="show('yhdt')" href="#">银行动态</a> > <font color="#184554">平安的绿金融</font>
-						</td>
-					</tr>
-				</table>
-				<div class="fengge"></div>
 				<div class="jtxx">
 					<h1 class="H1">平安的绿金融</h1>
-					<div class="zz">作者：管理员&nbsp;&nbsp;&nbsp;发布于：2013-11-19 13:26:00&nbsp;&nbsp;&nbsp;文字：【大】【中】【小】</div>
+					<div class="zz">作者：管理员&nbsp;&nbsp;&nbsp;发布于：2013-11-19 13:26:00 </div>
 					<div class="xx">
-						<img src="/static/img/jrzx/84.png"/>
+						<img src="../../static/img/jrzx/84.png"/>
 						<p>&nbsp;&nbsp;&nbsp;&nbsp;借助科技的力量，中国平安对金融机构的低碳行动进行了全新的诠释</p> 
 						<p>&nbsp;&nbsp;&nbsp;&nbsp;中国平安集团董事长马明哲希望借助科技跑赢竞争对手。</p> 
 						<p>&nbsp;&nbsp;&nbsp;&nbsp;最近一次引人瞩目的行动是，中国平安集团成为第一家拥有独立支付公司的金融机构，在互联网尤其是移动互联网时代，他已取得主动权。其他引人瞩目的举动就更多了，例如在企业社会责任方面，早在三年前，马明哲就提出了“绿金融”的概念，绿金融的核心就是，将科技注入金融活动的各个环节，以减少碳排放和纸张等浪费。</p> 
@@ -2514,18 +2238,9 @@
 			</div>
 			<!--**************************************************社区银行：商业银行的转型重要方向***********************************************-->		
 			<div class="right" id="yhdt8" style="display:none">
-				<table width="100%">
-					<tr>
-						<td><img src="/static/img/tip.png"/><span class="title">银行动态</span></td>
-						<td class="pull-right">
-							乾康（上海）金融信息服务有限公司 > <a onclick="show('yhdt')" href="#">银行动态</a> > <font color="#184554">社区银行：商业银行的转型重要方向</font>
-						</td>
-					</tr>
-				</table>
-				<div class="fengge"></div>
 				<div class="jtxx">
 					<h1 class="H1">社区银行：商业银行的转型重要方向</h1>
-					<div class="zz">作者：管理员&nbsp;&nbsp;&nbsp;发布于：2013-11-19 13:26:00&nbsp;&nbsp;&nbsp;文字：【大】【中】【小】</div>
+					<div class="zz">作者：管理员&nbsp;&nbsp;&nbsp;发布于：2013-11-19 13:26:00 </div>
 					<div class="xx">
 						<p>&nbsp;&nbsp;&nbsp;&nbsp;移动互联网技术的迅速发展，既使银行面临巨大挑战，也为银行零售业务转型提供了新的机遇。移动互联时代的银行渠道变革将突出虚实结合，“虚”即加快网络银行、手机银行等建设步伐，“实”则要求贴近消费者，大力发展社区银行，并实现银行线上线下高度协同。随着网络和现代通讯技术的发展，银行服务方向、营销渠道、客户金融需求等正发生着深刻变化，出现了金融需求多元化，客户需求差异化，营销渠道虚拟化，金融服务自助化，金融设备综合化的新趋势。网络、网购、快递不仅改变着人们的生活方式，也为银行转型社区银行提供了新的机会和发展空间。 </p>
 						<p class="step">社区银行：商业银行转型的重要方向 </p>
@@ -2557,18 +2272,9 @@
 			</div>
 			<!--**************************************************社区银行进化论更小更聪明***********************************************-->		
 			<div class="right" id="yhdt9" style="display:none">
-				<table width="100%">
-					<tr>
-						<td><img src="/static/img/tip.png"/><span class="title">银行动态</span></td>
-						<td class="pull-right">
-							乾康（上海）金融信息服务有限公司 > <a onclick="show('yhdt')" href="#">银行动态</a> > <font color="#184554">社区银行进化论更小更聪明</font>
-						</td>
-					</tr>
-				</table>
-				<div class="fengge"></div>
 				<div class="jtxx">
 					<h1 class="H1">社区银行进化论更小更聪明</h1>
-					<div class="zz">作者：管理员&nbsp;&nbsp;&nbsp;发布于：2013-11-19 13:26:00&nbsp;&nbsp;&nbsp;文字：【大】【中】【小】</div>
+					<div class="zz">作者：管理员&nbsp;&nbsp;&nbsp;发布于：2013-11-19 13:26:00 </div>
 					<div class="xx">
 						<p>&nbsp;&nbsp;&nbsp;&nbsp;对于中资银行动辄上千平方米的营业网点来说，90平方米的银行网点小得让人难以想象。</p>
 						<p>&nbsp;&nbsp;&nbsp;&nbsp;这是富国银行近期推动的“新型商店形态”。对于这家全美网络最大的银行，即便与自身相比，此次的网点瘦身也是一个相当大的跨越——面积只是其传统网点的1/4. </p>
@@ -2612,18 +2318,9 @@
 			</div>
 			<!--**************************************************社区银行石家庄萌芽***********************************************-->		
 			<div class="right" id="yhdt10" style="display:none">
-				<table width="100%">
-					<tr>
-						<td><img src="/static/img/tip.png"/><span class="title">银行动态</span></td>
-						<td class="pull-right">
-							乾康（上海）金融信息服务有限公司 > <a onclick="show('yhdt')" href="#">银行动态</a> > <font color="#184554">社区银行石家庄萌芽</font>
-						</td>
-					</tr>
-				</table>
-				<div class="fengge"></div>
 				<div class="jtxx">
 					<h1 class="H1">社区银行石家庄萌芽</h1>
-					<div class="zz">作者：管理员&nbsp;&nbsp;&nbsp;发布于：2013-11-19 13:26:00&nbsp;&nbsp;&nbsp;文字：【大】【中】【小】</div>
+					<div class="zz">作者：管理员&nbsp;&nbsp;&nbsp;发布于：2013-11-19 13:26:00 </div>
 					<div class="xx">
 						<p>&nbsp;&nbsp;&nbsp;&nbsp;宽敞的布艺休闲沙发，休闲区书吧里宽大的阅读桌、书架上一排排崭新的图书，还有儿童乐园的红色滑梯……看到这些，你可能不会想到，这里是一家银行。这些银行不仅为市民提供休闲娱乐，而且会营业到晚上9点才下班，现在，这样的银行在石家庄越来越多，它们被统称为社区银行。</p>
 						<p>&nbsp;&nbsp;&nbsp;&nbsp;社区银行的概念来自于美国等西方金融发达国家，其中的“社区”并不是一个严格界定的地理概念，既可以指一个省、一个市或一个县，也可以指城市或乡村居民的聚居区域。凡是资产规模较小、主要为经营区域内中小企业和居民家庭服务的地方性小型商业银行都可称为社区银行。</p>
@@ -2685,18 +2382,9 @@
 			</div>
 			<!--**************************************************小而不倒社区银行***********************************************-->		
 			<div class="right" id="yhdt11" style="display:none">
-				<table width="100%">
-					<tr>
-						<td><img src="/static/img/tip.png"/><span class="title">银行动态</span></td>
-						<td class="pull-right">
-							乾康（上海）金融信息服务有限公司 > <a onclick="show('yhdt')" href="#">银行动态</a> > <font color="#184554">小而不倒社区银行</font>
-						</td>
-					</tr>
-				</table>
-				<div class="fengge"></div>
 				<div class="jtxx">
 					<h1 class="H1">小而不倒社区银行</h1>
-					<div class="zz">作者：管理员&nbsp;&nbsp;&nbsp;发布于：2013-11-19 13:26:00&nbsp;&nbsp;&nbsp;文字：【大】【中】【小】</div>
+					<div class="zz">作者：管理员&nbsp;&nbsp;&nbsp;发布于：2013-11-19 13:26:00 </div>
 					<div class="xx">
 						<p>&nbsp;&nbsp;&nbsp;&nbsp;后金融危机时代，美国银行业的名声大为受挫，有关大银行的丑闻也是频频爆发。但社区银行却能反其道而行之，受到普通消费者和小商户的青睐。一项数据显示，在2012年，尽管有40多家社区银行因破产而关门大吉，美国社区银行的信任指数却从51%上升到55%。</p>
 						<p>&nbsp;&nbsp;&nbsp;&nbsp;这种信任的体现表现在多个方面，其中一项当属账户的转移。去年初，为了反对美国大型银行对借记卡用户每月收取5美元的管理费， 超过6万名的客户通过社交网络发起运动，将自己存在大银行的资产全部转移到免交管理费的社区银行和信用社。这项运动是转账趋势的集中体现，在2011年，近560万的美国客户将自己的资产从大型银行转移到更为便宜的社区银行和信用社，使得美国银行CEO不得不承认，大银行已经感觉到了5美元管理费所带来的阵痛。</p>
@@ -2724,20 +2412,11 @@
 			</div>
 			<!--**************************************************小微贷业务的出路***********************************************-->		
 			<div class="right" id="yhdt12" style="display:none">
-				<table width="100%">
-					<tr>
-						<td><img src="/static/img/tip.png"/><span class="title">银行动态</span></td>
-						<td class="pull-right">
-							乾康（上海）金融信息服务有限公司 > <a onclick="show('yhdt')" href="#">银行动态</a> > <font color="#184554">小微贷业务的出路</font>
-						</td>
-					</tr>
-				</table>
-				<div class="fengge"></div>
 				<div class="jtxx">
 					<h1 class="H1">小微贷业务的出路</h1>
-					<div class="zz">作者：管理员&nbsp;&nbsp;&nbsp;发布于：2013-11-19 13:26:00&nbsp;&nbsp;&nbsp;文字：【大】【中】【小】</div>
+					<div class="zz">作者：管理员&nbsp;&nbsp;&nbsp;发布于：2013-11-19 13:26:00 </div>
 					<div class="xx">
-						<img src="/static/img/jrzx/85.png"/>
+						<img src="../../static/img/jrzx/85.png"/>
 						<p>&nbsp;&nbsp;&nbsp;&nbsp;经过前几轮的较量之后，小微业务又成为各家争抢的新领地，你的小微业务如今健康吗？未来发展又在哪里？</p>
 						<p class="step">五大共性问题，速来自查：</p> 
 						<p class="secondStep">1.  定位不清：小与微业务不分，两张皮现象突出。</p>
@@ -2761,20 +2440,11 @@
 			</div>
 			<!--**************************************************直销银行***********************************************-->		
 			<div class="right" id="yhdt13" style="display:none">
-				<table width="100%">
-					<tr>
-						<td><img src="/static/img/tip.png"/><span class="title">银行动态</span></td>
-						<td class="pull-right">
-							乾康（上海）金融信息服务有限公司 > <a onclick="show('yhdt')" href="#">银行动态</a> > <font color="#184554">直销银行</font>
-						</td>
-					</tr>
-				</table>
-				<div class="fengge"></div>
 				<div class="jtxx">
 					<h1 class="H1">直销银行</h1>
-					<div class="zz">作者：管理员&nbsp;&nbsp;&nbsp;发布于：2013-11-19 13:26:00&nbsp;&nbsp;&nbsp;文字：【大】【中】【小】</div>
+					<div class="zz">作者：管理员&nbsp;&nbsp;&nbsp;发布于：2013-11-19 13:26:00 </div>
 					<div class="xx">
-						<img src="/static/img/jrzx/86.png"/>
+						<img src="../../static/img/jrzx/86.png"/>
 						<p>&nbsp;&nbsp;&nbsp;&nbsp;目前北京银行直销银行的远程智能柜员机已在北京、南京、济南、西安四地试点推出。</p>
 						<p>&nbsp;&nbsp;&nbsp;&nbsp;传统银行终于开始反击互联网金融了，他们选择不盲从线上发展大潮，而是选择进军直销银行。</p>
 						<p>&nbsp;&nbsp;&nbsp;&nbsp;近日，民生银行（600016.SH）和北京银行（601169.SH）接连推出直销银行业务，时间表和线路图均已十分清晰。不管你信不信，像逛24小时便利店一样享受银行服务已经指日可待了。</p>
@@ -2812,15 +2482,6 @@
 			</div>
 		<!--**************************************************政策要闻***********************************************-->
 			<div class="right" id="zcyw" style="display:none">
-				<table width="100%">
-					<tr>
-						<td><img src="/static/img/tip.png"/><span class="title">政策要闻</span></td>
-						<td class="pull-right">
-							乾康（上海）金融信息服务有限公司 > 金融咨询 ><font color="#184554">政策要闻</font>
-						</td>
-					</tr>
-				</table>
-				<div class="fengge"></div>
 				<table width="100%" class="datatable">
 					<thead>
 						<tr>
@@ -2883,18 +2544,9 @@
 			</div>	
 			<!--**************************************************P2P频触底线 监管层酝酿互联网金融新政***********************************************-->		
 			<div class="right" id="zcyw1" style="display:none">
-				<table width="100%">
-					<tr>
-						<td><img src="/static/img/tip.png"/><span class="title">政策要闻</span></td>
-						<td class="pull-right">
-							乾康（上海）金融信息服务有限公司 > <a onclick="show('zcyw')" href="#">政策要闻</a> > <font color="#184554">P2P频触底线 监管层酝酿互联网金融新政</font>
-						</td>
-					</tr>
-				</table>
-				<div class="fengge"></div>
 				<div class="jtxx">
 					<h1 class="H1">P2P频触底线 监管层酝酿互联网金融新政</h1>
-					<div class="zz">作者：管理员&nbsp;&nbsp;&nbsp;发布于：2013-11-19 13:26:00&nbsp;&nbsp;&nbsp;文字：【大】【中】【小】</div>
+					<div class="zz">作者：管理员&nbsp;&nbsp;&nbsp;发布于：2013-11-19 13:26:00 </div>
 					<div class="xx">
 						<p>&nbsp;&nbsp;&nbsp;&nbsp;最近一个月，平台倒闭事件愈演愈烈。</p>
 						<p>&nbsp;&nbsp;&nbsp;&nbsp;无准入门槛、无行业标准、无管理机构……P2P网贷“先天”不足，“后天”又缺乏自律和监管，野蛮生长的P2P行业风险正在不断加大。</p>
@@ -2929,20 +2581,11 @@
 			</div>
 			<!--**************************************************必须推进中国银行业六大改革 应对生死劫难 马蔚华***********************************************-->		
 			<div class="right" id="zcyw2" style="display:none">
-				<table width="100%">
-					<tr>
-						<td><img src="/static/img/tip.png"/><span class="title">政策要闻</span></td>
-						<td class="pull-right">
-							乾康（上海）金融信息服务有限公司 > <a onclick="show('zcyw')" href="#">政策要闻</a> > <font color="#184554">必须推进中国银行业六大改革 应对生死劫难 马蔚华</font>
-						</td>
-					</tr>
-				</table>
-				<div class="fengge"></div>
 				<div class="jtxx">
 					<h1 class="H1">必须推进中国银行业六大改革 应对生死劫难 马蔚华</h1>
-					<div class="zz">作者：管理员&nbsp;&nbsp;&nbsp;发布于：2013-11-19 13:26:00&nbsp;&nbsp;&nbsp;文字：【大】【中】【小】</div>
+					<div class="zz">作者：管理员&nbsp;&nbsp;&nbsp;发布于：2013-11-19 13:26:00 </div>
 					<div class="xx">
-						<img src="/static/img/jrzx/87.png"/>
+						<img src="../../static/img/jrzx/87.png"/>
 						<p>&nbsp;&nbsp;&nbsp;&nbsp; “银行业的黄金时代与中国经济周期是紧密相关的。经济决定金融，在经济改革转轨的同时，银行业遇到前所未有的挑战。”香港永隆银行董事长、招商银行前行长马蔚华在昨日举行的“2013年夏季达沃斯•中欧之夜”上表示。</p>
 						<p>&nbsp;&nbsp;&nbsp;&nbsp;马蔚华指出，面临生死劫难的银行业需要进行转型，尤其需要提高风险定价能力和客户服务能力。</p>
 						<p class="step">中国银行业遇生死劫难</p>
@@ -2975,20 +2618,11 @@
 			</div>
 			<!--**************************************************放宽金融市场准入 择机推出存款保险制度***********************************************-->		
 			<div class="right" id="zcyw3" style="display:none">
-				<table width="100%">
-					<tr>
-						<td><img src="/static/img/tip.png"/><span class="title">政策要闻</span></td>
-						<td class="pull-right">
-							乾康（上海）金融信息服务有限公司 > <a onclick="show('zcyw')" href="#">政策要闻</a> > <font color="#184554">放宽金融市场准入 择机推出存款保险制度</font>
-						</td>
-					</tr>
-				</table>
-				<div class="fengge"></div>
 				<div class="jtxx">
 					<h1 class="H1">放宽金融市场准入 择机推出存款保险制度</h1>
-					<div class="zz">作者：管理员&nbsp;&nbsp;&nbsp;发布于：2013-11-19 13:26:00&nbsp;&nbsp;&nbsp;文字：【大】【中】【小】</div>
+					<div class="zz">作者：管理员&nbsp;&nbsp;&nbsp;发布于：2013-11-19 13:26:00 </div>
 					<div class="xx">
-						<img src="/static/img/jrzx/88.png"/>
+						<img src="../../static/img/jrzx/88.png"/>
 						<p>&nbsp;&nbsp;&nbsp;&nbsp;2013夏季达沃斯论坛开幕式于今日下午在大连国际(7.13, 0.07, 0.99%)会议中心全会厅举行，国务院总理李克强在开幕式上发表特别致辞。李克强总理在答问环节上表示，推进金融体制改革要推进金融机构的改革，特别是要放宽市场准入；推动多层次资本市场的培育发展，拓宽投融资的渠道；加强金融监管并且择机推出存款保险制度。</p>
 						<p class="secondStep">以下为李克强答问实录：</p>
 						<p>&nbsp;&nbsp;&nbsp;&nbsp;致辞结束，李克强总理返回座位，施瓦布在座位上向李总理提问。　[ 2013-09-11 18:00 ] </p>
@@ -3039,20 +2673,11 @@
 			</div>
 			<!--**************************************************工行原行长杨凯生互联网金融不能野蛮生长***********************************************-->		
 			<div class="right" id="zcyw4" style="display:none">
-				<table width="100%">
-					<tr>
-						<td><img src="/static/img/tip.png"/><span class="title">政策要闻</span></td>
-						<td class="pull-right">
-							乾康（上海）金融信息服务有限公司 > <a onclick="show('zcyw')" href="#">政策要闻</a> > <font color="#184554">工行原行长杨凯生互联网金融不能野蛮生长</font>
-						</td>
-					</tr>
-				</table>
-				<div class="fengge"></div>
 				<div class="jtxx">
 					<h1 class="H1">工行原行长杨凯生互联网金融不能野蛮生长</h1>
-					<div class="zz">作者：管理员&nbsp;&nbsp;&nbsp;发布于：2013-11-19 13:26:00&nbsp;&nbsp;&nbsp;文字：【大】【中】【小】</div>
+					<div class="zz">作者：管理员&nbsp;&nbsp;&nbsp;发布于：2013-11-19 13:26:00 </div>
 					<div class="xx">
-						<img src="/static/img/jrzx/89.png"/>
+						<img src="../../static/img/jrzx/89.png"/>
 						<p>&nbsp;&nbsp;&nbsp;&nbsp;这些日子以来，互联网金融成了一个热门话题。有的说这是对传统银行的根本性挑战，断言银行要被颠覆了。更有人认为互联网金融进一步发展后，它将取代现有的间接融资和直接融资形式，银行、券商和交易所等金融中介都将不再起作用，甚至中央银行的货币发行功能也会被取代。</p>
 						<p>&nbsp;&nbsp;&nbsp;&nbsp;于是不少人跃跃欲试，都想投身于互联网金融业务，认为这是难得的商机。有人则干脆说，就是要当金融业的“搅局者”。 </p>
 						<p>&nbsp;&nbsp;&nbsp;&nbsp;笔者认为之所以出现目前这种状况，首先应该肯定，这是随着信息技术的不断革新和互联网功能的迅速进步而形成的潮流，因而这些现象的产生有其历史性；其次，也需要指出，目前不少人对所谓互联网金融的认识还不够全面，了解也不够充分，市场上的一些说法和做法明显地带有一定的盲目性，因而目前的不少现象也许只是阶段性的。</p>
@@ -3101,20 +2726,11 @@
 			</div>
 			<!--**************************************************民营银行首批最多5家***********************************************-->		
 			<div class="right" id="zcyw5" style="display:none">
-				<table width="100%">
-					<tr>
-						<td><img src="/static/img/tip.png"/><span class="title">政策要闻</span></td>
-						<td class="pull-right">
-							乾康（上海）金融信息服务有限公司 > <a onclick="show('zcyw')" href="#">政策要闻</a> > <font color="#184554">民营银行首批最多5家</font>
-						</td>
-					</tr>
-				</table>
-				<div class="fengge"></div>
 				<div class="jtxx">
 					<h1 class="H1">民营银行首批最多5家</h1>
-					<div class="zz">作者：管理员&nbsp;&nbsp;&nbsp;发布于：2013-11-19 13:26:00&nbsp;&nbsp;&nbsp;文字：【大】【中】【小】</div>
+					<div class="zz">作者：管理员&nbsp;&nbsp;&nbsp;发布于：2013-11-19 13:26:00 </div>
 					<div class="xx">
-						<img src="/static/img/jrzx/90.png"/>
+						<img src="../../static/img/jrzx/90.png"/>
 						<p>&nbsp;&nbsp;&nbsp;&nbsp;从7月金融“国十条”明确表示要引导民间资本进入金融行业后，各地掀起民营银行申办热潮。据统计，今年申请或有计划申请筹办民营银行的上市公司或其大股东已达27家，且数字仍在不断增长中</p>
 						<p>&nbsp;&nbsp;&nbsp;&nbsp; “神州银行’目前已经走完所有流程，近日将有望获得银监会和央行的审核通过。”一位内部人士近日透露。这意味着，名不见经传的“神州银行”有望在第一批获批的民营银行中抢占头筹。</p>
 						<p>&nbsp;&nbsp;&nbsp;&nbsp; “神州银行”就是在今年8月工商总局核准的华商银行，因为目前已有一家华商银行，所以被银监会和央行要求更名。</p>
@@ -3131,20 +2747,11 @@
 			</div>
 			<!--**************************************************支持互联网金融创新***********************************************-->		
 			<div class="right" id="zcyw6" style="display:none">
-				<table width="100%">
-					<tr>
-						<td><img src="/static/img/tip.png"/><span class="title">政策要闻</span></td>
-						<td class="pull-right">
-							乾康（上海）金融信息服务有限公司 > <a onclick="show('zcyw')" href="#">政策要闻</a> > <font color="#184554">支持互联网金融创新</font>
-						</td>
-					</tr>
-				</table>
-				<div class="fengge"></div>
 				<div class="jtxx">
 					<h1 class="H1">支持互联网金融创新</h1>
-					<div class="zz">作者：管理员&nbsp;&nbsp;&nbsp;发布于：2013-11-19 13:26:00&nbsp;&nbsp;&nbsp;文字：【大】【中】【小】</div>
+					<div class="zz">作者：管理员&nbsp;&nbsp;&nbsp;发布于：2013-11-19 13:26:00 </div>
 					<div class="xx">
-						<img src="/static/img/jrzx/91.png"/>
+						<img src="../../static/img/jrzx/91.png"/>
 						<p>&nbsp;&nbsp;&nbsp;&nbsp;国泰君安证券董事长万建华认为，我国的金融改革应该顺应互联网金融发展的内在要求，在政策上宽容，进行互联网创新，支持跨界发展。</p>
 						<p>&nbsp;&nbsp;&nbsp;&nbsp;万建华9月27日在“2013中国金融创新论坛”上表示，互联网、大数据、云计算、移动互联等信息技术为互联网金融的创新准备了条件。信息技术催生了电子支付的专业化趋势，金融电子商务蓬勃发展，金融业务产品化现象越来越普遍。</p>
 						<p>&nbsp;&nbsp;&nbsp;&nbsp;他指出金融业务产品化，即是把所有的投资需求和融资需求以产品的形式表现。它包括两个方面：一个是传统的商业银行由自己直接做融资贷款，变成同时卖产品;另外一个是电子商务和第三方支付企业平台搭建之后，都转向卖产品，比如余额宝，由卖商品的电子支付平台变成卖金融产品。</p>
@@ -3157,18 +2764,9 @@
 			</div>
 			<!--**************************************************做平台的两大关键***********************************************-->		
 			<div class="right" id="zcyw7" style="display:none">
-				<table width="100%">
-					<tr>
-						<td><img src="/static/img/tip.png"/><span class="title">政策要闻</span></td>
-						<td class="pull-right">
-							乾康（上海）金融信息服务有限公司 > <a onclick="show('zcyw')" href="#">政策要闻</a> > <font color="#184554">做平台的两大关键</font>
-						</td>
-					</tr>
-				</table>
-				<div class="fengge"></div>
 				<div class="jtxx">
 					<h1 class="H1">做平台的两大关键</h1>
-					<div class="zz">作者：管理员&nbsp;&nbsp;&nbsp;发布于：2013-11-19 13:26:00&nbsp;&nbsp;&nbsp;文字：【大】【中】【小】</div>
+					<div class="zz">作者：管理员&nbsp;&nbsp;&nbsp;发布于：2013-11-19 13:26:00 </div>
 					<div class="xx">
 						<p>&nbsp;&nbsp;&nbsp;&nbsp;平台模式如此诱人，但也是最难成功的一个战略。</p> 
 						<p>&nbsp;&nbsp;&nbsp;&nbsp;首先，选择平台战略的企业需要有能力累积巨大规模的用户。至少需要获得同行中规模第一的用户，这是一个非常大的挑战。</p> 
@@ -3215,16 +2813,27 @@
 				</div>
 			</div>
 		</div>
+		
+		<div class="back-to-top">
+			<img src="../../static/img/back-to-top.png"/>
+		</div>
 	<!--**************************************************foot***********************************************-->
-		<div class="foot">
-			<img src="/static/img/images/qk_12.png"/>
-			<img src="/static/img/images/qk_15.png"/>
+		<div class="foot" style="width:100%;float:left;">		
+			<img src="../../static/img/images/qk_12.png" style="width:100%"/>
+			<img src="../../static/img/images/qk_15.png"/>
 			<span>Copyright(C)2011-2014 乾康（上海）金融信息服务有限公司</span><br/>
 			<span>沪ICP备13043724号</span>
-		</div>
+		</div>		
 	</div>
-	<script type="text/javascript" src="/static/js/jquery-1.7.2.min.js"></script>
-	<script type="text/javascript" src="/static/js/jquery.dataTables.min.js"></script>
-	<script type="text/javascript" src="/static/js/script.js"></script>
+	<script type="text/javascript" src="../../static/js/jquery-1.7.2.min.js"></script>
+	<script type="text/javascript" src="../../static/js/jquery.dataTables.min.js"></script>
+	<script type="text/javascript" src="../../static/js/script.js"></script>
+	<!-- Slider -->
+	<script type="text/javascript" src="../../static/js/jquery.easing.1.3.js"></script>
+	<script type="text/javascript" src="../../static/js/jquery.animate-colors-min.js"></script>
+	<script type="text/javascript" src="../../static/js/jquery.skitter.js"></script>
+	<script type="text/javascript">
+		
+	</script>
 </body>
 </html>

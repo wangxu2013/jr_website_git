@@ -8,206 +8,221 @@
 	<meta name="author" content="Muhammad Usman">
 
 	<!-- The styles -->
-	<link href="/static/css/main.css" rel="stylesheet">
-	<style type="text/css">
-		*{font-family:Arial;}
+	<link href="../../static/css/main.css" rel="stylesheet">
+	 <link rel="stylesheet" type="text/css" href="../../static/css/skitter.styles.css" media="all" />
+	<style type="text/css">	
+		.cgal{width:28%;margin-top:0;}
 	</style>
-	
 	<script type="text/javascript">
 		var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
 		document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3F980a47baa3b028fee8b94644df33e9b8' type='text/javascript'%3E%3C/script%3E"));
 	</script>
 </head>
 
-<body>
+<body onload="imgs();">
 	<div class="main">
 	<!--**************************************************top***********************************************-->
-		<div class="logo">	
-			<img src="/static/img/images/logo.png"/>
-			<div>
-				<a href="/cgal" style="color:#828282;">中文</a><span style="color:#828282;">|</span>
-				<a href="/cgal_En" style="color:#828282;">English</a>
-				<a href="http://profitinsight.com/" style="color:#828282;margin-left:8px;"><img src="/static/img/PROFI.png" style="height:30px;padding:13px 0;float:right;_display:none;"/></a>
-			</div>			
-		</div>
-		<div class="nav">
-			<ul>
-				<li><a href="/">网站首页</a></li>
-				<li><a href="/gsjj">关于我们</a></li>
-				<li><a href="/xwdt">新闻动态</a></li>
+		<div class="logo" style="position:fixed;z-index:10000;">	
+			<a href="/"><img src="../../static/img/images/logo.png" style="height:60px;margin-top:15px;margin-left:30px;margin-right:150px;"/></a>
+			<ul class="newnav" style="margin-left:20px;z-index:10000;">
+				<!-- <li><a href="/">网站首页</a></li> -->				
 				<li><a href="/jjfa">业务指南</a></li>
-				<li><a href="/yhnx">银行内训</a></li>
 				<li class="active"><a href="/cgal">成功案例</a></li>
 				<li><a href="/hzhb">合作伙伴</a></li>
-				<li><a href="/jrzx">金融咨询</a></li>
+				<li><a href="/yhnx">银行内训</a></li>
+				<li><a href="/jrzx">金融咨询</a></li>				
+				<li><a href="/gsjj">关于我们</a></li>
+			<!-- 	<li><a href="/ygfc">员工风采</a></li> -->
 				<li><a href="/zpxx">招聘信息</a></li>
 			</ul>
 		</div>
-		<div class="flash-replaced">
-			<embed width="1000" height="188" type="application/x-shockwave-flash" src="../../static/img/content2.swf" pluginspage="http://www.adobe.com/go/getflashplayer" />
-    	</div>
-
-	<!--**************************************************content***********************************************-->
-		<div class="content">
-			<div class="left">
-				<img src="/static/img/images/lmdh.png"/>
-				<ul>
-					<li class="active" onclick="show('cgal')"><a href="#">成功案例</a></li>								
-				</ul>
-				<img src="/static/img/images/qk_11.png"/>
+		<!-- SLIDER -->
+		<div id="outerslider" style="margin-top:90px;_margin-top:0;">
+        	<div id="slidercontainer">
+            	<section id="slider">
+                <div class="box_skitter box_skitter_large">					
+                    <ul >
+						<li>
+                            <img src="../../static/img/sub02.png" alt="" style="height:100%"/>                            
+                        </li>
+                        <li>
+                            <img src="../../static/img/sub01.png" alt="" style="height:100%"/>                            
+                        </li>                        
+						<li>
+                            <img src="../../static/img/sub03.png" alt="" style="height:100%"/>                            
+                        </li>
+						<li>
+                            <img src="../../static/img/sub04.png" alt="" style="height:100%"/>                            
+                        </li>
+						<li>
+                            <img src="../../static/img/sub05.png" alt="" style="height:100%"/>                            
+                        </li>
+                    </ul>
+                </div>
+                </section>
+            </div>
+        </div>
+        <!-- END SLIDER -->	
+		<!-- 切换语言 -->		
+		<div class="lanage" onclick="setLanage(this)">
+			<img src="../../static/img/yysz.png"/>
+			<div>
+				<a href="/index">中文</a><br/>
+				<a href="/index_En">English</a>
 			</div>
-			<div class="right" id="cgal">
-				<table width="100%">
-					<tr>
-						<td><img src="/static/img/tip.png"/><span class="title">成功案例</span></td>
-						<td class="pull-right">
-							乾康（上海）金融信息服务有限公司 > <font color="#184554">成功案例</font>
-						</td>
-					</tr>
-				</table>
-				<div class="fengge"></div>
-				<table width="100%">
-					<tr>
-						<td onclick="show('al1')"><img src="/static/img/al1.png"/></td>
-						<td onclick="show('al2')"><img src="/static/img/al2.jpg"/></td>
-						<td onclick="show('al3')"><img src="/static/img/al3.png"/></td>
-						<td onclick="show('al4')"><img src="/static/img/al4.jpg"/></td>
-					</tr>	
-					<tr>						
-						<td onclick="show('al5')"><img src="/static/img/al5.png"/></td>
-						<td></td>
-						<td></td>
-					</tr>						
-				</table>
-				<div class="showPage">
-					<span>共5条 每页10条 页次：1/1</span>
-					<span class="pageNum" style="margin-left:370px;">首页</span>					
-					<span class="pageNum">上一页</span>	
-					<span class="pageNum">1</span>
-					<span class="pageNum">下一页</span>	
-					<span class="pageNum">尾页</span>				
+		</div>
+	<!--**************************************************left***********************************************-->	
+		<div style="width:100%;float:left;_margin-top:-90px;">
+			<div class="left">
+				<ul class="Tab">
+					<li class="active" onmouseover="change_div(this,'gsjj')"><a href="#">服务方向</a></li>
+					<li onmouseover="change_div(this,'fzln')" style=""><a href="#">发展理念</a></li>
+					<!-- <li onclick="change_div(this,'ryzs')"><a href="#">荣誉证书</a></li>
+					<li onclick="change_div(this,'zjtd')"><a href="#">专家团队</a></li> -->
+					<li onmouseover="change_div(this,'lxfs')" style="border-right:1px solid #dddddd;"><a href="#">联系方式</a></li>
+				</ul>
+				<div class="tab" id="gsjj">
+					信息咨询&nbsp;&nbsp;
+					技术支持&nbsp;&nbsp;
+					平台建设
 				</div>
-			</div>	
-<!--**************************************************姜堰农村商业银行***********************************************-->		
-			<div class="right" id="al1" style="display:none">
-				<table width="100%">
-					<tr>
-						<td><img src="/static/img/tip.png"/><span class="title">成功案例</span></td>
-						<td class="pull-right">
-							乾康（上海）金融信息服务有限公司 > <a onclick="show('cgal')" href="#">成功案例</a> > <font color="#184554">姜堰农村商业银行</font>
-						</td>
-					</tr>
-				</table>
-				<div class="fengge"></div>
-				<div class="jtxx">
-					<table cellspacing="10">
-						<tr>
-							<td align="center"><img src="/static/img/al1.png"/></td>
-						</tr>
-						<tr>
-							<td>&nbsp;姜堰农村商业银行</td>
-						</tr>
-					</table>
+				<div class="tab" style="display:none;" id="fzln"> 
+					创建领先国际的金融咨询机构<br/>
+					合力打造精英顾问团队<br/>
+					最大限度满足客户需求
 				</div>
-			</div>	
-<!--**************************************************句容农村商业银行***********************************************-->		
-			<div class="right" id="al2" style="display:none">
-				<table width="100%">
-					<tr>
-						<td><img src="/static/img/tip.png"/><span class="title">成功案例</span></td>
-						<td class="pull-right">
-							乾康（上海）金融信息服务有限公司 > <a onclick="show('cgal')" href="#">成功案例</a> > <font color="#184554">句容农村商业银行</font>
-						</td>
-					</tr>
-				</table>
-				<div class="fengge"></div>
-				<div class="jtxx">
-					<table cellspacing="10">
-						<tr>
-							<td align="center"><img src="/static/img/al2.jpg"/></td>
-						</tr>
-						<tr>
-							<td>&nbsp;句容农村商业银行</td>
-						</tr>
-					</table>
+				<div class="tab" style="display:none;" id="lxfs">
+					地址：上海市徐汇区桂箐路7号3号楼801室<br/>
+					address：Room 801,Building 3,No.7,Guiqing Road,Xuhui District,Shanghai <br/>
+					邮编： 200035<br/>
+					电话： 021-54485390 <br/>
+					传真： 021-54485391<br/>
+					电子邮件：qk_liuwx@163.com<br/>
 				</div>
-			</div>		
-<!--**************************************************华夏银行***********************************************-->		
-			<div class="right" id="al3" style="display:none">
-				<table width="100%">
-					<tr>
-						<td><img src="/static/img/tip.png"/><span class="title">成功案例</span></td>
-						<td class="pull-right">
-							乾康（上海）金融信息服务有限公司 > <a onclick="show('cgal')" href="#">成功案例</a> > <font color="#184554">华夏银行</font>
-						</td>
-					</tr>
-				</table>
-				<div class="fengge"></div>
-				<div class="jtxx">
-					<table cellspacing="10">
-						<tr>
-							<td align="center"><img src="/static/img/al3.png"/></td>
-						</tr>
-						<tr>
-							<td>&nbsp;华夏银行</td>
-						</tr>
-					</table>
+			<!--**************************************************员工风采***********************************************************************-->
+				<div style="width:100%;margin-top:40px;border-top:3px dotted #dddddd;margin-bottom:40px;">
+					<span style="background:white;position:absolute;margin-top:-15px;font-weight:bold;font-size:20px;color:#666666;">新闻动态</span>
+				</div>					
+				<div id="ifocus">
+					<div id="ifocus_pic">
+						<div id="ifocus_piclist">
+							<ul>
+								<li>
+									<div class="ygfc">
+										<div class="ygfcContent">
+											2013年，乾康公司与全球排名第一的美国的专业信用卡咨询公司PTC（PROFIT TECHNOLOGIES COMPANY)达成战略合作协议。双方将共同为银行开展零售业务提供全方位咨询服务。
+										</div>
+									</div>										
+									<div style="margin-top:-15px;margin-left:25px;float:left;font-size:16px;color:#727272;"> 
+										<b style="color:#0488cd;font-size:16px;">公司与美国PTC达成合作协议</b>
+									</div>
+								</li>
+								<li>
+									<div class="ygfc">
+										<div class="ygfcContent">
+											2013年，乾康公司与江苏兴化农村商业银行达成战略合作协议，为银行开发微小贷系统，以便银行客户经理更好的管理客户贷款信息。
+										</div>
+									</div>	
+									<div style="margin-top:-15px;margin-left:13px;float:left;font-size:16px;color:#727272;"> 
+										<b style="color:#0488cd;font-size:16px;">公司与兴化农商行达成合作协议</b>
+									</div>
+								</li>
+								<li>
+									<div class="ygfc">
+										<div class="ygfcContent">
+											创建领先国际的金融专业咨询机构1
+											合力打造精英顾问团队
+											最大限度满足客户需求创建领先国际的金融专业咨询机构
+											合力打造精英顾问团队
+											最大限度满足客户需求
+											创建领先国际的金融专业咨询机构
+											合力打造精英顾问团队
+										</div>
+									</div>	
+									<div style="margin-top:-15px;margin-left:30px;float:left;font-size:16px;color:#727272;"> 
+										<b style="color:#0488cd;font-size:16px;">公司与美国PTC达成合作协议</b>
+									</div>
+								</li>
+								<li>
+									<div class="ygfc">
+										<div class="ygfcContent">
+											创建领先国际的金融专业咨询机构1
+											合力打造精英顾问团队
+											最大限度满足客户需求创建领先国际的金融专业咨询机构
+											合力打造精英顾问团队
+											最大限度满足客户需求
+											创建领先国际的金融专业咨询机构
+											合力打造精英顾问团队
+										</div>
+									</div>	
+									<div style="margin-top:-15px;margin-left:30px;float:left;font-size:16px;color:#727272;"> 
+										<b style="color:#0488cd;font-size:16px;">公司与美国PTC达成合作协议</b>
+									</div>
+								</li>
+							</ul>
+						</div>
+						
+					</div>
+					<div id="ifocus_btn" style="display:none;">
+						<ul>
+							<li class="current"></li>
+							<li class="normal"></li>
+							<li class="normal"></li>
+							<li class="normal"></li>
+						</ul>
+					</div>
 				</div>
-			</div>		
-<!--**************************************************江南农村商业银行***********************************************-->		
-			<div class="right" id="al4" style="display:none">
-				<table width="100%">
-					<tr>
-						<td><img src="/static/img/tip.png"/><span class="title">成功案例</span></td>
-						<td class="pull-right">
-							乾康（上海）金融信息服务有限公司 > <a onclick="show('cgal')" href="#">成功案例</a> > <font color="#184554">江南农村商业银行</font>
-						</td>
-					</tr>
-				</table>
-				<div class="fengge"></div>
-				<div class="jtxx">
-					<table cellspacing="10">
-						<tr>
-							<td align="center"><img src="/static/img/al4.jpg"/></td>
-						</tr>
-						<tr>
-							<td>&nbsp;江南农村商业银行</td>
-						</tr>
-					</table>
+			</div>
+		<!--**************************************************right***********************************************-->	
+			<!--**************************************************title***********************************************-->		
+			<div class="title">
+				<h2>成功案例</h2>
+				<span class="place">当前位置：乾康（上海）金融信息服务有限公司 > <font style="color:#0488cd">成功案例</font></span>
+			</div>
+			<div class="right" style="_margin-left:50px;">				
+				<div class="cgal" id="image1" >
+					<img src="../../static/img/hxyh.png" style="width:100%"/>
 				</div>
-			</div>		
-<!--**************************************************兴化农村商业银行***********************************************-->		
-			<div class="right" id="al5" style="display:none">
-				<table width="100%">
-					<tr>
-						<td><img src="/static/img/tip.png"/><span class="title">成功案例</span></td>
-						<td class="pull-right">
-							乾康（上海）金融信息服务有限公司 > <a onclick="show('cgal')" href="#">成功案例</a> > <font color="#184554">兴化农村商业银行</font>
-						</td>
-					</tr>
-				</table>
-				<div class="fengge"></div>
-				<div class="jtxx">
-					<table cellspacing="10">
-						<tr>
-							<td align="center"><img src="/static/img/al5.png"/></td>
-						</tr>
-						<tr>
-							<td>&nbsp;兴化农村商业银行</td>
-						</tr>
-					</table>
+				<div class="cgal" id="image2" >
+					<img src="../../static/img/jnyh.png" style="width:100%"/>
 				</div>
-			</div>					
+				<div class="cgal" id="image3" >
+					<img src="../../static/img/xhyh.png" style="width:100%"/>
+				</div>
+				<div class="cgal" id="image4" style="margin-top:20px;">
+					<img src="../../static/img/jr.png" style="width:100%"/>
+				</div>
+				<div class="cgal" id="image5" style="margin-top:20px;">
+					<img src="../../static/img/jy.png" style="width:100%"/>
+				</div>		
+				<div class="cgal" id="image6" style="margin-top:20px;">
+					<img src="../../static/img/jynsh.png" style="width:100%"/>
+				</div>	
+				<div class="cgal" id="image7" style="margin-top:20px;">
+					<img src="../../static/img/wxnsh.png" style="width:100%"/>
+				</div>	
+			</div>
+		</div>
+		
+		<div class="back-to-top">
+			<img src="../../static/img/back-to-top.png"/>
 		</div>
 	<!--**************************************************foot***********************************************-->
-		<div class="foot">
-			<img src="/static/img/images/qk_12.png"/>
-			<img src="/static/img/images/qk_15.png"/>
+		<div class="foot" style="width:100%;float:left;">		
+			<img src="../../static/img/images/qk_12.png" style="width:100%"/>
+			<img src="../../static/img/images/qk_15.png"/>
 			<span>Copyright(C)2011-2014 乾康（上海）金融信息服务有限公司</span><br/>
 			<span>沪ICP备13043724号</span>
-		</div>
+		</div>		
 	</div>
-	<script type="text/javascript" src="/static/js/jquery-1.7.2.min.js"></script>
-	<script type="text/javascript" src="/static/js/script.js"></script>
+	<script type="text/javascript" src="../../static/js/jquery-1.7.2.min.js"></script>
+	<script type="text/javascript" src="../../static/js/script.js"></script>
+	<!-- Slider -->
+	<script type="text/javascript" src="../../static/js/jquery.easing.1.3.js"></script>
+	<script type="text/javascript" src="../../static/js/jquery.animate-colors-min.js"></script>
+	<script type="text/javascript" src="../../static/js/jquery.skitter.js"></script>
+	<script type="text/javascript">
+				
+	</script>
 </body>
 </html>

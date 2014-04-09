@@ -9,8 +9,9 @@
 
 	<!-- The styles -->
 	<link href="../../static/css/main.css" rel="stylesheet">
-	<style type="text/css">
-		*{font-family:Arial;}
+	 <link rel="stylesheet" type="text/css" href="../../static/css/skitter.styles.css" media="all" />
+	<style type="text/css">			
+		
 	</style>
 	<script type="text/javascript">
 		var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
@@ -18,148 +19,213 @@
 	</script>
 </head>
 
-<body>
+<body onload="imgs();">
 	<div class="main">
 	<!--**************************************************top***********************************************-->
-		<div class="logo">	
-			<img src="../../static/img/images/logo.png"/>
-			<div>
-				<a href="/gsjj" style="color:#828282;">中文</a><span style="color:#828282;">|</span>
-				<a href="/gsjj_En" style="color:#828282;">English</a>
-				<a href="http://profitinsight.com/" style="color:#828282;margin-left:8px;"><img src="../../static/img/PROFI.png" style="height:30px;padding:13px 0;float:right;_display:none;"/></a>
-			</div>			
-		</div>
-		<div class="nav">
-			<ul>
-				<li><a href="/">网站首页</a></li>
-				<li class="active"><a href="/gsjj">关于我们</a></li>
-				<li><a href="/xwdt">新闻动态</a></li>
+		<div class="logo" style="position:fixed;z-index:10000;">	
+			<a href="/"><img src="../../static/img/images/logo.png" style="height:60px;margin-top:15px;margin-left:30px;margin-right:150px;"/></a>
+			<ul class="newnav" style="margin-left:20px;z-index:10000;">
+				<!-- <li><a href="/">网站首页</a></li> -->				
 				<li><a href="/jjfa">业务指南</a></li>
-				<li><a href="/yhnx">银行内训</a></li>
 				<li><a href="/cgal">成功案例</a></li>
 				<li><a href="/hzhb">合作伙伴</a></li>
-				<li><a href="/jrzx">金融咨询</a></li>
+				<li><a href="/yhnx">银行内训</a></li>
+				<li><a href="/jrzx">金融咨询</a></li>				
+				<li class="active"><a href="/gsjj">关于我们</a></li>
+				<!-- <li><a href="/ygfc">员工风采</a></li> -->
 				<li><a href="/zpxx">招聘信息</a></li>
 			</ul>
 		</div>
-		<div class="flash-replaced">
-			<embed width="1000" height="188" type="application/x-shockwave-flash" src="../../static/img/content.swf" pluginspage="http://www.adobe.com/go/getflashplayer" />
-    	</div>
-
-	<!--**************************************************content***********************************************-->
-		<div class="content">
-			<div class="left">
-				<img src="../../static/img/images/gsjj.png"/>
-				<ul id="gywm-list">
-					<li class="active" onclick="change_div(this,'gsjj')"><a href="#">公司简介</a></li>
-					<li onclick="change_div(this,'fzln')"><a href="#">发展理念</a></li>
-					<!-- <li onclick="change_div(this,'ryzs')"><a href="#">荣誉证书</a></li>
-					<li onclick="change_div(this,'zjtd')"><a href="#">专家团队</a></li> -->
-					<li onclick="change_div(this,'lxfs')"><a href="#">联系方式</a></li>
-				</ul>
-				<img src="../../static/img/images/qk_11.png"/>
-			</div>
-			<div class="right" id="gsjj">
-				<table width="100%">
-					<tr>
-						<td><img src="../../static/img/tip.png"/><span class="title">公司简介</span></td>
-						<td class="pull-right">
-							乾康（上海）金融信息服务有限公司 > <font color="#184554">公司简介</font>
-						</td>
-					</tr>
-				</table>
-				<div class="fengge"></div>
-				<table>
-					<tr>
-						<td><img src="../../static/img/people.png" style="margin-top:20px;width:280px;"/></td>
-						<td style="vertical-align:top;padding-right:10px;">
-							<span class="content">
-								<br/>
-								&nbsp;&nbsp;&nbsp;&nbsp;<font color="#2a677b" style="font-size:16px;font-weight:bold;">乾康(上海)金融信息服务有限公司</font>是一家专注于金融领域专业管理咨询以及运营实施的服务机构。公司的主营业务是为银行等金融机构提供微小贷款和信用卡业务的咨询及运营、人力资源管理、新产品创新等咨询服务以及协助实现银行互联网金融平台建设----金融OTO商业模式服务平台。<br/>
-								&nbsp;&nbsp;&nbsp;&nbsp;乾康公司高层智囊云集，创始人及决策层领导集多年金融管理咨询经验、前瞻性的理念、大数据云计算的技术于一体，披荆斩棘的为行业开拓领航，打造了一支国际化和本土化相结合的咨询团队。<br/>
-								&nbsp;&nbsp;&nbsp;&nbsp;乾康公司咨询顾问均来自国内各银行、世界五百强企业高级管理人员，具备金融从业经历、金融管理咨询经验、金融专业MBA或博士以上教育背景，全部拥有国际名校教育背景以及国际金融机构或咨询机构的工作经历。<br/>
-								&nbsp;&nbsp;&nbsp;&nbsp;2013年，乾康公司与全球排名第一的美国的专业信用卡咨询公司PTC（PROFIT TECHNOLOGIES COMPANY)达成战略合作协议。双方将共同为银行开展零售业务提供全方位咨询服务。<br/>
-								&nbsp;&nbsp;&nbsp;&nbsp;乾康公司多年来始终致力于金融咨询领域，所以积累了雄厚的专业实力和项目经验。我们将助力银行：管理提升和利润提高，实现在风险可控的前提下，长期持久盈利！<br/>
-								
-							</span>
-							<img src="../../static/img/gsjj.png" style="margin-top:20px;width:100%;"/>
-						</td>
-					</tr>
-				</table>					
-			</div>
-			<div class="right" id="fzln" style="display:none;">
-				<table width="100%">
-					<tr>
-						<td><img src="../../static/img/tip.png"/><span class="title">发展理念</span></td>
-						<td class="pull-right">
-							乾康（上海）金融信息服务有限公司 > <font color="#184554">发展理念</font>
-						</td>
-					</tr>
-				</table>
-				<div class="fengge"></div>
-				<span style="font-size:14px;top:10px;color:#2a677b;">创建领先国际的金融专业咨询机构<br/>
-				合力打造精英顾问团队<br/>
-				最大限度满足客户需求</span>
-			</div>
-			<div class="right" id="ryzs" style="display:none;">
-				<table width="100%">
-					<tr>
-						<td><img src="../../static/img/tip.png"/><span class="title">荣誉证书</span></td>
-						<td class="pull-right">
-							乾康（上海）金融信息服务有限公司 > <font color="#184554">荣誉证书</font>
-						</td>
-					</tr>
-				</table>
-				<div class="fengge"></div>				
-			</div>	
-			<div class="right" id="zjtd" style="display:none;">
-				<table width="100%">
-					<tr>
-						<td><img src="../../static/img/tip.png"/><span class="title">专家团队</span></td>
-						<td class="pull-right">
-							乾康（上海）金融信息服务有限公司 > <font color="#184554">专家团队</font>
-						</td>
-					</tr>
-				</table>
-				<div class="fengge"></div>				
-			</div>	
-			<div class="right" id="lxfs"  style="display:none;">
-				<table width="100%">
-					<tr>
-						<td><img src="../../static/img/tip.png"/><span class="title">联系方式</span></td>
-						<td class="pull-right">
-							乾康（上海）金融信息服务有限公司 > <font color="#184554">联系方式</font>
-						</td>
-					</tr>
-				</table>
-				<div class="fengge"></div>	
-				<table>
-					<tr>
-						<td><img src="../../static/img/2.gif" /></td>
-						<td style="vertical-align:top;padding-right:10px;">
-							<span class="content">
-								<br/>
-									&nbsp;&nbsp;&nbsp;&nbsp;地址：上海市徐汇区桂箐路7号3号楼801室<br/>
-									&nbsp;&nbsp;&nbsp;&nbsp;address：Room 801,Building 3,No.7,Guiqing Road,Xuhui District,Shanghai  <br/>
-									&nbsp;&nbsp;&nbsp;&nbsp;邮编： 200035<br/>
-									&nbsp;&nbsp;&nbsp;&nbsp;电话： 021-54485390 <br/>
-									&nbsp;&nbsp;&nbsp;&nbsp;传真： 021-54485391<br/>
-									&nbsp;&nbsp;&nbsp;&nbsp;电子邮件：qk_zhoubin@163.com<br/>
-							</span>
-						</td>
-					</tr>
-				</table>	
+		<!-- SLIDER -->
+		<div id="outerslider" style="margin-top:90px;_margin-top:0;">
+        	<div id="slidercontainer">
+            	<section id="slider">
+                <div class="box_skitter box_skitter_large">					
+                    <ul >
+						<li>
+                            <img src="../../static/img/sub02.png" alt="" style="height:100%"/>                            
+                        </li>
+                        <li>
+                            <img src="../../static/img/sub01.png" alt="" style="height:100%"/>                            
+                        </li>                        
+						<li>
+                            <img src="../../static/img/sub03.png" alt="" style="height:100%"/>                            
+                        </li>
+						<li>
+                            <img src="../../static/img/sub04.png" alt="" style="height:100%"/>                            
+                        </li>
+						<li>
+                            <img src="../../static/img/sub05.png" alt="" style="height:100%"/>                            
+                        </li>
+                    </ul>
+                </div>
+                </section>
+            </div>
+        </div>
+        <!-- END SLIDER -->	
+		<!-- 切换语言 -->		
+		<div class="lanage" onclick="setLanage(this)">
+			<img src="../../static/img/yysz.png"/>
+			<div>
+				<a href="/index">中文</a><br/>
+				<a href="/index_En">English</a>
 			</div>
 		</div>
+	<!--**************************************************left***********************************************-->	
+		<div style="width:100%;float:left;_margin-top:-90px;">
+			<div class="left">
+				<ul class="Tab">
+					<li class="active" onmouseover="change_div(this,'gsjj')"><a href="#">服务方向</a></li>
+					<li onmouseover="change_div(this,'fzln')" style=""><a href="#">发展理念</a></li>
+					<!-- <li onclick="change_div(this,'ryzs')"><a href="#">荣誉证书</a></li>
+					<li onclick="change_div(this,'zjtd')"><a href="#">专家团队</a></li> -->
+					<li onmouseover="change_div(this,'lxfs')" style="border-right:1px solid #dddddd;"><a href="#">联系方式</a></li>
+				</ul>
+				<div class="tab" id="gsjj">
+					信息咨询&nbsp;&nbsp;
+					技术支持&nbsp;&nbsp;
+					平台建设
+				</div>
+				<div class="tab" style="display:none;" id="fzln"> 
+					创建领先国际的金融咨询机构<br/>
+					合力打造精英顾问团队<br/>
+					最大限度满足客户需求
+				</div>
+				<div class="tab" style="display:none;" id="lxfs">
+					地址：上海市徐汇区桂箐路7号3号楼801室<br/>
+					address：Room 801,Building 3,No.7,Guiqing Road,Xuhui District,Shanghai <br/>
+					邮编： 200035<br/>
+					电话： 021-54485390 <br/>
+					传真： 021-54485391<br/>
+					电子邮件：qk_liuwx@163.com<br/>
+				</div>
+			<!--**************************************************员工风采***********************************************************************-->
+				<div style="width:100%;margin-top:40px;border-top:3px dotted #dddddd;margin-bottom:40px;">
+					<span style="background:white;position:absolute;margin-top:-15px;font-weight:bold;font-size:20px;color:#666666;">员工风采</span>
+				</div>					
+				<div id="ifocus">
+					<div id="ifocus_pic">
+						<div id="ifocus_piclist">
+							<ul>
+								<li>
+									<div class="ygfc">
+										<div class="ygfcContent">
+											创建领先国际的金融专业咨询机构1
+											合力打造精英顾问团队
+											最大限度满足客户需求创建领先国际的金融专业咨询机构
+											合力打造精英顾问团队
+											最大限度满足客户需求
+											创建领先国际的金融专业咨询机构
+											合力打造精英顾问团队
+										</div>
+									</div>	
+									<img src="../../static/img/head.png" style="margin-top:-15px;margin-left:20px;float:left;"/>	
+									<div style="margin-top:3px;margin-left:25px;float:left;font-size:16px;color:#727272;"> 
+										<b style="color:#0488cd;font-size:16px;">周滨</b><br/>总经理
+									</div>
+								</li>
+								<li>
+									<div class="ygfc">
+										<div class="ygfcContent">
+											创建领先国际的金融专业咨询机构1
+											合力打造精英顾问团队
+											最大限度满足客户需求创建领先国际的金融专业咨询机构
+											合力打造精英顾问团队
+											最大限度满足客户需求
+											创建领先国际的金融专业咨询机构
+											合力打造精英顾问团队
+										</div>
+									</div>	
+									<img src="../../static/img/head.png" style="margin-top:-15px;margin-left:20px;float:left;"/>	
+									<div style="margin-top:3px;margin-left:25px;float:left;font-size:16px;color:#727272;"> 
+										<b style="color:#0488cd;font-size:16px;">刘学军</b><br/>副总经理
+									</div>
+								</li>
+								<li>
+									<div class="ygfc">
+										<div class="ygfcContent">
+											创建领先国际的金融专业咨询机构1
+											合力打造精英顾问团队
+											最大限度满足客户需求创建领先国际的金融专业咨询机构
+											合力打造精英顾问团队
+											最大限度满足客户需求
+											创建领先国际的金融专业咨询机构
+											合力打造精英顾问团队
+										</div>
+									</div>	
+									<img src="../../static/img/head.png" style="margin-top:-15px;margin-left:20px;float:left;"/>	
+									<div style="margin-top:3px;margin-left:25px;float:left;font-size:16px;color:#727272;"> 
+										<b style="color:#0488cd;font-size:16px;">马颖涵</b><br/>信用卡咨询部经理
+									</div>
+								</li>
+								<li>
+									<div class="ygfc">
+										<div class="ygfcContent">
+											创建领先国际的金融专业咨询机构1
+											合力打造精英顾问团队
+											最大限度满足客户需求创建领先国际的金融专业咨询机构
+											合力打造精英顾问团队
+											最大限度满足客户需求
+											创建领先国际的金融专业咨询机构
+											合力打造精英顾问团队
+										</div>
+									</div>	
+									<img src="../../static/img/head.png" style="margin-top:-15px;margin-left:20px;float:left;"/>	
+									<div style="margin-top:3px;margin-left:25px;float:left;font-size:16px;color:#727272;"> 
+										<b style="color:#0488cd;font-size:16px;">赵军扬</b><br/>客户经理
+									</div>
+								</li>
+							</ul>
+						</div>
+						
+					</div>
+					<div id="ifocus_btn" style="display:none;">
+						<ul>
+							<li class="current"></li>
+							<li class="normal"></li>
+							<li class="normal"></li>
+							<li class="normal"></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		<!--**************************************************title***********************************************-->		
+			<div class="title">
+				<h2>关于我们</h2>
+				<span class="place">当前位置：乾康（上海）金融信息服务有限公司 > <font style="color:#0488cd">关于我们</font></span>
+			</div>
+		<!--**************************************************right***********************************************-->	
+			<div class="right" style="_margin-left:50px;">				
+				<span class="content">
+					&nbsp;&nbsp;&nbsp;&nbsp;<b style="font-size:16px;">乾康(上海)金融信息服务有限公司</b>是一家专注于金融领域专业管理咨询以及运营实施的服务机构。公司的主营业务是为银行等金融机构提供微小贷款和信用卡业务的咨询及运营、人力资源管理、新产品创新等咨询服务以及协助实现银行互联网金融平台建设----金融OTO商业模式服务平台。<br/>
+					&nbsp;&nbsp;&nbsp;&nbsp;乾康公司高层智囊云集，创始人及决策层领导集多年金融管理咨询经验、前瞻性的理念、大数据云计算的技术于一体，披荆斩棘的为行业开拓领航，打造了一支国际化和本土化相结合的咨询团队。<br/>
+					&nbsp;&nbsp;&nbsp;&nbsp;乾康公司咨询顾问均来自国内各银行、世界五百强企业高级管理人员，具备金融从业经历、金融管理咨询经验、金融专业MBA或博士以上教育背景，全部拥有国际名校教育背景以及国际金融机构或咨询机构的工作经历。<br/>
+					&nbsp;&nbsp;&nbsp;&nbsp;2013年，乾康公司与全球排名第一的美国的专业信用卡咨询公司PTC（PROFIT TECHNOLOGIES COMPANY)达成战略合作协议。双方将共同为银行开展零售业务提供全方位咨询服务。<br/>
+					&nbsp;&nbsp;&nbsp;&nbsp;乾康公司多年来始终致力于金融咨询领域，所以积累了雄厚的专业实力和项目经验。我们将助力银行：管理提升和利润提高，实现在风险可控的前提下，长期持久盈利！<br/>
+				</span>	
+				<img src="../../static/img/gsjj.png" style="margin-left:125px;border:3px dotted #e1e1e1;margin-top:20px;"/>							
+			</div>
+		</div>
+		
+		<div class="back-to-top">
+			<img src="../../static/img/back-to-top.png"/>
+		</div>
 	<!--**************************************************foot***********************************************-->
-		<div class="foot">
-			<img src="../../static/img/images/qk_12.png"/>
+		<div class="foot" style="width:100%;float:left;">		
+			<img src="../../static/img/images/qk_12.png" style="width:100%"/>
 			<img src="../../static/img/images/qk_15.png"/>
 			<span>Copyright(C)2011-2014 乾康（上海）金融信息服务有限公司</span><br/>
 			<span>沪ICP备13043724号</span>
-		</div>
+		</div>		
 	</div>
 	<script type="text/javascript" src="../../static/js/jquery-1.7.2.min.js"></script>
 	<script type="text/javascript" src="../../static/js/script.js"></script>
+	<!-- Slider -->
+	<script type="text/javascript" src="../../static/js/jquery.easing.1.3.js"></script>
+	<script type="text/javascript" src="../../static/js/jquery.animate-colors-min.js"></script>
+	<script type="text/javascript" src="../../static/js/jquery.skitter.js"></script>
+	<script type="text/javascript">
+				
+	</script>
 </body>
 </html>
