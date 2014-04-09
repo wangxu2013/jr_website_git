@@ -8,12 +8,13 @@
 	<meta name="author" content="Muhammad Usman">
 
 	<!-- The styles -->
-	<link href="/static/css/main.css" rel="stylesheet">
+	<link href="../../static/css/main.css" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="../../static/css/skitter.styles.css" media="all" />
 	<style type="text/css">
-		*{font-family:Arial;}
-		.H1{font-family:Arial;}
+		.list{width:100%;}
+		.list li{list-style:none;border-right:1px solid #dddddd;border-bottom:1px solid #dddddd;border-left:3px solid #666666;background:#fafafa;width:99.1%;text-align:center;cursor:pointer;line-height:40px;color:#666666;font-size:16px;}
+		.list .active{border-left:3px solid #0488cd;background:white;color:#0488cd;}
 	</style>
-	
 	<script type="text/javascript">
 		var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
 		document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3F980a47baa3b028fee8b94644df33e9b8' type='text/javascript'%3E%3C/script%3E"));
@@ -31,57 +32,166 @@
 	</script>
 </head>
 
-<body onload="datatable()">
+<body onload="imgs();datatable()">
 	<div class="main">
 	<!--**************************************************top***********************************************-->
-		<div class="logo">	
-			<img src="/static/img/images/logo.png"/>
-			<div>
-				<a href="/jrzx" style="color:#828282;">中文</a><span style="color:#828282;">|</span>
-				<a href="/jrzx_En" style="color:#828282;">English</a>
-				<a href="http://profitinsight.com/" style="color:#828282;margin-left:8px;"><img src="/static/img/PROFI.png" style="height:30px;padding:13px 0;float:right;_display:none;"/></a>
-			</div>			
-		</div>
-		<div class="nav">
-			<ul>
-				<li><a href="/">Home</a></li>
-				<li><a href="/gsjj_En">About Us</a></li>
-				<li><a href="/xwdt_En">News</a></li>
+		<div class="logo" style="position:fixed;z-index:10000;">	
+			<a href="/index_En"><img src="../../static/img/images/logo.png" style="height:60px;margin-top:15px;margin-left:30px;margin-right:150px;"/></a>
+			<ul class="newnav" style="margin-left:20px;z-index:10000;">
+				<!-- <li><a href="/index_En">Home</a></li> -->				
 				<li><a href="/jjfa_En">Business</a></li>
-				<li><a href="/yhnx_En">Training</a></li>
 				<li><a href="/cgal_En">Case</a></li>
 				<li><a href="/hzhb_En">Partner</a></li>
-				<li class="active"><a href="/jrzx_En">Financial</a></li>
+				<li><a href="/yhnx_En">Training</a></li>
+				<li class="active"><a href="/jrzx_En">Financial</a></li>	
+				<li><a href="/gsjj_En">About Us</a></li>			
+			<!-- 	<li><a href="/ygfc_En">Employee</a></li> -->
 				<li><a href="/zpxx_En">Recruit</a></li>
 			</ul>
 		</div>
-		<div class="flash-replaced">
-			<embed width="1000" height="188" type="application/x-shockwave-flash" src="../../static/img/content2_En.swf" pluginspage="http://www.adobe.com/go/getflashplayer" />
-    	</div>
-
-	<!--**************************************************content***********************************************-->
-		<div class="content">
-			<div class="left">
-				<img src="/static/img/images/lmdh_En.png"/>
-				<ul id="gywm-list">
-					<li class="active" onclick="change_div(this,'hlw')"><a href="#">Internet</a></li>
-					<li onclick="change_div(this,'hykx')"><a href="#">Industry News</a></li>		
-					<li onclick="change_div(this,'yhdt')"><a href="#">Bank News</a></li>	
-					<li onclick="change_div(this,'zcyw')"><a href="#">Policy News</a></li>	
-				</ul>
-				<img src="/static/img/images/qk_11_En.png"/>
+		<!-- SLIDER -->
+		<div id="outerslider" style="margin-top:90px;_margin-top:0;">
+        	<div id="slidercontainer">
+            	<section id="slider">
+                <div class="box_skitter box_skitter_large">					
+                    <ul >
+						<li>
+                            <img src="../../static/img/sub02_En.png" alt="" style="height:100%"/>                            
+                        </li>
+                        <li>
+                            <img src="../../static/img/sub01_En.png" alt="" style="height:100%"/>                            
+                        </li>                        
+						<li>
+                            <img src="../../static/img/sub03_En.png" alt="" style="height:100%"/>                            
+                        </li>
+						<li>
+                            <img src="../../static/img/sub04_En.png" alt="" style="height:100%"/>                            
+                        </li>
+						<li>
+                            <img src="../../static/img/sub05_En.png" alt="" style="height:100%"/>                            
+                        </li>
+                    </ul>
+                </div>
+                </section>
+            </div>
+        </div>
+        <!-- END SLIDER -->	
+		<!-- 切换语言 -->		
+		<div class="lanage" onclick="setLanage(this)">
+			<img src="../../static/img/yysz.png"/>
+			<div>
+				<a href="/index">中文</a><br/>
+				<a href="/index_En">English</a>
+			</div>
+		</div>
+	<!--**************************************************left***********************************************-->	
+		<div style="width:100%;float:left;_margin-top:-90px;">
+			<div class="left">				
+				<div>
+					<ul id="gywm-list" class="list">
+						<li class="active" onclick="$('.right').hide();change_div(this,'hlw')" style="border-top:1px solid #dddddd;border-radius:5px 5px 0 0;">Internet</li>
+						<li onclick="$('.right').hide();change_div(this,'hykx');">Industry News</li>		
+						<li onclick="$('.right').hide();change_div(this,'yhdt')">Bank News</li>	
+						<li onclick="$('.right').hide();change_div(this,'zcyw')" style="border-radius:0 0 5px 5px;">Policy News</li>
+					</ul>
+				</div>
+				<!--**************************************************员工风采***********************************************************************-->
+				<div style="width:100%;margin-top:40px;border-top:3px dotted #dddddd;margin-bottom:40px;">
+					<span style="background:white;position:absolute;margin-top:-15px;font-weight:bold;font-size:20px;color:#666666;">Employee</span>
+				</div>					
+				<div id="ifocus">
+					<div id="ifocus_pic">
+						<div id="ifocus_piclist">
+							<ul>
+								<li>
+									<div class="ygfc">
+										<div class="ygfcContent">
+											创建领先国际的金融专业咨询机构1
+											合力打造精英顾问团队
+											最大限度满足客户需求创建领先国际的金融专业咨询机构
+											合力打造精英顾问团队
+											最大限度满足客户需求
+											创建领先国际的金融专业咨询机构
+											合力打造精英顾问团队
+										</div>
+									</div>	
+									<img src="../../static/img/head.png" style="margin-top:-15px;margin-left:20px;float:left;"/>	
+									<div style="margin-top:3px;margin-left:25px;float:left;font-size:16px;color:#727272;"> 
+										<b style="color:#0488cd;font-size:16px;">周滨</b><br/>总经理
+									</div>
+								</li>
+								<li>
+									<div class="ygfc">
+										<div class="ygfcContent">
+											创建领先国际的金融专业咨询机构1
+											合力打造精英顾问团队
+											最大限度满足客户需求创建领先国际的金融专业咨询机构
+											合力打造精英顾问团队
+											最大限度满足客户需求
+											创建领先国际的金融专业咨询机构
+											合力打造精英顾问团队
+										</div>
+									</div>	
+									<img src="../../static/img/head.png" style="margin-top:-15px;margin-left:20px;float:left;"/>	
+									<div style="margin-top:3px;margin-left:25px;float:left;font-size:16px;color:#727272;"> 
+										<b style="color:#0488cd;font-size:16px;">刘学军</b><br/>副总经理
+									</div>
+								</li>
+								<li>
+									<div class="ygfc">
+										<div class="ygfcContent">
+											创建领先国际的金融专业咨询机构1
+											合力打造精英顾问团队
+											最大限度满足客户需求创建领先国际的金融专业咨询机构
+											合力打造精英顾问团队
+											最大限度满足客户需求
+											创建领先国际的金融专业咨询机构
+											合力打造精英顾问团队
+										</div>
+									</div>	
+									<img src="../../static/img/head.png" style="margin-top:-15px;margin-left:20px;float:left;"/>	
+									<div style="margin-top:3px;margin-left:25px;float:left;font-size:16px;color:#727272;"> 
+										<b style="color:#0488cd;font-size:16px;">马颖涵</b><br/>信用卡咨询部经理
+									</div>
+								</li>
+								<li>
+									<div class="ygfc">
+										<div class="ygfcContent">
+											创建领先国际的金融专业咨询机构1
+											合力打造精英顾问团队
+											最大限度满足客户需求创建领先国际的金融专业咨询机构
+											合力打造精英顾问团队
+											最大限度满足客户需求
+											创建领先国际的金融专业咨询机构
+											合力打造精英顾问团队
+										</div>
+									</div>	
+									<img src="../../static/img/head.png" style="margin-top:-15px;margin-left:20px;float:left;"/>	
+									<div style="margin-top:3px;margin-left:25px;float:left;font-size:16px;color:#727272;"> 
+										<b style="color:#0488cd;font-size:16px;">赵军扬</b><br/>客户经理
+									</div>
+								</li>
+							</ul>
+						</div>
+						
+					</div>
+					<div id="ifocus_btn" style="display:none;">
+						<ul>
+							<li class="current"></li>
+							<li class="normal"></li>
+							<li class="normal"></li>
+							<li class="normal"></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+	<!--**************************************************title***********************************************-->		
+			<div class="title">
+				<h2>Financial</h2>
+				<span class="place">CardPay(Shanghai) > <font style="color:#0488cd">Financial</font></span>
 			</div>
 		<!--**************************************************互联网***********************************************-->
 			<div class="right" id="hlw">
-				<table width="100%">
-					<tr>
-						<td><img src="/static/img/tip.png"/><span class="title">Internet</span></td>
-						<td class="pull-right">
-							CardPay(Shanghai) > Financial advisory ><font color="#184554">Internet</font>
-						</td>
-					</tr>
-				</table>
-				<div class="fengge"></div>
 				<table width="100%" class="datatable">
 					<thead>
 						<tr>
@@ -235,15 +345,6 @@
 			</div>	
 			<!--**************************************************2013P2P投资者调查报告***********************************************-->		
 			<div class="right" id="hlw1" style="display:none">
-				<table width="100%">
-					<tr>
-						<td><img src="/static/img/tip.png"/><span class="title">Internet</span></td>
-						<td class="pull-right">
-							CardPay(Shanghai) > <a onclick="show('hlw')" href="#">Internet</a> > <font color="#184554">2013P2P Investor Survey</font>
-						</td>
-					</tr>
-				</table>
-				<div class="fengge"></div>
 				<div class="jtxx">
 					<h1 class="H1">2013P2P Investor Survey</h1>
 					<div class="zz">Author：admin&nbsp;&nbsp;&nbsp;Published：2013-11-19 13:26:00</div>
@@ -309,15 +410,6 @@
 			</div>		
 			<!--**************************************************O2O的全行业渗透***********************************************-->		
 			<div class="right" id="hlw2" style="display:none">
-				<table width="100%">
-					<tr>
-						<td><img src="/static/img/tip.png"/><span class="title">Internet</span></td>
-						<td class="pull-right">
-							CardPay(Shanghai) > <a onclick="show('hlw')" href="#">Internet</a> > <font color="#184554">O2O industry-wide penetration</font>
-						</td>
-					</tr>
-				</table>
-				<div class="fengge"></div>
 				<div class="jtxx">
 					<h1 class="H1">O2O industry-wide penetration</h1>
 					<div class="zz">Author：admin&nbsp;&nbsp;&nbsp;Published：2013-11-19 13:26:00</div>
@@ -385,15 +477,6 @@
 			</div>		
 			<!--**************************************************O2O如何颠覆传统行业***********************************************-->		
 			<div class="right" id="hlw3" style="display:none">
-				<table width="100%">
-					<tr>
-						<td><img src="/static/img/tip.png"/><span class="title">Internet</span></td>
-						<td class="pull-right">
-							CardPay(Shanghai) > <a onclick="show('hlw')" href="#">Internet</a> > <font color="#184554">O2O how to subvert the traditional industries</font>
-						</td>
-					</tr>
-				</table>
-				<div class="fengge"></div>
 				<div class="jtxx">
 					<h1 class="H1">O2O how to subvert the traditional industries</h1>
 					<div class="zz">Author：admin&nbsp;&nbsp;&nbsp;Published：2013-11-19 13:26:00</div>
@@ -448,15 +531,6 @@
 			</div>	
 			<!--**************************************************P2P5.0 网贷平台的中国式生长***********************************************-->		
 			<div class="right" id="hlw4" style="display:none">
-				<table width="100%">
-					<tr>
-						<td><img src="/static/img/tip.png"/><span class="title">Internet</span></td>
-						<td class="pull-right">
-							CardPay(Shanghai) > <a onclick="show('hlw')" href="#">Internet</a> > <font color="#184554">P2P5.0 net loan growth of Chinese-style platform</font>
-						</td>
-					</tr>
-				</table>
-				<div class="fengge"></div>
 				<div class="jtxx">
 					<h1 class="H1">P2P5.0 net loan growth of Chinese-style platform</h1>
 					<div class="zz">Author：admin&nbsp;&nbsp;&nbsp;Published：2013-11-19 13:26:00</div>
@@ -505,15 +579,6 @@
 			</div>	
 			<!--**************************************************传统金融互联网化***********************************************-->		
 			<div class="right" id="hlw5" style="display:none">
-				<table width="100%">
-					<tr>
-						<td><img src="/static/img/tip.png"/><span class="title">Internet</span></td>
-						<td class="pull-right">
-							CardPay(Shanghai) > <a onclick="show('hlw')" href="#">Internet</a> > <font color="#184554">Internet of traditional financial</font>
-						</td>
-					</tr>
-				</table>
-				<div class="fengge"></div>
 				<div class="jtxx">
 					<h1 class="H1">Internet of traditional financial</h1>
 					<div class="zz">Author：admin&nbsp;&nbsp;&nbsp;Published：2013-11-19 13:26:00</div>
@@ -576,15 +641,6 @@
 			</div>	
 			<!--**************************************************海内外“互联网金融”模式大PK***********************************************-->		
 			<div class="right" id="hlw6" style="display:none">
-				<table width="100%">
-					<tr>
-						<td><img src="/static/img/tip.png"/><span class="title">Internet</span></td>
-						<td class="pull-right">
-							CardPay(Shanghai) > <a onclick="show('hlw')" href="#">Internet</a> > <font color="#184554">At home and abroad, "Internet banking" model large PK</font>
-						</td>
-					</tr>
-				</table>
-				<div class="fengge"></div>
 				<div class="jtxx">
 					<h1 class="H1">At home and abroad, "Internet banking" model large PK</h1>
 					<div class="zz">Author：admin&nbsp;&nbsp;&nbsp;Published：2013-11-19 13:26:00</div>
@@ -617,15 +673,6 @@
 			</div>	
 			<!--**************************************************互联网金融***********************************************-->		
 			<div class="right" id="hlw7" style="display:none">
-				<table width="100%">
-					<tr>
-						<td><img src="/static/img/tip.png"/><span class="title">Internet</span></td>
-						<td class="pull-right">
-							CardPay(Shanghai) > <a onclick="show('hlw')" href="#">Internet</a> > <font color="#184554">Internet banking</font>
-						</td>
-					</tr>
-				</table>
-				<div class="fengge"></div>
 				<div class="jtxx">
 					<h1 class="H1">Internet banking</h1>
 					<div class="zz">Author：admin&nbsp;&nbsp;&nbsp;Published：2013-11-19 13:26:00</div>
@@ -664,15 +711,6 @@
 			</div>	
 			<!--**************************************************互联网金融高端论坛会议纪要***********************************************-->		
 			<div class="right" id="hlw8" style="display:none">
-				<table width="100%">
-					<tr>
-						<td><img src="/static/img/tip.png"/><span class="title">Internet</span></td>
-						<td class="pull-right">
-							CardPay(Shanghai) > <a onclick="show('hlw')" href="#">Internet</a> > <font color="#184554">Internet financial end forum meeting</font>
-						</td>
-					</tr>
-				</table>
-				<div class="fengge"></div>
 				<div class="jtxx">
 					<h1 class="H1">Internet financial end forum meeting</h1>
 					<div class="zz">Author：admin&nbsp;&nbsp;&nbsp;Published：2013-11-19 13:26:00</div>
@@ -708,15 +746,6 @@
 			</div>	
 			<!--**************************************************互联网金融空白区***********************************************-->		
 			<div class="right" id="hlw9" style="display:none">
-				<table width="100%">
-					<tr>
-						<td><img src="/static/img/tip.png"/><span class="title">Internet</span></td>
-						<td class="pull-right">
-							CardPay(Shanghai) > <a onclick="show('hlw')" href="#">Internet</a> > <font color="#184554">Internet banking blank area</font>
-						</td>
-					</tr>
-				</table>
-				<div class="fengge"></div>
 				<div class="jtxx">
 					<h1 class="H1">Internet banking blank area</h1>
 					<div class="zz">Author：admin&nbsp;&nbsp;&nbsp;Published：2013-11-19 13:26:00</div>
@@ -769,15 +798,6 @@
 			</div>	
 			<!--**************************************************互联网金融下银行的历史机遇***********************************************-->		
 			<div class="right" id="hlw10" style="display:none">
-				<table width="100%">
-					<tr>
-						<td><img src="/static/img/tip.png"/><span class="title">Internet</span></td>
-						<td class="pull-right">
-							CardPay(Shanghai) > <a onclick="show('hlw')" href="#">Internet</a> > <font color="#184554">Internet banking finance under the historical opportunity</font>
-						</td>
-					</tr>
-				</table>
-				<div class="fengge"></div>
 				<div class="jtxx">
 					<h1 class="H1">Internet banking finance under the historical opportunity</h1>
 					<div class="zz">Author：admin&nbsp;&nbsp;&nbsp;Published：2013-11-19 13:26:00</div>
@@ -826,15 +846,6 @@
 			</div>	
 			<!--**************************************************金融豪赌互联网***********************************************-->		
 			<div class="right" id="hlw11" style="display:none">
-				<table width="100%">
-					<tr>
-						<td><img src="/static/img/tip.png"/><span class="title">Internet</span></td>
-						<td class="pull-right">
-							CardPay(Shanghai) > <a onclick="show('hlw')" href="#">Internet</a> > <font color="#184554">Financial gamble internet</font>
-						</td>
-					</tr>
-				</table>
-				<div class="fengge"></div>
 				<div class="jtxx">
 					<h1 class="H1">Financial gamble internet</h1>
 					<div class="zz">Author：admin&nbsp;&nbsp;&nbsp;Published：2013-11-19 13:26:00</div>
@@ -886,15 +897,6 @@
 			</div>	
 			<!--**************************************************美国p2p信贷平台Prosper获红杉和黑石2500万美元投资***********************************************-->		
 			<div class="right" id="hlw12" style="display:none">
-				<table width="100%">
-					<tr>
-						<td><img src="/static/img/tip.png"/><span class="title">Internet</span></td>
-						<td class="pull-right">
-							CardPay(Shanghai) > <a onclick="show('hlw')" href="#">Internet</a> > <font color="#184554">U.S. credit p2p platform Prosper</font>
-						</td>
-					</tr>
-				</table>
-				<div class="fengge"></div>
 				<div class="jtxx">
 					<h1 class="H1">U.S. p2p platform Prosper credit for Sequoia and Blackstone $ 25 million investment</h1>
 					<div class="zz">Author：admin&nbsp;&nbsp;&nbsp;Published：2013-11-19 13:26:00</div>
@@ -909,15 +911,6 @@
 			</div>	
 			<!--**************************************************日本互联网金融成功案例***********************************************-->		
 			<div class="right" id="hlw13" style="display:none">
-				<table width="100%">
-					<tr>
-						<td><img src="/static/img/tip.png"/><span class="title">Internet</span></td>
-						<td class="pull-right">
-							CardPay(Shanghai) > <a onclick="show('hlw')" href="#">Internet</a> > <font color="#184554">Japanese Internet Financial Success Stories</font>
-						</td>
-					</tr>
-				</table>
-				<div class="fengge"></div>
 				<div class="jtxx">
 					<h1 class="H1">Japanese Internet Financial Success Stories</h1>
 					<div class="zz">Author：admin&nbsp;&nbsp;&nbsp;Published：2013-11-19 13:26:00</div>
@@ -965,15 +958,6 @@
 			</div>	
 			<!--**************************************************探秘天虹商场微信支付***********************************************-->		
 			<div class="right" id="hlw14" style="display:none">
-				<table width="100%">
-					<tr>
-						<td><img src="/static/img/tip.png"/><span class="title">Internet</span></td>
-						<td class="pull-right">
-							CardPay(Shanghai) > <a onclick="show('hlw')" href="#">Internet</a> > <font color="#184554">Quest Tianhong micro-channel payment</font>
-						</td>
-					</tr>
-				</table>
-				<div class="fengge"></div>
 				<div class="jtxx">
 					<h1 class="H1">Quest Tianhong micro-channel payment</h1>
 					<div class="zz">Author：admin&nbsp;&nbsp;&nbsp;Published：2013-11-19 13:26:00</div>
@@ -998,15 +982,6 @@
 			</div>	
 			<!--**************************************************微信O2O商家为什么要优惠***********************************************-->		
 			<div class="right" id="hlw17" style="display:none">
-				<table width="100%">
-					<tr>
-						<td><img src="/static/img/tip.png"/><span class="title">Internet</span></td>
-						<td class="pull-right">
-							CardPay(Shanghai) > <a onclick="show('hlw')" href="#">Internet</a> > <font color="#184554">Why micro-channel O2O business deals</font>
-						</td>
-					</tr>
-				</table>
-				<div class="fengge"></div>
 				<div class="jtxx">
 					<h1 class="H1">Why micro-channel O2O business deals</h1>
 					<div class="zz">Author：admin&nbsp;&nbsp;&nbsp;Published：2013-11-19 13:26:00</div>
@@ -1049,15 +1024,6 @@
 			</div>	
 			<!--**************************************************微信银功能全接触***********************************************-->		
 			<div class="right" id="hlw18" style="display:none">
-				<table width="100%">
-					<tr>
-						<td><img src="/static/img/tip.png"/><span class="title">Internet</span></td>
-						<td class="pull-right">
-							CardPay(Shanghai) > <a onclick="show('hlw')" href="#">Internet</a> > <font color="#184554">Function Keys Micro Credit Banks</font>
-						</td>
-					</tr>
-				</table>
-				<div class="fengge"></div>
 				<div class="jtxx">
 					<h1 class="H1">Function Keys Micro Credit Banks</h1>
 					<div class="zz">Author：admin&nbsp;&nbsp;&nbsp;Published：2013-11-19 13:26:00</div>
@@ -1094,15 +1060,6 @@
 			</div>	
 			<!--**************************************************我国电商发展情况***********************************************-->		
 			<div class="right" id="hlw19" style="display:none">
-				<table width="100%">
-					<tr>
-						<td><img src="/static/img/tip.png"/><span class="title">Internet</span></td>
-						<td class="pull-right">
-							CardPay(Shanghai) > <a onclick="show('hlw')" href="#">Internet</a> > <font color="#184554">The development of electronic business</font>
-						</td>
-					</tr>
-				</table>
-				<div class="fengge"></div>
 				<div class="jtxx">
 					<h1 class="H1">The development of electronic business</h1>
 					<div class="zz">Author：admin&nbsp;&nbsp;&nbsp;Published：2013-11-19 13:26:00</div>
@@ -1134,15 +1091,6 @@
 			</div>
 			<!--**************************************************银行互联网金融O2O降成本***********************************************-->		
 			<div class="right" id="hlw20" style="display:none">
-				<table width="100%">
-					<tr>
-						<td><img src="/static/img/tip.png"/><span class="title">Internet</span></td>
-						<td class="pull-right">
-							CardPay(Shanghai) > <a onclick="show('hlw')" href="#">Internet</a> > <font color="#184554">Bank internet banking O2O reduce costs</font>
-						</td>
-					</tr>
-				</table>
-				<div class="fengge"></div>
 				<div class="jtxx">
 					<h1 class="H1">Bank internet banking O2O reduce costs</h1>
 					<div class="zz">Author：admin&nbsp;&nbsp;&nbsp;Published：2013-11-19 13:26:00</div>
@@ -1190,15 +1138,6 @@
 			</div>
 			<!--**************************************************银行如何应对互联网时代***********************************************-->		
 			<div class="right" id="hlw21" style="display:none">
-				<table width="100%">
-					<tr>
-						<td><img src="/static/img/tip.png"/><span class="title">Internet</span></td>
-						<td class="pull-right">
-							CardPay(Shanghai) > <a onclick="show('hlw')" href="#">Internet</a> > <font color="#184554">How to deal with the Internet era bank</font>
-						</td>
-					</tr>
-				</table>
-				<div class="fengge"></div>
 				<div class="jtxx">
 					<h1 class="H1">How to deal with the Internet era bank</h1>
 					<div class="zz">Author：admin&nbsp;&nbsp;&nbsp;Published：2013-11-19 13:26:00</div>
@@ -1240,15 +1179,6 @@
 			</div>
 			<!--**************************************************中国线上P2P模式分类 影响及未来发展趋势***********************************************-->		
 			<div class="right" id="hlw22" style="display:none">
-				<table width="100%">
-					<tr>
-						<td><img src="/static/img/tip.png"/><span class="title">Internet</span></td>
-						<td class="pull-right">
-							CardPay(Shanghai) > <a onclick="show('hlw')" href="#">Internet</a> > <font color="#184554">Chinese online P2P pattern classification and future trends affecting</font>
-						</td>
-					</tr>
-				</table>
-				<div class="fengge"></div>
 				<div class="jtxx">
 					<h1 class="H1">Chinese online P2P pattern classification and future trends affecting</h1>
 					<div class="zz">Author：admin&nbsp;&nbsp;&nbsp;Published：2013-11-19 13:26:00</div>
@@ -1322,15 +1252,6 @@
 			</div>
 		<!--**************************************************行业快讯***********************************************-->
 			<div class="right" id="hykx" style="display:none">
-				<table width="100%">
-					<tr>
-						<td><img src="/static/img/tip.png"/><span class="title">Industry News</span></td>
-						<td class="pull-right">
-							CardPay(Shanghai) > Financial advisory ><font color="#184554">Industry News</font>
-						</td>
-					</tr>
-				</table>
-				<div class="fengge"></div>
 				<table width="100%" class="datatable">
 					<thead>
 						<tr>
@@ -1442,15 +1363,6 @@
 			</div>	
 			<!--**************************************************大数据时代来临了***********************************************-->		
 			<div class="right" id="hykx1" style="display:none">
-				<table width="100%">
-					<tr>
-						<td><img src="/static/img/tip.png"/><span class="title">Industry News</span></td>
-						<td class="pull-right">
-							CardPay(Shanghai) > <a onclick="show('hykx')" href="#">Industry News</a> > <font color="#184554">The era of big data</font>
-						</td>
-					</tr>
-				</table>
-				<div class="fengge"></div>
 				<div class="jtxx">
 					<h1 class="H1">The era of big data</h1>
 					<div class="zz">Author：admin&nbsp;&nbsp;&nbsp;Published：2013-11-19 13:26:00</div>
@@ -1492,15 +1404,6 @@
 			</div>	
 			<!--**************************************************德国“直销银行”发展状况的分析及启示***********************************************-->		
 			<div class="right" id="hykx2" style="display:none">
-				<table width="100%">
-					<tr>
-						<td><img src="/static/img/tip.png"/><span class="title">Industry News</span></td>
-						<td class="pull-right">
-							CardPay(Shanghai) > <a onclick="show('hykx')" href="#">Industry News</a> > <font color="#184554">German "Direct Banking" An Analysis of Development and Inspiration</font>
-						</td>
-					</tr>
-				</table>
-				<div class="fengge"></div>
 				<div class="jtxx">
 					<h1 class="H1">German "Direct Banking" An Analysis of Development and Inspiration</h1>
 					<div class="zz">Author：admin&nbsp;&nbsp;&nbsp;Published：2013-11-19 13:26:00</div>
@@ -1547,15 +1450,6 @@
 			</div>
 			<!--**************************************************第三方支付的机会外贸结汇代理***********************************************-->		
 			<div class="right" id="hykx3" style="display:none">
-				<table width="100%">
-					<tr>
-						<td><img src="/static/img/tip.png"/><span class="title">Industry News</span></td>
-						<td class="pull-right">
-							CardPay(Shanghai) > <a onclick="show('hykx')" href="#">Industry News</a> > <font color="#184554">Opportunities for third-party payment settlement...</font>
-						</td>
-					</tr>
-				</table>
-				<div class="fengge"></div>
 				<div class="jtxx">
 					<h1 class="H1">Opportunities for third-party payment settlement agents of foreign trade</h1>
 					<div class="zz">Author：admin&nbsp;&nbsp;&nbsp;Published：2013-11-19 13:26:00</div>
@@ -1576,15 +1470,6 @@
 			</div>
 			<!--**************************************************第三方支付行业报告***********************************************-->		
 			<div class="right" id="hykx4" style="display:none">
-				<table width="100%">
-					<tr>
-						<td><img src="/static/img/tip.png"/><span class="title">Industry News</span></td>
-						<td class="pull-right">
-							CardPay(Shanghai) > <a onclick="show('hykx')" href="#">Industry News</a> > <font color="#184554">Third-party payment industry report</font>
-						</td>
-					</tr>
-				</table>
-				<div class="fengge"></div>
 				<div class="jtxx">
 					<h1 class="H1">Third-party payment industry report</h1>
 					<div class="zz">Author：admin&nbsp;&nbsp;&nbsp;Published：2013-11-19 13:26:00</div>
@@ -1638,15 +1523,6 @@
 			</div>
 			<!--**************************************************复活的支付宝POS机及其野心***********************************************-->		
 			<div class="right" id="hykx5" style="display:none">
-				<table width="100%">
-					<tr>
-						<td><img src="/static/img/tip.png"/><span class="title">Industry News</span></td>
-						<td class="pull-right">
-							CardPay(Shanghai) > <a onclick="show('hykx')" href="#">Industry News</a> > <font color="#184554">Resurrection Alipay POS machine and its ambitions</font>
-						</td>
-					</tr>
-				</table>
-				<div class="fengge"></div>
 				<div class="jtxx">
 					<h1 class="H1">Resurrection Alipay POS machine and its ambitions</h1>
 					<div class="zz">Author：admin&nbsp;&nbsp;&nbsp;Published：2013-11-19 13:26:00</div>
@@ -1687,15 +1563,6 @@
 			</div>
 			<!--**************************************************Enterprises can successfully and change management hunger***********************************************-->		
 			<div class="right" id="hykx6" style="display:none">
-				<table width="100%">
-					<tr>
-						<td><img src="/static/img/tip.png"/><span class="title">Industry News</span></td>
-						<td class="pull-right">
-							CardPay(Shanghai) > <a onclick="show('hykx')" href="#">Industry News</a> > <font color="#184554">Enterprises can successfully and change management hunger</font>
-						</td>
-					</tr>
-				</table>
-				<div class="fengge"></div>
 				<div class="jtxx">
 					<h1 class="H1">Enterprises can successfully and change management hunger</h1>
 					<div class="zz">Author：admin&nbsp;&nbsp;&nbsp;Published：2013-11-19 13:26:00</div>
@@ -1730,15 +1597,6 @@
 			</div>
 			<!--**************************************************Enterprises can successfully and change management hunger***********************************************-->		
 			<div class="right" id="hykx7" style="display:none">
-				<table width="100%">
-					<tr>
-						<td><img src="/static/img/tip.png"/><span class="title">Industry News</span></td>
-						<td class="pull-right">
-							CardPay(Shanghai) > <a onclick="show('hykx')" href="#">Industry News</a> > <font color="#184554">Look Ma how to "rob" Banks</font>
-						</td>
-					</tr>
-				</table>
-				<div class="fengge"></div>
 				<div class="jtxx">
 					<h1 class="H1">Look Ma how to "rob" Banks</h1>
 					<div class="zz">Author：admin&nbsp;&nbsp;&nbsp;Published：2013-11-19 13:26:00</div>
@@ -1783,15 +1641,6 @@
 			</div>
 			<!--**************************************************Ma Tan core to achieve the ultimate product design***********************************************-->		
 			<div class="right" id="hykx8" style="display:none">
-				<table width="100%">
-					<tr>
-						<td><img src="/static/img/tip.png"/><span class="title">Industry News</span></td>
-						<td class="pull-right">
-							CardPay(Shanghai) > <a onclick="show('hykx')" href="#">Industry News</a> > <font color="#184554">Ma Tan core to achieve the ultimate product design</font>
-						</td>
-					</tr>
-				</table>
-				<div class="fengge"></div>
 				<div class="jtxx">
 					<h1 class="H1">Ma Tan core to achieve the ultimate product design</h1>
 					<div class="zz">Author：admin&nbsp;&nbsp;&nbsp;Published：2013-11-19 13:26:00</div>
@@ -1847,15 +1696,6 @@
 			</div>
 			<!--**************************************************Talking about the development direction of Kaka Union银联亲儿子也得自己长***********************************************-->		
 			<div class="right" id="hykx9" style="display:none">
-				<table width="100%">
-					<tr>
-						<td><img src="/static/img/tip.png"/><span class="title">Industry News</span></td>
-						<td class="pull-right">
-							CardPay(Shanghai) > <a onclick="show('hykx')" href="#">Industry News</a> > <font color="#184554">Talking about the development direction of Kaka </font>
-						</td>
-					</tr>
-				</table>
-				<div class="fengge"></div>
 				<div class="jtxx">
 					<h1 class="H1">Talking about the development direction of Kaka </h1>
 					<div class="zz">Author：admin&nbsp;&nbsp;&nbsp;Published：2013-11-19 13:26:00</div>
@@ -1881,15 +1721,6 @@
 			</div>
 			<!--************************************************** Tencent 100 billion dollars under achievement and a sense of crisis***********************************************-->		
 			<div class="right" id="hykx10" style="display:none">
-				<table width="100%">
-					<tr>
-						<td><img src="/static/img/tip.png"/><span class="title">Industry News</span></td>
-						<td class="pull-right">
-							CardPay(Shanghai) > <a onclick="show('hykx')" href="#">Industry News</a> > <font color="#184554">Tencent 100 billion dollars under achievement and a sense of crisis</font>
-						</td>
-					</tr>
-				</table>
-				<div class="fengge"></div>
 				<div class="jtxx">
 					<h1 class="H1">Tencent 100 billion dollars under achievement and a sense of crisis</h1>
 					<div class="zz">Author：admin&nbsp;&nbsp;&nbsp;Published：2013-11-19 13:26:00</div>
@@ -1950,15 +1781,6 @@
 			</div>
 			<!--************************************************** Prepaid card companies fought the individual market 信用卡与预付卡谋联合***********************************************-->		
 			<div class="right" id="hykx11" style="display:none">
-				<table width="100%">
-					<tr>
-						<td><img src="/static/img/tip.png"/><span class="title">Industry News</span></td>
-						<td class="pull-right">
-							CardPay(Shanghai) > <a onclick="show('hykx')" href="#">Industry News</a> > <font color="#184554">Prepaid card companies fought the individual market </font>
-						</td>
-					</tr>
-				</table>
-				<div class="fengge"></div>
 				<div class="jtxx">
 					<h1 class="H1">Prepaid card companies fought the individual market </h1>
 					<div class="zz">Author：admin&nbsp;&nbsp;&nbsp;Published：2013-11-19 13:26:00</div>
@@ -2007,15 +1829,6 @@
 			</div>
 			<!--**************************************************Alipay positive firefight with the Consortium***********************************************-->		
 			<div class="right" id="hykx12" style="display:none">
-				<table width="100%">
-					<tr>
-						<td><img src="/static/img/tip.png"/><span class="title">Industry News</span></td>
-						<td class="pull-right">
-							CardPay(Shanghai) > <a onclick="show('hykx')" href="#">Industry News</a> > <font color="#184554">Alipay positive firefight with the Consortium</font>
-						</td>
-					</tr>
-				</table>
-				<div class="fengge"></div>
 				<div class="jtxx">
 					<h1 class="H1">Alipay positive firefight with the Consortium</h1>
 					<div class="zz">Author：admin&nbsp;&nbsp;&nbsp;Published：2013-11-19 13:26:00</div>
@@ -2062,15 +1875,6 @@
 			</div>
 			<!--**************************************************Payment products restart the battle line***********************************************-->		
 			<div class="right" id="hykx13" style="display:none">
-				<table width="100%">
-					<tr>
-						<td><img src="/static/img/tip.png"/><span class="title">Industry News</span></td>
-						<td class="pull-right">
-							CardPay(Shanghai) > <a onclick="show('hykx')" href="#">Industry News</a> > <font color="#184554">Payment products restart the battle line</font>
-						</td>
-					</tr>
-				</table>
-				<div class="fengge"></div>
 				<div class="jtxx">
 					<h1 class="H1">Payment products restart the battle line</h1>
 					<div class="zz">Author：admin&nbsp;&nbsp;&nbsp;Published：2013-11-19 13:26:00</div>
@@ -2096,15 +1900,6 @@
 			</div>
 			<!--**************************************************Professional parse line payment and online payment***********************************************-->		
 			<div class="right" id="hykx14" style="display:none">
-				<table width="100%">
-					<tr>
-						<td><img src="/static/img/tip.png"/><span class="title">Industry News</span></td>
-						<td class="pull-right">
-							CardPay(Shanghai) > <a onclick="show('hykx')" href="#">Industry News</a> > <font color="#184554">Professional parse line payment and online payment</font>
-						</td>
-					</tr>
-				</table>
-				<div class="fengge"></div>
 				<div class="jtxx">
 					<h1 class="H1">Professional parse line payment and online payment</h1>
 					<div class="zz">Author：admin&nbsp;&nbsp;&nbsp;Published：2013-11-19 13:26:00</div>
@@ -2141,15 +1936,6 @@
 			</div>
 		<!--**************************************************银行动态***********************************************-->
 			<div class="right" id="yhdt" style="display:none">
-				<table width="100%">
-					<tr>
-						<td><img src="/static/img/tip.png"/><span class="title">Bank News</span></td>
-						<td class="pull-right">
-							CardPay(Shanghai) > Financial advisory ><font color="#184554">Bank News</font>
-						</td>
-					</tr>
-				</table>
-				<div class="fengge"></div>
 				<table width="100%" class="datatable">
 					<thead>
 						<tr>
@@ -2254,15 +2040,6 @@
 			</div>	
 			<!--**************************************************17家第三方支付企业获得跨境支付牌照***********************************************-->		
 			<div class="right" id="yhdt1" style="display:none">
-				<table width="100%">
-					<tr>
-						<td><img src="/static/img/tip.png"/><span class="title">Bank News</span></td>
-						<td class="pull-right">
-							CardPay(Shanghai) > <a onclick="show('yhdt')" href="#">Bank News</a> > <font color="#184554">17 third-party payment companies to obtain licenses cross-border payments</font>
-						</td>
-					</tr>
-				</table>
-				<div class="fengge"></div>
 				<div class="jtxx">
 					<h1 class="H1">17 third-party payment companies to obtain licenses cross-border payments</h1>
 					<div class="zz">Author：admin&nbsp;&nbsp;&nbsp;Published：2013-11-19 13:26:00</div>
@@ -2284,15 +2061,6 @@
 			</div>
 			<!--**************************************************单位卡创新产品宁波银行单位结算卡***********************************************-->		
 			<div class="right" id="yhdt2" style="display:none">
-				<table width="100%">
-					<tr>
-						<td><img src="/static/img/tip.png"/><span class="title">Bank News</span></td>
-						<td class="pull-right">
-							CardPay(Shanghai) > <a onclick="show('yhdt')" href="#">Bank News</a> > <font color="#184554">Innovative products unit card settlement card unit of Bank of Ningbo</font>
-						</td>
-					</tr>
-				</table>
-				<div class="fengge"></div>
 				<div class="jtxx">
 					<h1 class="H1">Innovative products unit card settlement card unit of Bank of Ningbo</h1>
 					<div class="zz">Author：admin&nbsp;&nbsp;&nbsp;Published：2013-11-19 13:26:00</div>
@@ -2318,15 +2086,6 @@
 			</div>
 			<!--**************************************************富国银行的发展历程***********************************************-->		
 			<div class="right" id="yhdt3" style="display:none">
-				<table width="100%">
-					<tr>
-						<td><img src="/static/img/tip.png"/><span class="title">Bank News</span></td>
-						<td class="pull-right">
-							CardPay(Shanghai) > <a onclick="show('yhdt')" href="#">Bank News</a> > <font color="#184554">Wells Fargo History</font>
-						</td>
-					</tr>
-				</table>
-				<div class="fengge"></div>
 				<div class="jtxx">
 					<h1 class="H1">Wells Fargo History</h1>
 					<div class="zz">Author：admin&nbsp;&nbsp;&nbsp;Published：2013-11-19 13:26:00</div>
@@ -2387,15 +2146,6 @@
 			</div>
 			<!--**************************************************工行拟10月上线电商平台***********************************************-->		
 			<div class="right" id="yhdt4" style="display:none">
-				<table width="100%">
-					<tr>
-						<td><img src="/static/img/tip.png"/><span class="title">Bank News</span></td>
-						<td class="pull-right">
-							CardPay(Shanghai) > <a onclick="show('yhdt')" href="#">Bank News</a> > <font color="#184554">ICBC intends to October on-line electronic business platform</font>
-						</td>
-					</tr>
-				</table>
-				<div class="fengge"></div>
 				<div class="jtxx">
 					<h1 class="H1">ICBC intends to October on-line electronic business platform</h1>
 					<div class="zz">Author：admin&nbsp;&nbsp;&nbsp;Published：2013-11-19 13:26:00</div>
@@ -2417,15 +2167,6 @@
 			</div>
 			<!--**************************************************金融危机的七步曲***********************************************-->		
 			<div class="right" id="yhdt5" style="display:none">
-				<table width="100%">
-					<tr>
-						<td><img src="/static/img/tip.png"/><span class="title">Bank News</span></td>
-						<td class="pull-right">
-							CardPay(Shanghai) > <a onclick="show('yhdt')" href="#">Bank News</a> > <font color="#184554">Seven Steps of financial crisis</font>
-						</td>
-					</tr>
-				</table>
-				<div class="fengge"></div>
 				<div class="jtxx">
 					<h1 class="H1">Seven Steps of financial crisis</h1>
 					<div class="zz">Author：admin&nbsp;&nbsp;&nbsp;Published：2013-11-19 13:26:00</div>
@@ -2450,15 +2191,6 @@
 			</div>
 			<!--**************************************************民生社区银行***********************************************-->		
 			<div class="right" id="yhdt6" style="display:none">
-				<table width="100%">
-					<tr>
-						<td><img src="/static/img/tip.png"/><span class="title">Bank News</span></td>
-						<td class="pull-right">
-							CardPay(Shanghai) > <a onclick="show('yhdt')" href="#">Bank News</a> > <font color="#184554">Minsheng Bank</font>
-						</td>
-					</tr>
-				</table>
-				<div class="fengge"></div>
 				<div class="jtxx">
 					<h1 class="H1">Minsheng Bank</h1>
 					<div class="zz">Author：admin&nbsp;&nbsp;&nbsp;Published：2013-11-19 13:26:00</div>
@@ -2477,15 +2209,6 @@
 			</div>
 			<!--**************************************************平安的绿金融***********************************************-->		
 			<div class="right" id="yhdt7" style="display:none">
-				<table width="100%">
-					<tr>
-						<td><img src="/static/img/tip.png"/><span class="title">Bank News</span></td>
-						<td class="pull-right">
-							CardPay(Shanghai) > <a onclick="show('yhdt')" href="#">Bank News</a> > <font color="#184554">Green financial peace</font>
-						</td>
-					</tr>
-				</table>
-				<div class="fengge"></div>
 				<div class="jtxx">
 					<h1 class="H1">Green financial peace</h1>
 					<div class="zz">Author：admin&nbsp;&nbsp;&nbsp;Published：2013-11-19 13:26:00</div>
@@ -2511,15 +2234,6 @@
 			</div>
 			<!--**************************************************社区银行：商业银行的转型重要方向***********************************************-->		
 			<div class="right" id="yhdt8" style="display:none">
-				<table width="100%">
-					<tr>
-						<td><img src="/static/img/tip.png"/><span class="title">Bank News</span></td>
-						<td class="pull-right">
-							CardPay(Shanghai) > <a onclick="show('yhdt')" href="#">Bank News</a> > <font color="#184554">Community Bank: important direction for the transformation...</font>
-						</td>
-					</tr>
-				</table>
-				<div class="fengge"></div>
 				<div class="jtxx">
 					<h1 class="H1">Community Bank: important direction for the transformation of commercial banks</h1>
 					<div class="zz">Author：admin&nbsp;&nbsp;&nbsp;Published：2013-11-19 13:26:00</div>
@@ -2554,15 +2268,6 @@
 			</div>
 			<!--**************************************************社区银行进化论更小更聪明***********************************************-->		
 			<div class="right" id="yhdt9" style="display:none">
-				<table width="100%">
-					<tr>
-						<td><img src="/static/img/tip.png"/><span class="title">Bank News</span></td>
-						<td class="pull-right">
-							CardPay(Shanghai) > <a onclick="show('yhdt')" href="#">Bank News</a> > <font color="#184554">Smaller community banks Darwinism smarter</font>
-						</td>
-					</tr>
-				</table>
-				<div class="fengge"></div>
 				<div class="jtxx">
 					<h1 class="H1">Smaller community banks Darwinism smarter</h1>
 					<div class="zz">Author：admin&nbsp;&nbsp;&nbsp;Published：2013-11-19 13:26:00</div>
@@ -2609,15 +2314,6 @@
 			</div>
 			<!--**************************************************社区银行石家庄萌芽***********************************************-->		
 			<div class="right" id="yhdt10" style="display:none">
-				<table width="100%">
-					<tr>
-						<td><img src="/static/img/tip.png"/><span class="title">Bank News</span></td>
-						<td class="pull-right">
-							CardPay(Shanghai) > <a onclick="show('yhdt')" href="#">Bank News</a> > <font color="#184554">Shijiazhuang budding community banks</font>
-						</td>
-					</tr>
-				</table>
-				<div class="fengge"></div>
 				<div class="jtxx">
 					<h1 class="H1">Shijiazhuang budding community banks</h1>
 					<div class="zz">Author：admin&nbsp;&nbsp;&nbsp;Published：2013-11-19 13:26:00</div>
@@ -2682,15 +2378,6 @@
 			</div>
 			<!--**************************************************小而不倒社区银行***********************************************-->		
 			<div class="right" id="yhdt11" style="display:none">
-				<table width="100%">
-					<tr>
-						<td><img src="/static/img/tip.png"/><span class="title">Bank News</span></td>
-						<td class="pull-right">
-							CardPay(Shanghai) > <a onclick="show('yhdt')" href="#">Bank News</a> > <font color="#184554">Small community banks to fail</font>
-						</td>
-					</tr>
-				</table>
-				<div class="fengge"></div>
 				<div class="jtxx">
 					<h1 class="H1">Small community banks to fail</h1>
 					<div class="zz">Author：admin&nbsp;&nbsp;&nbsp;Published：2013-11-19 13:26:00</div>
@@ -2721,15 +2408,6 @@
 			</div>
 			<!--**************************************************小微贷业务的出路***********************************************-->		
 			<div class="right" id="yhdt12" style="display:none">
-				<table width="100%">
-					<tr>
-						<td><img src="/static/img/tip.png"/><span class="title">Bank News</span></td>
-						<td class="pull-right">
-							CardPay(Shanghai) > <a onclick="show('yhdt')" href="#">Bank News</a> > <font color="#184554">Small micro-loan business the way out</font>
-						</td>
-					</tr>
-				</table>
-				<div class="fengge"></div>
 				<div class="jtxx">
 					<h1 class="H1">Small micro-loan business the way out</h1>
 					<div class="zz">Author：admin&nbsp;&nbsp;&nbsp;Published：2013-11-19 13:26:00</div>
@@ -2758,15 +2436,6 @@
 			</div>
 			<!--**************************************************直销银行***********************************************-->		
 			<div class="right" id="yhdt13" style="display:none">
-				<table width="100%">
-					<tr>
-						<td><img src="/static/img/tip.png"/><span class="title">Bank News</span></td>
-						<td class="pull-right">
-							CardPay(Shanghai) > <a onclick="show('yhdt')" href="#">Bank News</a> > <font color="#184554">Direct Banking</font>
-						</td>
-					</tr>
-				</table>
-				<div class="fengge"></div>
 				<div class="jtxx">
 					<h1 class="H1">Direct Banking</h1>
 					<div class="zz">Author：admin&nbsp;&nbsp;&nbsp;Published：2013-11-19 13:26:00</div>
@@ -2809,14 +2478,6 @@
 			</div>
 		<!--**************************************************政策要闻***********************************************-->
 			<div class="right" id="zcyw" style="display:none">
-				<table width="100%">
-					<tr>
-						<td><img src="/static/img/tip.png"/><span class="title">Policy News</span></td>
-						<td class="pull-right">
-							CardPay(Shanghai) > Financial advisory ><font color="#184554">Policy News</font>
-						</td>
-					</tr>
-				</table>
 				<div class="fengge"></div>
 				<table width="100%" class="datatable">
 					<thead>
@@ -2880,15 +2541,6 @@
 			</div>	
 			<!--**************************************************P2P频触底线 监管层酝酿互联网金融新政***********************************************-->		
 			<div class="right" id="zcyw1" style="display:none">
-				<table width="100%">
-					<tr>
-						<td><img src="/static/img/tip.png"/><span class="title">Policy News</span></td>
-						<td class="pull-right">
-							CardPay(Shanghai) > <a onclick="show('zcyw')" href="#">Policy News</a> > <font color="#184554">P2P bottom line frequency </font>
-						</td>
-					</tr>
-				</table>
-				<div class="fengge"></div>
 				<div class="jtxx">
 					<h1 class="H1">P2P bottom line frequency </h1>
 					<div class="zz">Author：admin&nbsp;&nbsp;&nbsp;Published：2013-11-19 13:26:00</div>
@@ -2926,15 +2578,6 @@
 			</div>
 			<!--**************************************************必须推进中国银行业六大改革 应对生死劫难 马蔚华***********************************************-->		
 			<div class="right" id="zcyw2" style="display:none">
-				<table width="100%">
-					<tr>
-						<td><img src="/static/img/tip.png"/><span class="title">Policy News</span></td>
-						<td class="pull-right">
-							CardPay(Shanghai) > <a onclick="show('zcyw')" href="#">Policy News</a> > <font color="#184554">Six reform must promote the China Banking </font>
-						</td>
-					</tr>
-				</table>
-				<div class="fengge"></div>
 				<div class="jtxx">
 					<h1 class="H1">Six reform must promote the China Banking </h1>
 					<div class="zz">Author：admin&nbsp;&nbsp;&nbsp;Published：2013-11-19 13:26:00</div>
@@ -2972,15 +2615,6 @@
 			</div>
 			<!--**************************************************放宽金融市场准入 择机推出存款保险制度***********************************************-->		
 			<div class="right" id="zcyw3" style="display:none">
-				<table width="100%">
-					<tr>
-						<td><img src="/static/img/tip.png"/><span class="title">Policy News</span></td>
-						<td class="pull-right">
-							CardPay(Shanghai) > <a onclick="show('zcyw')" href="#">Policy News</a> > <font color="#184554">Choose the launch deposit insurance system</font>
-						</td>
-					</tr>
-				</table>
-				<div class="fengge"></div>
 				<div class="jtxx">
 					<h1 class="H1">Choose the launch deposit insurance system </h1>
 					<div class="zz">Author：admin&nbsp;&nbsp;&nbsp;Published：2013-11-19 13:26:00</div>
@@ -3036,15 +2670,6 @@
 			</div>
 			<!--**************************************************工行原行长杨凯生互联网金融不能野蛮生长***********************************************-->		
 			<div class="right" id="zcyw4" style="display:none">
-				<table width="100%">
-					<tr>
-						<td><img src="/static/img/tip.png"/><span class="title">Policy News</span></td>
-						<td class="pull-right">
-							CardPay(Shanghai) > <a onclick="show('zcyw')" href="#">Policy News</a> > <font color="#184554">ICBC President Yang Kaisheng original Internet banking ...</font>
-						</td>
-					</tr>
-				</table>
-				<div class="fengge"></div>
 				<div class="jtxx">
 					<h1 class="H1">ICBC President Yang Kaisheng original Internet banking is not barbaric growth</h1>
 					<div class="zz">Author：admin&nbsp;&nbsp;&nbsp;Published：2013-11-19 13:26:00</div>
@@ -3098,15 +2723,6 @@
 			</div>
 			<!--**************************************************民营银行首批最多5家***********************************************-->		
 			<div class="right" id="zcyw5" style="display:none">
-				<table width="100%">
-					<tr>
-						<td><img src="/static/img/tip.png"/><span class="title">Policy News</span></td>
-						<td class="pull-right">
-							CardPay(Shanghai) > <a onclick="show('zcyw')" href="#">Policy News</a> > <font color="#184554">Up to five of the first private banks</font>
-						</td>
-					</tr>
-				</table>
-				<div class="fengge"></div>
 				<div class="jtxx">
 					<h1 class="H1">Up to five of the first private banks</h1>
 					<div class="zz">Author：admin&nbsp;&nbsp;&nbsp;Published：2013-11-19 13:26:00</div>
@@ -3128,15 +2744,6 @@
 			</div>
 			<!--**************************************************支持互联网金融创新***********************************************-->		
 			<div class="right" id="zcyw6" style="display:none">
-				<table width="100%">
-					<tr>
-						<td><img src="/static/img/tip.png"/><span class="title">Policy News</span></td>
-						<td class="pull-right">
-							CardPay(Shanghai) > <a onclick="show('zcyw')" href="#">Policy News</a> > <font color="#184554">Financial innovation to support Internet</font>
-						</td>
-					</tr>
-				</table>
-				<div class="fengge"></div>
 				<div class="jtxx">
 					<h1 class="H1">Financial innovation to support Internet</h1>
 					<div class="zz">Author：admin&nbsp;&nbsp;&nbsp;Published：2013-11-19 13:26:00</div>
@@ -3154,15 +2761,6 @@
 			</div>
 			<!--**************************************************做平台的两大关键***********************************************-->		
 			<div class="right" id="zcyw7" style="display:none">
-				<table width="100%">
-					<tr>
-						<td><img src="/static/img/tip.png"/><span class="title">Policy News</span></td>
-						<td class="pull-right">
-							CardPay(Shanghai) > <a onclick="show('zcyw')" href="#">Policy News</a> > <font color="#184554">Make two key platforms</font>
-						</td>
-					</tr>
-				</table>
-				<div class="fengge"></div>
 				<div class="jtxx">
 					<h1 class="H1">Make two key platforms</h1>
 					<div class="zz">Author：admin&nbsp;&nbsp;&nbsp;Published：2013-11-19 13:26:00</div>
@@ -3212,16 +2810,23 @@
 				</div>
 			</div>
 		</div>
+		<div class="back-to-top">
+			<img src="../../static/img/back-to-top.png"/>
+		</div>
 	<!--**************************************************foot***********************************************-->
-		<div class="foot">
-			<img src="/static/img/images/qk_12.png"/>
-			<img src="/static/img/images/qk_15.png"/>
+		<div class="foot" style="width:100%;float:left;">		
+			<img src="../../static/img/images/qk_12.png" style="width:100%"/>
+			<img src="../../static/img/images/qk_15.png"/>
 			<span>Copyright(C)2011-2014 CardPay(Shanghai) Finance Consulting Co.,Ltd.</span><br/>
 			<span>Shanghai ICP for 13043724</span>
-		</div>
+		</div>	
 	</div>
-	<script type="text/javascript" src="/static/js/jquery-1.7.2.min.js"></script>
-	<script type="text/javascript" src="/static/js/jquery.dataTables_En.min.js"></script>
-	<script type="text/javascript" src="/static/js/script.js"></script>
+	<script type="text/javascript" src="../../static/js/jquery-1.7.2.min.js"></script>
+	<script type="text/javascript" src="../../static/js/jquery.dataTables_En.min.js"></script>
+	<script type="text/javascript" src="../../static/js/script.js"></script>
+	<!-- Slider -->
+	<script type="text/javascript" src="../../static/js/jquery.easing.1.3.js"></script>
+	<script type="text/javascript" src="../../static/js/jquery.animate-colors-min.js"></script>
+	<script type="text/javascript" src="../../static/js/jquery.skitter.js"></script>
 </body>
 </html>

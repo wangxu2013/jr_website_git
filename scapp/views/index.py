@@ -93,6 +93,16 @@ def xqfk():
 @app.route('/xqfk_En')
 def xqfk_En():
     return render_template("xqfk/xqfk_En.html")
+	
+# 员工风采
+@app.route('/ygfc')
+def ygfc():
+    return render_template("ygfc/ygfc.html")
+
+# 员工风采
+@app.route('/ygfc_En')
+def ygfc_En():
+    return render_template("ygfc/ygfc_En.html")
 
 # 招聘信息
 @app.route('/zpxx')

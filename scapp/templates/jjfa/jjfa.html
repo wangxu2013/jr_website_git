@@ -8,9 +8,10 @@
 	<meta name="author" content="Muhammad Usman">
 
 	<!-- The styles -->
-	<link href="/static/css/main.css" rel="stylesheet">
-	<style type="text/css">
-		*{font-family:Arial;}
+	<link href="../../static/css/main.css" rel="stylesheet">
+	 <link rel="stylesheet" type="text/css" href="../../static/css/skitter.styles.css" media="all" />
+	<style type="text/css">			
+	
 	</style>
 	<script type="text/javascript">
 		var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
@@ -18,99 +19,230 @@
 	</script>
 </head>
 
-<body>
+<body onload="imgs();">
 	<div class="main">
 	<!--**************************************************top***********************************************-->
-		<div class="logo">	
-			<img src="/static/img/images/logo.png"/>
-			<div>
-				<a href="/jjfa" style="color:#828282;">中文</a><span style="color:#828282;">|</span>
-				<a href="/jjfa_En" style="color:#828282;">English</a>
-				<a href="http://profitinsight.com/" style="color:#828282;margin-left:8px;"><img src="/static/img/PROFI.png" style="height:30px;padding:13px 0;float:right;_display:none;"/></a>
-			</div>			
-		</div>
-		<div class="nav">
-			<ul>
-				<li><a href="/">网站首页</a></li>
-				<li><a href="/gsjj">关于我们</a></li>
-				<li><a href="/xwdt">新闻动态</a></li>
+		<div class="logo" style="position:fixed;z-index:10000;">	
+			<a href="/"><img src="../../static/img/images/logo.png" style="height:60px;margin-top:15px;margin-left:30px;margin-right:150px;"/></a>
+			<ul class="newnav" style="margin-left:20px;z-index:10000;">
+				<!-- <li><a href="/">网站首页</a></li> -->				
 				<li class="active"><a href="/jjfa">业务指南</a></li>
-				<li><a href="/yhnx">银行内训</a></li>
 				<li><a href="/cgal">成功案例</a></li>
 				<li><a href="/hzhb">合作伙伴</a></li>
-				<li><a href="/jrzx">金融咨询</a></li>
+				<li><a href="/yhnx">银行内训</a></li>
+				<li><a href="/jrzx">金融咨询</a></li>				
+				<li><a href="/gsjj">关于我们</a></li>
+				<!-- <li><a href="/ygfc">员工风采</a></li> -->
 				<li><a href="/zpxx">招聘信息</a></li>
 			</ul>
 		</div>
-		<div class="flash-replaced">
-			<embed width="1000" height="188" type="application/x-shockwave-flash" src="../../static/img/content2.swf" pluginspage="http://www.adobe.com/go/getflashplayer" />
-    	</div>
-
-	<!--**************************************************content***********************************************-->
-		<div class="content">
-			<div class="left">
-				<img src="/static/img/images/lmdh.png"/>
-				<ul>
-					<li class="active" onclick="show('jjfa')"><a href="#">业务指南</a></li>							
-				</ul>
-				<img src="/static/img/images/qk_11.png"/>
+		<!-- SLIDER -->
+		<div id="outerslider" style="margin-top:90px;_margin-top:0;">
+        	<div id="slidercontainer">
+            	<section id="slider">
+                <div class="box_skitter box_skitter_large">					
+                    <ul >
+						<li>
+                            <img src="../../static/img/sub02.png" alt="" style="height:100%"/>                            
+                        </li>
+                        <li>
+                            <img src="../../static/img/sub01.png" alt="" style="height:100%"/>                            
+                        </li>                        
+						<li>
+                            <img src="../../static/img/sub03.png" alt="" style="height:100%"/>                            
+                        </li>
+						<li>
+                            <img src="../../static/img/sub04.png" alt="" style="height:100%"/>                            
+                        </li>
+						<li>
+                            <img src="../../static/img/sub05.png" alt="" style="height:100%"/>                            
+                        </li>
+                    </ul>
+                </div>
+                </section>
+            </div>
+        </div>
+        <!-- END SLIDER -->	
+		<!-- 切换语言 -->		
+		<div class="lanage" onclick="setLanage(this)">
+			<img src="../../static/img/yysz.png"/>
+			<div>
+				<a href="/index">中文</a><br/>
+				<a href="/index_En">English</a>
 			</div>
+		</div>
+	<!--**************************************************left***********************************************-->	
+		<div style="width:100%;float:left;_margin-top:-90px;">
+			<div class="left">
+				<ul class="Tab">
+					<li class="active" onmouseover="change_div(this,'gsjj')"><a href="#">服务方向</a></li>
+					<li onmouseover="change_div(this,'fzln')" style=""><a href="#">发展理念</a></li>
+					<!-- <li onclick="change_div(this,'ryzs')"><a href="#">荣誉证书</a></li>
+					<li onclick="change_div(this,'zjtd')"><a href="#">专家团队</a></li> -->
+					<li onmouseover="change_div(this,'lxfs')" style="border-right:1px solid #dddddd;"><a href="#">联系方式</a></li>
+				</ul>
+				<div class="tab" id="gsjj">
+					信息咨询&nbsp;&nbsp;
+					技术支持&nbsp;&nbsp;
+					平台建设
+				</div>
+				<div class="tab" style="display:none;" id="fzln"> 
+					创建领先国际的金融咨询机构<br/>
+					合力打造精英顾问团队<br/>
+					最大限度满足客户需求
+				</div>
+				<div class="tab" style="display:none;" id="lxfs">
+					地址：上海市徐汇区桂箐路7号3号楼801室<br/>
+					address：Room 801,Building 3,No.7,Guiqing Road,Xuhui District,Shanghai <br/>
+					邮编： 200035<br/>
+					电话： 021-54485390 <br/>
+					传真： 021-54485391<br/>
+					电子邮件：qk_liuwx@163.com<br/>
+				</div>
+			<!--**************************************************员工风采***********************************************************************-->
+				<div style="width:100%;margin-top:40px;border-top:3px dotted #dddddd;margin-bottom:40px;">
+					<span style="background:white;position:absolute;margin-top:-15px;font-weight:bold;font-size:20px;color:#666666;">员工风采</span>
+				</div>					
+				<div id="ifocus">
+					<div id="ifocus_pic">
+						<div id="ifocus_piclist">
+							<ul>
+								<li>
+									<div class="ygfc">
+										<div class="ygfcContent">
+											创建领先国际的金融专业咨询机构1
+											合力打造精英顾问团队
+											最大限度满足客户需求创建领先国际的金融专业咨询机构
+											合力打造精英顾问团队
+											最大限度满足客户需求
+											创建领先国际的金融专业咨询机构
+											合力打造精英顾问团队
+										</div>
+									</div>	
+									<img src="../../static/img/head.png" style="margin-top:-15px;margin-left:20px;float:left;"/>	
+									<div style="margin-top:3px;margin-left:25px;float:left;font-size:16px;color:#727272;"> 
+										<b style="color:#0488cd;font-size:16px;">周滨</b><br/>总经理
+									</div>
+								</li>
+								<li>
+									<div class="ygfc">
+										<div class="ygfcContent">
+											创建领先国际的金融专业咨询机构1
+											合力打造精英顾问团队
+											最大限度满足客户需求创建领先国际的金融专业咨询机构
+											合力打造精英顾问团队
+											最大限度满足客户需求
+											创建领先国际的金融专业咨询机构
+											合力打造精英顾问团队
+										</div>
+									</div>	
+									<img src="../../static/img/head.png" style="margin-top:-15px;margin-left:20px;float:left;"/>	
+									<div style="margin-top:3px;margin-left:25px;float:left;font-size:16px;color:#727272;"> 
+										<b style="color:#0488cd;font-size:16px;">刘学军</b><br/>副总经理
+									</div>
+								</li>
+								<li>
+									<div class="ygfc">
+										<div class="ygfcContent">
+											创建领先国际的金融专业咨询机构1
+											合力打造精英顾问团队
+											最大限度满足客户需求创建领先国际的金融专业咨询机构
+											合力打造精英顾问团队
+											最大限度满足客户需求
+											创建领先国际的金融专业咨询机构
+											合力打造精英顾问团队
+										</div>
+									</div>	
+									<img src="../../static/img/head.png" style="margin-top:-15px;margin-left:20px;float:left;"/>	
+									<div style="margin-top:3px;margin-left:25px;float:left;font-size:16px;color:#727272;"> 
+										<b style="color:#0488cd;font-size:16px;">马颖涵</b><br/>信用卡咨询部经理
+									</div>
+								</li>
+								<li>
+									<div class="ygfc">
+										<div class="ygfcContent">
+											创建领先国际的金融专业咨询机构1
+											合力打造精英顾问团队
+											最大限度满足客户需求创建领先国际的金融专业咨询机构
+											合力打造精英顾问团队
+											最大限度满足客户需求
+											创建领先国际的金融专业咨询机构
+											合力打造精英顾问团队
+										</div>
+									</div>	
+									<img src="../../static/img/head.png" style="margin-top:-15px;margin-left:20px;float:left;"/>	
+									<div style="margin-top:3px;margin-left:25px;float:left;font-size:16px;color:#727272;"> 
+										<b style="color:#0488cd;font-size:16px;">赵军扬</b><br/>客户经理
+									</div>
+								</li>
+							</ul>
+						</div>
+						
+					</div>
+					<div id="ifocus_btn" style="display:none;">
+						<ul>
+							<li class="current"></li>
+							<li class="normal"></li>
+							<li class="normal"></li>
+							<li class="normal"></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		<!--**************************************************title***********************************************-->		
+			<div class="title">
+				<h2>业务指南</h2>
+				<span class="place">当前位置：乾康（上海）金融信息服务有限公司 > <font style="color:#0488cd">业务指南</font></span>
+			</div>
+		<!--**************************************************right***********************************************-->	
 			<div class="right" id="jjfa">
-				<table width="100%">
-					<tr>
-						<td><img src="/static/img/tip.png"/><span class="title">业务指南</span></td>
-						<td class="pull-right">
-							乾康（上海）金融信息服务有限公司 > <font color="#184554">业务指南</font>
-						</td>
-					</tr>
-				</table>
-				<div class="fengge"></div>
 				<table width="100%">
 					<tr class="bordered">
 						<td>
-							<img src="/static/img/list-style.png"/> 
+							<img src="../../static/img/list-style.png"/> 
 							<a href="#" onclick="show('hlw')">互联网金融OTO商业模式平台化建设</a>
-							<img src="/static/img/new.png"/>
+							<img src="../../static/img/new.png"/>
 						</td>
 						<td class="text-right">2013-11-01</td>
 					</tr>	
 					<tr class="bordered">
 						<td>
-							<img src="/static/img/list-style.png"/> 
+							<img src="../../static/img/list-style.png"/> 
 							<a href="#" onclick="show('wxdzxyy')">微小贷款咨询运营业务</a>
-							<img src="/static/img/new.png"/>
+							<img src="../../static/img/new.png"/>
 						</td>
 						<td class="text-right">2013-11-01</td>
 					</tr>		
 					<tr class="bordered">
 						<td>
-							<img src="/static/img/list-style.png"/> 
+							<img src="../../static/img/list-style.png"/> 
 							<a href="#" onclick="show('wdpx')">商业银行微小贷款培训</a>
+							<img src="../../static/img/new.png"/>
 						</td>
 						<td class="text-right">2013-01-22</td>
-					</tr>
+					</tr>					
 					<tr class="bordered">
 						<td>
-							<img src="/static/img/list-style.png"/> 
-							<a href="#" onclick="show('zzsb')">乾康自助设备管理平台</a>
-						</td>
-						<td class="text-right">2013-01-22</td>
-					</tr>
-					<tr class="bordered">
-						<td>
-							<img src="/static/img/list-style.png"/>
+							<img src="../../static/img/list-style.png"/>
 							<a href="#" onclick="show('yyzx')">信用卡咨询运营业务</a>
+							<img src="../../static/img/new.png"/>
 						</td>
 						<td class="text-right">2013-01-22</td>
 					</tr>
 					<tr class="bordered">
 						<td>
-							<img src="/static/img/list-style.png"/> 
+							<img src="../../static/img/list-style.png"/> 
 							<a href="#" onclick="show('wbfa')">商业银行自助设备管理服务外包方案</a>
 						</td>
 						<td class="text-right">2013-01-22</td>
 					</tr>	
-									
+					<tr class="bordered">
+						<td>
+							<img src="../../static/img/list-style.png"/> 
+							<a href="#" onclick="show('zzsb')">乾康自助设备管理平台</a>
+						</td>
+						<td class="text-right">2013-01-22</td>
+					</tr>				
 				</table>
 				<div class="showPage">
 					<span>共6条 每页10条 页次：1/1</span>
@@ -123,18 +255,9 @@
 			</div>
 <!--**************************************************商业银行微小贷款培训***********************************************-->		
 			<div class="right" id="wdpx" style="display:none">
-				<table width="100%">
-					<tr>
-						<td><img src="/static/img/tip.png"/><span class="title">业务指南</span></td>
-						<td class="pull-right">
-							乾康（上海）金融信息服务有限公司 > <a onclick="show('jjfa')" href="#">业务指南</a> > <font color="#184554">商业银行微小贷款培训</font>
-						</td>
-					</tr>
-				</table>
-				<div class="fengge"></div>
 				<div class="jtxx">
 					<h1 class="H1">商业银行微小贷款培训</h1>
-					<div class="zz">作者：管理员&nbsp;&nbsp;&nbsp;发布于：2013-01-22 13:11:46 &nbsp;&nbsp;&nbsp;文字：【大】【中】【小】</div>
+					<div class="zz">作者：管理员&nbsp;&nbsp;&nbsp;发布于：2013-01-22 13:11:46 </div>
 					<div class="xx">
 						<p>培训背景</p>
 						<p>微贷款（Micro Credit）是国际上成熟的金融产品，是指专门为中低收入阶层和微小企业提供的、商业可持续的小额贷款。微贷款技术的使用和推广是近年来金融市场的重要创新，其在中国金融领域的大规模运用，将从根本上解决中低收入阶层和微小企业难以获得传统抵押贷款服务的困境，也将成为中小金融机构未来的主营产品。</p>
@@ -156,24 +279,15 @@
 						<p>在岗培训主要采用学徒制度。微贷培训生跟随培训师现场实践。培训师一方面向培训生解释工作内容、工作步聚，回答他们的提问，进行有针对性的评估和辅导。另一方面观察培训生在工作中的表现，定期评估。</p>
 						<p>专题培训</p>
 						<p>专题培训是针对实际工作过程中的问题，组织开展的小型专题讲座和讨论。引导微贷人员共同找到答案或者解决办法。专题培训多是涉及到信贷员在信贷流程操作中出现的问题，如识别申请表各项内容间的内在联系、正确进行交叉检验等。</p>
-						
 					</div>
 				</div>
+				<img src="../../static/img/back.png" onclick="show('jjfa')" style="cursor:pointer;float:right;"/>
 			</div>		
 <!--**************************************************乾康自助设备管理平台***********************************************-->		
 			<div class="right" id="zzsb" style="display:none">
-				<table width="100%">
-					<tr>
-						<td><img src="/static/img/tip.png"/><span class="title">业务指南</span></td>
-						<td class="pull-right">
-							乾康（上海）金融信息服务有限公司 >  <a onclick="show('jjfa')" href="#">业务指南</a> > <font color="#184554">乾康自助设备管理平台</font>
-						</td>
-					</tr>
-				</table>
-				<div class="fengge"></div>
 				<div class="jtxx">
 					<h1 class="H1">乾康自助设备管理平台</h1>
-					<div class="zz">作者：管理员&nbsp;&nbsp;&nbsp;发布于：2013-01-22 13:13:01&nbsp;&nbsp;&nbsp;文字：【大】【中】【小】</div>
+					<div class="zz">作者：管理员&nbsp;&nbsp;&nbsp;发布于：2013-01-22 13:13:01</div>
 					<div class="xx">
 						<p>随着各商业银行近年来各类自助设备数量的不断增加，如何对这些设备进行有效的管理是摆在每个银行管理人员面前的一个不容忽视的问题。自助业务运营管理涉及的环节较多，其主要包括设备运行监控、维护维修调度、加钞计划制定、清机加钞、维护维修、配钞清点、资金调拨、对账、异常账务处理、客户投诉受理和处理、安保等。</p>
 						<p>目前业务运营涉及的主要环节均为手工操作，效率低下，工作强度高且易于出现差错，业务运营的规范化和精细化操作难度较大，不利于业务的长远发展和操作风险控制。手工操作在运营规模较小时还基本能适应业务需要，但随着自助业务运营规模的不断扩大，运营管理的难度和复杂度也随之提高，就需要有新的高效操作方式来解决面临的问题，提高运营管理各个环节的工作效率，增强业务操作的规范化和精细化，借助外部约束来控制操作风险，从而为自助业务的长远发展奠定坚实的基础，进一步提高自助业务运营管理水平。</p>
@@ -182,31 +296,22 @@
 						<p>一是提高事件监控管理能力。ATM网络能否安全、稳定运行，是银行最为关心的问题，而减少宕机时间、缩短维修时间，是银行实现ATM开机时间最大化的前提。因此，实现对ATM网络状况的监测非常关键。而一套ATM运营管理系统所具有的事件管理功能，能够对ATM的整个运行周期和修理进展情况进行跟踪，接收ATM或网络发来的所有状态消息，从而有效提高事件监控管理的能力。</p>
 						<p>二是提升ATM客户关系管理能力。通过持卡人在ATM上发生的交易信息，银行能够深入了解和研究客户的财务状况、交易习惯和使用心理，对目标客户群进行细分，为不同用户提供定制的个性化金融服务，将ATM打造成用户与银行之间的良性沟通渠道。而实现这一切都离不开ATM运营管理系统所具有的内容分发功能。</p>
 						<p>三是提升ATM现金管理的能力。合理配备ATM中的现金储备量，是解决其运行效率和运行成本这对矛盾的关键。在ATM现金管理方面，银行以往一般都是根据经验或根据ATM的缺钞信息决定其现金储备量的大小或加钞的时机。而ATM运营管理系统所具有的现金管理功能可以帮助银行对现金流量进行收集和分析，提供合理的现金配备方案，同时为所有与现金加钞有关的合作伙伴提供自动化的预警和通知、监控日常的ATM现金储备水平等。</p>
-						
 					</div>
 				</div>
+				<img src="../../static/img/back.png" onclick="show('jjfa')" style="cursor:pointer;float:right;"/>
 			</div>	
 <!--**************************************************信用卡咨询运营业务***********************************************-->		
 			<div class="right" id="yyzx" style="display:none">
-				<table width="100%">
-					<tr>
-						<td><img src="/static/img/tip.png"/><span class="title">业务指南</span></td>
-						<td class="pull-right">
-							乾康（上海）金融信息服务有限公司 >  <a onclick="show('jjfa')" href="#">业务指南</a> > <font color="#184554">信用卡咨询运营业务</font>
-						</td>
-					</tr>
-				</table>
-				<div class="fengge"></div>
 				<div class="jtxx">
 					<h1 class="H1">信用卡咨询运营业务</h1>
-					<div class="zz">作者：管理员&nbsp;&nbsp;&nbsp;发布于：2013-01-22 13:19:42&nbsp;&nbsp;&nbsp;文字：【大】【中】【小】</div>
+					<div class="zz">作者：管理员&nbsp;&nbsp;&nbsp;发布于：2013-01-22 13:19:42</div>
 					<div class="xx">
 						<p>&nbsp;&nbsp;&nbsp;&nbsp;信用卡业务作为金融业的一项重点业务，这些年的发展异常迅猛，2012年年底累计发卡量已经达到3.31亿张，信用卡授信总额也达到3.49万亿元。随着7月20日央行放开贷款利率管制，利率市场化即将给银行带来严峻的考验,信用卡业务成为银行业务转型的主力军,如何抓住机遇寻求转型发展机遇，综合提升整体服务能力，成为摆在很多银行面前的重大课题。</p>
 						<p class="step">信用卡咨询运营业务主要包括:</p>
 						<p class="secondStep">一、信用卡业务综合发展策略咨询</p>
 						<p>&nbsp;&nbsp;&nbsp;&nbsp;对银行所在经营区域以及业务发展现状进行细致分析，综合解析符合本行实际的信用卡综合业务发展战略内容。建立具有自身特色的、目标明晰的、安全可行的信用卡业务发展战略。通过对实施计划与发展战略的配合实现计划探讨，明确具体实行方案，并得到行高层全各方位的资源支持与配合。</p>
 						<p>构建具有自身发展特色的战略规划，实现以下战略目标：</p>
-						<p><img src="/static/img/zlmb.png" style="margin-top:20px;"/></p>
+						<p><img src="../../static/img/zlmb.png" style="margin-top:20px;"/></p>
 						<p class="secondStep">二、信用卡管理架构、业务流程设计咨询</p>
 						<p>&nbsp;&nbsp;&nbsp;&nbsp;帮助银行建立或重造信用卡各个管理职能环节，使银行从信用卡中心的管理架构到管理操作流程均得到较好的优化，帮助银行合理配置管理资源，较好的符合相关管理要求和防范各管理环节风险，以达到提升银行的信用卡综合管理水平的目的。</p>
 						<p>具体内容包括：</p>
@@ -215,9 +320,9 @@
 						<p>&nbsp;&nbsp;&nbsp;&nbsp;3、辅导信用卡中心建立和完善、细化业务流程设计。</p>
 						<p>&nbsp;&nbsp;&nbsp;&nbsp;4、辅导银行对业务所需各岗位职责和风险控制环节再造。</p>
 						<p>&nbsp;&nbsp;&nbsp;&nbsp;5、对银行各层管理人员进行全方位信用卡业务培训，对信用卡中心核心管理人员进行提高培训。</p>
-						<p><img src="/static/img/xykyw1.png" style="margin-top:20px;"/></p>
+						<p><img src="../../static/img/xykyw1.png" style="margin-top:20px;"/></p>
 						<p>信用卡中心管理架构建设咨询：</p>
-						<p><img src="/static/img/xykyw2.png" style="margin-top:20px;"/></p>
+						<p><img src="../../static/img/xykyw2.png" style="margin-top:20px;"/></p>
 						<p class="secondStep">三、信用卡业务产品创新设计咨询 </p>
 						<p>&nbsp;&nbsp;&nbsp;&nbsp;1、信用卡综合产品内涵设计。</p>
 						<p>&nbsp;&nbsp;&nbsp;&nbsp;2、信用卡品牌以及主打产品设计。</p>
@@ -226,7 +331,7 @@
 						<p>&nbsp;&nbsp;&nbsp;&nbsp;5、信用卡多特色产品综合设计。</p>
 						<p>&nbsp;&nbsp;&nbsp;&nbsp;6、各项产品相关业务流程设计。 </p>
 						<p>创建产品创新体系：</p>
-						<p><img src="/static/img/xykyw3.png" style="margin-top:20px;"/></p>
+						<p><img src="../../static/img/xykyw3.png" style="margin-top:20px;"/></p>
 						<p class="secondStep">四、信用卡业务综合风险管理策略咨询 </p>
 						<p>&nbsp;&nbsp;&nbsp;&nbsp;主要是帮助银行建立较完善的风险防控体系，即对信用卡业务的审核、审批、授信、催收等各个主要风险管理关键点进行系统化的风控建设，协助银行做好相关责任机制和监测手段的建设，以达到综合提高整体信用卡业务风险防控能力的目标要求。主要内容包括：</p>
 						<p>&nbsp;&nbsp;&nbsp;&nbsp;1、辅导银行建立完善信用卡业务资信审核机制。</p>
@@ -235,7 +340,7 @@
 						<p>&nbsp;&nbsp;&nbsp;&nbsp;4、辅导银行建立完善信用卡催收管理办法及流程。</p>
 						<p>&nbsp;&nbsp;&nbsp;&nbsp;5、辅导银行建立完善不良资产处置与管理机制。</p>
 						<p>完整的信用卡业务风险管理体系：</p>
-						<p><img src="/static/img/xykyw4.png" style="margin-top:20px;"/></p>
+						<p><img src="../../static/img/xykyw4.png" style="margin-top:20px;"/></p>
 						<p class="secondStep">五、信用卡中心管理人员与直营团队培养咨询</p>
 						<p>&nbsp;&nbsp;&nbsp;&nbsp;在完善管理体系的基础上针对体系内各个岗位的需求为银行进行专业化人才的招募、考核、专业培训、市场适应锻炼、业务模拟运营、业务运作指导等，以充分满足管理与发展的人才需求。</p>
 						<p>&nbsp;&nbsp;&nbsp;&nbsp;1、辅导银行制定和实施营销方案。</p>
@@ -247,7 +352,7 @@
 						<p>&nbsp;&nbsp;&nbsp;&nbsp;7、辅导银行建立与奖励相匹配的责任管理制度。</p>
 						<p>&nbsp;&nbsp;&nbsp;&nbsp;8、负责对银行的直营客户经理以及相关负责人进行全面的培训。</p>
 						<p>可视化业务流程控制体系：</p>
-						<p><img src="/static/img/xykyw5.png" style="margin-top:20px;"/></p>
+						<p><img src="../../static/img/xykyw5.png" style="margin-top:20px;"/></p>
 						<p class="secondStep">六、综合运营战略合作咨询</p>
 						<p>&nbsp;&nbsp;&nbsp;&nbsp;在包含上述五项咨询的基础上进一步进行实施咨询即与银行共享收益，负责咨询效果的实现，收益来自于确保银行取得稳定业务增长。</p>
 						<p>具体内容包括：</p>
@@ -261,21 +366,13 @@
 						<p>&nbsp;&nbsp;&nbsp;&nbsp;8、帮助银行在信用卡综合能力不断提高的基础上提升信用卡品牌形象。</p>
 					</div>
 				</div>
+				<img src="../../static/img/back.png" onclick="show('jjfa')" style="cursor:pointer;float:right;"/>
 			</div>				
 <!--**************************************************商业银行自助设备管理服务外包方案***********************************************-->		
 			<div class="right" id="wbfa" style="display:none">
-				<table width="100%">
-					<tr>
-						<td><img src="/static/img/tip.png"/><span class="title">业务指南</span></td>
-						<td class="pull-right">
-							乾康（上海）金融信息服务有限公司 >  <a onclick="show('jjfa')" href="#">业务指南</a> > <font color="#184554">商业银行自助设备管理服务外包方案</font>
-						</td>
-					</tr>
-				</table>
-				<div class="fengge"></div>
 				<div class="jtxx">
 					<h1 class="H1">商业银行自助设备管理服务外包方案</h1>
-					<div class="zz">作者：管理员&nbsp;&nbsp;&nbsp;发布于：2013-01-22 13:17:22&nbsp;&nbsp;&nbsp;文字：【大】【中】【小】</div>
+					<div class="zz">作者：管理员&nbsp;&nbsp;&nbsp;发布于：2013-01-22 13:17:22</div>
 					<div class="xx">
 						<p>乾康公司一直以引入国际成熟运营模式，发展国内金融自助渠道业务为己任，凭借强大的投资实力、专业化的管理团队，围绕金融电子支付，提供个性化、专业化的运营服务：设备提供、商业选址、运营管理、维修维护、软件开发和增值业务拓展等。</p>
 						<p>作为零售银行服务体系的重要组成部分，自助设备的管理主要包括自助银行商业选址、网点建设、业务管理、运行管理、设备维护管理、安全管理、营销管理。自助银行的建设涉及到银行许多业务环节，需要科技部门、电子银行部、保卫部门、后勤保障部门以及计财部门共同配合，并征得监管当局和公安部门同意后才能完成最终的开业和运营，为此我们乾康公司将针对商业银行自助设备的全过程建设和管理提出我们的实施方案：</p>
@@ -283,9 +380,9 @@
 						<p>乾康公司基于多年来对银行自助渠道建设方面的专业化实施经验，以领先的商业选址模型为依托，可为商业银行提供了自助渠道规划和实施方案，不仅提高了银行有效服务半径，更使银行的自助渠道运行效率得到了大幅提升。</p>
 						<p>乾康公司优秀的商业选址水平，是依托优秀的项目管理能力和商业选址后台支持系统作为保障。乾康的银行网点和自助银行商业选址评价系统是基于GIS技术，利用电子地图为空间坐标平台，将影响网点交易量的所有环境因素，统一纳入分析和计算，使调查数据和分析结果可以直观的显示在电子地图上。</p>
 						<p>XX市内150个建议点位vs. 市场潜力</p>
-						<p><img src="/static/img/map1.jpg" width="100%"/></p>
+						<p><img src="../../static/img/map1.jpg" width="100%"/></p>
 						<p>备选点址基本情况：地理分布（示例）</p>
-						<p><img src="/static/img/map2.jpg" width="100%"/></p>
+						<p><img src="../../static/img/map2.jpg" width="100%"/></p>
 						<p>蓝色表示所有备选点址，红色表示提交点址</p>
 						<p>我们乾康公司本着效率优先的原则进行自助银行的商业选址工作，即以节约经营成本、增加收益，最大限度地吸引客户、提高服务效率、促进业务发展为目标，根据初期与银行共同商议确定的《自助银行建设项目计划书》的要求进行具体的自助银行选址工作。乾康公司专职项目经理在商业选址时将根据乾康公司商业选址调查表的各项要素进行相关调查核实，最终将调查数据发送至乾康公司上海总部导入《银行网点和自助银行商业选址评价系统》进行评审，最终出具评审报告提交银行终审确定。同时乾康公司还负责与业主进行沟通协调（与出租方初步拟定合同要素，主要包括：房屋租赁的租期、租金及其递增情况；电费、物业管理费、门前三包费等费用清算；双方承担的权利和义务等），向银行提交《自助银行选址评估表》、合同范本、业主所拥有的土地使用权证复印件、房屋产权证或契证复印件、公司营业执照或个人身份证（个人房屋）复印件，如果出租方非房屋产权人，另需递交产权人同意转租授权书及双方合同复印件。配合银行完成地址的确认和出租合同的签订工作。向监管部门和公安部门申请报备工作以及租赁合同中涉及的相关费用由银行负责。</p>
 						<p>自助银行建设：</p>
@@ -304,21 +401,13 @@
 						
 					</div>
 				</div>
+				<img src="../../static/img/back.png" onclick="show('jjfa')" style="cursor:pointer;float:right;"/>
 			</div>				
 <!--**************************************************微小贷款咨询运营业务***********************************************-->		
 			<div class="right" id="wxdzxyy" style="display:none">
-				<table width="100%">
-					<tr>
-						<td><img src="/static/img/tip.png"/><span class="title">业务指南</span></td>
-						<td class="pull-right">
-							乾康（上海）金融信息服务有限公司 >  <a onclick="show('jjfa')" href="#">业务指南</a> > <font color="#184554">微小贷款咨询运营业务</font>
-						</td>
-					</tr>
-				</table>
-				<div class="fengge"></div>
 				<div class="jtxx">
 					<h1 class="H1">微小贷款咨询运营业务</h1>
-					<div class="zz">作者：管理员&nbsp;&nbsp;&nbsp;发布于：2013-11-01 11:23:01&nbsp;&nbsp;&nbsp;文字：【大】【中】【小】</div>
+					<div class="zz">作者：管理员&nbsp;&nbsp;&nbsp;发布于：2013-11-01 11:23:01</div>
 					<div class="xx">
 						<p>&nbsp;&nbsp;&nbsp;&nbsp;乾康公司的微小贷款咨询运营业务是基于IPC微贷应用技术，总结多家银行小微贷业务运营中的先进实战经验，在此基础上，经过深入研究、总结提炼，形成独具本土特色的，涵盖客户识别、风险控制、全流程管理的乾康小微贷款业务体系。</p>
 						<p>&nbsp;&nbsp;&nbsp;&nbsp;乾康公司创新了客户经理分层管理体系、客户网络化维护模式、以及高效的绩效评估考核办法、责任清晰奖惩准确的责任管理体系。在上述体系的指导下，使乾康微贷业务体系比传统的微贷体系更加有激励效果，使银行与员工共享收益。最大限度激发员工的工作积极性和忠诚度。</p>
@@ -335,7 +424,7 @@
 						<p>&nbsp;&nbsp;&nbsp;&nbsp;6、制定市场营销策略；</p>
 						<p>&nbsp;&nbsp;&nbsp;&nbsp;7、分析微小贷款业务的盈利能力及利润贡献度；</p>
 						<p>乾康小微贷款业务体系：</p>
-						<p><img src="/static/img/xykyw6.png" style="margin-top:20px;"/></p>
+						<p><img src="../../static/img/xykyw6.png" style="margin-top:20px;"/></p>
 						<p class="secondStep">三、培训实施</p>
 						<p>&nbsp;&nbsp;&nbsp;&nbsp;首先对高管人员、部门负责人进行专业培训，统一思想。对微小贷款业务人员进行课堂培训和业务操作培训，并进行评估和淘汰。</p>
 						<p class="secondStep">四、业务运营</p>
@@ -344,24 +433,16 @@
 						<p>&nbsp;&nbsp;&nbsp;&nbsp;2、银行具备独立运转微小贷款业务的能力，并实现快速、安全的规模扩张。</p>
 						<p>&nbsp;&nbsp;&nbsp;&nbsp;3、银行具备自我培训能力，并拥有一批素质过硬的专业人才</p>
 						<p>小微贷款专营机构设计建议：</p>
-						<p><img src="/static/img/xykyw7.png" style="margin-top:20px;"/></p>						
+						<p><img src="../../static/img/xykyw7.png" style="margin-top:20px;"/></p>						
 					</div>
 				</div>
+				<img src="../../static/img/back.png" onclick="show('jjfa')" style="cursor:pointer;float:right;"/>
 			</div>	
 <!--**************************************************互联网金融OTO商业模式平台化建设***********************************************-->		
 			<div class="right" id="hlw" style="display:none">
-				<table width="100%">
-					<tr>
-						<td><img src="/static/img/tip.png"/><span class="title">业务指南</span></td>
-						<td class="pull-right">
-							乾康（上海）金融信息服务有限公司 >  <a onclick="show('jjfa')" href="#">业务指南</a> > <font color="#184554">互联网金融OTO商业模式平台化建设</font>
-						</td>
-					</tr>
-				</table>
-				<div class="fengge"></div>
 				<div class="jtxx">
 					<h1 class="H1">互联网金融OTO商业模式平台化建设</h1>
-					<div class="zz">作者：管理员&nbsp;&nbsp;&nbsp;发布于：2013-11-01 12:23:01&nbsp;&nbsp;&nbsp;文字：【大】【中】【小】</div>
+					<div class="zz">作者：管理员&nbsp;&nbsp;&nbsp;发布于：2013-11-01 12:23:01</div>
 					<div class="xx">						
 						<p class="step">一、OTO业务简介</p>					
 						<p>&nbsp;&nbsp;&nbsp;&nbsp;OTO商业模式是一种新诞生的电子商务模式，这种模式大大的缩短了消费者决策时间，“OTO”是“Online To Offline”的简写，即“线上到线下”，OTO商业模式的核心是把线上的消费者带到现实的门店中，通过在线支付购买线下的商品和服务，再到线下去享受服务。2012年对于电子商务来说会是一个关键的一年，传统企业频频试水电商，本公司通过不懈的努力，致力打造适合中国国情的<b>区域性银行互联网金融平台。</b></p>
@@ -371,23 +452,35 @@
 						<p>&nbsp;&nbsp;&nbsp;&nbsp;在综合金融日益临近的今天，本公司平台产品应运而生，它的建立可帮助城商行、农商行整合自身资源，优化资源配置，在付出较少人力物力的情况下拓展业务，并获得稳定的资金回报，更好的推介银行业务，为城商行、农商行二次腾飞插上信息化金融这一翅膀，全面助推为城商行、农商行战略转型。</p>
 						<p>&nbsp;&nbsp;&nbsp;&nbsp;前期主要以专业的黄金商城和金融商品商城作为起步点,实现黄金的网上交易,并逐步拓展黄金业务的延伸产品,同时实现金融产品商品化,实现网上金融商品买卖建设方案如下:</p>
 						<p class="step">三、互联网平台黄金商品交易区</p>
-						<p><img src="/static/img/xykyw8.png" style="margin-top:20px;"/></p>
+						<p><img src="../../static/img/xykyw8.png" style="margin-top:20px;"/></p>
 						<p class="step">四、互联网平台金融商品交易区</p>
-						<p><img src="/static/img/xykyw9.png" style="margin-top:20px;"/></p>						
-						<p><img src="/static/img/xykyw10.png" style="margin-top:20px;"/></p>						
+						<p><img src="../../static/img/xykyw9.png" style="margin-top:20px;"/></p>						
+						<p><img src="../../static/img/xykyw10.png" style="margin-top:20px;"/></p>						
 					</div>
-				</div>
-			</div>		
+				</div>				
+				<img src="../../static/img/back.png" onclick="show('jjfa')" style="cursor:pointer;float:right;"/>
+			</div>	
+		</div>
+		
+		<div class="back-to-top">
+			<img src="../../static/img/back-to-top.png"/>
 		</div>
 	<!--**************************************************foot***********************************************-->
-		<div class="foot">
-			<img src="/static/img/images/qk_12.png"/>
-			<img src="/static/img/images/qk_15.png"/>
+		<div class="foot" style="width:100%;float:left;">		
+			<img src="../../static/img/images/qk_12.png" style="width:100%"/>
+			<img src="../../static/img/images/qk_15.png"/>
 			<span>Copyright(C)2011-2014 乾康（上海）金融信息服务有限公司</span><br/>
 			<span>沪ICP备13043724号</span>
-		</div>
+		</div>		
 	</div>
-	<script type="text/javascript" src="/static/js/jquery-1.7.2.min.js"></script>
-	<script type="text/javascript" src="/static/js/script.js"></script>
+	<script type="text/javascript" src="../../static/js/jquery-1.7.2.min.js"></script>
+	<script type="text/javascript" src="../../static/js/script.js"></script>
+	<!-- Slider -->
+	<script type="text/javascript" src="../../static/js/jquery.easing.1.3.js"></script>
+	<script type="text/javascript" src="../../static/js/jquery.animate-colors-min.js"></script>
+	<script type="text/javascript" src="../../static/js/jquery.skitter.js"></script>
+	<script type="text/javascript">
+	
+	</script>
 </body>
 </html>

@@ -10,57 +10,37 @@
 	<!-- The styles -->
 	<link href="../static/css/main.css" rel="stylesheet">
 	 <link rel="stylesheet" type="text/css" href="../static/css/skitter.styles.css" media="all" />
-	<style type="text/css">		
-		*{font-family:Arial;padding:0;margin:0;border:none;}
-		.banner{position:relative; width:1000px;height:308px;}
-		.banImgs li{ display:none; list-style:none;position:absolute;}
-
-		.jsNav{ position:absolute; right: 10px; bottom: 10px; height: 20px; z-index:99; overflow:hidden ;}
-		.jsNav a{ color:white; text-decoration:none; font-family:"微软雅黑"; font-size:12px; display:block;}
-		.jsNav a:hover{ text-decoration:none}
-		.trigger{ float:left; margin-right:5px; background:#2175D9; width:16px; height:16px; line-height:16px; text-align:center;}
-		.current{background:#004699; width:16px; height:16px; line-height:16px; text-align:center;}
+	<style type="text/css">
 		#outerslider{position:relative;top:-1px;}
-		#slidercontainer{position:relative; height:308px;}
-		.box_skitter_large {width:1000px; height:308px;}
+		#slidercontainer{position:relative; height:413px;}
+		.box_skitter_large {width:100%; height:413px;}
 		.box_skitter_large .label_skitter{bottom:0px;left:0px ; padding:0; background:url(../static/img/opacity-slider-text.png) repeat;font-size:12px;padding:10px 30px;color:#fff;font-family:Arial, Helvetica, sans-serif;}
 	</style>
 	<script type="text/javascript">
 		var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
 		document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3F980a47baa3b028fee8b94644df33e9b8' type='text/javascript'%3E%3C/script%3E"));
-
-		function imgs(){
-			//=================================== SLIDESHOW ===================================//
-			jQuery(".box_skitter_large").skitter({
-				animation: "random",
-				interval: 3000,
-				numbers: false, 
-				numbers_align: "right", 
-				hideTools: false,
-				controls: false,
-				focus: false,
-				focus_position: true,
-				width_label:'1000px', 
-				enable_navigation_keys: true,   
-				progressbar: false
-			});
-
-		}
+	
 	</script>
 </head>
 
-<body onload="imgs()">
+<body onload="imgs();">
 	<div class="main">
 	<!--**************************************************top***********************************************-->
-		<div class="logo">	
-			<img src="../static/img/images/logo.png"/>	
-			<div>
-				<a href="/index" style="color:#828282;">中文</a><span style="color:#828282;">|</span>
-				<a href="/index_En" style="color:#828282;">English</a>
-				<a href="http://profitinsight.com/" style="color:#828282;margin-left:8px;"><img src="../static/img/PROFI.png" style="height:30px;padding:13px 0;float:right;_display:none;"/></a>
-			</div>	
+		<div class="logo" style="position:fixed;z-index:10000;">	
+			<a href="/"><img src="../static/img/images/logo.png" style="height:60px;margin-top:15px;margin-left:30px;margin-right:150px;"/></a>
+			<ul class="newnav" style="margin-left:20px;z-index:10000;">
+				<!-- <li class="active"><a href="/">网站首页</a></li> -->				
+				<li><a href="/jjfa">业务指南</a></li>
+				<li><a href="/cgal">成功案例</a></li>
+				<li><a href="/hzhb">合作伙伴</a></li>
+				<li><a href="/yhnx">银行内训</a></li>
+				<li><a href="/jrzx">金融咨询</a></li>				
+				<li><a href="/gsjj">关于我们</a></li>
+				<!-- <li><a href="/ygfc">员工风采</a></li> -->
+				<li><a href="/zpxx">招聘信息</a></li>
+			</ul>
 		</div>
-		<div class="nav">
+		<!-- <div class="nav">
 			<ul>
 				<li class="active"><a href="/">网站首页</a></li>
 				<li><a href="/gsjj">关于我们</a></li>
@@ -72,7 +52,7 @@
 				<li><a href="/jrzx">金融咨询</a></li>
 				<li><a href="/zpxx">招聘信息</a></li>
 			</ul>
-		</div>
+		</div> -->
 		<!--<div class="flash-replaced">
 			<embed width="1000" height="308" type="application/x-shockwave-flash" src="..../static/img/index.swf" pluginspage="http://www.adobe.com/go/getflashplayer" onclick="http://qkcardpay.sinaapp.com/hzhb/"/>
 			<a href="/hzhb" style="z-index:2;position:absolute;top:0px;width:1000px;height:308px;"></a>
@@ -92,22 +72,22 @@
 			</div>
 		</div> -->
 		<!-- SLIDER -->
-        <div id="outerslider">
+		<div id="outerslider" style="margin-top:90px;_margin-top:0;">
         	<div id="slidercontainer">
             	<section id="slider">
-                <div class="box_skitter box_skitter_large">
-                    <ul>
+                <div class="box_skitter box_skitter_large">					
+                    <ul >
                         <li>
-                            <img src="../static/img/pag4.jpg" alt="" />                            
+                            <img src="../static/img/pag4.jpg" alt="" style="height:100%"/>                            
                         </li>
                         <li>
-                            <img src="../static/img/pag1.jpg" alt="" />
+                            <img src="../static/img/pag1.jpg" alt="" style="width:100%"/>
                         </li>
                         <li>
-                            <img src="../static/img/pag2.jpg" alt="" />
+                            <img src="../static/img/pag2.jpg" alt="" style="width:100%"/>
                         </li>
 						<li>
-                            <img src="../static/img/pag3.jpg" alt="" />
+                            <img src="../static/img/pag3.jpg" alt="" style="width:100%"/>
                         </li>
                     </ul>
                 </div>
@@ -115,50 +95,154 @@
             </div>
         </div>
         <!-- END SLIDER -->
-	<!--**************************************************content***********************************************-->
-		<div class="content-index">
-			<div class="left">
-				<img src="../static/img/images/qk_06.png"/>
-				<ul>
-					<li><a href="/jjfa">微贷技术导入</a></li>
-					<li><a href="/jjfa">信用卡运营咨询</a></li>
-					<li><a href="/jjfa">银行应用管理系统</a></li>
-					<li><a href="/jjfa">银行自助设备运营管理</a></li>
-				</ul>
-				<img src="../static/img/images/qk_11.png"/>
+		<!-- 切换语言 -->		
+		<div class="lanage" onclick="setLanage(this)">
+			<img src="../static/img/yysz.png"/>
+			<div>
+				<a href="/index">中文</a><br/>
+				<a href="/index_En">English</a>
 			</div>
-			<div class="right1" style="_margin-left:-45px;">
-				<a href="/xwdt" style="position:relative;top:40px;margin-left:195px;padding:5px 10px;">&nbsp;</a>
-				<ul>
-					<li><a href="/xwdt">公司与美国PTC达成合作协议</a></li>
-				</ul>
+		</div>
+		<!--**************************************************content***********************************************-->
+		<div class="content-index" style="margin-left:90px;">
+			<div class="span3" onmouseover="$('#box1').attr('src','../static/img/jrzxBlue.png');" onmouseout="$('#box1').attr('src','../static/img/jrzx.png')">
+				<img src="../static/img/jrzx.png" style="position:absolute;margin-top:-50px;margin-left:9.7%;_margin-left:135px;" id="box1"/>
+				<div style="margin-top:65px;text-align:center;">
+					<div style="font-weight:bold;font-size:20px;color:#666666">合作伙伴</div>
+					<div style="padding:20px;font-size:16px;color:#727272">
+						<a href="http://profitinsight.com/" style="color:#828282;margin-left:8px;"><img src="../static/img/PROFI.png" style="height:40px;"/></a><br/>
+						2013年，乾康公司与全球排名第一的美国的专业信用卡咨询公司PTC（PROFIT TECHNOLOGIES COMPANY)达成战略合作协议。双方将共同为银行开展零售业务提供全方位咨询服务。						
+					</div>
+					<div style="margin:10px 0;">
+						<a href="/hzhb" style="font-size:16px;color:#0488cd;">了解更多...	</a>					
+					</div>
+				</div>				
 			</div>
-			<div class="right1" style="background: #ffffff url(../static/img/images/qk_08.png) no-repeat;">
-				<a href="/jjfa" style="position:relative;top:40px;margin-left:190px;padding:5px 10px;">&nbsp;</a>
-				<ul style="margin-left:45px;">
-					<li><a href="/jjfa">信用卡业务运营咨询</a></li>
-					<li><a href="/jjfa">商业银行自助设备管理服务外包</a></li>
-					<li><a href="/jjfa">乾康自助设备管理平台</a></li>
-					<li><a href="/jjfa">商业银行微小贷款培训</a></li>
-				</ul>
+			<div class="span3" onmouseover="$('#box2').attr('src','../static/img/xwdtBlue.png')" onmouseout="$('#box2').attr('src','../static/img/xwdt.png')">
+				<img src="../static/img/xwdt.png" style="position:absolute;margin-top:-50px;margin-left:9.7%;_margin-left:135px;" id="box2"/>
+				<div style="margin-top:65px;text-align:center;">
+					<div style="font-weight:bold;font-size:20px;color:#666666">公司简介</div>
+					<div style="padding:20px;font-size:16px;color:#727272">
+						乾康(上海)金融信息服务有限公司是一家专注于金融领域专业管理咨询以及运营实施的服务机构。公司的主营业务是为银行等金融机构提供微小贷款和信用卡业务的咨询及运营、人力资源管理、新产品创新等咨询服务以及协助实现银行互联网金融平台建设----金融OTO商业模式服务平台。
+					</div>
+					<div style="margin:10px 0;">
+						<a href="/gsjj" style="font-size:16px;color:#0488cd;">了解更多...	</a>					
+					</div>
+				</div>				
 			</div>
-			<div class="right1" style="background: #ffffff url(../static/img/images/qk_09.jpg) no-repeat;">
-				<a href="/jrzx" style="position:relative;top:40px;margin-left:190px;padding:5px 10px;">&nbsp;</a>
-				<ul style="margin-left:45px;">
-					<li><a href="/jrzx">互联网</a></li>
-					<li><a href="/jrzx">行业快讯</a></li>
-					<li><a href="/jrzx">银行动态</a></li>
-					<li><a href="/jrzx">政策要闻</a></li>
-				</ul>
-			</div>			
+			<div class="span3" onmouseover="$('#box3').attr('src','../static/img/ywznBlue.png')" onmouseout="$('#box3').attr('src','../static/img/ywzn.png')">
+				<img src="../static/img/ywzn.png" style="position:absolute;margin-top:-50px;margin-left:9.7%;_margin-left:135px;" id="box3"/>
+				<div style="margin-top:65px;text-align:center;">
+					<div style="font-weight:bold;font-size:20px;color:#666666">联系方式</div>
+					<div style="padding:20px;font-size:16px;color:#727272">
+						地址：上海市徐汇区桂箐路7号3号楼801室<br/>
+						address：Room 801,Building 3,No.7,Guiqing Road,Xuhui District,Shanghai <br/>
+						电话： 021-54485390 <br/>
+						传真： 021-54485391<br/>
+						电子邮件：qk_liuwx@163.com
+					</div>
+					<div style="margin:10px 0;">
+						<a href="/gsjj" style="font-size:16px;color:#0488cd;">了解更多...	</a>					
+					</div>
+				</div>				
+			</div>
+			
+		</div>
+		<div class="box" style="width:99.9%;">
+			<div style="width:25%;margin-top:40px;border-top:3px dotted #dddddd;float:left;margin-left:7.5%;_margin-left:60px;">
+				<span style="background:white;position:absolute;margin-top:-15px;font-weight:bold;font-size:20px;color:#666666;">成功案例</span>
+				<div style="padding:20px 0;font-size:16px;color:#727272;line-height:28px;">
+					乾康公司咨询顾问均来自国内各银行、世界五百强企业高级管理人员，具备金融从业经历、金融管理咨询经验、金融专业MBA或博士以上教育背景，全部拥有国际名校教育背景以及国际金融机构或咨询机构的工作经历，与部分知名银行有过密切合作。<br/>
+					<div style="text-align:right;margin-top:5px;">
+						<img src="../static/img/left.png" onclick="leftBtn()" style="cursor:pointer;"/>
+						<img src="../static/img/right.png" onclick="rightBtn()" style="cursor:pointer;"/>
+					</div>					
+				</div>
+			</div>
+			<div class="cgal" id="image1">
+				<img src="../static/img/hxyh.png" style="width:100%"/>
+			</div>
+			<div class="cgal" id="image2">
+				<img src="../static/img/jnyh.png" style="width:100%"/>
+			</div>
+			<div class="cgal" id="image3">
+				<img src="../static/img/xhyh.png" style="width:100%"/>
+			</div>
+			<div class="cgal" style="display:none;" id="image4">
+				<img src="../static/img/jr.png" style="width:100%"/>
+			</div>
+			<div class="cgal" style="display:none;" id="image5">
+				<img src="../static/img/jy.png" style="width:100%"/>
+			</div>
+			<div class="cgal" style="display:none;" id="image6">
+				<img src="../static/img/jynsh.png" style="width:100%"/>
+			</div>	
+			<div class="cgal" style="display:none;" id="image7">
+				<img src="../static/img/wxnsh.png" style="width:100%"/>
+			</div>
+		</div>
+		<div style="width:99%;float:left;padding:0 7.5%;">
+			<div style="width:85%;margin-top:40px;border-top:3px dotted #dddddd;"><span style="background:white;position:absolute;margin-top:-15px;font-weight:bold;font-size:20px;color:#666666;">服务领域</span></div>
+			<div style="background:url(../static/img/box.png) no-repeat;width:625px;height:353px;margin-top:30px;margin-left:-4px;float:left;padding:30px;">
+				<div id="xyk" class="jianjie">
+					<div style="font-weight:bold;font-size:18px;color:#666666">信用卡运营咨询</div>
+					<div style="padding:20px 20px 0 0;font-size:16px;color:#727272;line-height:28px;">
+						信用卡业务作为金融业的一项重点业务，这些年的发展异常迅猛，2012年年底累计发卡量已经达到3.31亿张，信用卡授信总额也达到3.49万亿元。随着7月20日央行放开贷款利率管制，利率市场化即将给银行带来严峻的考验,信用卡业务成为银行业务转型的主力军,如何抓住机遇寻求转型发展机遇，综合提升整体服务能力，成为摆在很多银行面前的重大课题。<br/>
+						信用卡咨询运营业务主要包括：信用卡业务综合发展策略咨询；信用卡管理架构、业务流程设计咨询；信用卡业务产品创新设计咨询；信用卡业务综合风险管理策略咨询；信用卡中心管理人员与直营团队培养咨询；综合运营战略合作咨询。<br/>
+						<a href="/jjfa" style="font-size:16px;color:#0488cd;">了解更多...	</a>	
+					</div>
+				</div>
+				<div id="ATM" style="display:none;" class="jianjie">
+					<div style="font-weight:bold;font-size:18px;color:#666666">商业银行ATM管理服务</div>
+					<div style="padding:20px 20px 0 0;font-size:16px;color:#727272;line-height:28px;">
+						乾康公司一直以引入国际成熟运营模式，发展国内金融自助渠道业务为己任，凭借强大的投资实力、专业化的管理团队，围绕金融电子支付，提供个性化、专业化的运营服务：设备提供、商业选址、运营管理、维修维护、软件开发和增值业务拓展等。<br/>
+						作为零售银行服务体系的重要组成部分，自助设备的管理主要包括自助银行商业选址、网点建设、业务管理、运行管理、设备维护管理、安全管理、营销管理。自助银行的建设涉及到银行许多业务环节，需要科技部门、电子银行部、保卫部门、后勤保障部门以及计财部门共同配合，并征得监管当局和公安部门同意后才能完成最终的开业和运营。<br/>
+						<a href="/jjfa" style="font-size:16px;color:#0488cd;">了解更多...	</a>	
+					</div>
+				</div>
+				<div id="OTO" style="display:none;" class="jianjie">
+					<div style="font-weight:bold;font-size:18px;color:#666666">互联网金融OTO商业模式平台化建设</div>
+					<div style="padding:20px 20px 0 0;font-size:16px;color:#727272;line-height:28px;">
+						OTO商业模式是一种新诞生的电子商务模式，这种模式大大的缩短了消费者决策时间，“OTO”是“Online To Offline”的简写，即“线上到线下”，OTO商业模式的核心是把线上的消费者带到现实的门店中，通过在线支付购买线下的商品和服务，再到线下去享受服务。2012年对于电子商务来说会是一个关键的一年，传统企业频频试水电商，本公司通过不懈的努力，致力打造适合中国国情的区域性银行互联网金融平台。<br/>
+						本公司平台产品支持个人、商户、机构用户三大用户群同时在线进行银行各类金融产品平台功能操作的线上服务。<br/>
+						<a href="/jjfa" style="font-size:16px;color:#0488cd;">了解更多...	</a>	
+					</div>
+				</div>
+				<div id="xwd" style="display:none;" class="jianjie">
+					<div style="font-weight:bold;font-size:18px;color:#666666">微小贷款咨询运营业务</div>
+					<div style="padding:20px 20px 0 0;font-size:16px;color:#727272;line-height:28px;">
+						乾康公司的微小贷款咨询运营业务是基于IPC微贷应用技术，总结多家银行小微贷业务运营中的先进实战经验，在此基础上，经过深入研究、总结提炼，形成独具本土特色的，涵盖客户识别、风险控制、全流程管理的乾康小微贷款业务体系。<br/>
+						  乾康公司创新了客户经理分层管理体系、客户网络化维护模式、以及高效的绩效评估考核办法、责任清晰奖惩准确的责任管理体系。在上述体系的指导下，使乾康微贷业务体系比传统的微贷体系更加有激励效果，使银行与员工共享收益。最大限度激发员工的工作积极性和忠诚度。<br/><br/>
+						<a href="/jjfa" style="font-size:16px;color:#0488cd;">了解更多...	</a>	
+					</div>
+				</div>
+			</div>
+			<div class="box4">
+				<div class="span2 active" style="margin:3%;_margin:10px;" onmouseover="changeFWLY(this,1)">
+					<img src="../static/img/xykWhite.png" style="margin-top:45px;" id="img1"/>
+				</div>
+				<div class="span2" style="margin:3% 3% 0 0;_margin:10px 10px 0 0;" onmouseover="changeFWLY(this,2)">
+					<img src="../static/img/atm.png" style="margin-top:30px;" id="img2"/>
+				</div>
+				<div class="span2" style="margin:3%;_margin:10px;margin-top:0;" onmouseover="changeFWLY(this,3)">
+					<img src="../static/img/lc.png" style="margin-top:33px;" id="img3"/>
+				</div>
+				<div class="span2" style="margin:0 3% 0 0;_margin:0 10px 0 0;" onmouseover="changeFWLY(this,4)">
+					<img src="../static/img/xwd.png" style="margin-top:50px;" id="img4"/>
+				</div>
+			</div>
+		</div>
+		
+		<div class="back-to-top">
+			<img src="../static/img/back-to-top.png"/>
 		</div>
 	<!--**************************************************foot***********************************************-->
-		<div class="foot">
-			<img src="../static/img/images/qk_12.png"/>
+		<div class="foot" style="width:100%;float:left;">		
+			<img src="../static/img/images/qk_12.png" style="width:100%"/>
 			<img src="../static/img/images/qk_15.png"/>
 			<span>Copyright(C)2011-2014 乾康（上海）金融信息服务有限公司</span><br/>
 			<span>沪ICP备13043724号</span>
-		</div>
+		</div>		
 	</div>
 	<script type="text/javascript" src="../static/js/jquery-1.7.2.min.js"></script>
 	<script type="text/javascript" src="../static/js/script.js"></script>
@@ -166,5 +250,82 @@
 	<script type="text/javascript" src="../static/js/jquery.easing.1.3.js"></script>
 	<script type="text/javascript" src="../static/js/jquery.animate-colors-min.js"></script>
 	<script type="text/javascript" src="../static/js/jquery.skitter.js"></script>
+	<script type="text/javascript">
+		
+		var q=1;
+		function leftBtn(){
+			if(q==3){	
+				$('#image7').hide();
+				$('#image4').show();
+				$('#image5').show();
+				$('#image6').show();
+				q=2;
+			}			
+			else{			
+				$('#image4').hide();
+				$('#image5').hide();
+				$('#image6').hide();
+				$('#image1').show();
+				$('#image2').show();
+				$('#image3').show();
+				q=1;
+			}
+		}
+		function rightBtn(){			
+			if(q==1){	
+				$('#image1').hide();
+				$('#image2').hide();
+				$('#image3').hide();				
+				$('#image4').show();
+				$('#image5').show();
+				$('#image6').show();
+				q=2;
+			}			
+			else{				
+				$('#image4').hide();
+				$('#image5').hide();
+				$('#image6').hide();
+				$('#image7').show();	
+				q=3;
+			}
+		}
+		//四小魔方
+		function changeFWLY(obj,num){			
+			$('.span2').attr('class','span2');
+			$(obj).attr('class','span2 active');
+			if(num==1){
+				$('#img1').attr('src','../static/img/xykWhite.png');
+				$('#img2').attr('src','../static/img/atm.png');
+				$('#img3').attr('src','../static/img/lc.png');
+				$('#img4').attr('src','../static/img/xwd.png');
+				$('.jianjie').hide();
+				$('#xyk').show();
+			}
+			if(num==2){
+				$('#img1').attr('src','../static/img/xyk.png');
+				$('#img2').attr('src','../static/img/atmWhite.png');
+				$('#img3').attr('src','../static/img/lc.png');
+				$('#img4').attr('src','../static/img/xwd.png');
+				$('.jianjie').hide();
+				$('#ATM').show();
+			}
+			if(num==3){
+				$('#img1').attr('src','../static/img/xyk.png');
+				$('#img2').attr('src','../static/img/atm.png');
+				$('#img3').attr('src','../static/img/lcWhite.png');
+				$('#img4').attr('src','../static/img/xwd.png');
+				$('.jianjie').hide();
+				$('#OTO').show();
+			}
+			if(num==4){
+				$('#img1').attr('src','../static/img/xyk.png');
+				$('#img2').attr('src','../static/img/atm.png');
+				$('#img3').attr('src','../static/img/lc.png');
+				$('#img4').attr('src','../static/img/xwdWhite.png');
+				$('.jianjie').hide();
+				$('#xwd').show();
+			}
+		}
+	</script>
 </body>
 </html>

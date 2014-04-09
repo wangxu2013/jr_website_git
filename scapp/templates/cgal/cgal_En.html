@@ -8,9 +8,10 @@
 	<meta name="author" content="Muhammad Usman">
 
 	<!-- The styles -->
-	<link href="/static/css/main.css" rel="stylesheet">
+	<link href="../../static/css/main.css" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="../../static/css/skitter.styles.css" media="all" />
 	<style type="text/css">
-		*{font-family:Arial;}
+		.cgal{width:28%;margin-top:0;}
 	</style>
 	<script type="text/javascript">
 		var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
@@ -18,195 +19,222 @@
 	</script>
 </head>
 
-<body>
+<body onload="imgs();">
 	<div class="main">
 	<!--**************************************************top***********************************************-->
-		<div class="logo">	
-			<img src="/static/img/images/logo.png"/>
-			<div>
-				<a href="/cgal" style="color:#828282;">中文</a><span style="color:#828282;">|</span>
-				<a href="/cgal_En" style="color:#828282;">English</a>
-				<a href="http://profitinsight.com/" style="color:#828282;margin-left:8px;"><img src="/static/img/PROFI.png" style="height:30px;padding:13px 0;float:right;_display:none;"/></a>
-			</div>			
-		</div>
-		<div class="nav">
-			<ul>
-				<li><a href="/index_En">Home</a></li>
-				<li><a href="/gsjj_En">About Us</a></li>
-				<li><a href="/xwdt_En">News</a></li>
+		<div class="logo" style="position:fixed;z-index:10000;">	
+			<a href="/index_En"><img src="../../static/img/images/logo.png" style="height:60px;margin-top:15px;margin-left:30px;margin-right:150px;"/></a>
+			<ul class="newnav" style="margin-left:20px;z-index:10000;">
+				<!-- <li><a href="/index_En">Home</a></li> -->				
 				<li><a href="/jjfa_En">Business</a></li>
-				<li><a href="/yhnx_En">Training</a></li>
 				<li class="active"><a href="/cgal_En">Case</a></li>
 				<li><a href="/hzhb_En">Partner</a></li>
-				<li><a href="/jrzx_En">Financial</a></li>
+				<li><a href="/yhnx_En">Training</a></li>
+				<li><a href="/jrzx_En">Financial</a></li>				
+				<li><a href="/gsjj_En">About Us</a></li>
+				<!-- <li><a href="/ygfc_En">Employee</a></li> -->
 				<li><a href="/zpxx_En">Recruit</a></li>
 			</ul>
 		</div>
-		<div class="flash-replaced">
-			<embed width="1000" height="188" type="application/x-shockwave-flash" src="../../static/img/content2_En.swf" pluginspage="http://www.adobe.com/go/getflashplayer" />
-    	</div>
-
-	<!--**************************************************content***********************************************-->
-		<div class="content">
-			<div class="left">
-				<img src="/static/img/images/lmdh_En.png"/>
-				<ul>
-					<li class="active" onclick="show('cgal')"><a href="#">Successful Case</a></li>								
-				</ul>
-				<img src="/static/img/images/qk_11_En.png"/>
+		<!-- SLIDER -->
+		<div id="outerslider" style="margin-top:90px;_margin-top:0;">
+        	<div id="slidercontainer">
+            	<section id="slider">
+                <div class="box_skitter box_skitter_large">					
+                    <ul >
+						<li>
+                            <img src="../../static/img/sub02_En.png" alt="" style="height:100%"/>                            
+                        </li>
+                        <li>
+                            <img src="../../static/img/sub01_En.png" alt="" style="height:100%"/>                            
+                        </li>                        
+						<li>
+                            <img src="../../static/img/sub03_En.png" alt="" style="height:100%"/>                            
+                        </li>
+						<li>
+                            <img src="../../static/img/sub04_En.png" alt="" style="height:100%"/>                            
+                        </li>
+						<li>
+                            <img src="../../static/img/sub05_En.png" alt="" style="height:100%"/>                            
+                        </li>
+                    </ul>
+                </div>
+                </section>
+            </div>
+        </div>
+        <!-- END SLIDER -->	
+		<!-- 切换语言 -->		
+		<div class="lanage" onclick="setLanage(this)">
+			<img src="../../static/img/yysz.png"/>
+			<div>
+				<a href="/index">中文</a><br/>
+				<a href="/index_En">English</a>
 			</div>
-			<div class="right" id="cgal">
-				<table width="100%">
-					<tr>
-						<td><img src="/static/img/tip.png"/><span class="title"> Successful Case</span></td>
-						<td class="pull-right">
-							CardPay(Shanghai) > <font color="#184554">Successful Case</font>
-						</td>
-					</tr>
-				</table>
-				<div class="fengge"></div>
-				<table width="100%">
-					<tr>
-						<td onclick="show('al1')"><img src="/static/img/al1.png"/></td>
-						<td onclick="show('al2')"><img src="/static/img/al2.jpg"/></td>
-						<td onclick="show('al3')"><img src="/static/img/al3.png"/></td>
-						<td onclick="show('al4')"><img src="/static/img/al4.jpg"/></td>
-					</tr>	
-					<tr>						
-						<td onclick="show('al5')"><img src="/static/img/al5.png"/></td>
-						<td></td>
-						<td></td>
-					</tr>						
-				</table>
-				<div class="showPage">
-					<span>Page: 1/1</span>
-					<span class="pageNum" style="margin-left:480px;">First</span>					
-					<span class="pageNum">Previous</span>	
-					<span class="pageNum">1</span>
-					<span class="pageNum">Next</span>	
-					<span class="pageNum">Last</span>				
+		</div>
+	<!--**************************************************left***********************************************-->	
+		<div style="width:100%;float:left;_margin-top:-90px;">
+			<div class="left">
+				<ul class="Tab">
+					<li class="active" onmouseover="change_div(this,'gsjj')"><a href="#">Services</a></li>
+					<li onmouseover="change_div(this,'fzln')" style=""><a href="#">Concept</a></li>
+					<!-- <li onclick="change_div(this,'ryzs')"><a href="#">荣誉证书</a></li>
+					<li onclick="change_div(this,'zjtd')"><a href="#">专家团队</a></li> -->
+					<li onmouseover="change_div(this,'lxfs')" style="border-right:1px solid #dddddd;"><a href="#">Contact</a></li>
+				</ul>
+				<div class="tab" id="gsjj">
+					Information<br/>
+					Technical Support<br/>
+					Platform
 				</div>
-			</div>	
-<!--**************************************************姜堰农村商业银行***********************************************-->		
-			<div class="right" id="al1" style="display:none">
-				<table width="100%">
-					<tr>
-						<td><img src="/static/img/tip.png"/><span class="title"> Successful Case</span></td>
-						<td class="pull-right">
-							CardPay(Shanghai) > <a onclick="show('cgal')" href="#">Successful Case</a> > <font color="#184554">JiangYan Rural Commercial Bank</font>
-						</td>
-					</tr>
-				</table>
-				<div class="fengge"></div>
-				<div class="jtxx">
-					<table cellspacing="10">
-						<tr>
-							<td align="center"><img src="/static/img/al1.png"/></td>
-						</tr>
-						<tr>
-							<td>&nbsp;JiangYan Rural Commercial Bank</td>
-						</tr>
-					</table>
+				<div class="tab" style="display:none;" id="fzln"> 
+					Create a leading international financial professional consultancy<br/>
+					Together to create elite team of consultants<br/>
+					Maximum to meet customer demand
 				</div>
-			</div>	
-<!--**************************************************句容农村商业银行***********************************************-->		
-			<div class="right" id="al2" style="display:none">
-				<table width="100%">
-					<tr>
-						<td><img src="/static/img/tip.png"/><span class="title"> Successful Case</span></td>
-						<td class="pull-right">
-							CardPay(Shanghai) > <a onclick="show('cgal')" href="#">Successful Case</a> > <font color="#184554">JiangSu JuRong Rural Commercial Bank</font>
-						</td>
-					</tr>
-				</table>
-				<div class="fengge"></div>
-				<div class="jtxx">
-					<table cellspacing="10">
-						<tr>
-							<td align="center"><img src="/static/img/al2.jpg"/></td>
-						</tr>
-						<tr>
-							<td>&nbsp;JiangSu JuRong Rural Commercial Bank</td>
-						</tr>
-					</table>
+				<div class="tab" style="display:none;" id="lxfs">
+					Address：Room 801,Building 3,No.7,Guiqing Road,Xuhui District,Shanghai  <br/>
+					Postcode：200035<br/>
+					Phone：021-54485390 <br/>
+					Fax： 021-54485391<br/>
+					E-mail：qk_liuwx@163.com<br/>
 				</div>
-			</div>		
-<!--**************************************************华夏银行***********************************************-->		
-			<div class="right" id="al3" style="display:none">
-				<table width="100%">
-					<tr>
-						<td><img src="/static/img/tip.png"/><span class="title"> Successful Case</span></td>
-						<td class="pull-right">
-							CardPay(Shanghai) > <a onclick="show('cgal')" href="#">Successful Case</a> > <font color="#184554">HUAXIA BANK</font>
-						</td>
-					</tr>
-				</table>
-				<div class="fengge"></div>
-				<div class="jtxx">
-					<table cellspacing="10">
-						<tr>
-							<td align="center"><img src="/static/img/al3.png"/></td>
-						</tr>
-						<tr>
-							<td>&nbsp;HUAXIA BANK</td>
-						</tr>
-					</table>
+			<!--**************************************************员工风采***********************************************************************-->
+				<div style="width:100%;margin-top:40px;border-top:3px dotted #dddddd;margin-bottom:40px;">
+					<span style="background:white;position:absolute;margin-top:-15px;font-weight:bold;font-size:20px;color:#666666;">Employee</span>
+				</div>					
+				<div id="ifocus">
+					<div id="ifocus_pic">
+						<div id="ifocus_piclist">
+							<ul>
+								<li>
+									<div class="ygfc">
+										<div class="ygfcContent">
+											创建领先国际的金融专业咨询机构1
+											合力打造精英顾问团队
+											最大限度满足客户需求创建领先国际的金融专业咨询机构
+											合力打造精英顾问团队
+											最大限度满足客户需求
+											创建领先国际的金融专业咨询机构
+											合力打造精英顾问团队
+										</div>
+									</div>	
+									<img src="../../static/img/head.png" style="margin-top:-15px;margin-left:20px;float:left;"/>	
+									<div style="margin-top:3px;margin-left:25px;float:left;font-size:16px;color:#727272;"> 
+										<b style="color:#0488cd;font-size:16px;">周滨</b><br/>总经理
+									</div>
+								</li>
+								<li>
+									<div class="ygfc">
+										<div class="ygfcContent">
+											创建领先国际的金融专业咨询机构1
+											合力打造精英顾问团队
+											最大限度满足客户需求创建领先国际的金融专业咨询机构
+											合力打造精英顾问团队
+											最大限度满足客户需求
+											创建领先国际的金融专业咨询机构
+											合力打造精英顾问团队
+										</div>
+									</div>	
+									<img src="../../static/img/head.png" style="margin-top:-15px;margin-left:20px;float:left;"/>	
+									<div style="margin-top:3px;margin-left:25px;float:left;font-size:16px;color:#727272;"> 
+										<b style="color:#0488cd;font-size:16px;">刘学军</b><br/>副总经理
+									</div>
+								</li>
+								<li>
+									<div class="ygfc">
+										<div class="ygfcContent">
+											创建领先国际的金融专业咨询机构1
+											合力打造精英顾问团队
+											最大限度满足客户需求创建领先国际的金融专业咨询机构
+											合力打造精英顾问团队
+											最大限度满足客户需求
+											创建领先国际的金融专业咨询机构
+											合力打造精英顾问团队
+										</div>
+									</div>	
+									<img src="../../static/img/head.png" style="margin-top:-15px;margin-left:20px;float:left;"/>	
+									<div style="margin-top:3px;margin-left:25px;float:left;font-size:16px;color:#727272;"> 
+										<b style="color:#0488cd;font-size:16px;">马颖涵</b><br/>信用卡咨询部经理
+									</div>
+								</li>
+								<li>
+									<div class="ygfc">
+										<div class="ygfcContent">
+											创建领先国际的金融专业咨询机构1
+											合力打造精英顾问团队
+											最大限度满足客户需求创建领先国际的金融专业咨询机构
+											合力打造精英顾问团队
+											最大限度满足客户需求
+											创建领先国际的金融专业咨询机构
+											合力打造精英顾问团队
+										</div>
+									</div>	
+									<img src="../../static/img/head.png" style="margin-top:-15px;margin-left:20px;float:left;"/>	
+									<div style="margin-top:3px;margin-left:25px;float:left;font-size:16px;color:#727272;"> 
+										<b style="color:#0488cd;font-size:16px;">赵军扬</b><br/>客户经理
+									</div>
+								</li>
+							</ul>
+						</div>
+						
+					</div>
+					<div id="ifocus_btn" style="display:none;">
+						<ul>
+							<li class="current"></li>
+							<li class="normal"></li>
+							<li class="normal"></li>
+							<li class="normal"></li>
+						</ul>
+					</div>
 				</div>
-			</div>		
-<!--**************************************************江南农村商业银行***********************************************-->		
-			<div class="right" id="al4" style="display:none">
-				<table width="100%">
-					<tr>
-						<td><img src="/static/img/tip.png"/><span class="title"> Successful Case</span></td>
-						<td class="pull-right">
-							CardPay(Shanghai) > <a onclick="show('cgal')" href="#">Successful Case</a> > <font color="#184554">JiangNan Rural Commercial Bank</font>
-						</td>
-					</tr>
-				</table>
-				<div class="fengge"></div>
-				<div class="jtxx">
-					<table cellspacing="10">
-						<tr>
-							<td align="center"><img src="/static/img/al4.jpg"/></td>
-						</tr>
-						<tr>
-							<td>&nbsp;JiangNan Rural Commercial Bank</td>
-						</tr>
-					</table>
+			</div>
+		<!--**************************************************title***********************************************-->		
+			<div class="title">
+				<h2>Case</h2>
+				<span class="place">CardPay(Shanghai) > <font style="color:#0488cd">Case</font></span>
+			</div>
+		<!--**************************************************right***********************************************-->	
+			<div class="right" style="_margin-left:50px;">				
+				<div class="cgal" id="image1" >
+					<img src="../../static/img/hxyh.png" style="width:100%"/>
 				</div>
-			</div>		
-<!--**************************************************兴化农村商业银行***********************************************-->		
-			<div class="right" id="al5" style="display:none">
-				<table width="100%">
-					<tr>
-						<td><img src="/static/img/tip.png"/><span class="title"> Successful Case</span></td>
-						<td class="pull-right">
-							CardPay(Shanghai) > <a onclick="show('cgal')" href="#">Successful Case</a> > <font color="#184554">XingHua Rural Commercial Bank</font>
-						</td>
-					</tr>
-				</table>
-				<div class="fengge"></div>
-				<div class="jtxx">
-					<table cellspacing="10">
-						<tr>
-							<td align="center"><img src="/static/img/al5.png"/></td>
-						</tr>
-						<tr>
-							<td>&nbsp;XingHua Rural Commercial Bank</td>
-						</tr>
-					</table>
+				<div class="cgal" id="image2" >
+					<img src="../../static/img/jnyh.png" style="width:100%"/>
 				</div>
-			</div>					
+				<div class="cgal" id="image3" >
+					<img src="../../static/img/xhyh.png" style="width:100%"/>
+				</div>
+				<div class="cgal" id="image4" style="margin-top:20px;">
+					<img src="../../static/img/jr.png" style="width:100%"/>
+				</div>
+				<div class="cgal" id="image5" style="margin-top:20px;">
+					<img src="../../static/img/jy.png" style="width:100%"/>
+				</div>
+				<div class="cgal" id="image6" style="margin-top:20px;">
+					<img src="../../static/img/jynsh.png" style="width:100%"/>
+				</div>	
+				<div class="cgal" id="image7" style="margin-top:20px;">
+					<img src="../../static/img/wxnsh.png" style="width:100%"/>
+				</div>
+			</div>
+		</div>
+		<div class="back-to-top">
+			<img src="../../static/img/back-to-top.png"/>
 		</div>
 	<!--**************************************************foot***********************************************-->
-		<div class="foot">
-			<img src="/static/img/images/qk_12.png"/>
-			<img src="/static/img/images/qk_15.png"/>
+		<div class="foot" style="width:100%;float:left;">		
+			<img src="../../static/img/images/qk_12.png" style="width:100%"/>
+			<img src="../../static/img/images/qk_15.png"/>
 			<span>Copyright(C)2011-2014 CardPay(Shanghai) Finance Consulting Co.,Ltd.</span><br/>
 			<span>Shanghai ICP for 13043724</span>
-		</div>
+		</div>	
 	</div>
-	<script type="text/javascript" src="/static/js/jquery-1.7.2.min.js"></script>
-	<script type="text/javascript" src="/static/js/script.js"></script>
+	<script type="text/javascript" src="../../static/js/jquery-1.7.2.min.js"></script>
+	<script type="text/javascript" src="../../static/js/jquery.dataTables_En.min.js"></script>
+	<script type="text/javascript" src="../../static/js/script.js"></script>
+	<!-- Slider -->
+	<script type="text/javascript" src="../../static/js/jquery.easing.1.3.js"></script>
+	<script type="text/javascript" src="../../static/js/jquery.animate-colors-min.js"></script>
+	<script type="text/javascript" src="../../static/js/jquery.skitter.js"></script>
 </body>
 </html>
