@@ -90,7 +90,8 @@
 				<div>
 					<ul class="list" id="gywm-list">
 						<li class="active" onclick="$('.right').hide();change_div(this,'kctx');" style="border-radius:5px 5px 0 0;">课程体系</li>
-						<li onclick="$('.right').hide();change_div(this,'gkkc');" style="border-top:none;border-radius:0 0 5px 5px;">公开课程</li>
+						<li onclick="$('.right').hide();change_div(this,'gkkc');" style="border-top:none;">公开课程</li>
+						<li onclick="$('.right').hide();change_div(this,'gkkc');" style="border-top:none;border-radius:0 0 5px 5px;">内训课程</li>
 					</ul>
 				</div>
 			<!--**************************************************新闻动态***********************************************************************-->
@@ -172,7 +173,7 @@
 				<span class="place">当前位置：乾康（上海）金融信息服务有限公司 > <font style="color:#0488cd">银行内训</font></span>
 			</div>
 		<!--**************************************************right***********************************************-->	
-			<div class="right" id="kctx">
+			<div class="right" id="kctx" style="display:none">
 				<table width="100%">
 					<tr class="bordered">
 						<td>
@@ -181,13 +182,6 @@
 						</td>
 						<td class="text-right"></td>
 					</tr>	
-					<tr class="bordered">
-						<td>
-							<img src="../../static/img/list-style.png"/> 
-							<a href="#" onclick="show('yhnxkc')">银行内训课程</a>
-						</td>
-						<td class="text-right"></td>
-					</tr>
 				</table>
 				<div class="showPage">
 					<span>共1条 每页10条 页次：1/1</span>
@@ -265,38 +259,9 @@
 					</div>
 				</div>
 				<img src="../../static/img/back.png" onclick="show('kctx')" style="cursor:pointer;float:right;"/>
-			</div>		
-			<!--**************************************************商业银行微小贷款培训课程***********************************************-->		
-			<div class="right" id="yhnxkc" style="display:none">
-				<div class="jtxx">
-					<h1 class="H1">银行内训课程</h1>
-					<div class="xx">
-						<p>1、银行服务礼仪规范</p>
-						<p>2、银行职业道德与从业操守</p>
-						<p>3、商业银行法律基础知识</p>
-						<p>4、银行员工职业精神与阳光心态塑造</p>
-						<p>5、银行员工职业生涯规划与管理</p>
-						<p>6、高效沟通技巧</p>
-						<p>7、金融市场学</p>
-						<p>8、银行票据业务基础知识</p>
-						<p>9、个人、公司金融业务及操作</p>
-						<p>10、电子银行、银行卡业务及操作</p>
-						<p>11、市场调研技术</p>						
-						<p>12、小额贷款业务标准流程及系统处理流程介绍</p>
-						<p>13、信用卡、信用卡系统知识</p>
-						<p>14、小额贷款客户营销策略</p>
-						<p>15、客户关系维护与管理</p>
-						<p>16、小额贷款销售技巧</p>
-						<p>17、小额贷款贷后监控和风险防范</p>
-						<p>18、会计学、会计学报表基础</p>
-						<p>19、货币银行基础</p>
-						<p>20、银行信息系统概要</p>					
-					</div>
-				</div>
-				<img src="../../static/img/back.png" onclick="show('kctx')" style="cursor:pointer;float:right;"/>
-			</div>		
+			</div>	
 <!--**************************************************公开课程***********************************************-->		
-			<div class="right" id="gkkc" style="display:none">
+			<div class="right" id="gkkc">
 				<table width="100%" id="gkkc1">
 					<thead>
 						<tr>

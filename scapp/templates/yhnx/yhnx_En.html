@@ -89,8 +89,9 @@
 			<div class="left">				
 				<div>
 					<ul class="list" id="gywm-list">
-						<li class="active" onclick="$('.right').hide();change_div(this,'kctx');" style="border-radius:5px 5px 0 0;">Curriculum system</li>
-						<li onclick="$('.right').hide();change_div(this,'gkkc');" style="border-top:none;border-radius:0 0 5px 5px;">Open courses</li>
+						<li class="active" onclick="$('.right').hide();change_div(this,'kctx');" style="border-radius:5px 5px 0 0;">Curriculum system</li>						
+						<li onclick="$('.right').hide();change_div(this,'gkkc');" style="border-top:none;">Open courses</li>
+						<li onclick="$('.right').hide();change_div(this,'gkkc');" style="border-top:none;border-radius:0 0 5px 5px;">Training courses </li>
 					</ul>
 				</div>
 				<!--**************************************************新闻动态***********************************************************************-->
@@ -161,7 +162,7 @@
 				<h2>Training</h2>
 				<span class="place">CardPay(Shanghai) > <font style="color:#0488cd">Training</font></span>
 			</div>
-			<div class="right" id="kctx">
+			<div class="right" id="kctx"  style="display:none">
 				<table width="100%">
 					<tr class="bordered">
 						<td>
@@ -249,7 +250,7 @@
 				<img src="../../static/img/back.png" onclick="show('kctx')" style="cursor:pointer;float:right;"/>
 			</div>		
 <!--**************************************************公开课程***********************************************-->		
-			<div class="right" id="gkkc" style="display:none">
+			<div class="right" id="gkkc">
 				<table width="100%" id="gkkc1">
 					<thead>
 						<tr>
