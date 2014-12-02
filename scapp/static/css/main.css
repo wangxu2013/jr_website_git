@@ -86,12 +86,12 @@ textarea{width:420px;height:150px;background:#fbfbfb;border:1px solid #dcd9d4;}
 .secondList li a{line-height:40px;}
 .secondList li:hover{background:#2f3843}
 .span3{display:inline-block;float:left;width:29%;margin:15px;margin-top:60px;border:1px solid #dddddd;background:#fafafa;border-bottom:3px solid #0488cd;border-radius:5px;}
-.box{display:bolck;float:left;margin-top:40px;height:340px;border:1px solid #dddddd;border-left:none;border-right:none;background:#fafafa;border-radius:5px;}
+.box{display:bolck;float:left;margin-top:40px;height:380px;border:1px solid #dddddd;border-left:none;border-right:none;background:#fafafa;border-radius:5px;}
 .box4{width:348px;height:348px;margin-top:30px;margin-left:-4px;border:1px solid #e1e1e1;float:left;border-radius:5px;margin-left:30px;margin-left:8%;}
 .box4 .span2{width:45.5%;_width:150px;height:45.5%;float:left;text-align:center;background:#e1e1e1;}
 .box4 .span2 img{width:50%}
 .box4 .active{background:#0488cd;}
-.cgal{width:18%;border:3px dotted #e1e1e1;float:left;margin-top:40px;margin-left:2%;}
+.cgal{width:10%;border:3px dotted #e1e1e1;float:left;margin-top:40px;margin-left:1%;}
 
 /* 滚动图片 */
 #ifocus_pic { display:inline; position:relative; float:left; width:273px; height:350px; overflow:hidden;}
