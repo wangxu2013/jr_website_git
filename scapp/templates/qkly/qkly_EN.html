@@ -1,0 +1,647 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>	
+	<meta charset="utf-8">
+	<title>CardPay(Shanghai) Finance Consulting Co.,Ltd.</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Charisma, a fully featured, responsive, HTML5, Bootstrap admin template.">
+	<meta name="author" content="Muhammad Usman">
+	<!-- 地图 -->
+	<script type="text/javascript" src="../../static/js/bdMap.js"></script>
+	<!-- The styles -->
+	<link href="../../static/css/main.css" rel="stylesheet">
+	<link href="../../static/css/imagehover.css" rel="stylesheet">
+	 <link rel="stylesheet" type="text/css" href="../../static/css/skitter.styles.css" media="all" />
+	<style type="text/css">	
+		.qkly .span4 img{width:70px;vertical-align:center;margin-top:-10px;margin-bottom:10px;}
+		.qkly .span4 h1{top:10px;font-size:15px;line-height:30px;}
+		.qkly .span4 h1 span
+	</style>
+	<script type="text/javascript">
+		var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+		document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3F980a47baa3b028fee8b94644df33e9b8' type='text/javascript'%3E%3C/script%3E"));
+	</script>
+</head>
+
+<body onload="imgs();">
+<div class="main">
+	<!--**************************************************top***********************************************-->
+	<div class="logo" style="position:fixed;z-index:10000;">	
+		<a href="../index_EN.html"><img src="../../static/img/logo.png"/></a>
+		<ul class="newnav" style="margin-left:20px;z-index:10000;">
+			<li class="active"><a href="qkly_EN.html">Areas</a></li>
+			<li><a href="../qkhb/qkhb_EN.html">Partner</a></li>
+			<li><a href="../qkjz/qkjz_EN.html">Family</a></li>
+			<li><a href="../jrqk/jrqk_EN.html">Join Us</a></li>	
+			<li><a href="../gyqk/gyqk_EN.html">About Us</a></li>
+		</ul>
+	</div>
+	<!-- SLIDER -->
+	<div id="outerslider">
+		<div id="slidercontainer">
+			<section id="slider">
+			<div class="box_skitter box_skitter_large">					
+				<ul >
+					<li>
+						<img src="../../static/img/banner4_EN.jpg" alt="" style="height:100%"/>                            
+					</li>
+					<li>
+						<img src="../../static/img/banner5_EN.jpg" alt="" style="height:100%"/>                            
+					</li>          
+					<li>
+						<img src="../../static/img/banner6_EN.jpg" alt="" style="height:100%"/>                            
+					</li>    
+				</ul>
+			</div>
+			</section>
+		</div>
+	</div>
+	<!-- END SLIDER -->		
+	<div class="qkly" onmouseleave="resetTab()">
+		<div class="span4 active" onclick="Tab(this,'101')" onmouseover="Tab3(this,'101')" id="Tab101">
+			<img src="../../static/img/101_h.png" style="margin-top:5px;"/>		
+			<h1>INTERNET CONSUMER<br/><span>FINANCE</span></h1>
+		</div>
+		<div class="span4" onclick="Tab(this,'102')" onmouseover="Tab3(this,'102')" id="Tab102">
+			<img src="../../static/img/102.png" style="margin-top:5px;"/>	
+			<h1>PERSONAL FINANCIAL <br/><span>SERVICES</span></h1>
+		</div>
+		<div class="span4" onclick="Tab(this,'103')" onmouseover="Tab3(this,'103')" id="Tab103">
+			<img src="../../static/img/103.png" style="margin-top:5px;"/>		
+			<h1>REMOTE CREDIT<br/><span>EVALUATION</span></h1>
+		</div>
+	</div>
+	<!--**************************************************title***********************************************-->	
+	<div id="101" class="Tab">	
+		<div class="title">
+			<h1>INTERNET CONSUMER</h1><h2>F</h2><h3>inance</h3>
+		</div>
+		<div class="xfjrList zp">
+			<div onclick="$('.Tab').hide();$('#zp1').show();">
+				<img src="../../static/img/sc4.png"/>
+				<p style="line-height:25px;">Research center was established</p>
+			</div>
+			<div onclick="$('.Tab').hide();$('#zp3').show();">
+				<img src="../../static/img/sc30.jpg"/>
+				<p style="line-height:25px;">Introduction of consumer finance</p>
+			</div>
+			<div onclick="$('.Tab').hide();$('#zp4').show();">
+				<img  src="../../static/img/sc31.jpg"/>
+				<p style="line-height:25px;">Internet consumer finance manager</p>
+			</div>
+			<div onclick="$('.Tab').hide();$('#ywly').show();">
+				<img src="../../static/img/xfjr2.jpg"/>
+				<p style="line-height:50px;">Consumer finance business</p>
+			</div>
+			<div onclick="$('.Tab').hide();$('#glspx').show();">
+				<img src="../../static/img/xfjr1.jpg"/>
+				<p style="line-height:25px;">Consumer Finance Manager Training</p>
+			</div>
+			<div>
+				<img src="../../static/img/xfjr3.jpg"/>
+				<p style="line-height:25px;">Consumer finance platform operators</p>
+			</div>
+			<div>
+				<img src="../../static/img/xfjr4.jpg"/>
+				<p style="line-height:50px;">Consumer banking software</p>
+			</div>
+		</div>
+	</div>
+	<div class="Tab" id="zp1" style="display:none;">
+		<div class="title">
+			<h1>Research center was established</h1><h2>S</h2><h3>et up</h3>
+		</div>
+		<div class="AboutUs" style="background-image:url(../../static/img/sc32.jpg);height:285px;">
+			<h1 style="margin-top:0">Introductionr</h1>
+			<h2>Consumer finance research center</h2>
+			<span style="height:155px;"></span>
+			<font>China's Internet consumer finance financial institute research center is based on traditional financial companies such as bank competitiveness as the key point, to support the country's economic growth as the goal, to carry out research, consulting, integration of industry, training and development plan and related activity monitoring, a consultancy. Belonging to the Chinese Internet financial institute.</font>
+		</div>
+		<div class="AboutUs qywh" id="dh1" style="background-image:url(../../static/img/sc33.jpg);height:350px;position:relative;right:-100%;">
+			<h1 style="margin-top:30px">Center Build</h1>
+			<h2>Consumer Finance Research </h2>
+			<span style="height:155px;"></span>
+			<font>In January 2015, sponsored by the China electronic commerce association 2015 China Internet financial peak BBS and China Internet research institute held a grand opening ceremony in Beijing national convention center, China academy of Internet financial consumer finance research centre under the background of this arises at the historic moment.</font>
+		</div>
+		<div id="dh2" style="position:relative;left:-100%;">
+			<div class="title">
+				<h1>Approval</h1><h2>A</h2><h3>uthorization</h3>
+			</div>
+			<div class="AboutUs xfjr">
+				<p style="width:100%">1, research center for approval		<font style="margin-left:32%;color:#5a5a5a;">2, gave nameboards research center</font></p>
+				<img src="../../static/img/qkjf1.png" style="width:48%;margin-right:1.5%;margin-top:20px;height:340px;border:1px solid #ddd;"/>
+				<img src="../../static/img/qkjf2.png" style="width:48%;margin-top:20px;height:340px;border:1px solid #ddd;"/>
+			</div>
+		</div>
+		<div id="dh3" style="filter:alpha(opacity=0);opacity:0;width:100%">
+			<div class="title">
+				<h1>To carry out vocational skills training</h1><h2>V</h2><h3>ocational skills training</h3>
+			</div>
+			<div class="AboutUs xfjr">
+				<p>With the rapid development of the financial industry, the Internet industry has grown in size and the entire industry to talented person's demand more and more intense, but the workers, the good and bad are intermingled, to some extent affected the market environment.
+				<br/>To comprehensively improve the whole quality of industry professionals, the standard industry market environment, promote the sustainable and healthy development of the industry should be the party central committee and the state council, China's Internet financial consumption center for financial research institute (hereinafter referred to as the "center") approval, set up to regulate the operation of the consumer finance business standards for the purpose, to help Banks into consumer finance blue ocean industry, cultivating talents, consumer finance should be the party central committee and the state council called on, center set up and carry out "the Internet consumer financial management division" occupational skills training certification program.
+				</p>
+				<img src="../../static/img/5.jpg" style="width:33%;"/>
+				<img src="../../static/img/6.jpg" style="width:33%;"/>
+				<img src="../../static/img/7.jpg" style="width:33%;"/>
+			</div>
+		</div>
+		<button class="back" onclick="$('.Tab').hide();$('#101').show();">BACK</button>
+	</div>
+	<div class="Tab" id="zp3" style="display:none;">
+		<div class="title">
+			<h1>Introduction</h1><h2>O</h2><h3>f consumer finance</h3>
+		</div>
+		<div class="AboutUs" style="background-image:url(../../static/img/sc34.jpg);height:262px;">
+			<h1 style="margin-top:0px;">Consumer Finance</h1>
+			<h2>What is a consumer finance</h2>
+			<span style="height:125px;"></span>
+			<font>
+				Consumer finance refers to a consumer financial company to the borrower for consumption (not including buying homes and cars) for the purpose of the loan. With a single line of credit of small, fast examination and approval, no collateral, flexible services, the advantages of the loan term is short.<br/>
+				
+			</font>
+		</div>
+		<div id="dh7" style="position:relative;right:-100%;">
+			<div class="title">
+				<h1>Consumer finance</h1><h2>C</h2><h3>onsumer finance background</h3>
+			</div>
+			<div class="AboutUs xfjr">
+				<p>At present, China's consumer loan balance of total loan balance is only about 20%, and 50% is still a big gap than European and American developed country, from the point of the loan subsidiary, in 13 years to 14 years in the bank's personal loan, credit proportion also after the mortgage and car loans, ranked third.</p>
+				<p>China's Internet consumer finance market starting stage at present, with the overall development of the financial industry, the Internet, the concept of residents escalated, and further recognition of consumer financial model on the Internet, the Internet consumer finance market in the next three years, will continue to keep the explosive growth. Internet consumer finance market in 2014 deals reached 9.69 billion yuan, rose 112.5%, the market size by 2017 is expected to exceed 2017 yuan.</p>
+					
+				<p>Internet consumer finance companies development in China has experienced three phases:</p>
+				<p><strong>1, the first phase of the pilot period 2010-2013</strong></p>
+				<p>North silver consumer finance companies, China consumer finance companies, consumer finance companies and chengdu home credit consumer finance companies. In Beijing, Shanghai, chengdu, tianjin pilot</p>
+				<p><strong>2, the second phase expansion in 2013-2015</strong></p>
+				<p>New pilot cities include: shenyang, nanjing, hangzhou, hefei, quanzhou, wuhan, guangzhou, chongqing, xian and Qingdao</p>
+				<p><strong>3, the third stage fully open period since 2015</strong></p>
+				<p>On the one hand, the extension of the pilot cities across the country, on the other hand below the approval rights to each department at the provincial level</p>
+				<p>Located in the Qingdao haier consumer finance companies, located in wuhan in hubei province consumer finance company, located in nanjing suning consumer finance companies, consumer finance companies immediately in chongqing municipality, is located in guangzhou of post consumer finance company, hangzhou HangYin consumer finance companies, hefei emblem silver consumer finance companies, shanxi jin merchants consumer finance companies, liaoning shengyin consumer finance companies, etc., the financial industry, the establishment of the consumer finance companies make system more robust, plays a positive role to the development of consumer finance.</p>
+				<img src="../../static/img/8.jpg" style="width:33%;"/>
+				<img src="../../static/img/9.jpg" style="width:33%;"/>
+				<img src="../../static/img/10.jpg" style="width:33%;"/>
+			</div>
+		</div>
+		<div id="dh8" style="position:relative;left:-100%;">
+			<div class="title">
+				<h1>Consumer finance</h1><h2>E</h2><h3>ffect</h3>
+			</div>
+			<div class="AboutUs xfjr"><img src="../../static/img/11.jpg" style="float:right;width:400px;height:250px;margin-left:20px;"/>
+				<p><strong>For financial institutions</strong></p>
+				<p>1, optimize the assets structure; 2, promote the profit growth; 3, improve the financial service system.</p>
+				<p><strong>Effect on consumers'</strong></p>
+				<p>1, meet the demand of normal consumption; 2, promoting consumption upgrading; 3, strengthen the consciousness of personal credit.</p>
+				<p><strong>Effect on the economic transformation</strong></p>
+				<p>1, to expand domestic demand, consumption; 2, transformation of the pattern of economic development; 3, optimize the environment of social credit.</p>
+				<p>In carrying out national "expanding domestic demand and promote economic structure transformation and upgrading", consumer finance will become the economic transformation and pratt &whitney financial booster, for stimulating economic development and structural transformation is of great significance.</p>
+				<p>Consumer finance in the raise the level of the consumer life and support economic growth plays a positive role in promoting, the financial services currently in mature markets and emerging markets have been widely used.</p>
+			</div>
+		</div>
+		<div id="dh9" style="filter:alpha(opacity=0);opacity:0;width:100%">
+			<div class="title">
+				<h1>The current domestic consumer finance</h1><h2>M</h2><h3>arket</h3>
+			</div>
+			<div class="xfjrList zp">
+				<div>
+					<img src="../../static/img/12.jpg">
+					<p style="line-height:25px;">College consumer market by installments</p>
+				</div>
+				<div>
+					<img src="../../static/img/13.jpg">
+					<p style="line-height:25px;">Blue-collar consumer market by installments</p>
+				</div>
+				<div>
+					<img src="../../static/img/14.jpg">
+					<p style="line-height:25px;">Housing consumption market by installments</p>
+				</div>
+				<div>
+					<img src="../../static/img/15.jpg">
+					<p style="line-height:25px;">Travel consumer market by installments</p>
+				</div>
+				<div>
+					<img src="../../static/img/16.jpg">
+					<p style="line-height:25px;">Decorate a consumer market by installments</p>
+				</div>
+				<div>
+					<img src="../../static/img/17.jpg">
+					<p style="line-height:25px;">Education consumption market by installments</p>
+				</div>
+			</div>
+		</div>
+		<button class="back" onclick="$('.Tab').hide();$('.XFJR').hide();$('#101').show();">BACK</button>
+	</div>
+	<div class="Tab" id="zp4" style="display:none;">
+		<div class="title">
+			<h1>Internet consumer finance manager </h1><h2>C</h2><h3>ourse</h3>
+		</div>
+		<div class="AboutUs xfjr">
+			<img src="../../static/img/18.jpg" style="float:right;margin-left:20px;height:190px;margin-top:20px;"/>
+			<h1 class="tip">A, curriculum background</h1>
+			<p>2016 Internet financial talent attraction index rising, talent attraction at the top of the list, many industries are all talented person net, the relevant statistics show that in the next few years China's Internet financial talent gap will be more than 300, while consumer finance personnel belongs to the gap in the gap, the next ten years, domestic consumption financial talent gap will continue to rise.</p>
+			<p>On March 16, 2016, China's Internet financial institute approved to establish "Chinese Internet financial consumption center for financial research institute (hereinafter referred to as the" center "), to regulate the operation of the consumer finance business standards for the purpose, to help Banks into consumer finance blue ocean industry, cultivating talents, consumer finance should be the party central committee and the state council called on, center set up and carry out "the Internet consumer financial management division" occupational skills training certification program.</p>
+		</div>
+		<div class="AboutUs xfjr" id="dh10" style="position:relative;right:-100%;">	
+			<img src="../../static/img/19.jpg" style="float:left;margin-right:20px;width:400px;height:200px;"/>
+			<h1 class="tip">B, the agency was established</h1>
+			<p>In January 2015, sponsored by the China electronic commerce association 2015 China Internet financial peak BBS and China Internet research institute held a grand opening ceremony in Beijing national convention center, China academy of Internet financial consumer finance research centre under the background of this arises at the historic moment. China academy of Internet financial consumer finance research center to finance honest, prudent, stable, profitable business nature, to promote Chinese residents can benefit from pratt &whitney financial and develop corresponding talents to make due contributions.</p>
+			<p>On March 16, 2016, China's Internet financial institute approval consumer finance research center was established.</p>
+		</div>
+		<div class="AboutUs xfjr" id="dh11" style="position:relative;left:-100%;">	
+			<img src="../../static/img/20.jpg" style="float:right;margin-left:20px;margin-top:60px;"/>
+			<h1 class="tip">C, institutional profile</h1>			
+			<p>China's Internet consumer finance financial institute research center is based on traditional financial companies such as bank competitiveness as the key point, to support the country's economic growth as the goal, to carry out research, consulting, integration of industry, training and development plan and related activity monitoring, a consultancy. Under the Internet into the institute.</p>
+			
+			<h1 class="tip">D, course description</h1>
+			<p>The Internet consumer financial management division series course divided into advanced class and middle class, according to the school, teaching channels and into different training products, at the same time, the center to open an online training course.</p>
+			<p>Advanced course content includes: overview of consumer finance, and marketing of consumer finance, the consumer finance business and operations, "financial risk control consumption and fraud", "consumer financial information technology", "consumer finance and laws and regulations construction, etc.;</p>
+			<p>Intermediate class course content includes: the consumer finance base ", "consumer finance marketing", "financial risk control consumption", "financial compliance" consumption, etc.</p>
+		</div>
+		<div class="AboutUs xfjr" id="dh12" style="position:relative;right:-100%;">		
+			<img src="../../static/img/21.jpg" style="float:left;margin-right:20px;margin-top:60px;"/>
+			<h1 class="tip">E, the syllabus (advanced)</h1>
+			<p>(a) foundation course</p>
+			<p>1. Consumer financial infrastructure; 2. The development history of consumer finance; 3. The domestic consumer finance management entity is introduced; 4. Consumer finance business model; 5. Introduce several typical consumer financial entities</p>
+			<p>(b) business courses</p>
+			<p>1. The meaning of commercial Banks to carry out the consumer finance; 2. Consumer finance business model choice; 3. The consumer finance business/company's organizational structure; 4. The consumer finance business/company department role; 5. Consumer finance credit factory pattern is introduced. 6. Consumer finance marketing system. 7. Consumption configuration and innovation of financial products; 8. Consumer financial accounting system; 9. Consumer finance assets management and collection; 10. Consumer finance organization staff training, evaluation</p>
+			<p>(c) risk control courses</p>
+			<p>1. The consumer finance business risk control concept, with the company's business, the differences between the small business risk control? ; 2. The consumption culture in the whole process of financial risk control of credit factory implementation; 3. The risk control department personnel allocation and division of labor; 4. Risk control department at the core of the process (online, offline); 5. The choice of risk control model and optimization; 6. The performance evaluation of the risk control department; 7. Consumer financial asset preservation and collection</p>
+			<p>(d) technical courses</p>
+			<p>1. The mainstream of the Internet financial technology introduction; 2. Consumer demand for computer technology (a) consumer finance companies technology architecture, application architecture, data architecture, infrastructure, security architecture); b) consumer finance governance of science and technology (science and technology, organizational structure and division of labor, technical team building and training) ]; 3. Consumer finance system and its main application is introduced; (c) channel access class: APP, third-party API; d) background processing categories: letter review system, risk control system; e) data analysis classes: big data platform, model maintenance; f) infrastructure]; 4. Several typical consumer finance share the technical architecture</p>
+			<p>(e) law courses</p>
+			<p>1. The evolution of the development of the Internet financial and regulatory environment at home and abroad. 2. The development history of domestic consumption financial regulations (2007-2013-1015); 3. Consumer finance related regulations (such as third-party payment, electronic account regulations) is introduced. 4. The future domestic consumption analysis of the evolution of financial supervision and regulation; 5. Commercial Banks how to make full use of the regulations of the dividend, rapidly expand consumer finance</p>
+		</div>
+		<div class="AboutUs xfjr" id="dh13" style="position:relative;left:-100%;">	
+			<img src="../../static/img/22.jpg" style="float:right;margin-left:20px;margin-top:80px;"/>
+			<h1 class="tip">F, syllabus (intermediate)</h1>
+			<p>(a) base paper</p>
+			<p>1. Summary of consumer finance, consumer finance definition, development history and the direction of domestic consumption; 2. Consumer finance to participate in the organization, organization structure and roles; 3. The amount of financial business model (online, offline and online mode). 4. The consumer finance business process (marketing - approval - lending - collection, teaching process to do); 5. Consumer financial products (consumer financial products, plan breath way, reimbursement of setting up the related calculation, etc.); 6. Consumer finance risk control and fraud (consumer finance business how to do risk control, fraud). 7. Consumer finance assets management and collection; 8. Customer manager in the position and role of the consumer finance business</p>
+			<p>(b) marketing article</p>
+			<p>1. The significance and the value of the marketing of consumer finance, the characteristics of consumer marketing; 2. Consumer finance marketing manager for the customer requirements; 3. Marketing foundation; 4. Consumer behavior and consumer psychology; 5. Customer groups consumption financial analysis and marketing strategy; 6. Real fuck on consumer finance marketing skills and training; 7. Etiquette, dress and speech; 8. Persuade skills; 9. Product recommendations and solutions; 10. In field training</p>
+			<p>(c) the risk control</p>
+			<p>1. The risk control and the significance and the value of the financial fraud on consumption, consumer finance risk control and the characteristics of the fraud; 2. Consumer financial risk control and anti-fraud marketing manager for the customer requirements; According to the characteristics of consumer finance risk control pertaining to the customer manager in the marketing, research ability, knowledge requirements; 3. The financial risk management; 4. Consumer finance risk control and the fraud in the whole process of the ground; In a guest, the examination and approval, the collection of assets in the link of related processing is introduced; 5. Consumer financial risk control and anti-fraud explaining skill in field and training</p>
+			<p>(d) the compliance report</p>
+			<p>1. Domestic consumption financial regulation development history; 2. Domestic consumption financial regulation law is introduced; 3. Consumer finance related regulations is introduced; 4. Customer manager how to compliance work</p>
+		</div>
+		<div class="AboutUs xfjr" id="dh14" style="position:relative;right:-100%;">		
+			<img src="../../static/img/23.jpg" style="float:left;margin-right:20px;margin-top:40px;"/>
+			<h1 class="tip">G,Course advantage</h1>
+			<p>Strong practicability, dry goods</p>
+			<p>Different from traditional financial business training, this training course in addition to consumer finance theory teaching, will focus on consumer finance field and experience of training teachers from many domestic first-class commercial Banks, consumer finance companies, has the rich work experience, in addition to imparting consumer finance idea, more teaching core consumer finance related links such as business development, risk control fraud, information technology and so on specific field experience, students can rapid growth in a short period of time for practical backbone in the field of consumer finance, in the fierce talent market.</p>
+			<p>Brand effect and value enhancement</p>
+			<p>As dry cultivation of domestic financial services market for many years, finance and national ministry of industry and consumer finance research institute jointly launched consumer finance courses, qualified trainees will be authenticated by the national ministry of industry and related ability certificate, this is very good value for the broad masses of students improve marks and ability to prove it.</p>
+		</div>
+		<div class="AboutUs xfjr" id="dh15" style="position:relative;left:-100%;">		
+			<img src="../../static/img/24.jpg" style="float:right;margin-left:20px;"/>	
+			<h1 class="tip">H, teachers' instructions</h1>
+			<p>Training the teachers are from the lecturer, experts in the field of related academic field and practice field, lawyers and risk control, senior analyst, teacher, on behalf of the professional level of the Internet financial training, is a good way to guarantee the training of students can not only learn solid theory knowledge, and to have the strong ability to solve practical problems, ensure that students can do the Internet consumer finance job requirements.</p>		
+		</div>
+		<div class="AboutUs xfjr" id="dh16" style="position:relative;right:-100%;">	
+			<img src="../../static/img/qkjf5.png" style="float:left;margin-right:20px;margin-top:40px;"/>	
+			<h1 class="tip">I, certificate</h1>
+			<p>"Consumer financial management division," refers to the commercial Banks, consumer finance companies, financial companies, financial institutions, such as Internet in the consumer finance industry business, risk control and management professionals.
+				<br/>The Internet consumer financial management division certificate is the holder to perform the financial industry, the Internet consumer finance business skills. The certificate for the Chinese Internet financial professionals, the traditional finance professionals and people who are aspiring to enter the industry society.
+			<br/>The Internet consumer financial management division certificate by the China Internet financial institute consists of consumer finance research center of the inspection certification, China's Internet financial institute certificate, issued by the ministry of industry and cover chapter of industry and information technology, information center. Passed the training and assessment certification, holder can be competent for marketing, consumer finance related work background operation, risk control, loan approval, such as product manager position.
+			</p>
+		</div>
+		<button class="back" onclick="$('.Tab').hide();$('.XFJR').hide();$('#101').show();">BACK</button>
+	</div>
+	<div class="Tab" id="ywly" style="display:none;">
+		<div class="title">
+			<h1>Consumer finance business</h1><h2>B</h2><h3>usiness field</h3>
+		</div>
+		<div class="AboutUs xfjr">
+			<div id="ywly1">
+				<h1 class="tip">ONE. Consumer finance business</h1>
+				<div class="message">
+					<p style="top:20px;" ><font>1. Advisory</font>Consumer-oriented financial institutions to provide financial advisory services for the theme of the series, including strategic consulting</p>
+					<p style="left:30px;top:40px;"><font>2. Operations</font>Kang Jin dry clothes ready to work with financial institutions to set up consumer finance organizations to conduct business operations and technical operations, risks, and grow together</p>
+					<p style="left:670px;top:-350px;text-align:left;"><font>3. Train</font>Consumer-oriented financial institutions to provide training practitioners, covering consumer finance professionals, including account managers, risk control personnel, assets, personnel, collection</p>
+					<p style="left:770px;top:-320px;text-align:left;"><font>4. Implement</font>Consumer-oriented financial institutions to provide financial application system implementation, Kim Kang dry clothes mature system products include: access channels, customer marketing, risk control and anti-fraud, collections and other assets</p>
+				</div>	
+			</div>
+			<div style="position:relative;right:-120%;" id="ywly2">
+				<h1 class="tip" style="margin-top:130px;">TEO.Consumer Financial Services</h1>
+				<p>Dry clothes Kim Kang-depth cooperation with the Ministry of Finance Research Institute of the Chinese Internet, the consumer finance Plough, is currently working to offer consumer finance professional training courses.</p>
+				<img src="../../static/img/xfjr1.png" style="width:33%;margin-top:20px;"/>
+				<img src="../../static/img/xfjr2.png" style="width:33%;margin-top:20px;"/>
+				<img src="../../static/img/xfjr3.png" style="width:33%;margin-top:20px;"/>				
+			</div>
+			<div style="position:relative;left:-120%;" id="ywly3">
+				<h1 class="tip">TREE. Examples consumer finance acquisition channels</h1>
+				<p style="width:100%">1. Beijing Huaxin Electronics Enterprise Group		<font style="margin-left:22%;color:#5a5a5a;">2. Roca Shopping</font></p>
+				<img src="../../static/img/xfjr4.png" style="width:48%;margin-right:1.5%;margin-top:20px;height:250px;border:1px solid #ddd;"/>
+				<img src="../../static/img/xfjr5.png" style="width:48%;margin-top:20px;height:250px;border:1px solid #ddd;"/>
+				<h1 class="tip">FOUR.Customer diversion channel</h1>
+				<p>1. Online Store&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2. Entity District&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3. WeChat district</p>
+			</div>
+			<div style="position:relative;right:-120%;" id="ywly4">
+				<h1 class="tip">FIVE.Consumer finance system</h1>
+				<p>1. The whole process of risk control</p><p>Customer Information Management (into pieces)------Integrated Risk Management------Credit platform------Channel Platform Management (open up consumer finance ecosystem)</p><br/><br/>
+				<p>2. Credit platform</p>
+				<p><b>Advantage:</b></p>
+				<p>A full range of data: Account Manager site survey of credit data, big data mining</p>
+				<p>Superb data: cross-checking the accuracy of the data, specific data mining algorithm logic,<br/> relevance psychology, behavioral psychology import</p>
+				<p>Timeliness: Online credit assessment developed in accordance with the level of risk <br/>assessment strategies</p>
+				<p>Accuracy: real-time updates economic situation index model customization regionalization<br/> credit expert online guide</p><br/>
+				<img src="../../static/img/xfjr6.png" style="width:40%;margin-right:1.5%;float:right;margin-top:-200px;"/><br/>
+				<p>3. Big Data-Primary data collection and preprocessing</p>
+				<p>Original data: fund, water, electricity, newspapers, blog microblogging, communication and information, the Internet+</p>
+				<p>Pretreatment: data deduplication---Noise data---Smart Word</p>
+			</div>
+		</div>
+		<button class="back" onclick="$('.Tab').hide();$('.XFJR').hide();$('#101').show();">BACK</button>
+	</div>
+	<div class="Tab" id="glspx" style="display:none;">
+		<div class="title">
+			<h1>Consumer Finance Manager</h1><h2>T</h2><h3>raining</h3>
+		</div>
+		<div class="AboutUs qywh" id="qkkh" style="background:url(../../static/img/sc6.jpg) no-repeat left top;padding-bottom:120px;margin-bottom:30px;">		
+			<h2>Trainer Background</h2>	
+			<span style="height:230px;margin-left:455px;"></span>
+			<font style="width:42%;line-height:25px;">
+			In implementing the country "expand domestic demand and promote economic restructuring and upgrading", the consumer finance will become the economic transformation and inclusive financial boosters, for stimulating economic development and promote the structural transformation of great significance.January 31, 2015, by the China Academy of Chinese Internet banking e-commerce Association was established and inaugurated, in order to promote the healthy development of the Internet for the purpose of financial,  banking and Internet-related business conducted surveys and research, 
+			</font>
+		</div>	
+		<div id="zgzs" style="filter:alpha(opacity=0);opacity:0;">
+			<div class="title">
+				<h1>Vocational Qualification</h1><h2>C</h2><h3>ertificate</h3>
+			</div>
+			<div class="AboutUs xfjr">
+				<div class="jrgls" onclick="dialog(this);">
+					<figure class="imghvr-zoom-in">
+						<img src="../../static/img/jrgls1.jpg" class="smallImg">
+						<figcaption>
+							<img src="../../static/img/zz.png" class="zz"/>
+						</figcaption><a href="javascript:;"></a>
+					</figure>
+				</div>
+				<div class="jrgls" onclick="dialog(this);">
+					<figure class="imghvr-zoom-in"><img src="../../static/img/jrgls2.jpg"  class="smallImg">
+						<figcaption>
+							<img src="../../static/img/zz.png" class="zz"/>
+						</figcaption><a href="javascript:;"></a>
+					</figure>
+				</div>
+				<div class="jrgls" onclick="dialog(this);">
+					<figure class="imghvr-zoom-in"><img src="../../static/img/jrgls3.jpg"  class="smallImg">
+						<figcaption>
+							<img src="../../static/img/zz.png" class="zz"/>
+						</figcaption><a href="javascript:;"></a>
+					</figure>
+				</div>
+				<div class="jrgls" onclick="dialog(this);">
+					<figure class="imghvr-zoom-in"><img src="../../static/img/jrgls4.jpg"  class="smallImg">
+						<figcaption>
+							<img src="../../static/img/zz.png" class="zz"/>
+						</figcaption><a href="javascript:;"></a>
+					</figure>
+				</div>
+				<div class="jrgls" onclick="dialog(this);">
+					<figure class="imghvr-zoom-in"><img src="../../static/img/jrgls5.jpg"  class="smallImg">
+						<figcaption>
+							<img src="../../static/img/zz.png" class="zz"/>
+						</figcaption><a href="javascript:;"></a>
+					</figure>
+				</div>
+				<div class="jrgls" onclick="dialog(this);">
+					<figure class="imghvr-zoom-in"><img src="../../static/img/jrgls6.jpg" class="smallImg">
+						<figcaption>
+							<img src="../../static/img/zz.png" class="zz"/>
+						</figcaption><a href="javascript:;"></a>
+					</figure>
+				</div>
+			</div>	
+
+		</div>
+		<button class="back" onclick="$('.Tab').hide();$('.XFJR').hide();$('#101').show();">BACK</button>
+	</div>
+	<div id="102" class="Tab" style="display:none;">
+		<div class="title">
+			<h1>Personal financial services</h1><h2>C</h2><h3>onsulting operations</h3>
+		</div>
+		<div class="AboutUs xfjr">	
+			<img src="../../static/img/sc8.jpg" style="float:right;margin-left:20px;margin-top:20px;"/>	
+			<h1 style="color:#1c57a8;">A, small loans business consulting, operations</h1>
+			<p style="font-size:16px;line-height:30px;">Tiny loans dried kang company consulting operations is based on IPC micro loan application technology, summarizes several Banks small micro lending operations of advanced experience, on this basis, through in-depth study and summary, form a unique local characteristics, covers the customer identification, risk control, the whole process management system of dry Kang Xiaowei loan business.<br/>Dry, innovation of the customer manager layered management system, customer network maintenance mode, assessment method and effective performance evaluation, responsibility, clear rewards and punishments accurate the responsibility of the management system.</p>
+		</div>
+		<div class="AboutUs xfjr" id="dh21" style="position:relative;right:-100%;">	
+			<img src="../../static/img/sc9.jpg" style="float:left;margin-right:20px;margin-top:20px;"/>
+			<h1 style="color:#1c57a8;">B, the credit card business consulting, operations</h1>
+			<p style="font-size:16px;line-height:30px;">CardPay finance a full range of credit card business consulting, operations. Credit card business development strategy consulting; credit card center management architecture, business systems consulting; business credit card product innovation and design consulting; credit card business integrated risk management policy advice, and improve risk prevention and control system; credit card center management and marketing capacity building; credit card operations, further implementation of the outcome of consultation on a consultancy basis, revenue sharing with the bank.</p>
+		</div>
+		<div class="AboutUs xfjr" id="dh22" style="position:relative;left:-100%;">	
+			<h1 style="color:#1c57a8;">C, the personal financial business management and marketing Ability</h1>
+			<p style="font-size:16px;line-height:30px;">CardPay improve financial services core competitiveness and sustainable development capacity, and to ensure the smooth conduct comprehensive personal financial business, develop a business with independent, effective risk control, in-depth development of the market, high-quality performance well done core team.</p>
+			<img src="../../static/img/sc15.jpg" style="width:33%;height:233px;"/>
+			<img src="../../static/img/sc16.jpg" style="width:33%;height:233px;"/>
+			<img src="../../static/img/sc17.jpg" style="width:33%;height:233px;"/>
+		</div>
+	</div>
+	<div id="103" class="Tab" style="display:none;">
+		<div class="title">
+			<h1>Remote credit evaluation</h1><h2>P</h2><h3>latform</h3>
+		</div>
+		<div class="AboutUs" style="background:url(../../static/img/sc5.jpg) no-repeat right top;">	
+			<h2 style="margin-top:0px;">"Financial Credit Platform"</h2>
+			<span style="height:185px"></span>
+			<font style="width:37.5%">
+				"CardPay Financial Credit Platform" credit provided to the expert online conduct credit assessments remote credit platform to effectively integrate credit expert resources, precise prevention and control of credit risk. In accordance with the special credit risk characteristics matching expert, flexible credit assessment and approval of the audit mode, the ability to achieve business and management.
+			</font>			
+		</div>		
+		<div class="AboutUs qywh" id="dh33" style="background-image:url(../../static/img/sc2.jpg);position:relative;right:-100%;">
+			<h2 style="margin-top:-10px;">Credit Evaluation Model</h2>
+			<span style="margin-left:360px;height:155px"></span>
+			<font style="width:51%">CardPay Finance "credit assessment model" based on personal financial business credit credit policy in order to assess the repayment ability of multi-dimensional, business conditions, the owner (operator) moral character, the owner (operator) of the body and other living conditions the starting point, the line and the first data combined with unique algorithm modeling, while the introduction of big data, data mining and analysis, for accurate assessment of the main credit rating.</font>
+		</div>
+	</div>		
+	
+	<!-- 切换语言 -->		
+	<div class="lanage" onclick="setLanage(this)">						
+		<img src="../../static/img/yy.png" id="yySmall" onmouseover="showYY()"/>	
+		<ul id="yyBig" onmouseleave="hideYY()">
+			<li><a href="../index.html"><img src="../../static/img/Ch.png"/>中文</a></li>
+			<li><a href="../index_EN.html"><img src="../../static/img/En.png"/>ENGLISH</a></li>
+		</ul>
+	</div>	
+	<div class="back-to-top">
+		<img src="../../static/img/back-to-top.png"/>
+	</div>
+<!--**************************************************foot***********************************************-->
+		<div class="dialog">
+			<div class="background">				
+				<form class="dialog-box">
+					<p><img class="close" src="../../static/img/close.jpg" onclick="$('.dialog').hide();"/></p>
+					<img id="bigImg"/>
+				</form>
+			</div><!--透明背景-->
+		</div><!--对话框-->
+	<div class="foot">
+		<br/>
+		<span>Copyright(C)2011-2014 CardPay(Shanghai) Finance Consulting Co.,Ltd.</span><br/>
+		<span>Shanghai ICP for 13043724</span>
+	</div>
+</div>
+	<script type="text/javascript" src="../../static/js/jquery-1.7.2.min.js"></script>
+	<script type="text/javascript" src="../../static/js/script.js"></script>
+	<!-- Slider -->
+	<script type="text/javascript" src="../../static/js/jquery.easing.1.3.js"></script>
+	<script type="text/javascript" src="../../static/js/jquery.animate-colors-min.js"></script>
+	<script type="text/javascript" src="../../static/js/jquery.skitter.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$(".cgal").mouseover(function(){
+				$(this).find(".zz").show();
+			});
+			$(".cgal").mouseout(function(){
+				$(this).find(".zz").hide();
+			});
+			$(window).scroll(function(){
+				var srollPos = $(window).scrollTop();    //滚动条距顶部距离(页面超出窗口的高度)			
+				if($("#ywly").css("display")!="none"){
+					if(srollPos>"1200"){
+						$("#ywly4").animate({right:"0"},"slow");
+					}				
+					else{
+						$("#ywly4").css("right","-120%");
+						if(srollPos>"800"){
+							$("#ywly3").animate({left:"0"},"slow");
+						}
+						else{
+							$("#ywly3").css("left","-120%");
+							if(srollPos>"500"){
+								$("#ywly2").animate({right:"0"},"slow");
+							}
+							else{
+								$("#ywly2").css("right","-120%")
+							}
+						}
+					}
+				}
+				if($("#glspx").css("display")!="none"){
+					if(srollPos>"600"){
+						$("#zgzs").animate({opacity:"1"},"slow");
+					}	
+					else{
+						$("#zgzs").css("filter","alpha(opacity=0)");
+						$("#zgzs").css("opacity","0");
+					}	
+				}
+				if($("#102").css("display")!="none"){
+					if(srollPos>"1000"){
+							$("#dh22").animate({left:"0"},"slow");
+					}
+					else{
+						$("#dh22").css("left","-100%");
+						if(srollPos>"500"){
+							$("#dh21").animate({right:"0"},"slow");
+						}
+						else{
+							$("#dh21").css("right","-100%")
+						}
+					}
+				}
+				if($("#zp1").css("display")!="none"){
+					if(srollPos>"1500"){						
+						$("#dh3").animate({opacity:"1"},"slow");
+					}				
+					else{
+						$("#dh3").css("filter","alpha(opacity=0)");
+						$("#dh3").css("opacity","0");
+						if(srollPos>"900"){
+							$("#dh2").animate({left:"0"},"slow");
+						}
+						else{
+							$("#dh2").css("left","-100%");
+							if(srollPos>"500"){
+								$("#dh1").animate({right:"0"},"slow");
+							}
+							else{
+								$("#dh1").css("right","-100%")
+							}
+						}
+					}
+				}
+				if($("#zp3").css("display")!="none"){
+					if(srollPos>"1800"){						
+						$("#dh9").animate({opacity:"1"},"slow");
+					}				
+					else{
+						$("#dh9").css("filter","alpha(opacity=0)");
+						$("#dh9").css("opacity","0");
+						if(srollPos>"1200"){
+							$("#dh8").animate({left:"0"},"slow");
+						}
+						else{
+							$("#dh8").css("left","-100%");
+							if(srollPos>"500"){
+								$("#dh7").animate({right:"0"},"slow");
+							}
+							else{
+								$("#dh7").css("right","-100%")
+							}
+						}
+					}
+				}
+				if($("#zp4").css("display")!="none"){
+					if(srollPos>"3300"){
+						$("#dh16").animate({right:"0"},"slow");
+					}
+					else{
+						$("#dh16").css("right","-100%")
+						if(srollPos>"3000"){
+							$("#dh15").animate({left:"0"},"slow");
+						}
+						else{
+							$("#dh15").css("left","-100%");
+							if(srollPos>"2700"){
+								$("#dh14").animate({right:"0"},"slow");
+							}
+							else{
+								$("#dh14").css("right","-100%")
+								if(srollPos>"2000"){
+									$("#dh13").animate({left:"0"},"slow");
+								}	
+								else{
+									$("#dh13").css("left","-100%");
+									if(srollPos>"1200"){
+										$("#dh12").animate({right:"0"},"slow");
+									}				
+									else{
+										$("#dh12").css("right","-100%")
+										if(srollPos>"600"){
+											$("#dh11").animate({left:"0"},"slow");
+										}
+										else{
+											$("#dh11").css("left","-100%");
+											if(srollPos>"300"){
+												$("#dh10").animate({right:"0"},"slow");
+											}
+											else{
+												$("#dh10").css("right","-100%")
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+				if($("#103").css("display")!="none"){
+					if(srollPos>"500"){
+						$("#dh33").animate({right:"0"},"slow");
+					}
+					else{
+						$("#dh33").css("right","-100%")
+					}
+				}
+			});
+		});	
+		function dialog(obj){
+			var src=$(obj).find(".smallImg").attr("src");			
+			$("#bigImg").attr("src",src);
+			$('.dialog').show();
+		}
+	</script>
+	
+</body>
+</html>

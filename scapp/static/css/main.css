@@ -5,8 +5,9 @@ body{background:white;overflow-x:hidden;}
 a{text-decoration:none;color:#000000;}
 img{border:none;}
 .main{background:white;width:1350px;margin:0 auto;overflow:hidden;}
-.logo{width:1350px;height:89px;background: #ffffff url(../img/top.png) repeat-x;}
-.logo img{float:left;}
+.logo{width:1350px;height:70px;background: #101928;}
+
+.logo img{float:left;height:60px;margin-top:5px;margin-left:30px;margin-right:150px;}
 .logo div{line-height:56px;display:inline;float:left;width:618px;text-align:right;}
 
 .nav{width:100%;height:42px;background: #ffffff url(../img/images/qk_04.png) repeat-x;}
@@ -40,8 +41,7 @@ img{border:none;}
 .foot span{font-size:14px;color:#a3a3a3;position:relative;top:-10px;line-height:20px;}
 
 .right{display:inline;float:left;width:60%;margin:20px 6% 0 4%;_margin-left:35px;}
-.title{width:60%;height:40px;border:1px solid #dddddd;border-left:3px solid #666666;background:#fafafa;font-size:18px;font-weight:bold;color:gray;display:inline;float:left;margin:40px 6% 0 4%;_margin-left:35px;}
-h2{font-weight:bold;font-size:20px;color:#666666;margin-left:3%;line-height:40px;display:inline;}
+
 .place{float:right;margin-right:3%;font-weight:normal;line-height:40px;_margin-top:-80px;}
 .pull-right{color:#b1afaf;text-align:right;}
 .pull-right a{color:#b1afaf;}
@@ -74,11 +74,11 @@ textarea{width:420px;height:150px;background:#fbfbfb;border:1px solid #dcd9d4;}
 
 
 .back-to-top{position:fixed;right:15px;bottom:100px;display:none;cursor:pointer;_position:absolute;}
-.newnav{list-style:none;z-index:10000;position:relative}
-.newnav li{float:left;width:93px;height:90px;text-align:center;cursor:pointer;}
-.newnav li a{color:#bcbcbc;line-height:90px;font-size:15px;}
+.newnav{list-style:none;z-index:10000;position:absolute;right:0;}
+.newnav li{float:left;width:150px;height:70px;text-align:center;cursor:pointer;}
+.newnav li a{color:#bcbcbc;display:inline-block;width:100%;line-height:70px;font-size:15px;}
 .newnav .active{background: url(../img/newnavActive.png) no-repeat;}
-.newnav .active a{color:#fff;line-height:90px;font-size:15px;}
+.newnav .active a{color:#fff;font-size:15px;}
 .newnav li:hover{background: url(../img/newnavHover.png) repeat-x;}
 .newnav li:hover a{color:#fff;}
 .secondList{margin-top:-4px;position:fixed;}
@@ -91,7 +91,6 @@ textarea{width:420px;height:150px;background:#fbfbfb;border:1px solid #dcd9d4;}
 .box4 .span2{width:45.5%;_width:150px;height:45.5%;float:left;text-align:center;background:#e1e1e1;}
 .box4 .span2 img{width:50%}
 .box4 .active{background:#0488cd;}
-.cgal{width:10%;border:3px dotted #e1e1e1;float:left;margin-top:40px;margin-left:1%;}
 
 /* 滚动图片 */
 #ifocus_pic { display:inline; position:relative; float:left; width:273px; height:350px; overflow:hidden;}
@@ -101,15 +100,17 @@ textarea{width:420px;height:150px;background:#fbfbfb;border:1px solid #dcd9d4;}
 .ygfcContent{width:80%;margin:0 auto;font-size:16px;color:#727272;}
 p{color:#666666;font-size:16px;}
 /* flash */
-#outerslider{position:relative;top:-1px;}
+#outerslider{position:relative;top:-1px;margin-top:70px;_margin-top:0;}
 #slidercontainer{position:relative; height:248px;}
 .box_skitter_large {width:1350px; height:248px;}
 .box_skitter_large .label_skitter{bottom:0px;left:0px ; padding:0; background:url(../static/img/opacity-slider-text.png) repeat;font-size:12px;padding:10px 30px;color:#fff;font-family:Arial, Helvetica, sans-serif;}
 
-
-.lanage{position:fixed;z-index;1000;margin-left:-80px;bottom:0px;cursor:pointer;}
-.lanage div{border:1px solid #dddddd;margin-top:-6px;padding:10px 15px;width:45px;background:#fff;border-radius:5px;_width:40px;_padding:0;_padding-left:15px;}
-.lanage a{color:#0488cd;font-size:16px;}
+/*语言*/
+.lanage{position:fixed;float:left;z-index;10000;left:0px;bottom:0px;cursor:pointer;}
+.lanage img{position:relative;display:block;}
+.lanage li{line-height:40px;padding-left:10px;}
+.lanage a img{width:40px;display:inline-block;vertical-align:middle;margin-right:10px;}
+#yyBig{margin-top:-250px;margin-left:-190px;background:url(../../static/img/yyBig.png);width:189px;height:200px;padding-top:105px;}
 
 .tab{width:84.2%;border:1px solid #dddddd;margin-top:40px;border-top:none;padding:20px;color:#0488cd;font-size:16px;_margin-top:-1px;}		
 
@@ -118,3 +119,183 @@ p{color:#666666;font-size:16px;}
 .hzhb div{padding:20px 0;}
 .hzhb div img{width:40%;border:3px dotted #e1e1e1;display:inline-block;float:left;}
 .hzhb div span{display:inline-block;width:55%;float:left;margin-left:3%;font-size:16px;color:#727272;line-height:28px;}
+
+/*首页*/
+/*乾康领域*/
+.qkly{width:90%;margin:0 auto;margin-top:20px;position:relative;background:#eef2f5;}
+.qkly .span4{width:33%;float:left;display:inline-block;text-align:center;cursor:pointer;background:#eef2f5;margin-left:0;}
+.qkly .span4 img{margin:20px;vertical-align:middle;margin-left:-10px;}
+.qkly .span4 h1{display:inline-block;position:relative;top:20px;font-size:16px;line-height:35px;color:#ff9900;}
+.qkly .span4 h1 span{display:inline-block;font-size:12px;line-height:15px;color:#cccccc;}
+.qkly .active{background:#264b99;}
+/*乾康集团*/
+.qkjt{float:left;width:70%;margin-left:15%;text-align:center;line-height:30px;}
+.qkjt h1{background:#fff;line-height:90px;text-align:center;font-size:20px;color:#264b99;}
+.qkjt h1 img{margin:25px;vertical-align:middle;}
+.qkjt h2{color: #9abefc;font-weight:normal;margin-top:-35px;}
+.qkjt p{margin-top:20px;margin-bottom:40px;}
+.qkjt .button{border:1px solid #d9d9d9;padding:10px 60px;background:#fff;color:#264b99;border-radius:60px;}
+.qkjt .button:hover{border:1px solid #264b99;}
+/*乾康口号*/
+.qkkh{float:left;width:100%;margin-top:60px;background:#c3d6ff;text-align:center;}
+.qkkh h1{text-align:center;font-size:24px;color:#1e3b78;font-weight:normal;line-height:40px;margin-top:30px;}
+
+.qkkh h2{display:block;text-align:center;font-size:14px;color:#9abefc;font-weight:normal;line-height:20px;margin-left:0;margin-bottom:40px;}
+.qkkh .span6{width:13.5%;display:inline-block;background:#f6f6f6;margin-right:1%;margin-bottom:50px;}
+.qkkh .span6 img{margin-top:20px;}
+.qkkh .span6 h1{font-size:20px;color:#264b99;margin-top:0;}
+.qkkh .span6 h2{color:#5a5a5a;margin-top:10px;margin-bottom:20px;}
+
+
+/*乾康家族*/
+.qkjz{width:100%;margin-left:0;}
+.qkjz h1{color:#264b99;margin-bottom:50px;}
+.qkjz h2{color:#ffa753;margin-bottom:70px;}
+.qkjz p{font-size:18px;line-height:40px;color:#000;}
+.qkjz img{vertical-align:middle;margin-top:-5px;}
+.sgz{display:inline-block;background:url(../img/sgz.png) no-repeat;width:280px;line-height:46px;margin-left:-4px;text-align:left;}
+.sgz span{display:block;position:relative;top:-40px;left:43px;color:#1b57a8;font-weight:bold;font-size:20px;}
+.czlc{display:inline-block;width:280px;text-align:left;margin-left:-4px;}
+.czlc font{color:#1b57a8;display:block;position:relative;top:-10px;left:145px;line-height:25px;}
+.czlc .sj{color:#434343;}
+
+.zgs{background:#6b6969;width:30%;display:inline-block;margin-top:-30px;}
+.zgs img{width:100%;height:200px;margin:0;}
+.zgs span{display:inline-block;width:100%;height:180px;padding-top:20px;}
+.zgs h2{color:#fff;margin:0;line-height:70px;font-size:18px;font-weight:normal;margin-top:-10px;}
+.zgs a{padding:10px 40px;border:0;background:#ff9900;border-radius:20px;color:#fff;cursor:pointer;}
+.gsjj{display:inline-block;width:60%;}
+
+.yyms{display:inline-block;width:40%;margin-bottom:50px;}
+.yyms span{display:inline-block;width:55%;}
+.yyms span font{font-size:16px;display:block;color:#1dae9e;font-weight:bold;}
+/*成功故事*/
+.cggs{float:left;background:#ffe4bd;text-align:center;line-height:30px;padding:0 5% 50px 5%;margin-top:10px;}
+.cggs h1{color:#ff9900;width:90%;}
+.cggs h2{color:#ffa753;margin-bottom:30px;width:90%;}
+.cggs p{color:#000;width:90%;font-size:14px;margin-bottom:30px;}
+.cggs .prev{display:inline-block;width:49px;height:150px;background:#ffe4bd url(../img/prev1.png) no-repeat right center;cursor:pointer;position:relative;float:left;margin-left:-5%;padding-left:5%;}
+.cggs .next{display:inline-block;width:49px;height:150px;background:#ffe4bd url(../img/next1.png) no-repeat left center;cursor:pointer;position:relative;float:right;margin-right:5%;padding-left:5%;}
+.cggs .prev:hover{background:#ffe4bd url(../img/prev2.png) no-repeat right center;}
+.cggs .next:hover{background:#ffe4bd url(../img/next2.png) no-repeat left center;}
+.cggs .cgimg{width:2000px;float:left;margin-left:60px;margin-top:-150px;} 
+.cgimg img{width:142px;height:142px;border:3px dotted #e1e1e1;float:left;margin-right:10px;}
+/*乾康伙伴*/
+.qkhb{margin-bottom:50px;}
+.parner{display:inline-block;}
+.parner img{cursor:pointer;}
+.parner p{font-weight:bold;color:#666;margin-top:-10px;}
+.parner span{display:inline-block;color:#666;font-size:14px;margin-top:50px;line-height:20px;}
+.parner font{color:#aeaeae;line-height:40px;color:#ff9900;}
+.lcLeft{background:url(../img/lcLeft.png) no-repeat;width:142px;}
+.lcCenter{background:url(../img/lcCenter.png) no-repeat;width:170px;}
+.lcRight{background:url(../img/lcRight.png) no-repeat;width:144px;}
+.lcL{background:url(../img/lcL.png) no-repeat;width:210px;}
+.lcC{background:url(../img/lcC.png) no-repeat;width:210px;}
+.lcR{background:url(../img/lcR.png) no-repeat;width:210px;}
+/*底部*/
+.foot{width:100%;float:left;text-align:center;background:#242333;}
+.foot p{text-align:left;color:#909098;font-size:14px;}
+.foot .xx{float:left;width:90%;margin-left:5%;border-bottom:1px solid #656565;margin-bottom:20px;padding-bottom:15px;}
+.foot ul {}
+.foot ul li{float:left;color:#909098;list-style:none;padding-right:15px;}
+.foot ul li a{color:#909098;}
+.foot img{display:block;float:right;width:100px;height:100px;margin-top:-120px;}
+.foot .xx font{display:block;float:right;width:40%;text-align:right;margin-bottom:10px;padding-right:10px;}
+.foot span{display:block;width:100%;float:left;font-size:14px;color:#a3a3a3;position:relative;line-height:25px;}
+
+/*左侧导航*/
+.leftNav{background:#264b99;padding:20px;}
+.leftNav h1{color:#fff;font-size:20px;margin-bottom:20px;}
+.list{width:100%;}
+.list li{list-style:none;cursor:pointer;padding-left:75px;background:#264b99 url("../img/list.jpg") no-repeat;margin-bottom:10px;line-height:34px;color:#fff;}
+.list .active{background:#264b99 url("../img/list_active.jpg") no-repeat;color:#264b99;}
+/*标题*/
+.title{width:90%;line-height:100px;font-size:18px;text-align:center;font-weight:bold;color:#000;float:left;margin-left:5%;margin-top:20px;margin-bottom:20px;}
+.title h1{display:inline-block;font-weight:normal;font-size:25px;color:#000;position:relative;z-index:2}
+.title h2{display:inline-block;width:100px;text-align:center;font-size:25px;background:url(../img/title.jpg) no-repeat center;color:#000;margin-left:-20px;position:relative;z-index:1}
+.title h3{display:inline-block;font-size:16px;font-weight:normal;margin-left:-20px;color:#000;position:relative;z-index:2}
+/*关于乾康*/
+.AboutUs{float:left;width:80%;margin-left:10%;background:url(../img/gyqk.jpg) no-repeat right top;height:350px;margin-bottom:40px;padding-bottom:40px;border-bottom:1px dashed #d9d9d9;}
+.AboutUs h1{color:#000;font-size:20px;font-weight:normal;margin-top:50px;line-height:30px;}
+.AboutUs h2{font-size:35px;color:#000;line-height:70px;}
+.AboutUs span{display:inline-block;width:150px;height:155px;border-top:2px solid #000;margin-right:10px;}
+.AboutUs font{display:inline-block;width:46%;color:#000;line-height:30px;}
+.AboutUs b{color:#000;}
+/*企业文化*/
+.qywh{background:url(../img/qywh.png) no-repeat left top;margin-top:0;height:250px;margin-bottom:0px;}
+.qywh h1,.qywh h2{text-align:right;}
+.qywh h1{margin-top:0;}
+.qywh span{margin-left:420px;height:95px;}
+.qywh font{width:45%;}
+/*成功故事*/
+.Success{float:left;width:100%;background:#fff;}
+.Success .leaf{width:40%;margin-left:10%;text-align:center;}
+.Success .leaf img{width:80px;border-radius:80px;border:1px solid #ddd;margin-right:5px;margin-top:0;filter:gray; -webkit-filter: grayscale(100%);cursor:pointer;}
+/*.Success .leaf img:hover{filter:none; -webkit-filter: grayscale(0%);}*/
+.tree{margin-top:-250px;margin-left:90px;}
+.Success .xx{width:38%;margin-right:10%;float:right;margin-top:-200px;}
+.Success .xx h1{color:#000;font-size:20px;font-weight:normal;line-height:30px;text-align:right;}
+.Success .xx h2{font-size:35px;color:#000;line-height:70px;text-align:right;}
+.Success .xx p{color:#000;line-height:30px;}
+.Success .xx img{margin-top:40px;width:100%;}
+/*消费金融*/
+.xfjrList{margin:0 10%;margin-bottom:100px;float:left;width:80%;}
+.xfjrList div{display:inline-block;width:29.2%;padding:10px;float:left;border:1px solid rgb(238, 238, 238);margin-right:20px;margin-bottom:20px;cursor:pointer;}
+.xfjrList img{width:100%;height:215px;}
+.xfjrList p{color:#000;text-align:center;line-height:40px;}
+.xfjrList div:hover {border:1px solid #ff9900;}
+.xfjrList div:hover p{color:#264b99;}
+
+.xfjr{background:#fff;height:auto;}
+.xfjr h1{margin-top:0;line-height:60px;}
+.xfjr p{font-size:14px;line-height:25px;}
+.xfjr .message{background:url(../img/xian.png) no-repeat center;height:200px;margin-top:-20px;}
+.xfjr .message p{width:300px;text-align:right;color:#5a5a5a;font-size:14px;position:relative;}
+.xfjr .message p font{display:block;width:100%;color:#1c57a8;border-top:none;font-size:16px;font-weight:bold;}
+.back{width:150px;height:45px;text-align:center;line-height:45px;background:#1c4587;border:none;color:#fff;margin-left:10%;margin-top:-20px;margin-bottom:30px;cursor:pointer;}
+.jrgls{width:16%;display:inline-block;border:1px solid #ddd;cursor:pointer;margin-top:20px;margin-bottom:20px;height:108px;}
+.jrgls img{width:94%;margin:3%;}
+img.zz{width:35px;background:none;border:none;margin-left:38px;margin-top:7px;}
+
+#xyk .tip{font-weight:bold;padding:10px 0;width:13%;display:inline-block;text-align:center;font-size:15px;line-height:25px;border-right:1px dashed #bfbfbf;border-left:5px solid #264b99}
+.Pleft{width:85%;display:inline-block;padding-left:10px;margin-bottom:20px;}
+#xyk .Right{border-left:1px dashed #bfbfbf;border-right:5px solid #264b99}
+.Pright{padding-left:0;padding-right:10px;}
+/*弹出框*/
+.dialog{width:100%;height:100%;position:fixed;top:0;z-index:1000000;display:none;}
+.dialog .background{position:absolute;width:100%;height:100%;background:rgba(0, 0, 0, 0.5)!important;filter:Alpha(opacity=50); background:#000;}
+.dialog .dialog-box{position:relative;width:730px;background:#ffffff;border:1px solid #e5e5e5;border-radius:10px;margin:0 auto;margin-top:50px;}
+
+.dialog-box p{text-align:right;background:#fff;text-align:right;margin:0 auto;border-radius:10px 10px 0 0;}
+.dialog-box .close{display:inline;border:0;margin:0;width:37px;cursor:pointer;border-radius:10px;}
+.dialog-box img{display:block;width:700px;margin:0 auto;border:15px solid #fff;border-top:0;border-radius:0 0 10px 10px;}
+/*乾康家族*/
+.span33{width:25%;float:left;display:inline-block;text-align:center;cursor:pointer;background:#eef2f5;margin-left:0;}
+.span33 h1{line-height:20px;color:#264b99;padding:20px 0;}
+.span33 font{color:#ccc;line-height:20px;}
+.active h1{color:#ff9900;}
+/*加入乾康*/
+.zp div{width:21%;}
+.zp img{height:170px;}
+.leftContent{float:left;margin-left:10%;width:45%;border:1px dashed #bcbcbc;padding:5px;margin-bottom:20px;}
+#map,#map2,#map3{width:100%;height:350px;}
+.rightContent{float:left;margin-left:3%;width:31%;padding-top:40px;}
+.rightContent h1{font-size:25px;font-weight:normal;color:#000;line-height:80px;}
+.rightContent p{line-height:60px;border-bottom:1px dashed #ddd;}
+.rightContent p img{vertical-align:middle;margin-right:10px;}
+.jrqk{width:80%;margin-left:10%;padding-top:20px;border-top:1px dotted #818181;margin-bottom:20px;}
+.jrqk img{width:33%;height:230px;}
+/*乾康金服*/
+.zjjs{width:50%;display:inline-block;display:none;}
+.zjjs font{color:#000;font-size:30px;line-height:70px;}
+.zjjs font b{color:gray;font-size:20px;font-weight:normal;}
+.zjjs .tip{color:#1c57a8;font-weight:bold;}
+.zjjs p{line-height:22px;}
+.zjjs img{width:165px;height:165px;float:right;border-radius:165px;border:3px solid #cacaca;}
+.jjtd{background:url(../img/zjtd/bj.jpg) no-repeat;width:482px;height:322px;float:right;display:inline-block;}
+.jjtd img{width:96.4px;height:81px;position:relative;float:left;margin-left:96.4px;cursor:pointer;}
+
+#gsxm{width:80%;margin-left:10%;}
+#gsxm div{width:21%;}
+#gsxm div img{height:160px;}
