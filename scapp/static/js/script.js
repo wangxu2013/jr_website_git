@@ -1,7 +1,88 @@
 var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
 document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3F980a47baa3b028fee8b94644df33e9b8' type='text/javascript'%3E%3C/script%3E"));
 
-//¹ØÓÚÎÒÃÇdivÇĞ»»
+$(document).ready(function(){                            //ä¸»ä½“å…ƒç´ 
+	$(window).scroll(function(){
+		var srollPos = $(window).scrollTop();    //æ»šåŠ¨æ¡è·é¡¶éƒ¨è·ç¦»(é¡µé¢è¶…å‡ºçª—å£çš„é«˜åº¦)				
+		
+		if(srollPos!="0"){
+			$(".logo").css("opacity","0.8");
+			$(".logo").css("filter","alpha(opacity=80)");
+		}
+		else{				
+			$(".logo").css("opacity","1");
+			$(".logo").css("filter","alpha(opacity=100)");
+		}
+	});
+});
+		
+//æœåŠ¡é¢†åŸŸå›¾ç‰‡åˆ‡æ¢
+function Hover(obj,src){
+	$(obj).find("img").attr("src",src+"_h.png");
+	$(obj).css("background","#264b99")
+}
+function Normal(obj,src){
+	$(obj).find("img").attr("src",src+".png");
+	$(obj).css("background","#eef2f5")
+}
+function Tab(obj,src){//é¼ æ ‡ç‚¹å‡»
+	$(".qkly div").attr("class","span4");
+	$(obj).attr("class","span4 active");
+	var i=101
+	$(".span4 img").each(function(){
+		$(this).attr("src","../../static/img/"+i+".png")
+		i++;
+	});
+	$(obj).find("img").attr("src","../../static/img/"+src+"_h.png")
+	$(".Tab").hide();
+	$("#"+src).show();
+}
+function Tab3(obj,src){//é¼ æ ‡ç»è¿‡
+	$(".qkly div").attr("class","span4");
+	$(obj).attr("class","span4 active");
+	var i=101
+	$(".span4 img").each(function(){
+		$(this).attr("src","../../static/img/"+i+".png")
+		i++;
+	});
+	$(obj).find("img").attr("src","../../static/img/"+src+"_h.png")
+	
+}
+function resetTab(){//é¼ æ ‡ç¦»å¼€
+	for(i=101;i<104;i++){
+		if($("#"+i).css("display")=="block"){
+			$("#Tab"+i).find("img").attr("src","../../static/img/"+i+"_h.png")
+			$("#Tab"+i).attr("class","span4 active");
+		}
+		else{
+			$("#Tab"+i).find("img").attr("src","../../static/img/"+i+".png")
+			$("#Tab"+i).attr("class","span4");
+			
+		}
+	}	
+}
+function Tab2(obj,src){
+	$(".qkly div").attr("class","span33");
+	$(obj).attr("class","span33 active");	
+	$(".Tab").hide();
+	$("#"+src).show();
+}
+function Tab4(obj,src){
+	$(".qkly div").attr("class","span33");
+	$(obj).attr("class","span33 active");	
+}
+function resetTab2(){//é¼ æ ‡ç¦»å¼€
+	for(i=101;i<105;i++){
+		if($("#"+i).css("display")=="block"){
+			$("#Tab"+i).attr("class","span33 active");
+		}
+		else{
+			$("#Tab"+i).attr("class","span33");
+			
+		}
+	}	
+}
+//å…³äºæˆ‘ä»¬divåˆ‡æ¢
 function change_div(obj,id){
 	var list=document.getElementById("gywm-list").getElementsByTagName("li");
 	for(i=0;i<list.length;i++){
@@ -10,18 +91,19 @@ function change_div(obj,id){
 	$(obj).attr('css','active');
 	$("#"+id).show();
 }
-//ÏÔÊ¾¾ßÌåĞÅÏ¢
+//æ˜¾ç¤ºå…·ä½“ä¿¡æ¯
 function show(id){	
 	$(".right").hide();
 	$("#"+id).show();
 }
-function setLanage(obj){
-	if($(obj).css('margin-left')!='-10px'){
-		$(obj).animate({marginLeft:'-10px'},'slow');
-	}
-	else{
-		$(obj).animate({marginLeft:'-80px'},'slow');
-	}
+//åˆ‡æ¢è¯­è¨€
+function showYY(){
+	$("#yyBig").animate({marginLeft:"0px"},"1000");
+	$("#yySmall").css("left","-55px");
+}
+function hideYY(){
+	$("#yyBig").animate({marginLeft:"-190px"},"500");
+	setTimeout("$('#yySmall').animate({left:'0px'},'500')","300");
 }
 //=================================== SLIDESHOW ===================================//
 function imgs(){
@@ -39,7 +121,7 @@ function imgs(){
 		progressbar: false
 	});
 }
-// ****************¹ö¶¯´°¿ÚÀ´ÅĞ¶Ï°´Å¥ÏÔÊ¾»òÒş²Ø*********************
+// ****************æ»šåŠ¨çª—å£æ¥åˆ¤æ–­æŒ‰é’®æ˜¾ç¤ºæˆ–éšè—*********************
 $(window).scroll(function() {
 if ($(this).scrollTop() > 150) {
 $('.back-to-top').fadeIn(100);
@@ -48,7 +130,7 @@ $('.back-to-top').fadeOut(100);
 }
 });
 
-// jQueryÊµÏÖ¶¯»­¹ö¶¯
+// jQueryå®ç°åŠ¨ç”»æ»šåŠ¨
 $('.back-to-top').click(function(event) {
 event.preventDefault();
 $('html, body').animate({scrollTop: 0}, 500);
@@ -60,7 +142,7 @@ $('.tab').hide();
 $('#'+id).show();
 }
 
-//************************Ô±¹¤·ç²É************************
+//************************å‘˜å·¥é£é‡‡************************
 function addLoadEvent(func){
 	var oldonload = window.onload;
 	if (typeof window.onload != 'function') {

@@ -9,17 +9,20 @@
 
 	<!-- The styles -->
 	<link href="../static/css/main.css" rel="stylesheet">
-	<link rel="stylesheet" type="text/css" href="../static/css/skitter.styles.css" media="all" />
+	 <link rel="stylesheet" type="text/css" href="../static/css/skitter.styles.css" media="all" />
 	<style type="text/css">
 		#outerslider{position:relative;top:-1px;}
 		#slidercontainer{position:relative; height:413px;}
 		.box_skitter_large {width:100%; height:413px;}
 		.box_skitter_large .label_skitter{bottom:0px;left:0px ; padding:0; background:url(../static/img/opacity-slider-text.png) repeat;font-size:12px;padding:10px 30px;color:#fff;font-family:Arial, Helvetica, sans-serif;}
+		
+		.qkly{width:100%;margin-top:-1px;}
+		.qkly .span4{width:33.3%;}
 	</style>
-
 	<script type="text/javascript">
 		var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
 		document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3F980a47baa3b028fee8b94644df33e9b8' type='text/javascript'%3E%3C/script%3E"));
+	
 	</script>
 </head>
 
@@ -27,39 +30,35 @@
 	<div class="main">
 	<!--**************************************************top***********************************************-->
 		<div class="logo" style="position:fixed;z-index:10000;">	
-			<a href="/index_En"><img src="../static/img/images/logo.png" style="height:60px;margin-top:15px;margin-left:30px;margin-right:150px;"/></a>
+			<a href="index_EN.html"><img src="../static/img/logo.png"/></a>
 			<ul class="newnav" style="margin-left:20px;z-index:10000;">
-				<!-- <li class="active"><a href="/index_En">Home</a></li> -->				
-				<li><a href="/jjfa_En">Business</a></li>
-				<li><a href="/cgal_En">Case</a></li>
-				<li><a href="/hzhb_En">Partner</a></li>
-				<li><a href="/yhnx_En">Training</a></li>
-				<li><a href="/jrzx_En">Financial</a></li>	
-				<li><a href="/gsjj_En">About Us</a></li>			
-			<!-- 	<li><a href="/ygfc_En">Employee</a></li> -->
-				<li><a href="/zpxx_En">Recruit</a></li>
+				<li><a href="qkly/qkly_EN.html">Areas</a></li>	
+				<li><a href="qkhb/qkhb_EN.html">Partner</a></li>	
+				<li><a href="qkjz/qkjz_EN.html">Family</a></li>	
+				<li><a href="jrqk/jrqk_EN.html">Join Us</a></li>				
+				<li><a href="gyqk/gyqk_EN.html">About Us</a></li>	
 			</ul>
 		</div>
-		<!-- SLIDER -->
-		<div id="outerslider" style="margin-top:90px;_margin-top:0;">
+		
+		<div id="outerslider">
         	<div id="slidercontainer">
             	<section id="slider">
                 <div class="box_skitter box_skitter_large">					
-                    <ul >
+                    <ul>
                         <li>
-                            <img src="../static/img/hzhb1_En.jpg" alt="" style="height:100%"/>                            
-                        </li>
-                        <li>
-                            <img src="../static/img/page4_En.jpg" alt="" style="height:100%"/>                            
-                        </li>
-                        <li>
-                            <img src="../static/img/pag1_En.jpg" alt="" style="width:100%"/>
-                        </li>
-                        <li>
-                            <img src="../static/img/pag2_En.jpg" alt="" style="width:100%"/>
+                            <img src="../static/img/banner1_EN.jpg" alt="" style="width:100%"/>                            
                         </li>
 						<li>
-                            <img src="../static/img/pag3_En.jpg" alt="" style="width:100%"/>
+                            <img src="../static/img/banner2_EN.jpg" alt="" style="width:100%"/>                            
+                        </li>
+                        <li>
+                            <img src="../static/img/banner3_EN.jpg" alt="" style="width:100%"/>
+                        </li>
+                        <li>
+                            <img src="../static/img/hzhb1_EN.jpg" alt="" style="height:100%"/>
+                        </li>
+                        <li>
+                            <img src="../static/img/page4_EN.jpg" alt="" style="height:100%"/>
                         </li>
                     </ul>
                 </div>
@@ -67,169 +66,164 @@
             </div>
         </div>
         <!-- END SLIDER -->
-		<!-- 切换语言 -->		
-		<div class="lanage" onclick="setLanage(this)">
-			<img src="../static/img/yysz.png"/>
-			<div>
-				<a href="/index">中文</a><br/>
-				<a href="/index_En">English</a>
+		
+		<!--**************************************************content***********************************************-->
+		<div class="qkly">
+			<div class="span4" onmouseover="Hover(this,'../static/img/101')" onmouseout="Normal(this,'../static/img/101')"  onclick="window.location.href='qkly/qkly.html'">
+				<img src="../static/img/101.png"/>		
+				<h1>INTERNET CONSUMER<br/><span>FINANCE</span></h1>
+			</div>
+			<div class="span4" onmouseover="Hover(this,'../static/img/102')" onmouseout="Normal(this,'../static/img/102')"  onclick="window.location.href='qkly/qkly.html'">
+				<img src="../static/img/102.png"/>	
+				<h1>PERSONAL FINANCIAL <br/><span>SERVICES</span></h1>
+			</div>
+			<div class="span4" onmouseover="Hover(this,'../static/img/103')" onmouseout="Normal(this,'../static/img/103')"  onclick="window.location.href='qkly/qkly.html'">
+				<img src="../static/img/103.png"/>			
+				<h1>REMOTE CREDIT<br/><span>EVALUATION</span></h1>
 			</div>
 		</div>
-
-	<!--**************************************************content***********************************************-->
-		<div class="content-index" style="margin-left:90px;">
-			<div class="span3" onmouseover="$('#box1').attr('src','../static/img/jrzxBlue.png');" onmouseout="$('#box1').attr('src','../static/img/jrzx.png')">
-				<img src="../static/img/jrzx.png" style="position:absolute;margin-top:-50px;margin-left:9.7%;_margin-left:135px;" id="box1"/>
-				<div style="margin-top:65px;text-align:center;">
-					<div style="font-weight:bold;font-size:20px;color:#666666">Partner</div>
-					<div style="padding:20px;font-size:16px;color:#727272">
-						November 2014 the company signed a long-term strategic and everything partnership agreement to jointly promote and dry Kang MasterCard credit card business and Internet banking business and technical landing in mainland China.<br/>
-						2013 my company and the world's top-ranked American consulting firm specializing in credit card PTC entered into a strategic cooperation agreement. 
-					</div>
-					<div style="margin:10px 0;">
-						<a href="/hzhb_En" style="font-size:16px;color:#0488cd;">Learn More...	</a>					
-					</div>
-				</div>				
-			</div>
-			<div class="span3" onmouseover="$('#box2').attr('src','../static/img/xwdtBlue.png')" onmouseout="$('#box2').attr('src','../static/img/xwdt.png')">
-				<img src="../static/img/xwdt.png" style="position:absolute;margin-top:-50px;margin-left:9.7%;_margin-left:135px;" id="box2"/>
-				<div style="margin-top:65px;text-align:center;">
-					<div style="font-weight:bold;font-size:20px;color:#666666">About Us</div>
-					<div style="padding:20px;font-size:16px;color:#727272">
-						CardPay(Shanghai) is a financial information services focused on the financial sector professional management consulting and operational implementation services. The company's main business is to provide banks and other financial institutions to provide small loans and credit cards business consulting and operations, human resource management...
-					</div>
-					<div style="margin:10px 0;">
-						<a href="/gsjj_En" style="font-size:16px;color:#0488cd;">Learn More...	</a>					
-					</div>
-				</div>				
-			</div>
-			<div class="span3" onmouseover="$('#box3').attr('src','../static/img/ywznBlue.png')" onmouseout="$('#box3').attr('src','../static/img/ywzn.png')">
-				<img src="../static/img/ywzn.png" style="position:absolute;margin-top:-50px;margin-left:9.7%;_margin-left:135px;" id="box3"/>
-				<div style="margin-top:65px;text-align:center;">
-					<div style="font-weight:bold;font-size:20px;color:#666666">Contact Information</div>
-					<div style="padding:20px;font-size:16px;color:#727272">						
-						<br/>address：Room 801,Building 3,No.7,Guiqing Road,Xuhui District,Shanghai <br/>
-						Postcode：200035<br/>
-						Pone： 021-54485390 <br/>
-						Fax： 021-54485391<br/>
-						E-mail：qk_liuwx@163.com<br/><br/><br/>
-					</div>
-					<div style="margin:10px 0;">
-						<a href="/gsjj_En" style="font-size:16px;color:#0488cd;">Learn More...	</a>					
-					</div>
-				</div>				
-			</div>			
+		<div class="qkjt">
+			<h1><img src="../static/img/title1.png"/>CARDPAY<img src="../static/img/title2.png"/></h1>
+			<h2>ABOUT US</h2>
+			<p>CardPay Financial Group is a focus on the financial sector as well as professional management consulting services operator implementation. Group's main business is to provide personal financial services consulting and operations of banks and other financial institutions, banking and financial help to achieve the construction of the Internet platform to create business models OTO financial services platform.</p>
+			<a href="gyqk/gyqk.html" class="button">MORE</a>
 		</div>
-		<div class="box" style="width:99.9%;height:380px;">
-			<div class="hzhb">
-				<span class="top">MasterCard</span>
-				<div>
-					<a href="http://www.mastercard.com/cn/consumer/index.html"><img src="../static/img/wsd.jpg"/></a>
-					<span>In 2014, CardPay(Shanghai) Finance Consulting Co., Ltd. and MasterCard International has established a strategic partnership in order to assist and promote bilateral business development in China and give full play to respective advantages and characteristics. The two parties have developed specific business collaborations based on common requirements. </span>
-				</div>
+		<div class="qkkh" id="qkkh" style="filter:alpha(opacity=0);opacity:0;">
+			<h1>GOOD SERVICE</h1>
+			<h2>POWERFUL</h2>
+			<div class="span6">			
+				<img src="../static/img/zy.png"/>		
+				<h1>Profession</h1>
+				<h2>Professional services, quality assurance</h2>
 			</div>
-			<div class="hzhb" style="margin-left:3%;">
-				<span class="top">PTC</span>
-				<div>
-					<a href="http://profitinsight.com/"><img src="../static/img/ptc.jpg"/></a>
-					<span>2013, the company and the global dry Kang United States ranked first professional credit card consulting firm PTC (PROFIT TECHNOLOGIES COMPANY) entered into a strategic cooperation agreement. The two sides will work together to provide comprehensive advisory services for banks and retail businesses.</span>
-				</div>
+			<div class="span6">
+				<img src="../static/img/gx.png"/>	
+				<h1>Efficient</h1>
+				<h2>Experienced, fast and efficient</h2>
+			</div>
+			<div class="span6">			
+				<img src="../static/img/jyy.png"/>		
+				<h1>Dedicated</h1>
+				<h2>Dedication, <br/>improve self</h2>
+			</div>
+			<div class="span6">			
+				<img src="../static/img/hz.png"/>		
+				<h1>Cooperation</h1>
+				<h2>Teamwork, promote development</h2>
+			</div>
+			<div class="span6">			
+				<img src="../static/img/cx.png"/>		
+				<h1>Integrity</h1>
+				<h2>Honest and trustworthy, safe and reliable</h2>
+			</div>
+			<div class="span6" style="margin-right:0;">				
+				<img src="../static/img/jq.png"/>	
+				<h1>Enthusiasm</h1>
+				<h2>Full of enthusiasm, and positive</h2>
 			</div>
 		</div>
-		<div class="box" style="width:99.9%;">
-			<div style="width:25%;margin-top:40px;border-top:3px dotted #dddddd;float:left;margin-left:7.5%;_margin-left:60px;">
-				<span style="background:white;position:absolute;margin-top:-15px;font-weight:bold;font-size:20px;color:#666666;">Case</span>
-				<div style="padding:20px 0;font-size:16px;color:#727272;line-height:28px;">
-					Dry Kang consultants are from domestic banks, the world's five hundred senior corporate executives, with financial industry experience, financial consulting experience in management, finance professional MBA or PhD in higher education background, and some well-known banks have had close cooperation.<br/>
-					<!-- <div style="text-align:right;margin-top:0px;">
-						<img src="../static/img/left.png" onclick="leftBtn()" style="cursor:pointer;"/>
-						<img src="../static/img/right.png" onclick="rightBtn()" style="cursor:pointer;"/>
-					</div>	 -->				
-				</div>
-			</div>
-			<div class="cgal" id="image1">
-				<img src="../static/img/hxyh.png" style="width:100%;"/>
-			</div>
-			<div class="cgal" id="image2">
-				<img src="../static/img/jnyh.png" style="width:100%"/>
-			</div>
-			<div class="cgal" id="image3">
-				<img src="../static/img/csnsh.png" style="width:100%"/>				
-			</div>
-			<div class="cgal" id="image4">
-				<img src="../static/img/wxnsh.png" style="width:100%"/>	
-			</div>
-			<div class="cgal" id="image5">
-				<img src="../static/img/xhyh.png" style="width:100%"/>
-			</div>
-			<div class="cgal" id="image6" style="margin-top:10px;">
-				<img src="../static/img/jynsh.png" style="width:100%"/>
-			</div>	
-			<div class="cgal" id="image7" style="margin-top:10px;">
-				<img src="../static/img/jr.png" style="width:100%;"/>
-			</div>
-			<div class="cgal" id="image8" style="margin-top:10px;">				
-				<img src="../static/img/jy.png" style="width:100%"/>
-			</div>			
-			<div class="cgal" id="image9" style="margin-top:10px;">				
-				<img src="../static/img/xmnsh.jpg" style="width:100%"/>
+		<div class="qkjt qkjz" id="qkjz" style="filter:alpha(opacity=0);opacity:0;">	
+			<h1><img src="../static/img/title1.png"/>FAMILY<img src="../static/img/title2.png"/></h1>
+			<h2 style="color: #9abefc;margin-top:-85px;">SUBSIDIARY</h2>
+			<div class="zgs">
+				<img src="../static/img/sc10.jpg"/>
+				<span>
+					<img src="../static/img/LOGO1.png" style="width:100px;height:60px;"/><h2>CardPay Finance Consulting Co.,Ltd.</h2>
+				<a href="qkjz/qkjz.html">MORE</a></span>
+			</div><div class="zgs" style="position:relative;top:-57px;">
+				<span><img src="../static/img/LOGO2.png" style="width:60px;height:60px;"/><h2>CardPay Info Tech Co.,Ltd.</h2>
+				<a href="qkjz/qkjz.html">MORE</a></span>
+				<img src="../static/img/sc20.jpg"/>
+			</div><div class="zgs">
+				<img src="../static/img/sc21.png"/>
+				<span><img src="../static/img/LOGO3.png" style="width:60px;height:60px;"/><h2 style="line-height:30px;padding:5px 0">QianKangJinFu(Beijing) Information Technology Co.,Ltd</h2>
+				<a href="qkjz/qkjz.html">MORE</a></span>
 			</div>
 		</div>
-		<div style="width:99%;float:left;padding:0 7.5%;">
-			<div style="width:85%;margin-top:40px;border-top:3px dotted #dddddd;"><span style="background:white;position:absolute;margin-top:-15px;font-weight:bold;font-size:20px;color:#666666;">Services</span></div>
-			<div style="background:url(../static/img/box.png) no-repeat;width:625px;height:353px;margin-top:30px;margin-left:-4px;float:left;padding:30px;">
-				<div id="xyk" class="jianjie">
-					<div style="font-weight:bold;font-size:18px;color:#666666">Credit Card Operations Consulting</div>
-					<div style="padding:20px 20px 0 0;font-size:16px;color:#727272;line-height:28px;">
-						Credit card business as a key business financial industry, the development of these years of extraordinarily rapid end of 2012 a total issuance volume has reached 331 million, total credit card credit reached 3.49 trillion yuan. With the July 20 release loan interest rate the central bank controls the interest rate market is about to pose serious challenges to the bank, the credit card business has become the main force in banking transformation, how to seize the opportunity to seek restructuring and development opportunities to enhance the overall integrated service capabilities, many banks be placed in front of a major issue.
-						<a href="/jjfa_En" style="font-size:16px;color:#0488cd;">Learn More...</a>	
-					</div>
-				</div>
-				<div id="ATM" style="display:none;" class="jianjie">
-					<div style="font-weight:bold;font-size:18px;color:#666666">Commercial Bank ATM management services</div>
-					<div style="padding:20px 20px 0 0;font-size:16px;color:#727272;line-height:28px;">
-						Qiankang company has been introducing international mature business model, the development of domestic financial self-channel business mission, with strong investment capabilities, professional management team around the electronic payment, provide personalized, professional service operations: Equipment provided, business location, operation and management, repair and maintenance, software development and value-added business development and so on.<br/>
-						<a href="/jjfa_En" style="font-size:16px;color:#0488cd;">Learn More...</a>	
-					</div>
-				</div>
-				<div id="OTO" style="display:none;" class="jianjie">
-					<div style="font-weight:bold;font-size:18px;color:#666666">Internet banking platform construction business model OTO</div>
-					<div style="padding:20px 20px 0 0;font-size:16px;color:#727272;line-height:28px;">
-						OTO business model is a new birth of e-commerce mode, which greatly shorten the consumer decision-making time, "OTO" is "Online To Offline" shorthand, that "online to offline", OTO business model core is to bring the reality of consumer online stores, the payment for goods and services purchased through online and offline, and then go on to enjoy the service line. 2012 for e-commerce, it will be a critical year, traditional companies frequently try Hydropower Company, the Company, through unremitting efforts to build regional banks suitable for China's Internet banking platform.<br/>
-						<a href="/jjfa_En" style="font-size:16px;color:#0488cd;">Learn More...</a>	
-					</div>
-				</div>
-				<div id="xwd" style="display:none;" class="jianjie">
-					<div style="font-weight:bold;font-size:18px;color:#666666">Small business lending consulting operations</div>
-					<div style="padding:20px 20px 0 0;font-size:16px;color:#727272;line-height:28px;">
-						Qiankang tiny loans consulting company operating business is based on micro-credit application technology IPC summarizes a number of banks in small micro-credit operations of the advanced combat experience, on this basis, after in-depth research, analyzed and summarized to form a unique local characteristics covering customer identification, risk control and management of the whole process Qiankang small micro-lending system.<br/>
-						<a href="/jjfa_En" style="font-size:16px;color:#0488cd;">Learn More...</a>	
-					</div>
-				</div>
-			</div>
-			<div class="box4">
-				<div class="span2 active" style="margin:3%;_margin:10px;" onmouseover="changeFWLY(this,1)">
-					<img src="../static/img/xykWhite.png" style="margin-top:45px;" id="img1"/>
-				</div>
-				<div class="span2" style="margin:3% 3% 0 0;_margin:10px 10px 0 0;" onmouseover="changeFWLY(this,4)">
-					<img src="../static/img/lc.png" style="margin-top:33px;" id="img4"/>
-				</div>				
-				<div class="span2" style="margin:3%;_margin:10px;margin-top:0;" onmouseover="changeFWLY(this,3)">
-					<img src="../static/img/xwd.png" style="margin-top:35px;" id="img3"/>
-				</div>
-				<div class="span2" style="margin:0 3% 0 0;_margin:0 10px 0 0;" onmouseover="changeFWLY(this,2)">
-					<img src="../static/img/atm.png" style="margin-top:30px;" id="img2"/>
-				</div>
-			</div>
+		<div class="qkkh cggs" id="cggs" style="filter:alpha(opacity=0);opacity:0;">
+			<h1>SUCCESS CASE</h1>
+			<h2>SUCCESS STORIES</h2>
+			<p>Dry Kang consultants are from domestic banks, Fortune 500 company executives, with finance industry experience, financial consulting experience in management, finance MBA or PhD in higher education background, all with international elite educational background as well as international financial institutions or work experience advisory bodies, and some well-known banks have had close cooperation.</p>
+			
+			<span class="prev" onclick="$('.cgimg').animate({marginLeft:'60px'},'slow')"></span>
+			<span class="next" onclick="$('.cgimg').animate({marginLeft:'-573px'},'slow')"></span>	
+			<div class="cgimg"> 					
+				<img src="../static/img/jnnsh.png" id="1"/>
+				<img src="../static/img/tynsh.png" id="2"/>
+				<img src="../static/img/hxyh.jpg" id="3"/>
+				<img src="../static/img/jnyh.jpg" id="4"/>
+				<img src="../static/img/csnsh.jpg" id="5"/>		
+				<img src="../static/img/wxnsh.jpg" id="6"/>	
+				<img src="../static/img/xhyh.jpg" id="7"/>
+				<img src="../static/img/jynsh.jpg" id="8"/>
+				<img src="../static/img/jr.jpg" id="9"/>
+				<img src="../static/img/jy.jpg" id="10"/>
+				<img src="../static/img/xmnsh.png" id="11" />	
+			</div>				
 		</div>
 		
+		<div class="qkjt qkhb" id="qkhb" style="width:100%;margin-left:0;filter:alpha(opacity=0);opacity:0;">	
+			<h1><img src="../static/img/title1.png"/>PANTNER<img src="../static/img/title2.png"/></h1>
+			<h2>COOPERATION</h2>
+			<div class="parner lcLeft">
+				<img src="../static/img/hzhb1.png" onclick="window.open('http://www.profitinsight.com/')"/>
+				<p>PTC&nbsp;&nbsp;&nbsp;&nbsp;</p>
+			</div><div class="parner lcCenter">
+				<img src="../static/img/hzhb3.png" onclick="window.open('http://www.rcbda.cn/')"/>
+				<p>Rural Commercial</p>
+			</div><div class="parner lcCenter">
+				<img src="../static/img/hzhb2.png" onclick="window.open('http://www.mastercard.com.cn')"/>
+				<p>MasterCard</p>
+			</div><div class="parner lcRight">
+				<img src="../static/img/hzhb4.png" onclick="window.open('http://www.xhjr.net')"/>
+				<p>&nbsp;&nbsp;&nbsp;&nbsp;XINHUA</p>
+			</div><br/>	
+			<div class="parner lcL">
+				<span>Reached a strategic cooperation agreement with PTC<br/>
+				<font>2013</font></span>
+			</div><div class="parner lcC">
+				<span>China has become the only company that agricultural businesses Union observers<br/>
+				<font>2013</font></span>
+			</div><div class="parner lcC">
+				<span>MasterCard <br/>(Asia-Pacific)<br/> Strategic Partner<br/>
+				<font>2014</font></span>
+			</div><div class="parner lcC">
+				<span>Signed a agreement with China Rural Commercial Alliance<br/>
+				<font>2015</font></span>
+			</div><div class="parner lcR">
+				<span>Signed a strategic cooperation agreement with Xinhua Financial Holding<br/>
+				<font>2015</font></span>
+			</div>
+		</div>
+	<!--**************************************************foot***********************************************-->
+		<!-- 切换语言 -->		
+		<div class="lanage" onclick="setLanage(this)">						
+			<img src="../static/img/yy.png" id="yySmall" onmouseover="showYY()"/>	
+			<ul id="yyBig" onmouseleave="hideYY()">
+				<li><a href="index.html"><img src="../static/img/Ch.png"/>中文</a></li>
+				<li><a href="index_EN.html"><img src="../static/img/En.png"/>ENGLISH</a></li>
+			</ul>
+		</div>
 		<div class="back-to-top">
 			<img src="../static/img/back-to-top.png"/>
 		</div>
-	<!--**************************************************foot***********************************************-->
-		<div class="foot" style="width:100%;float:left;">		
-			<img src="../static/img/images/qk_12.png" style="width:100%"/>
-			<img src="../static/img/images/qk_15.png"/>
+		<div class="foot">
+			<div class="xx">
+				<p style="line-height:40px;font-size:15px;">CardPay(Shanghai) Finance Consulting Co.,Ltd.</p>				
+				<p>Address：Room 801,Building 3,No.7,Guiqing Road,Xuhui District,Shanghai </p>		
+				<p>Pone： 021-54485390 </p>
+				<p>Fax： 021-54485391</p>
+				<p>E-mail：liuxj@qkjr.com.cn</p>
+				<ul>
+					<li>Related Links:</li>
+					<li><a href="">Personal Finance</a></li>
+					<li><a href="">Consumer Finance</a></li>
+					<li><a href="">Supply Chain Finance</a></li>
+					<li><a href="">Funds Management</a></li>
+				</ul>
+				<img src="../static/img/2wm.png" />
+				<font>— WeChat —</font>
+			</div><br/>
 			<span>Copyright(C)2011-2014 CardPay(Shanghai) Finance Consulting Co.,Ltd.</span><br/>
 			<span>Shanghai ICP for 13043724</span>
 		</div>		
@@ -241,82 +235,24 @@
 	<script type="text/javascript" src="../static/js/jquery.animate-colors-min.js"></script>
 	<script type="text/javascript" src="../static/js/jquery.skitter.js"></script>
 	<script type="text/javascript">
-		var q=1;
-		function leftBtn(){
-			if(q==3){	
-				$('#image7').hide();
-				$('#image8').hide();
-				$('#image4').show();
-				$('#image5').show();
-				$('#image6').show();
-				q=2;
-			}			
-			else{			
-				$('#image4').hide();
-				$('#image5').hide();
-				$('#image6').hide();
-				$('#image1').show();
-				$('#image2').show();
-				$('#image3').show();
-				q=1;
-			}
-		}
-		function rightBtn(){			
-			if(q==1){	
-				$('#image1').hide();
-				$('#image2').hide();
-				$('#image3').hide();				
-				$('#image4').show();
-				$('#image5').show();
-				$('#image6').show();
-				q=2;
-			}			
-			else{				
-				$('#image4').hide();
-				$('#image5').hide();
-				$('#image6').hide();
-				$('#image7').show();	
-				$('#image8').show();
-				q=3;
-			}
-		}
-		//四小魔方
-		function changeFWLY(obj,num){			
-			$('.span2').attr('class','span2');
-			$(obj).attr('class','span2 active');
-			if(num==1){
-				$('#img1').attr('src','../static/img/xykWhite.png');
-				$('#img2').attr('src','../static/img/atm.png');
-				$('#img3').attr('src','../static/img/xwd.png');
-				$('#img4').attr('src','../static/img/lc.png');
-				$('.jianjie').hide();
-				$('#xyk').show();
-			}
-			if(num==2){
-				$('#img1').attr('src','../static/img/xyk.png');
-				$('#img2').attr('src','../static/img/atmWhite.png');
-				$('#img3').attr('src','../static/img/xwd.png');
-				$('#img4').attr('src','../static/img/lc.png');
-				$('.jianjie').hide();
-				$('#ATM').show();
-			}
-			if(num==3){
-				$('#img1').attr('src','../static/img/xyk.png');
-				$('#img2').attr('src','../static/img/atm.png');
-				$('#img3').attr('src','../static/img/xwdWhite.png');
-				$('#img4').attr('src','../static/img/lc.png');
-				$('.jianjie').hide();
-				$('#OTO').show();
-			}
-			if(num==4){
-				$('#img1').attr('src','../static/img/xyk.png');
-				$('#img2').attr('src','../static/img/atm.png');
-				$('#img3').attr('src','../static/img/xwd.png');
-				$('#img4').attr('src','../static/img/lcWhite.png');
-				$('.jianjie').hide();
-				$('#xwd').show();
-			}
-		}
+		$(document).ready(function(){                            //主体元素
+			$(window).scroll(function(){
+				var srollPos = $(window).scrollTop();    //滚动条距顶部距离(页面超出窗口的高度)				
+				if(srollPos>"500"){
+					$("#qkkh").animate({opacity:"1"},"slow");
+				}
+				if(srollPos>"950"){
+					$("#qkjz").animate({opacity:"1"},"slow");
+				}
+				if(srollPos>"1350"){
+					$("#cggs").animate({opacity:"1"},"slow");
+				}
+				if(srollPos>"1800"){
+					$("#qkhb").animate({opacity:"1"},"slow");
+				}
+			});
+		});
+		
 	</script>
 </body>
 </html>
