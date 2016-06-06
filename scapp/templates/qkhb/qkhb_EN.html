@@ -11,8 +11,8 @@
 	<!-- The styles -->
 	<link href="../../static/css/main.css" rel="stylesheet">
 	 <link rel="stylesheet" type="text/css" href="../../static/css/skitter.styles.css" media="all" />
-	<style type="text/css">			
-		
+	<style type="text/css">	
+		.foot{position:fixed;bottom:0;}
 	</style>
 	<script type="text/javascript">
 		var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
@@ -113,7 +113,30 @@
 	<script type="text/javascript" src="../../static/js/jquery.easing.1.3.js"></script>
 	<script type="text/javascript" src="../../static/js/jquery.animate-colors-min.js"></script>
 	<script type="text/javascript" src="../../static/js/jquery.skitter.js"></script>
-	
+	<script type="text/javascript">
+		$(document).ready(function(){   
+			if($(window).width()<"800"){
+				$(".box_skitter").html("<ul>"+
+											"<li>"+
+												"<img src='../static/img/banner11_EN.jpg'/>"+                        
+											"</li>"+
+											"<li>"+
+												"<img src='../static/img/banner12_EN.jpg' /> "+                           
+											"</li>"+
+											"<li>"+
+												"<img src='../static/img/banner13_EN.jpg'/>"+
+											"</li>"+
+											"<li>"+
+												"<img src='../static/img/hzhb11_En.jpg'/>"+
+											"</li>"+
+											"<li>"+
+												"<img src='../static/img/page14_En.jpg'/>"+
+											"</li>"+
+										"</ul>");
+			}
+		});
+		
+	</script>
 	
 </body>
 </html>
