@@ -131,7 +131,7 @@
 				<img src="../static/img/sc10.jpg"/>
 				<span>				
 					<img src="../static/img/logo1.png"  style="width:6.25em;height:3.75em;"/>
-					<h2>乾康金融信息服务有限公司</h2>
+					<h2>乾康金融信息服务股份有限公司</h2>
 					<a href="/qkjz">了解更多</a>
 				</span>
 			</div><div class="zgs" id="xxjs">
@@ -297,16 +297,16 @@
 		$(document).ready(function(){                            //主体元素
 			$(window).scroll(function(){
 				var srollPos = $(window).scrollTop();    //滚动条距顶部距离(页面超出窗口的高度)				
-				if(srollPos>"500"){
+				if(srollPos>"400"){
 					$("#qkkh").animate({opacity:"1"},"slow");
 				}
-				if(srollPos>"900"){
+				if(srollPos>"600"){
 					$("#qkjz").animate({opacity:"1"},"slow");
 				}
-				if(srollPos>"1200"){
+				if(srollPos>"1100"){
 					$("#cggs").animate({opacity:"1"},"slow");
 				}
-				if(srollPos>"1600"){
+				if(srollPos>"1400"){
 					$("#qkhb").animate({opacity:"1"},"slow");
 				}
 				if(srollPos!="0"){
@@ -318,7 +318,7 @@
 					$(".logo").css("filter","alpha(opacity=100)");
 				}
 			});
-			if($(window).width()<"400"){
+			if($(window).width()<"800"){
 				$(".box_skitter").html("<ul>"+
 											"<li>"+
 												"<img src='../static/img/banner11.jpg'/>"+                        

@@ -61,15 +61,15 @@
 	<div class="qkly" id="qkly" onmouseleave="resetTab()">
 		<div class="span4 active" onclick="Tab(this,'101')" onmouseover="Tab3(this,'101')" id="Tab101">
 			<img src="../../static/img/101_h.png"/>		
-			<h1>互联网消费金融<br/><span>INTERNET CONSUMER<br/>FINANCE</span></h1>
+			<h1>互联网消费金融<br/><span>INTERNET<br/>CONSUMER<br/>FINANCE</span></h1>
 		</div>
 		<div class="span4" onclick="Tab(this,'102')" onmouseover="Tab3(this,'102')" id="Tab102">
 			<img src="../../static/img/102.png"/>	
-			<h1>个人金融业务咨询运营<br/><span>PERSONAL FINANCIAL<br/>SERVICES</span></h1>
+			<h1>个人金融业务咨询运营<br/><span>PERSONAL<br/>FINANCIAL<br/>SERVICES</span></h1>
 		</div>
 		<div class="span4" onclick="Tab(this,'103')" onmouseover="Tab3(this,'103')" id="Tab103">
 			<img src="../../static/img/103.png"/>		
-			<h1>远程授信评估平台<br/><span>REMOTE CREDIT<br/>EVALUATION</span></h1>
+			<h1>远程授信评估平台<br/><span>REMOTE<br/>CREDIT<br/>EVALUATION</span></h1>
 		</div>
 	</div>
 	<!--**************************************************title***********************************************-->	
@@ -152,7 +152,7 @@
 		<div class="title">
 			<h1>消费金融简介</h1><h2>C</h2><h3>onsumer finance profile</h3>
 		</div>
-		<div class="AboutUs" style="background-image:url(../../static/img/sc34.jpg);height:262px;">
+		<div class="AboutUs" id="xx1" style="background-image:url(../../static/img/sc34.jpg);">
 			<h1 style="margin-top:0px;">Consumer Finance</h1>
 			<h2>什么是消费金融</h2>
 			<span></span>
@@ -544,13 +544,13 @@
 					}
 				}
 				if($("#zp1").css("display")!="none"){
-					if(srollPos>"1300"){						
+					if(srollPos>"1100"){						
 						$("#dh3").animate({opacity:"1"},"slow");
 					}				
 					else{
 						$("#dh3").css("filter","alpha(opacity=0)");
 						$("#dh3").css("opacity","0");
-						if(srollPos>"800"){
+						if(srollPos>"700"){
 							$("#dh2").animate({left:"0"},"slow");
 						}
 						else{
@@ -565,18 +565,18 @@
 					}
 				}
 				if($("#zp3").css("display")!="none"){
-					if(srollPos>"1600"){						
+					if(srollPos>"1500"){						
 						$("#dh9").animate({opacity:"1"},"slow");
 					}				
 					else{
 						$("#dh9").css("filter","alpha(opacity=0)");
 						$("#dh9").css("opacity","0");
-						if(srollPos>"1200"){
+						if(srollPos>"800"){
 							$("#dh8").animate({left:"0"},"slow");
 						}
 						else{
 							$("#dh8").css("left","-100%");
-							if(srollPos>"500"){
+							if(srollPos>"300"){
 								$("#dh7").animate({right:"0"},"slow");
 							}
 							else{
@@ -638,7 +638,7 @@
 					}
 				}				
 			});
-			if($(window).width()<"1000"&&$(window).width()>"600"){
+			if($(window).width()<"800"){
 				$(".box_skitter").html("<ul>"+
 											"<li>"+
 												"<img src='../../static/img/banner11.jpg'/>"+                        
