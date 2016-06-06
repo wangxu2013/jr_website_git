@@ -24,13 +24,13 @@
 <div class="main">
 	<!--**************************************************top***********************************************-->
 	<div class="logo" style="position:fixed;z-index:10000;">	
-		<a href="../index.html"><img src="../../static/img/logo.png"/></a>
+		<a href="/index"><img src="../../static/img/logo.png"/></a>
 		<ul class="newnav" style="margin-left:20px;z-index:10000;">
-			<li><a href="../qkly/qkly.html">乾康领域</a></li>
-			<li class="active"><a href="qkhb.html">乾康伙伴</a></li>
-			<li><a href="../qkjz/qkjz.html">乾康家族</a></li>
-			<li><a href="../jrqk/jrqk.html">加入乾康</a></li>	
-			<li><a href="../gyqk/gyqk.html">关于乾康</a></li>
+			<li><a href="/qkly">乾康领域</a></li>
+			<li class="active"><a href="/qkhb">乾康伙伴</a></li>
+			<li><a href="/qkjz">乾康家族</a></li>
+			<li><a href="/jrqk">加入乾康</a></li>	
+			<li><a href="/gyqk">关于乾康</a></li>
 		</ul>
 	</div>
 	<!-- SLIDER -->
@@ -77,7 +77,7 @@
 			<span>与PTC达成<br/>战略合作协议<br/>
 			<font>2013年</font></span>
 		</div><div class="parner lcC">
-			<span>成为中国农商行联盟唯一<br/>公司观察员<br/>
+			<span>成为中国农商行联盟<br/>唯一公司观察员<br/>
 			<font>2013年</font></span>
 		</div><div class="parner lcC">
 			<span>MasterCard（亚太）<br/>战略合作伙伴<br/>
@@ -94,8 +94,8 @@
 	<div class="lanage" onclick="setLanage(this)">						
 		<img src="../../static/img/yy.png" id="yySmall" onmouseover="showYY()"/>	
 		<ul id="yyBig" onmouseleave="hideYY()">
-			<li><a href="../index.html"><img src="../../static/img/Ch.png"/>中文</a></li>
-			<li><a href="../index_EN.html"><img src="../../static/img/En.png"/>ENGLISH</a></li>
+			<li><a href="/index"><img src="../../static/img/Ch.png"/>中文</a></li>
+			<li><a href="/index_EN"><img src="../../static/img/En.png"/>ENGLISH</a></li>
 		</ul>
 	</div>	
 	<div class="back-to-top">
@@ -114,7 +114,30 @@
 	<script type="text/javascript" src="../../static/js/jquery.easing.1.3.js"></script>
 	<script type="text/javascript" src="../../static/js/jquery.animate-colors-min.js"></script>
 	<script type="text/javascript" src="../../static/js/jquery.skitter.js"></script>
-	
+	<script type="text/javascript">
+		$(document).ready(function(){   
+			if($(window).width()<"1000"&&$(window).width()>"600"){
+				$(".box_skitter").html("<ul>"+
+											"<li>"+
+												"<img src='../../static/img/banner11.jpg'/>"+                        
+											"</li>"+
+											"<li>"+
+												"<img src='../../static/img/banner12.jpg' /> "+                           
+											"</li>"+
+											"<li>"+
+												"<img src='../../static/img/banner13.jpg'/>"+
+											"</li>"+
+											"<li>"+
+												"<img src='../../static/img/hzhb11.jpg'/>"+
+											"</li>"+
+											"<li>"+
+												"<img src='../../static/img/page14.jpg'/>"+
+											"</li>"+
+										"</ul>");
+			}
+		});
+		
+	</script>
 	
 </body>
 </html>

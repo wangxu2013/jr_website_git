@@ -24,13 +24,13 @@
 <div class="main">
 	<!--**************************************************top***********************************************-->
 	<div class="logo" style="position:fixed;z-index:10000;">	
-		<a href="../index.html"><img src="../../static/img/logo.png"/></a>
+		<a href="/index"><img src="../../static/img/logo.png"/></a>
 		<ul class="newnav" style="margin-left:20px;z-index:10000;">
-			<li><a href="../qkly/qkly.html">乾康领域</a></li>
-			<li><a href="../qkhb/qkhb.html">乾康伙伴</a></li>
-			<li><a href="../qkjz/qkjz.html">乾康家族</a></li>
-			<li><a href="../jrqk/jrqk.html">加入乾康</a></li>	
-			<li class="active"><a href="gyqk.html">关于乾康</a></li>
+			<li><a href="/qkly">乾康领域</a></li>
+			<li><a href="/qkhb">乾康伙伴</a></li>
+			<li><a href="/qkjz">乾康家族</a></li>
+			<li><a href="/jrqk">加入乾康</a></li>	
+			<li class="active"><a href="/gyqk">关于乾康</a></li>
 		</ul>
 	</div>
 	<!-- SLIDER -->
@@ -64,14 +64,14 @@
 		<h2>乾康金融集团</h2>
 		<span></span>
 		<font>
-			乾康金融集团是一家专注于金融领域专业管理咨询以及运营实施的服务机构。 集团主营业务是为银行等金融机构提供个人金融业务咨询及运营，助力实现银行互联网金融平台建设，打造金融 OTO 商业模式服务平台。<br/>
+			乾康金融集团是一家专注于金融领域专业管理咨询以及运营实施的服务机构。 集团主营业务是为银行等金融机构提供个人金融业务咨询及运营，助力实现银行互联网银行平台建设，打造金融 OTO 商业模式服务平台。<br/>
 			乾康公司高层智囊云集，创始人及决策层领导集多年金融管理咨询经验、前瞻性的理念、大数据云计算的技术于一体，披荆斩棘的为行业开拓领航，打造了一支国际化和本土化相结合的咨询团队。
 		</font>
 	</div>
 	<div class="AboutUs qywh" id="dh2" style="position:relative;right:-100%;">
 		<h1>企业文化</h1>
 		<h2>CardPay Company culture</h2>
-		<span></span>
+		<span id="qywh"></span>
 		<font>
 			乾康公司多年来始终致力于金融咨询领域，所以积累了雄厚的专业实力和项目经验。我们将助力银行：管理提升和利润提高，实现在风险可控的前提下，长期持久盈利！<br/>
 			乾康态度：专业、高效、敬业、合作、诚信、激情<br/>
@@ -108,8 +108,8 @@
 	<div class="lanage" onclick="setLanage(this)">						
 		<img src="../../static/img/yy.png" id="yySmall" onmouseover="showYY()"/>	
 		<ul id="yyBig" onmouseleave="hideYY()">
-			<li><a href="../index.html"><img src="../../static/img/Ch.png"/>中文</a></li>
-			<li><a href="../index_EN.html"><img src="../../static/img/En.png"/>ENGLISH</a></li>
+			<li><a href="/index"><img src="../../static/img/Ch.png"/>中文</a></li>
+			<li><a href="/index_EN"><img src="../../static/img/En.png"/>ENGLISH</a></li>
 		</ul>
 	</div>	
 		
@@ -134,10 +134,10 @@
 			$("#dh1").animate({left:"0"},"slow");
 			$(window).scroll(function(){
 				var srollPos = $(window).scrollTop();    //滚动条距顶部距离(页面超出窗口的高度)				
-				if(srollPos>"500"){
+				if(srollPos>"400"){
 					$("#dh2").animate({right:"0"},"slow");
 				}
-				if(srollPos>"900"){
+				if(srollPos>"700"){
 					$("#cggs").animate({opacity:"1"},"1000");
 				}
 				
@@ -153,7 +153,26 @@
 					i++
 				else
 					i=1
-			},1000);  
+			},1000); 
+			if($(window).width()<"1000"&&$(window).width()>"600"){
+				$(".box_skitter").html("<ul>"+
+											"<li>"+
+												"<img src='../../static/img/banner11.jpg'/>"+                        
+											"</li>"+
+											"<li>"+
+												"<img src='../../static/img/banner12.jpg' /> "+                           
+											"</li>"+
+											"<li>"+
+												"<img src='../../static/img/banner13.jpg'/>"+
+											"</li>"+
+											"<li>"+
+												"<img src='../../static/img/hzhb11.jpg'/>"+
+											"</li>"+
+											"<li>"+
+												"<img src='../../static/img/page14.jpg'/>"+
+											"</li>"+
+										"</ul>");
+			}
 		});
 		
 	</script>

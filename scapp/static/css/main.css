@@ -5,24 +5,17 @@ body{background:white;overflow-x:hidden;}
 a{text-decoration:none;color:#000000;}
 img{border:none;}
 .main{background:white;width:1350px;margin:0 auto;overflow:hidden;}
-.logo{width:1350px;height:70px;background: #101928;}
+.logo{width:1350px;height:70px;background: #101928;top:0;}
+.logo img{float:left;height:60px;margin-top:5px;margin-left:30px;}
 
-.logo img{float:left;height:60px;margin-top:5px;margin-left:30px;margin-right:150px;}
-.logo div{line-height:56px;display:inline;float:left;width:618px;text-align:right;}
+.newnav{list-style:none;z-index:10000;position:absolute;right:0;}
+.newnav li{float:left;width:150px;height:70px;text-align:center;cursor:pointer;}
+.newnav li a{color:#bcbcbc;display:inline-block;width:100%;line-height:70px;font-size:15px;}
+.newnav .active{background: url(../img/newnavActive.png) no-repeat;background-size:100% 100%}
+.newnav .active a{color:#fff;font-size:15px;}
+.newnav li:hover{background: url(../img/newnavHover.png) repeat-x;background-size:100% 100%}
+.newnav li:hover a{color:#fff;}
 
-.nav{width:100%;height:42px;background: #ffffff url(../img/images/qk_04.png) repeat-x;}
-.nav ul{margin-left:70px;}
-.nav ul li{float:left;line-height:42px;width:97px;list-style:none;text-align:center;}
-.nav ul li a{font-weight:bold;color:white;font-size:14px;}
-.nav .active{background: #ffffff url(../img/nav-active.png) no-repeat;}
-
-.show{width:100%;height:309px;background: #ffffff url(../img/images/qk_05.jpg) ;}
-.show-gywm{width:100%;height:189px;background: #ffffff url(../img/images/gywm.jpg) ;}
-.show-xwdt{width:100%;height:189px;background: #ffffff url(../img/images/xwdt.jpg) no-repeat;}
-.show-cgal{width:100%;height:189px;background: #ffffff url(../img/images/cgal.jpg) no-repeat;}
-.show-lxwm{width:100%;height:189px;background: #ffffff url(../img/images/lxwm.jpg) no-repeat;}
-.show-content{width:100%;height:189px;background: #ffffff url(../img/images/content.jpg) no-repeat;}
-.flash-replaced{position:relative;top:-1px;}
 
 .content{width:100%;min-height:320px;}
 .left{display:inline;float:left;width:20%;margin-left:8%;margin-top:40px;}
@@ -74,13 +67,7 @@ textarea{width:420px;height:150px;background:#fbfbfb;border:1px solid #dcd9d4;}
 
 
 .back-to-top{position:fixed;right:15px;bottom:100px;display:none;cursor:pointer;_position:absolute;}
-.newnav{list-style:none;z-index:10000;position:absolute;right:0;}
-.newnav li{float:left;width:150px;height:70px;text-align:center;cursor:pointer;}
-.newnav li a{color:#bcbcbc;display:inline-block;width:100%;line-height:70px;font-size:15px;}
-.newnav .active{background: url(../img/newnavActive.png) no-repeat;}
-.newnav .active a{color:#fff;font-size:15px;}
-.newnav li:hover{background: url(../img/newnavHover.png) repeat-x;}
-.newnav li:hover a{color:#fff;}
+
 .secondList{margin-top:-4px;position:fixed;}
 .secondList li{width:175px;height:40px;line-height:40px;float:none;background: #252c34;color:white;list-style:none;border-bottom:1px solid #414f5a;cursor:pointer;}
 .secondList li a{line-height:40px;}
@@ -91,7 +78,6 @@ textarea{width:420px;height:150px;background:#fbfbfb;border:1px solid #dcd9d4;}
 .box4 .span2{width:45.5%;_width:150px;height:45.5%;float:left;text-align:center;background:#e1e1e1;}
 .box4 .span2 img{width:50%}
 .box4 .active{background:#0488cd;}
-
 /* 滚动图片 */
 #ifocus_pic { display:inline; position:relative; float:left; width:273px; height:350px; overflow:hidden;}
 #ifocus_piclist { position:relative; }
@@ -128,6 +114,14 @@ p{color:#666666;font-size:16px;}
 .qkly .span4 h1{display:inline-block;position:relative;top:20px;font-size:16px;line-height:35px;color:#ff9900;}
 .qkly .span4 h1 span{display:inline-block;font-size:12px;line-height:15px;color:#cccccc;}
 .qkly .active{background:#264b99;}
+#qkly .span4 img{width:70px;vertical-align:center;margin-top:-10px;margin-bottom:10px;}
+#qkly .span4 h1{top:10px;font-size:15px;line-height:30px;}
+#img1{float:right;margin-left:1.25em;height:11.8em;margin-top:2em;}
+#img2{float:left;margin-right:1.25em;width:25em;height:12.5em;margin-top:1em;}
+#img3{float:right;margin-left:1.25em;margin-top:3.75em;}
+#img4{float:left;margin-right:1.25em;margin-top:1.25em;}
+#img5{float:right;margin-left:1.25em;margin-top:5em;}
+#img6{float:left;margin-right:1.25em;margin-top:2.5em;}
 /*乾康集团*/
 .qkjt{float:left;width:70%;margin-left:15%;text-align:center;line-height:30px;}
 .qkjt h1{background:#fff;line-height:90px;text-align:center;font-size:20px;color:#264b99;}
@@ -159,12 +153,13 @@ p{color:#666666;font-size:16px;}
 .czlc font{color:#1b57a8;display:block;position:relative;top:-10px;left:145px;line-height:25px;}
 .czlc .sj{color:#434343;}
 
-.zgs{background:#6b6969;width:30%;display:inline-block;margin-top:-30px;}
+.zgs{background:#eef2f5;;;width:30%;display:inline-block;margin-top:-30px;}
 .zgs img{width:100%;height:200px;margin:0;}
 .zgs span{display:inline-block;width:100%;height:180px;padding-top:20px;}
-.zgs h2{color:#fff;margin:0;line-height:70px;font-size:18px;font-weight:normal;margin-top:-10px;}
+.zgs h2{color:#294167;margin:0;line-height:70px;font-size:18px;font-weight:normal;margin-top:-10px;}
 .zgs a{padding:10px 40px;border:0;background:#ff9900;border-radius:20px;color:#fff;cursor:pointer;}
 .gsjj{display:inline-block;width:60%;}
+#xxjs{position:relative;top:-3.5em;}
 
 .yyms{display:inline-block;width:40%;margin-bottom:50px;}
 .yyms span{display:inline-block;width:55%;}
@@ -179,7 +174,7 @@ p{color:#666666;font-size:16px;}
 .cggs .prev:hover{background:#ffe4bd url(../img/prev2.png) no-repeat right center;}
 .cggs .next:hover{background:#ffe4bd url(../img/next2.png) no-repeat left center;}
 .cggs .cgimg{width:2000px;float:left;margin-left:60px;margin-top:-150px;} 
-.cgimg img{width:142px;height:142px;border:3px dotted #e1e1e1;float:left;margin-right:10px;}
+.cgimg img{width:148px;height:148px;float:left;margin-right:10px;}
 /*乾康伙伴*/
 .qkhb{margin-bottom:50px;}
 .parner{display:inline-block;}
@@ -187,12 +182,12 @@ p{color:#666666;font-size:16px;}
 .parner p{font-weight:bold;color:#666;margin-top:-10px;}
 .parner span{display:inline-block;color:#666;font-size:14px;margin-top:50px;line-height:20px;}
 .parner font{color:#aeaeae;line-height:40px;color:#ff9900;}
-.lcLeft{background:url(../img/lcLeft.png) no-repeat;width:142px;}
-.lcCenter{background:url(../img/lcCenter.png) no-repeat;width:170px;}
-.lcRight{background:url(../img/lcRight.png) no-repeat;width:144px;}
-.lcL{background:url(../img/lcL.png) no-repeat;width:210px;}
-.lcC{background:url(../img/lcC.png) no-repeat;width:210px;}
-.lcR{background:url(../img/lcR.png) no-repeat;width:210px;}
+.lcLeft{background:url(../img/lcLeft.png) no-repeat;width:142px;background-size:100%}
+.lcCenter{background:url(../img/lcCenter.png) no-repeat;width:170px;background-size:100%}
+.lcRight{background:url(../img/lcRight.png) no-repeat;width:144px;background-size:100%}
+.lcL{background:url(../img/lcL.png) no-repeat;width:210px;background-size:100%}
+.lcC{background:url(../img/lcC.png) no-repeat;width:210px;background-size:100%}
+.lcR{background:url(../img/lcR.png) no-repeat;width:210px;background-size:100%}
 /*底部*/
 .foot{width:100%;float:left;text-align:center;background:#242333;}
 .foot p{text-align:left;color:#909098;font-size:14px;}
@@ -213,35 +208,35 @@ p{color:#666666;font-size:16px;}
 /*标题*/
 .title{width:90%;line-height:100px;font-size:18px;text-align:center;font-weight:bold;color:#000;float:left;margin-left:5%;margin-top:20px;margin-bottom:20px;}
 .title h1{display:inline-block;font-weight:normal;font-size:25px;color:#000;position:relative;z-index:2}
-.title h2{display:inline-block;width:100px;text-align:center;font-size:25px;background:url(../img/title.jpg) no-repeat center;color:#000;margin-left:-20px;position:relative;z-index:1}
+.title h2{display:inline-block;width:100px;text-align:center;font-size:25px;background:url(../img/title.jpg) no-repeat center;background-size:100%;color:#000;margin-left:-20px;position:relative;z-index:1}
 .title h3{display:inline-block;font-size:16px;font-weight:normal;margin-left:-20px;color:#000;position:relative;z-index:2}
 /*关于乾康*/
 .AboutUs{float:left;width:80%;margin-left:10%;background:url(../img/gyqk.jpg) no-repeat right top;height:350px;margin-bottom:40px;padding-bottom:40px;border-bottom:1px dashed #d9d9d9;}
 .AboutUs h1{color:#000;font-size:20px;font-weight:normal;margin-top:50px;line-height:30px;}
 .AboutUs h2{font-size:35px;color:#000;line-height:70px;}
-.AboutUs span{display:inline-block;width:150px;height:155px;border-top:2px solid #000;margin-right:10px;}
+.AboutUs span{display:inline-block;width:13%;height:155px;border-top:2px solid #000;margin-right:1%;vertical-align:top;margin-top:1em;}
 .AboutUs font{display:inline-block;width:46%;color:#000;line-height:30px;}
 .AboutUs b{color:#000;}
 /*企业文化*/
 .qywh{background:url(../img/qywh.png) no-repeat left top;margin-top:0;height:250px;margin-bottom:0px;}
 .qywh h1,.qywh h2{text-align:right;}
 .qywh h1{margin-top:0;}
-.qywh span{margin-left:420px;height:95px;}
+.qywh span{margin-left:40%;height:95px;}
 .qywh font{width:45%;}
 /*成功故事*/
 .Success{float:left;width:100%;background:#fff;}
 .Success .leaf{width:40%;margin-left:10%;text-align:center;}
 .Success .leaf img{width:80px;border-radius:80px;border:1px solid #ddd;margin-right:5px;margin-top:0;filter:gray; -webkit-filter: grayscale(100%);cursor:pointer;}
 /*.Success .leaf img:hover{filter:none; -webkit-filter: grayscale(0%);}*/
-.tree{margin-top:-250px;margin-left:90px;}
-.Success .xx{width:38%;margin-right:10%;float:right;margin-top:-200px;}
+.tree{margin-top:-230px;margin-left:90px;}
+.Success .xx{width:40%;margin-right:10%;float:right;margin-top:-200px;}
 .Success .xx h1{color:#000;font-size:20px;font-weight:normal;line-height:30px;text-align:right;}
 .Success .xx h2{font-size:35px;color:#000;line-height:70px;text-align:right;}
 .Success .xx p{color:#000;line-height:30px;}
 .Success .xx img{margin-top:40px;width:100%;}
 /*消费金融*/
 .xfjrList{margin:0 10%;margin-bottom:100px;float:left;width:80%;}
-.xfjrList div{display:inline-block;width:29.2%;padding:10px;float:left;border:1px solid rgb(238, 238, 238);margin-right:20px;margin-bottom:20px;cursor:pointer;}
+.xfjrList div{display:inline-block;width:29.2%;padding:0.7em;float:left;border:1px solid rgb(238, 238, 238);margin-right:1.25em;margin-bottom:1.25em;cursor:pointer;}
 .xfjrList img{width:100%;height:215px;}
 .xfjrList p{color:#000;text-align:center;line-height:40px;}
 .xfjrList div:hover {border:1px solid #ff9900;}
@@ -250,12 +245,22 @@ p{color:#666666;font-size:16px;}
 .xfjr{background:#fff;height:auto;}
 .xfjr h1{margin-top:0;line-height:60px;}
 .xfjr p{font-size:14px;line-height:25px;}
+.img3{width:33%}
 .xfjr .message{background:url(../img/xian.png) no-repeat center;height:200px;margin-top:-20px;}
 .xfjr .message p{width:300px;text-align:right;color:#5a5a5a;font-size:14px;position:relative;}
 .xfjr .message p font{display:block;width:100%;color:#1c57a8;border-top:none;font-size:16px;font-weight:bold;}
+#ms1,#ms5{top:20px;}
+#ms2{left:30px;top:90px;}
+#ms3{left:670px;top:-210px;text-align:left;}
+#ms4{left:770px;top:-150px;text-align:left;}
+#ms6{left:30px;top:60px;}
+#ms7{left:670px;top:-350px;text-align:left;}
+#ms8{left:770px;top:-320px;text-align:left;}
+.img2{width:48%;margin-top:20px;height:22em;border:1px solid #ddd;margin-right:1.5%;}
+
 .back{width:150px;height:45px;text-align:center;line-height:45px;background:#1c4587;border:none;color:#fff;margin-left:10%;margin-top:-20px;margin-bottom:30px;cursor:pointer;}
 .jrgls{width:16%;display:inline-block;border:1px solid #ddd;cursor:pointer;margin-top:20px;margin-bottom:20px;height:108px;}
-.jrgls img{width:94%;margin:3%;}
+.jrgls img{width:94%;margin:3%;height:94%;}
 img.zz{width:35px;background:none;border:none;margin-left:38px;margin-top:7px;}
 
 #xyk .tip{font-weight:bold;padding:10px 0;width:13%;display:inline-block;text-align:center;font-size:15px;line-height:25px;border-right:1px dashed #bfbfbf;border-left:5px solid #264b99}
@@ -265,11 +270,11 @@ img.zz{width:35px;background:none;border:none;margin-left:38px;margin-top:7px;}
 /*弹出框*/
 .dialog{width:100%;height:100%;position:fixed;top:0;z-index:1000000;display:none;}
 .dialog .background{position:absolute;width:100%;height:100%;background:rgba(0, 0, 0, 0.5)!important;filter:Alpha(opacity=50); background:#000;}
-.dialog .dialog-box{position:relative;width:730px;background:#ffffff;border:1px solid #e5e5e5;border-radius:10px;margin:0 auto;margin-top:50px;}
+.dialog .dialog-box{position:relative;width:45em;background:#ffffff;border:1px solid #e5e5e5;border-radius:10px;margin:0 auto;margin-top:7%;}
 
 .dialog-box p{text-align:right;background:#fff;text-align:right;margin:0 auto;border-radius:10px 10px 0 0;}
 .dialog-box .close{display:inline;border:0;margin:0;width:37px;cursor:pointer;border-radius:10px;}
-.dialog-box img{display:block;width:700px;margin:0 auto;border:15px solid #fff;border-top:0;border-radius:0 0 10px 10px;}
+.dialog-box img{display:block;width:90%;margin:0 auto;border:15px solid #fff;border-top:0;border-radius:0 0 10px 10px;}
 /*乾康家族*/
 .span33{width:25%;float:left;display:inline-block;text-align:center;cursor:pointer;background:#eef2f5;margin-left:0;}
 .span33 h1{line-height:20px;color:#264b99;padding:20px 0;}
@@ -299,3 +304,162 @@ img.zz{width:35px;background:none;border:none;margin-left:38px;margin-top:7px;}
 #gsxm{width:80%;margin-left:10%;}
 #gsxm div{width:21%;}
 #gsxm div img{height:160px;}
+
+#qkkh span{margin-left:43%;}
+#qkkh font{width:42%;line-height:1.7em;}
+.ywzxyy .imgright{float:right;margin-left:1.25em;}
+.ywzxyy .imgleft{float:left;margin-right:1.25em;}
+.ywzxyy p{font-size:16px;line-height:30px;}
+#zxjj{height:285px;}
+.yjzxcl{height:350px;}
+#sxpt{height:298px;}
+#qkjr{height:300px;}
+#qkxx{height:280px;}
+@media all and (min-width: 800px) and (max-width: 1300px){
+	.main{width:100%;}
+	.logo{width:100%;}
+ }
+@media all and (min-width: 600px) and (max-width: 800px){
+	*{font-size:0.9em;}
+	p{font-size:1em;}
+	.main{width:100%;}
+	.back{margin-left:5%;margin-top:0;}
+	.logo{width:100%;height:4.375em;}	
+	.logo img{height:3em;margin-top:0.6em;margin-left:0.5em;}
+	.newnav{list-style:none;z-index:10000;position:absolute;right:0;}
+	.newnav li{width:7em;height:4.375em;}
+	.newnav li a{width:100%;line-height:4.375em;font-size:0.9em;}
+	.newnav .active a{line-height:4.375em;font-size:0.9em;}
+	/* flash */
+	#outerslider{margin-top:4.375em;}
+	#slidercontainer{height:247px;}
+	.box_skitter_large {width:100%;height:247px;}
+	
+	/*标题*/
+	.title{line-height:6.25em;font-size:1.2em;margin-top:1.5em;margin-bottom:1.5em;}
+	.title h1{font-size:1.6em;margin-right:0.7em;}
+	.title h2{width:5em;font-size:1.6em;margin-left:-1.5em;}
+	.title h3{font-size:1em;margin-left:-1.5em;}
+	/*乾康领域*/
+	.qkly{width:100%;margin-top:-1px;}
+	.qkly .span4 img{margin:0 auto;display:block;width:40%;margin-top:2em;}
+	.qkly .span4 h1{display:block;position:relative;top:0;font-size:1em;line-height:2em;}
+	.qkly .span4 h1 span{display:block;font-size:0.7em;line-height:1em;margin-bottom:2em;}
+	#qkly .span4{width:33.33%}
+	#qkly .span4 img{width:25%;margin-top:1em;display:inline-block;float:left;margin-left:1%;}
+	#qkly .span4 h1{top:10px;font-size:1em;line-height:2em;}
+	/*乾康集团*/
+	.qkjt h1{line-height:5.5em;font-size:1.5em;}
+	.qkjt h1 img{margin:1.5em;width:25%;}
+	.qkjt h2{margin-top:-3em;}
+	.qkjt p{margin-top:1.2em;margin-bottom:2em;}
+	.qkjt .button{padding:0.8em 5em;border-radius:5em;}
+	/*乾康口号*/
+	.qkkh{margin-top:3em;text-align:center;padding-bottom:1em;}
+	.qkkh h1{font-size:1.5em;line-height:2.5em;margin-top:1.5em;}
+	.qkkh h2{font-size:1em;line-height:1.5em;margin-bottom:1.5em;}
+	.qkkh .span6{width:30%;margin:0 0.5%;margin-bottom:1em;}
+	.qkkh .span6 img{width:30%;margin-top:1.5em;}
+	.qkkh .span6 h1{font-size:1.5em;}
+	.qkkh .span6 h2{margin-bottom:1em;}
+	/*乾康家族*/
+	.zgs{margin-top:-4em;}
+	.zgs img{height:12.5em;}
+	.zgs span{height:11em;padding-top:1.5em;}
+	.zgs h2{line-height:4em;font-size:1.2em;margin-top:-0.625em;}
+	.zgs a{padding:0.625em 2.5em;border-radius:2.5em;}
+	.gsjj{width:60%;}
+	#xxjs{top:-3.7em;}
+	
+	#gsxm{width:90%;margin-left:5%;}
+	#gsxm div{width:27%;}
+	#gsxm div img{height:9em;}
+	/*成功故事*/	
+	.cggs{margin-top:0;}
+	.cggs h2{margin-bottom:1em;}
+	.cggs p{font-size:0.875em;margin-bottom:1.5em;}
+	.cggs .prev{width:3em;height:10em;}
+	.cggs .next{width:3em;height:10em;}
+	
+	
+	/*乾康伙伴*/
+	.qkhb{margin-bottom:2em;width:100%;margin-left:0;}
+	.parner{display:inline-block;}
+	.parner p{font-weight:bold;color:#666;margin-top:-0.8em;}
+	.parner span{display:inline-block;color:#666;font-size:0.875em;margin-top:2em;line-height:1.5em;}
+	.parner font{color:#aeaeae;line-height:2em;color:#ff9900;}
+	.lcLeft,.lcLeft img{width:8.875em;}
+	.lcCenter,.lcCenter img{width:10.625em;}
+	.lcRight,.lcRight img{width:9em;}
+	.lcL,.lcC,.lcR{width:10em; }
+	/*底部*/
+	.foot p{font-size:0.875em;}
+	.foot .xx{margin-bottom:1.5em;padding-bottom:1em;}
+	.foot img{width:8em;height:8em;margin-top:-10em;}
+	.foot .xx font{margin-bottom:0.5em;padding-right:0.8em;margin-top:-1.5em;}
+	.foot span{font-size:0.875em;line-height:1.5em;}
+	/*关于乾康*/
+	.AboutUs{width:90%;margin-left:5%;background-size:70% 89%;height:auto;margin-bottom:2em;padding-bottom:3em;}
+	.AboutUs h1{font-size:1.5em;margin-top:0;line-height:1.8em;}
+	.AboutUs h2{font-size:2em;line-height:2em;}
+	.AboutUs span{width:7em;margin-right:0.5em;}
+	.AboutUs font{line-height:1.8em;}
+	/*企业文化*/
+	.qywh{height:20em;}
+	.qywh h1{margin-top:0;}
+	.qywh span{margin-left:38%;margin-right:1%;}
+	.qywh font{width:45%;}
+	font.zxcl{line-height:1.7em;}
+	#qywh{margin-left:41%;width:5em;}
+	/*消费金融*/
+	.xfjrList{margin:0 5%;margin-bottom:2em;width:90%;}
+	.xfjrList div{width:27.5%;padding:0.7em;margin:0 0.5em;margin-bottom:1.5em;}
+	.xfjrList img{height:8.5em;}
+	.xfjrList p{line-height:2.5em;}
+	
+	.xfjr{background:#fff;height:auto;}
+	.xfjr h1{margin-top:3em;line-height:3.75em;}
+	.xfjr p{font-size:0.875em;line-height:1.5em;}
+	.img3{width:32%}
+	#jrjgzy  img{margin-top:6em}
+	#jrjgzy p{line-height:1.5em;}
+	
+	#xfjrywly{height:auto;}
+	.xfjr .message{background-size:40%;height:12.5em;margin-top:-1.5em;}
+	.xfjr .message p{width:14em;font-size:0.875em;}
+	.xfjr .message p font{font-size:1em;}
+	
+	#ms1,#ms5{top:0em;left:-1em}
+	#ms2{left:2em;top:4em;}
+	#ms3{left:28em;top:-17em;}
+	#ms4{left:30em;top:-14em;}	
+	#ms6{left:1.875em;top:0;}
+	#ms7{left:30em;top:-32em;}
+	#ms8{left:30em;top:-30em;}	
+	.img2{margin-top:1.5em;height:15em;margin-right:1%;}
+	#ywly3,#ywly4{position:relative;top:-2em;}
+	#yjzxjj{margin-top:1em;}
+	
+	
+	/*互联网消费金融管理师*/	
+	#img1,#img2{width:45%;height:15em;}
+	#img3{width:45%;height:18em;}
+	#img4,#img5,#img6,#img7{width:45%;height:18em;margin-top:3em}
+	#zp4 .AboutUs h1{margin-top:0em;}
+	#dh12 p{line-height:1.2em;}
+	#qkkh span{margin-left:40%;width:6em;margin-right:1%;}
+	#qkkh font{width:45%;line-height:1.5em;}
+	.jrgls {height:5em}
+	img.zz{display:none;}
+	.ywzxyy h1{margin-top:0;}
+	.ywzxyy p{font-size:1.2em;line-height:1.8em;}
+	.ywzxyy img{width:22em}
+	.ywzxyy .img3{width:32%;}
+	#zxjj,.yjzxcl,#sxpt,#qkjr,#qkxx{height:auto;}
+	/*成功故事*/
+	.Success .leaf{width:100%;margin-left:0;}
+	.Success .leaf img{width:5em;border-radius:5em;margin-right:0.5em;}
+	.tree{margin-top:-2em;margin-left:2%;width:100%;}
+	.Success .xx{display:none;}
+	#dh33 font{line-height:1.4em;}
+ }
