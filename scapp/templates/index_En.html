@@ -11,11 +11,8 @@
 	<link href="../static/css/main.css" rel="stylesheet">
 	 <link rel="stylesheet" type="text/css" href="../static/css/skitter.styles.css" media="all" />
 	<style type="text/css">
-		#outerslider{position:relative;top:-1px;}
-		#slidercontainer{position:relative; height:413px;}
-		.box_skitter_large {width:100%; height:413px;}
-		.box_skitter_large .label_skitter{bottom:0px;left:0px ; padding:0; background:url(../static/img/opacity-slider-text.png) repeat;font-size:12px;padding:10px 30px;color:#fff;font-family:Arial, Helvetica, sans-serif;}
-		
+		#scrollobj{width:90%;white-space:nowrap;overflow:hidden;} 
+		#scrollobj img{width:15%;margin-right:1%;}
 		.qkly{width:100%;margin-top:-1px;}
 		.qkly .span4{width:33.3%;}
 	</style>
@@ -30,13 +27,13 @@
 	<div class="main">
 	<!--**************************************************top***********************************************-->
 		<div class="logo" style="position:fixed;z-index:10000;">	
-			<a href="index_EN.html"><img src="../static/img/logo.png"/></a>
+			<a href="/index_EN"><img src="../static/img/logo.png"/></a>
 			<ul class="newnav" style="margin-left:20px;z-index:10000;">
-				<li><a href="qkly/qkly_EN.html">Areas</a></li>	
-				<li><a href="qkhb/qkhb_EN.html">Partner</a></li>	
-				<li><a href="qkjz/qkjz_EN.html">Family</a></li>	
-				<li><a href="jrqk/jrqk_EN.html">Join Us</a></li>				
-				<li><a href="gyqk/gyqk_EN.html">About Us</a></li>	
+				<li><a href="/qkly_EN">Areas</a></li>	
+				<li><a href="/qkhb_EN">Partner</a></li>	
+				<li><a href="/qkjz_EN">Family</a></li>	
+				<li><a href="/jrqk_EN">Join Us</a></li>				
+				<li><a href="/gyqk_EN">About Us</a></li>	
 			</ul>
 		</div>
 		
@@ -69,15 +66,15 @@
 		
 		<!--**************************************************content***********************************************-->
 		<div class="qkly">
-			<div class="span4" onmouseover="Hover(this,'../static/img/101')" onmouseout="Normal(this,'../static/img/101')"  onclick="window.location.href='qkly/qkly.html'">
+			<div class="span4" onmouseover="Hover(this,'../static/img/101')" onmouseout="Normal(this,'../static/img/101')"  onclick="window.location.href='/qkly_EN'">
 				<img src="../static/img/101.png"/>		
 				<h1>INTERNET CONSUMER<br/><span>FINANCE</span></h1>
 			</div>
-			<div class="span4" onmouseover="Hover(this,'../static/img/102')" onmouseout="Normal(this,'../static/img/102')"  onclick="window.location.href='qkly/qkly.html'">
+			<div class="span4" onmouseover="Hover(this,'../static/img/102')" onmouseout="Normal(this,'../static/img/102')"  onclick="window.location.href='/qkly_EN'">
 				<img src="../static/img/102.png"/>	
 				<h1>PERSONAL FINANCIAL <br/><span>SERVICES</span></h1>
 			</div>
-			<div class="span4" onmouseover="Hover(this,'../static/img/103')" onmouseout="Normal(this,'../static/img/103')"  onclick="window.location.href='qkly/qkly.html'">
+			<div class="span4" onmouseover="Hover(this,'../static/img/103')" onmouseout="Normal(this,'../static/img/103')"  onclick="window.location.href='/qkly_EN'">
 				<img src="../static/img/103.png"/>			
 				<h1>REMOTE CREDIT<br/><span>EVALUATION</span></h1>
 			</div>
@@ -86,7 +83,7 @@
 			<h1><img src="../static/img/title1.png"/>CARDPAY<img src="../static/img/title2.png"/></h1>
 			<h2>ABOUT US</h2>
 			<p>CardPay Financial Group is a focus on the financial sector as well as professional management consulting services operator implementation. Group's main business is to provide personal financial services consulting and operations of banks and other financial institutions, banking and financial help to achieve the construction of the Internet platform to create business models OTO financial services platform.</p>
-			<a href="gyqk/gyqk.html" class="button">MORE</a>
+			<a href="/gyqk_EN" class="button">MORE</a>
 		</div>
 		<div class="qkkh" id="qkkh" style="filter:alpha(opacity=0);opacity:0;">
 			<h1>GOOD SERVICE</h1>
@@ -99,7 +96,7 @@
 			<div class="span6">
 				<img src="../static/img/gx.png"/>	
 				<h1>Efficient</h1>
-				<h2>Experienced, fast and efficient</h2>
+				<h2>Experienced, fast and<br/>efficient</h2>
 			</div>
 			<div class="span6">			
 				<img src="../static/img/jyy.png"/>		
@@ -128,16 +125,16 @@
 			<div class="zgs">
 				<img src="../static/img/sc10.jpg"/>
 				<span>
-					<img src="../static/img/LOGO1.png" style="width:100px;height:60px;"/><h2>CardPay Finance Consulting Co.,Ltd.</h2>
-				<a href="qkjz/qkjz.html">MORE</a></span>
-			</div><div class="zgs" style="position:relative;top:-57px;">
-				<span><img src="../static/img/LOGO2.png" style="width:60px;height:60px;"/><h2>CardPay Info Tech Co.,Ltd.</h2>
-				<a href="qkjz/qkjz.html">MORE</a></span>
+					<img src="../static/img/LOGO1.png" style="width:6.25em;height:3.75em;"/><h2>CardPay Finance</h2>
+				<a href="/qkjz_EN">MORE</a></span>
+			</div><div class="zgs" id="xxjs">
+				<span><img src="../static/img/LOGO2.png" style="width:3.75em;height:3.75em;"/><h2>CardPay Info Tech</h2>
+				<a href="/qkjz_EN">MORE</a></span>
 				<img src="../static/img/sc20.jpg"/>
 			</div><div class="zgs">
 				<img src="../static/img/sc21.png"/>
-				<span><img src="../static/img/LOGO3.png" style="width:60px;height:60px;"/><h2 style="line-height:30px;padding:5px 0">QianKangJinFu(Beijing) Information Technology Co.,Ltd</h2>
-				<a href="qkjz/qkjz.html">MORE</a></span>
+				<span><img src="../static/img/LOGO3.png" style="width:3.75em;height:3.75em;"/><h2>QianKangJinFu(Beijing)</h2>
+				<a href="/qkjz_EN">MORE</a></span>
 			</div>
 		</div>
 		<div class="qkkh cggs" id="cggs" style="filter:alpha(opacity=0);opacity:0;">
@@ -145,9 +142,9 @@
 			<h2>SUCCESS STORIES</h2>
 			<p>Dry Kang consultants are from domestic banks, Fortune 500 company executives, with finance industry experience, financial consulting experience in management, finance MBA or PhD in higher education background, all with international elite educational background as well as international financial institutions or work experience advisory bodies, and some well-known banks have had close cooperation.</p>
 			
-			<span class="prev" onclick="$('.cgimg').animate({marginLeft:'60px'},'slow')"></span>
-			<span class="next" onclick="$('.cgimg').animate({marginLeft:'-573px'},'slow')"></span>	
-			<div class="cgimg"> 					
+			<!--<span class="prev" onclick="$('.cgimg').animate({marginLeft:'60px'},'slow')"></span>
+			<span class="next" onclick="$('.cgimg').animate({marginLeft:'-573px'},'slow')"></span>	-->
+			<div id="scrollobj"> 					
 				<img src="../static/img/jnnsh.png" id="1"/>
 				<img src="../static/img/tynsh.png" id="2"/>
 				<img src="../static/img/hxyh.jpg" id="3"/>
@@ -182,7 +179,7 @@
 				<span>Reached a strategic cooperation agreement with PTC<br/>
 				<font>2013</font></span>
 			</div><div class="parner lcC">
-				<span>China has become the only company that agricultural businesses Union observers<br/>
+				<span>China has become<br/> the only company <br/>that agricultural...<br/>
 				<font>2013</font></span>
 			</div><div class="parner lcC">
 				<span>MasterCard <br/>(Asia-Pacific)<br/> Strategic Partner<br/>
@@ -191,7 +188,7 @@
 				<span>Signed a agreement with China Rural Commercial Alliance<br/>
 				<font>2015</font></span>
 			</div><div class="parner lcR">
-				<span>Signed a strategic cooperation agreement with Xinhua Financial Holding<br/>
+				<span>Agreement with <br/>Xinhua Financial <br/>Holding<br/>
 				<font>2015</font></span>
 			</div>
 		</div>
@@ -200,8 +197,8 @@
 		<div class="lanage" onclick="setLanage(this)">						
 			<img src="../static/img/yy.png" id="yySmall" onmouseover="showYY()"/>	
 			<ul id="yyBig" onmouseleave="hideYY()">
-				<li><a href="index.html"><img src="../static/img/Ch.png"/>中文</a></li>
-				<li><a href="index_EN.html"><img src="../static/img/En.png"/>ENGLISH</a></li>
+				<li><a href="/index"><img src="../static/img/Ch.png"/>中文</a></li>
+				<li><a href="/index_EN"><img src="../static/img/En.png"/>ENGLISH</a></li>
 			</ul>
 		</div>
 		<div class="back-to-top">
@@ -214,13 +211,13 @@
 				<p>Pone： 021-54485390 </p>
 				<p>Fax： 021-54485391</p>
 				<p>E-mail：liuxj@qkjr.com.cn</p>
-				<ul>
+				<!--<ul>
 					<li>Related Links:</li>
 					<li><a href="">Personal Finance</a></li>
 					<li><a href="">Consumer Finance</a></li>
 					<li><a href="">Supply Chain Finance</a></li>
 					<li><a href="">Funds Management</a></li>
-				</ul>
+				</ul>-->
 				<img src="../static/img/2wm.png" />
 				<font>— WeChat —</font>
 			</div><br/>
@@ -251,6 +248,50 @@
 					$("#qkhb").animate({opacity:"1"},"slow");
 				}
 			});
+			if($(window).width()<"1000"&&$(window).width()>"600"){
+				$(".box_skitter").html("<ul>"+
+											"<li>"+
+												"<img src='../static/img/banner11_EN.jpg'/>"+                        
+											"</li>"+
+											"<li>"+
+												"<img src='../static/img/banner12_EN.jpg' /> "+                           
+											"</li>"+
+											"<li>"+
+												"<img src='../static/img/banner13_EN.jpg'/>"+
+											"</li>"+
+											"<li>"+
+												"<img src='../static/img/hzhb11_EN.jpg'/>"+
+											"</li>"+
+											"<li>"+
+												"<img src='../static/img/page14_EN.jpg'/>"+
+											"</li>"+
+										"</ul>");
+			}
+			else{
+				$("#slidercontainer").css("height","416px")
+				$(".box_skitter_large").css("height","416px")
+			}
+			setInterval(function(){
+				var obj=document.getElementById('scrollobj')
+				var text="<img src='../static/img/jnnsh.png'/> "+
+							"<img src='../static/img/tynsh.png'/> "+
+							"<img src='../static/img/hxyh.jpg'/> "+
+							"<img src='../static/img/jnyh.jpg'/> "+
+							"<img src='../static/img/csnsh.jpg'/> "+	
+							"<img src='../static/img/wxnsh.jpg'/> "+	
+							"<img src='../static/img/xhyh.jpg'/> "+
+							"<img src='../static/img/jynsh.jpg'/> "+
+							"<img src='../static/img/jr.jpg'/> "+
+							"<img src='../static/img/jy.jpg'/> "+
+							"<img src='../static/img/xmnsh.png'/> "				
+				//obj.innerHTML += text;
+				obj.scrollLeft++; 
+				//当滚动条到达右边顶端时 
+				if (obj.scrollWidth-obj.scrollLeft <=1200) { 
+					obj.innerHTML += text; 
+				} 
+				
+			},20); 
 		});
 		
 	</script>
