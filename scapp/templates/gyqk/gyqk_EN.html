@@ -59,7 +59,7 @@
 	<div class="title">
 		<h1>CardPay</h1><h2>A</h2><h3>bout us</h3>
 	</div>
-	<div class="AboutUs" id="dh1" style="position:relative;left:-100%;">
+	<div class="AboutUs dh" id="dh1" style="position:relative;left:-100%;">
 		<h1>Company Profile</h1>
 		<h2>CardPay Financial Group</h2>
 		<span></span>
@@ -67,7 +67,7 @@
 			Dry kang financial group, focus on the financial sector, is a professional management consulting and operational implementation services. Main business of the group is for Banks and other financial institutions to provide personal financial business consulting and operation, help to realize bank Internet financial platform construction, build financial OTO business mode service platform.
 		</font>
 	</div>
-	<div class="AboutUs qywh" id="dh2" style="position:relative;right:-100%;">
+	<div class="AboutUs qywh dh" id="dh2" style="position:relative;right:-100%;">
 		<h1>CardPay</h1>
 		<h2>Company culture</h2>
 		<span id="qywh"></span>
@@ -76,7 +76,7 @@
 			<br/><br/><br/>
 		</font>
 	</div>
-	<div id="cggs" style="width:100%;filter:alpha(opacity=0);opacity:0;">
+	<div id="cggs" class="dh" style="width:100%;filter:alpha(opacity=0);opacity:0;">
 		<div class="title">
 			<h1>Success</h1><h2>S</h2><h3>tories</h3>
 		</div>
@@ -117,7 +117,6 @@
 	</div>
 <!--**************************************************foot***********************************************-->
 	<div class="foot">
-		<br/>
 		<span>Copyright(C)2011-2014 CardPay(Shanghai) Finance Consulting Co.,Ltd.</span><br/>
 		<span>Shanghai ICP for 13043724</span>
 	</div>
@@ -130,16 +129,43 @@
 	<script type="text/javascript" src="../../static/js/jquery.skitter.js"></script>
 	<script type="text/javascript">
 		$(document).ready(function(){    
-			$("#dh1").animate({left:"0"},"slow");
-			$(window).scroll(function(){
-				var srollPos = $(window).scrollTop();    //滚动条距顶部距离(页面超出窗口的高度)				
-				if(srollPos>"500"){
-					$("#dh2").animate({right:"0"},"slow");
-				}
-				if(srollPos>"900"){
-					$("#cggs").animate({opacity:"1"},"1000");
-				}
-			});
+			$("#dh1").animate({left:"0"},"slow");			
+			if($(window).width()<"800"){
+				$(".box_skitter").html("<ul>"+
+											"<li>"+
+												"<img src='../../static/img/banner11.jpg'/>"+                        
+											"</li>"+
+											"<li>"+
+												"<img src='../../static/img/banner12.jpg' /> "+                           
+											"</li>"+
+											"<li>"+
+												"<img src='../../static/img/banner13.jpg'/>"+
+											"</li>"+
+											"<li>"+
+												"<img src='../../static/img/hzhb11.jpg'/>"+
+											"</li>"+
+											"<li>"+
+												"<img src='../../static/img/page14.jpg'/>"+
+											"</li>"+
+										"</ul>");
+										
+				$(".dh").css("opacity","1");
+				$(".dh").css("filter","alpha(opacity=100)");
+				
+				$(".dh").css("left","0");
+				$(".dh").css("right","0");
+			}
+			else{
+				$(window).scroll(function(){
+					var srollPos = $(window).scrollTop();    //滚动条距顶部距离(页面超出窗口的高度)				
+					if(srollPos>"500"){
+						$("#dh2").animate({right:"0"},"slow");
+					}
+					if(srollPos>"900"){
+						$("#cggs").animate({opacity:"1"},"1000");
+					}
+				});
+			}
 			//树动画
 			var i=1
 			setInterval(function(){				

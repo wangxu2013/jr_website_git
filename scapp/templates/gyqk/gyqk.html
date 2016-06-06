@@ -59,7 +59,7 @@
 	<div class="title">
 		<h1>关于乾康</h1><h2>A</h2><h3>bout us</h3>
 	</div>
-	<div class="AboutUs" id="dh1" style="position:relative;left:-100%;">
+	<div class="AboutUs dh" id="dh1" style="position:relative;left:-100%;">
 		<h1>Company Profile</h1>
 		<h2>乾康金融集团</h2>
 		<span></span>
@@ -68,7 +68,7 @@
 			乾康公司高层智囊云集，创始人及决策层领导集多年金融管理咨询经验、前瞻性的理念、大数据云计算的技术于一体，披荆斩棘的为行业开拓领航，打造了一支国际化和本土化相结合的咨询团队。
 		</font>
 	</div>
-	<div class="AboutUs qywh" id="dh2" style="position:relative;right:-100%;">
+	<div class="AboutUs qywh dh" id="dh2" style="position:relative;right:-100%;">
 		<h1>企业文化</h1>
 		<h2>CardPay Company culture</h2>
 		<span id="qywh"></span>
@@ -77,7 +77,7 @@
 			乾康态度：专业、高效、敬业、合作、诚信、激情<br/>
 		</font>
 	</div>
-	<div id="cggs" style="width:100%;filter:alpha(opacity=0);opacity:0;">
+	<div id="cggs" class="dh" style="width:100%;filter:alpha(opacity=0);opacity:0;">
 		<div class="title">
 			<h1>成功故事</h1><h2>S</h2><h3>uccess stories</h3>
 		</div>
@@ -118,7 +118,6 @@
 	</div>
 <!--**************************************************foot***********************************************-->
 	<div class="foot">
-		<br/>
 		<span>Copyright(C)2011-2014 乾康（上海）金融信息服务股份有限公司</span><br/>
 		<span>沪ICP备13043724号</span>
 	</div>
@@ -132,16 +131,7 @@
 	<script type="text/javascript">
 		$(document).ready(function(){  
 			$("#dh1").animate({left:"0"},"slow");
-			$(window).scroll(function(){
-				var srollPos = $(window).scrollTop();    //滚动条距顶部距离(页面超出窗口的高度)				
-				if(srollPos>"300"){
-					$("#dh2").animate({right:"0"},"slow");
-				}
-				if(srollPos>"600"){
-					$("#cggs").animate({opacity:"1"},"1000");
-				}
-				
-			});
+			
 			//树动画
 			var i=1
 			setInterval(function(){
@@ -154,7 +144,7 @@
 				else
 					i=1
 			},1000); 
-			if($(window).width()<"1000"&&$(window).width()>"600"){
+			if($(window).width()<"800"){
 				$(".box_skitter").html("<ul>"+
 											"<li>"+
 												"<img src='../../static/img/banner11.jpg'/>"+                        
@@ -172,6 +162,24 @@
 												"<img src='../../static/img/page14.jpg'/>"+
 											"</li>"+
 										"</ul>");
+										
+				$(".dh").css("opacity","1");
+				$(".dh").css("filter","alpha(opacity=100)");
+				
+				$(".dh").css("left","0");
+				$(".dh").css("right","0");
+			}
+			else{
+				$(window).scroll(function(){
+					var srollPos = $(window).scrollTop();    //滚动条距顶部距离(页面超出窗口的高度)				
+					if(srollPos>"300"){
+						$("#dh2").animate({right:"0"},"slow");
+					}
+					if(srollPos>"600"){
+						$("#cggs").animate({opacity:"1"},"1000");
+					}
+					
+				});
 			}
 		});
 		

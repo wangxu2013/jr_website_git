@@ -85,7 +85,7 @@
 			<p>CardPay Financial Group is a focus on the financial sector as well as professional management consulting services operator implementation. Group's main business is to provide personal financial services consulting and operations of banks and other financial institutions, banking and financial help to achieve the construction of the Internet platform to create business models OTO financial services platform.</p>
 			<a href="/gyqk_EN" class="button">MORE</a>
 		</div>
-		<div class="qkkh" id="qkkh" style="filter:alpha(opacity=0);opacity:0;">
+		<div class="qkkh dh" id="qkkh" style="filter:alpha(opacity=0);opacity:0;">
 			<h1>GOOD SERVICE</h1>
 			<h2>POWERFUL</h2>
 			<div class="span6">			
@@ -111,17 +111,17 @@
 			<div class="span6">			
 				<img src="../static/img/cx.png"/>		
 				<h1>Integrity</h1>
-				<h2>Honest and trustworthy, safe and reliable</h2>
+				<h2>Honest and trustworthy safe and reliable</h2>
 			</div>
 			<div class="span6" style="margin-right:0;">				
 				<img src="../static/img/jq.png"/>	
 				<h1>Enthusiasm</h1>
-				<h2>Full of enthusiasm, and positive</h2>
+				<h2>Full of enthusiasm, <br/>and positive</h2>
 			</div>
 		</div>
-		<div class="qkjt qkjz" id="qkjz" style="filter:alpha(opacity=0);opacity:0;">	
+		<div class="qkjt qkjz dh" id="qkjz" style="filter:alpha(opacity=0);opacity:0;">	
 			<h1><img src="../static/img/title1.png"/>FAMILY<img src="../static/img/title2.png"/></h1>
-			<h2 style="color: #9abefc;margin-top:-85px;">SUBSIDIARY</h2>
+			<h2 style="color: #9abefc;">SUBSIDIARY</h2>
 			<div class="zgs">
 				<img src="../static/img/sc10.jpg"/>
 				<span>
@@ -137,7 +137,7 @@
 				<a href="/qkjz_EN">MORE</a></span>
 			</div>
 		</div>
-		<div class="qkkh cggs" id="cggs" style="filter:alpha(opacity=0);opacity:0;">
+		<div class="qkkh cggs dh" id="cggs" style="filter:alpha(opacity=0);opacity:0;">
 			<h1>SUCCESS CASE</h1>
 			<h2>SUCCESS STORIES</h2>
 			<p>Dry Kang consultants are from domestic banks, Fortune 500 company executives, with finance industry experience, financial consulting experience in management, finance MBA or PhD in higher education background, all with international elite educational background as well as international financial institutions or work experience advisory bodies, and some well-known banks have had close cooperation.</p>
@@ -159,7 +159,7 @@
 			</div>				
 		</div>
 		
-		<div class="qkjt qkhb" id="qkhb" style="width:100%;margin-left:0;filter:alpha(opacity=0);opacity:0;">	
+		<div class="qkjt qkhb dh" id="qkhb" style="width:100%;margin-left:0;filter:alpha(opacity=0);opacity:0;">	
 			<h1><img src="../static/img/title1.png"/>PANTNER<img src="../static/img/title2.png"/></h1>
 			<h2>COOPERATION</h2>
 			<div class="parner lcLeft">
@@ -167,7 +167,7 @@
 				<p>PTC&nbsp;&nbsp;&nbsp;&nbsp;</p>
 			</div><div class="parner lcCenter">
 				<img src="../static/img/hzhb3.png" onclick="window.open('http://www.rcbda.cn/')"/>
-				<p>Rural Commercial</p>
+				<p>Agricultural</p>
 			</div><div class="parner lcCenter">
 				<img src="../static/img/hzhb2.png" onclick="window.open('http://www.mastercard.com.cn')"/>
 				<p>MasterCard</p>
@@ -176,19 +176,19 @@
 				<p>&nbsp;&nbsp;&nbsp;&nbsp;XINHUA</p>
 			</div><br/>	
 			<div class="parner lcL">
-				<span>Reached a strategic cooperation agreement with PTC<br/>
+				<span>Cooperation Agreement with <br/>PTC<br/>
 				<font>2013</font></span>
 			</div><div class="parner lcC">
-				<span>China has become<br/> the only company <br/>that agricultural...<br/>
+				<span>Agricultural firms only league observers<br/>
 				<font>2013</font></span>
 			</div><div class="parner lcC">
-				<span>MasterCard <br/>(Asia-Pacific)<br/> Strategic Partner<br/>
+				<span>MasterCard (Asia-Pacific) Strategic Partner<br/>
 				<font>2014</font></span>
 			</div><div class="parner lcC">
-				<span>Signed a agreement with China Rural Commercial Alliance<br/>
+				<span>Signed an agreement with Agricultural<br/>
 				<font>2015</font></span>
 			</div><div class="parner lcR">
-				<span>Agreement with <br/>Xinhua Financial <br/>Holding<br/>
+				<span>Agreement with Xinhua Financial Holding<br/>
 				<font>2015</font></span>
 			</div>
 		</div>
@@ -206,7 +206,7 @@
 		</div>
 		<div class="foot">
 			<div class="xx">
-				<p style="line-height:40px;font-size:15px;">CardPay(Shanghai) Finance Consulting Co.,Ltd.</p>				
+				<p style="line-height:2em;font-size:1.8em;">CardPay(Shanghai) Finance Consulting Co.,Ltd.</p>				
 				<p>Address：Room 801,Building 3,No.7,Guiqing Road,Xuhui District,Shanghai </p>		
 				<p>Pone： 021-54485390 </p>
 				<p>Fax： 021-54485391</p>
@@ -248,7 +248,7 @@
 					$("#qkhb").animate({opacity:"1"},"slow");
 				}
 			});
-			if($(window).width()<"1000"&&$(window).width()>"600"){
+			if($(window).width()<"800"){
 				$(".box_skitter").html("<ul>"+
 											"<li>"+
 												"<img src='../static/img/banner11_EN.jpg'/>"+                        
@@ -266,6 +266,8 @@
 												"<img src='../static/img/page14_EN.jpg'/>"+
 											"</li>"+
 										"</ul>");
+				$(".dh").css("opacity","1");
+				$(".dh").css("filter","alpha(opacity=100)");
 			}
 			else{
 				$("#slidercontainer").css("height","416px")

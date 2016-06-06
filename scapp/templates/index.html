@@ -89,7 +89,7 @@
 			<p>乾康金融集团是一家专注于金融领域专业管理咨询以及运营实施的服务机构。 集团主营业务是为银行等金融机构提供个人金融业务咨询及运营，助力实现银行互联网银行平台建设，打造金融 OTO 商业模式服务平台。</p>
 			<a href="/gyqk" class="button">查看详情</a>
 		</div>
-		<div class="qkkh" id="qkkh" style="filter:alpha(opacity=0);opacity:0;">
+		<div class="qkkh dh" id="qkkh" style="filter:alpha(opacity=0);opacity:0;">
 			<h1>雄厚实力 服务周到</h1>
 			<h2>POWERFUL GOOD SERVICE</h2>
 			
@@ -124,24 +124,26 @@
 				<h2>热情饱满，积极向上</h2>
 			</div>
 		</div>
-		<div class="qkjz qkjt" id="qkjz" style="filter:alpha(opacity=0);opacity:0;">			
+		<div class="qkjz qkjt dh" id="qkjz" style="filter:alpha(opacity=0);opacity:0;">			
 			<h1><img src="../static/img/title1.png"/>乾康家族<img src="../static/img/title2.png"/></h1>
-			<h2 style="color: #9abefc;margin-top:-85px;">FAMILY</h2>
+			<h2 style="color: #9abefc;">FAMILY</h2>
 			<div class="zgs">
 				<img src="../static/img/sc10.jpg"/>
 				<span>				
 					<img src="../static/img/logo1.png"  style="width:6.25em;height:3.75em;"/>
-					<h2>乾康金融信息服务股份有限公司</h2>
+					<h2>乾康金融信息服务有限公司</h2>
 					<a href="/qkjz">了解更多</a>
 				</span>
-			</div><div class="zgs" id="xxjs">
+			</div>
+			<div class="zgs" id="xxjs">
 				<span>
 					<img src="../static/img/LOGO2.png" style="width:3.75em;height:3.75em;"/>
 					<h2>乾康信息技术有限公司</h2>
 					<a href="/qkjz">了解更多</a>
 				</span>
 				<img src="../static/img/sc20.jpg"/>
-			</div><div class="zgs">
+			</div>
+			<div class="zgs">
 				<img src="../static/img/sc21.png"/>
 				<span>
 					<img src="../static/img/LOGO3.png" style="width:3.75em;height:3.75em;"/>
@@ -150,7 +152,7 @@
 				</span>
 			</div>
 		</div>
-		<div class="qkkh cggs" id="cggs" style="filter:alpha(opacity=0);opacity:0;">
+		<div class="qkkh cggs dh" id="cggs" style="filter:alpha(opacity=0);opacity:0;">
 			<h1>成功故事</h1>
 			<h2>SUCCESS STORIES</h2>
 			<p>乾康公司咨询顾问均来自国内各银行、世界五百强企业高级管理人员，具备金融从业经历、金融管理咨询经验、金融专业MBA或博士以上教育背景，全部拥有国际名校教育背景以及国际金融机构或咨询机构的工作经历，与部分知名银行有过密切合作。</p>
@@ -221,7 +223,7 @@
 			</div>
 		</div>
 		-->
-		<div class="qkjt qkhb" id="qkhb" style="width:100%;margin-left:0;filter:alpha(opacity=0);opacity:0;">		
+		<div class="qkjt qkhb dh" id="qkhb" style="width:100%;margin-left:0;filter:alpha(opacity=0);opacity:0;">		
 			<h1><img src="../static/img/title1.png"/>乾康伙伴<img src="../static/img/title2.png"/></h1>
 			<h2>PANTNER</h2>
 			<div class="parner lcLeft">
@@ -268,7 +270,7 @@
 		</div>
 		<div class="foot">
 			<div class="xx">
-				<p style="line-height:3em;font-size:2em;">乾康（上海）金融信息服务股份有限公司</p>				
+				<p style="line-height:2em;font-size:1.8em;">乾康（上海）金融信息服务股份有限公司</p>				
 				<p>地址： 上海市徐汇区桂箐路7号3号楼801室</p>		
 				<p>电话： 021-54485390</p>
 				<p>传真： 021-54485391</p>
@@ -336,6 +338,9 @@
 												"<img src='../static/img/page14.jpg'/>"+
 											"</li>"+
 										"</ul>");
+											
+				$(".dh").css("opacity","1");
+				$(".dh").css("filter","alpha(opacity=100)");
 			}
 			else{
 				$("#slidercontainer").css("height","416px")
