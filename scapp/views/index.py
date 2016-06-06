@@ -12,7 +12,7 @@ def index():
 # 首页
 @app.route('/index_EN')
 def index_EN():
-    return render_template("index_EN.html")
+    return render_template("index_En.html")
 
 # 乾康领域
 @app.route('/qkly')
