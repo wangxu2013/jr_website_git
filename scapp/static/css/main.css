@@ -183,7 +183,7 @@ p{color:#666666;font-size:1em;}
 .parner font{color:#aeaeae;line-height:40px;color:#ff9900;}
 .lcLeft{background:url(../img/lcLeft.png) no-repeat;width:142px;background-size:100%}
 .lcCenter{background:url(../img/lcCenter.png) no-repeat;width:170px;background-size:100%}
-.lcRight{background:url(../img/lcRight.png) no-repeat;width:144px;background-size:100%}
+.lcRight{background:url(../img/lcRight.png) no-repeat;width:142px;background-size:100%}
 .lcL{background:url(../img/lcL.png) no-repeat;width:210px;background-size:100%}
 .lcC{background:url(../img/lcC.png) no-repeat;width:210px;background-size:100%}
 .lcR{background:url(../img/lcR.png) no-repeat;width:210px;background-size:100%}
@@ -390,7 +390,7 @@ img.zz{width:35px;background:none;border:none;margin-left:38px;margin-top:7px;}
 	.parner font{color:#aeaeae;line-height:2em;color:#ff9900;}
 	.lcLeft,.lcLeft img{width:7.55em;}
 	.lcCenter,.lcCenter img{width:9em;}
-	.lcRight,.lcRight img{width:7.62em;}
+	.lcRight,.lcRight img{width:7.55em;}
 	.lcL,.lcC,.lcR{width:20%; }
 	/*底部*/
 	.foot p{font-size:0.875em;}
