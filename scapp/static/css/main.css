@@ -1,5 +1,5 @@
 
-*{font-size:0.9em;font-family:微软雅黑;margin:0;padding:0;color:#666666}
+*{font-size:14px;font-family:微软雅黑;margin:0;padding:0;color:#666666}
 html{overflow-y:scroll;overflow-x:hidden;} 
 body{background:white;overflow-x:hidden;}
 a{text-decoration:none;color:#000000;}
@@ -156,7 +156,7 @@ p{color:#666666;font-size:1em;}
 .zgs{background:#eef2f5;width:33%;display:inline-block;float:left;margin-top:2em;margin-bottom:3em}
 .zgs img{width:100%;height:200px;margin:0;}
 .zgs span{display:inline-block;width:100%;height:180px;padding-top:20px;}
-.zgs h2{color:#294167;margin:0;line-height:70px;font-size:2em;font-weight:normal;margin-top:-10px;}
+.zgs h2{color:#294167;margin:0;line-height:70px;font-size:25px;font-weight:normal;margin-top:-10px;}
 .zgs a{padding:10px 40px;border:0;background:#ff9900;border-radius:20px;color:#fff;cursor:pointer;}
 .gsjj{display:inline-block;width:60%;}
 
