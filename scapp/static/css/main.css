@@ -304,7 +304,6 @@ img.zz{width:35px;background:none;border:none;margin-left:38px;margin-top:7px;}
 #gsxm div{width:21%;}
 #gsxm div img{height:160px;}
 
-#qkkh span{margin-left:43%;}
 #qkkh font{width:42%;line-height:1.7em;}
 .ywzxyy .imgright{float:right;margin-left:1.25em;}
 .ywzxyy .imgleft{float:left;margin-right:1.25em;}
@@ -391,8 +390,8 @@ img.zz{width:35px;background:none;border:none;margin-left:38px;margin-top:7px;}
 	.parner font{color:#aeaeae;line-height:2em;color:#ff9900;}
 	.lcLeft,.lcLeft img{width:7.55em;}
 	.lcCenter,.lcCenter img{width:9em;}
-	.lcRight,.lcRight img{width:7.55em;}
-	.lcL,.lcC,.lcR{width:8.5em; }
+	.lcRight,.lcRight img{width:7.62em;}
+	.lcL,.lcC,.lcR{width:20%; }
 	/*底部*/
 	.foot p{font-size:0.875em;}
 	.foot .xx{margin-bottom:1.5em;padding-bottom:1em;}
@@ -409,9 +408,8 @@ img.zz{width:35px;background:none;border:none;margin-left:38px;margin-top:7px;}
 	.qywh{height:20em;}
 	.qywh h1{margin-top:0;}
 	.qywh span{margin-left:38%;margin-right:1%;}
-	.qywh font{width:45%;}
+	.qywh font{width:45%;float:right;}
 	font.zxcl{line-height:1.7em;}
-	#qywh{margin-left:41%;width:5em;}
 	/*消费金融*/
 	.xfjrList{margin:0 5%;margin-bottom:5em;width:90%;}
 	.xfjrList div{width:26.5%;padding:0.7em;margin:0 0.5em;margin-bottom:1.5em;}
@@ -449,7 +447,6 @@ img.zz{width:35px;background:none;border:none;margin-left:38px;margin-top:7px;}
 	#img4,#img5,#img6,#img7,#img8{width:45%;margin-top:5em}
 	#zp4 .AboutUs h1{margin-top:0em;}
 	#dh12 p{line-height:1.2em;}
-	#qkkh span{margin-left:40%;margin-right:1%;}
 	#qkkh font{width:45%;line-height:1.5em;}
 	.jrgls {height:5em}
 	img.zz{display:none;}
