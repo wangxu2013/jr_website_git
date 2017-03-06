@@ -211,7 +211,7 @@ p{color:#666666;font-size:1em;}
 .title h3{display:inline-block;font-size:16px;font-weight:normal;margin-left:-20px;color:#000;position:relative;z-index:2}
 /*关于乾康*/
 .AboutUs{float:left;width:80%;margin-left:10%;background:url(../img/gyqk.jpg) no-repeat right top;height:350px;margin-bottom:40px;padding-bottom:40px;border-bottom:1px dashed #d9d9d9;}
-.AboutUs h1{color:#000;font-size:20px;font-weight:normal;margin-top:50px;line-height:30px;}
+.AboutUs h1{color:#000;font-size:20px;font-weight:normal;margin-top:30px;line-height:30px;}
 .AboutUs h2{font-size:35px;color:#000;line-height:70px;}
 .AboutUs span{display:inline-block;width:13%;border-top:2px solid #000;margin-right:1%;vertical-align:top;margin-top:1em;}
 .AboutUs font{display:inline-block;width:46%;color:#000;line-height:30px;}
