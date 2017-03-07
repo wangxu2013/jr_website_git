@@ -63,6 +63,16 @@ def gyqk():
 @app.route('/gyqk_EN')
 def gyqk_EN():
     return render_template("gyqk/gyqk_EN.html")
+	
+# 乾康新闻
+@app.route('/qkxw')
+def qkxw():
+    return render_template("qkxw/qkxw.html")	
+	
+# 乾康新闻
+@app.route('/qkxw_EN')
+def qkxw_EN():
+    return render_template("qkxw/qkxw_EN.html")
 
 
 # 管理员
