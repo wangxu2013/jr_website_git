@@ -197,7 +197,7 @@ p{color:#666666;font-size:14px;}
 .foot ul li{float:left;color:#909098;list-style:none;padding-right:15px;}
 .foot ul li a{color:#909098;}
 .foot img{display:block;float:right;width:100px;height:100px;margin-top:-120px;}
-.foot .xx font{display:block;float:right;width:40%;text-align:right;margin-bottom:10px;padding-right:10px;}
+.foot .xx font{display:block;float:right;width:40%;text-align:right;margin-bottom:10px;padding-right:10px;color:#666;}
 .foot span{display:block;width:100%;float:left;font-size:0.9em;color:#a3a3a3;position:relative;line-height:25px;}
 
 /*左侧导航*/
@@ -324,9 +324,9 @@ img.zz{width:35px;background:none;border:none;margin-left:38px;margin-top:7px;}
 /*乾康新闻*/
 .title .time{color:gray;margin-top:-70px;font-weight:normal;font-size:13px;}
 .xw p{font-size:14px;color:#000;line-height:25px;}
-.xw img{display:block;margin:0 auto;margin-top:10px;width:500px;}
+.xw img{display:block;margin:0 auto;margin-top:10px;width:590px;}
 .xw p.tz{color:gray;font-size:14px;text-align:center;margin-bottom:20px;}
-
+#dks{width:590px}
 }
 @media all and (min-width: 800px) and (max-width: 1300px){
 	.main{width:100%;}
@@ -406,7 +406,7 @@ img.zz{width:35px;background:none;border:none;margin-left:38px;margin-top:7px;}
 	.lcCenter,.lcCenter img{width:9em;}
 	.lcRight,.lcRight img{width:7.55em;}
 	.lcL,.lcC,.lcR{width:20%; }
-	#dsj{width:310px}
+	#dsj{width:320px}
 	/*底部*/
 	.foot p{font-size:0.875em;}
 	.foot .xx{margin-bottom:1.5em;padding-bottom:1em;}
@@ -478,10 +478,10 @@ img.zz{width:35px;background:none;border:none;margin-left:38px;margin-top:7px;}
 	.Success .xx{display:none;}
 	#dh33 font{line-height:1.4em;}
 	/*乾康新闻*/
-	.xw img{width:350px;}
+	.xw img{width:320px;}
 	.title .time{font-size:8px;margin-top:-30px;}
 	.xw p.tz{font-size:9px;margin-bottom:10px;}
-	
+	#dks{width:320px}
 /*火狐浏览器*/
 		*{font-size:10px;}
 		p{font-size:10px;}
