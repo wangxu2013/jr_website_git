@@ -327,6 +327,7 @@ img.zz{width:35px;background:none;border:none;margin-left:38px;margin-top:7px;}
 .xw p{font-size:14px;color:#000;line-height:25px;}
 .xw img{display:block;margin:0 auto;margin-top:10px;width:590px;}
 .xw p.tz{color:gray;font-size:14px;text-align:center;margin-bottom:20px;}
+#xw7 h2{display:block;width:auto;background:none;margin-left:0;margin-top:-70px;font-weight:normal;}
 #dks{width:590px}
 .xw .xwtitle{color:rgb(95, 156, 239);font-size:16px;font-weight: bold;}
 #zjs{color: rgb(143, 121, 71);text-align:center;margin-top:-100px;font-size:30px;}
@@ -486,6 +487,7 @@ img.zz{width:35px;background:none;border:none;margin-left:38px;margin-top:7px;}
 	.xw p.tz{font-size:9px;margin-bottom:10px;}
 
 	.xw .xwtitle{font-size:12px;}
+	#xw7 h2{margin-top:-30px;}
 	#dks{width:320px}
 	#zjs{margin-top:-40px;font-size:15px;}
 /*火狐浏览器*/
