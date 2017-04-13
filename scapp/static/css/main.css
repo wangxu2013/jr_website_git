@@ -116,14 +116,9 @@ p{color:#666666;font-size:14px;}
 .qkly .active{background:#264b99;}
 #qkly .span4 img{width:70px;vertical-align:center;margin-top:-35px;margin-bottom:10px;}
 #qkly .span4 h1{top:5px;font-size:15px;line-height:30px;}
-#img1{float:right;margin-left:1.25em;height:250px;width:500px;margin-top:2em;}
-#img2{float:right;margin-left:1.25em;height:200px;margin-top:2em;}
-#img3{float:right;margin-left:1.25em;margin-top:3.75em;}
-#img4{float:left;margin-right:1.25em;margin-top:1.25em;}
-#img5{float:right;margin-left:1.25em;margin-top:5em;}
-#img6{float:left;margin-right:1.25em;margin-top:2.5em;}
-#img7{float:right;margin-left:1.25em;}
-#img8{float:left;margin-right:1.25em;margin-top:2em;}
+#img1{float:right;margin-left:20px;width:500px;}
+#img2{float:left;margin-right:20px;width:500px;margin-top:10px;}
+#img3{float:right;margin-left:20px;width:500px;}
 /*乾康集团*/
 .qkjt{float:left;width:70%;margin-left:15%;text-align:center;line-height:30px;}
 .qkjt h1{background:#fff;line-height:4em;text-align:center;font-size:2em;color:#264b99;}
@@ -312,8 +307,8 @@ img.zz{width:35px;background:none;border:none;margin-left:38px;margin-top:7px;}
 #gsxm div img{height:160px;}
 
 #qkkh font{width:42%;line-height:1.7em;}
-.ywzxyy .imgright{float:right;margin-left:1.25em;}
-.ywzxyy .imgleft{float:left;margin-right:1.25em;}
+.ywzxyy .imgright{float:right;margin-left:20px;width:500px;height:250px;}
+.ywzxyy .imgleft{float:left;margin-right:20px;width:500px;height:250px;}
 .ywzxyy p{line-height:30px;}
 #zxjj{height:285px;}
 .yjzxcl{height:350px;}
@@ -465,7 +460,6 @@ img.zz{width:35px;background:none;border:none;margin-left:38px;margin-top:7px;}
 	/*互联网消费金融管理师*/	
 	#img1,#img2{width:45%;height:15em;}
 	#img3{width:45%;height:18em;}
-	#img4,#img5,#img6,#img7,#img8{width:45%;margin-top:5em}
 	#zp4 .AboutUs h1{margin-top:0em;}
 	#dh12 p{line-height:1.2em;}
 	#qkkh font{width:45%;line-height:1.5em;}
@@ -622,4 +616,8 @@ img.zz{width:35px;background:none;border:none;margin-left:38px;margin-top:7px;}
 		.span33 font{font-size:8px;}
 		.myimg{height:100px}
 		.zgs .hh{display:block;margin-top:0px;}
+		#img4{width:100%;}
+		.ywzxyy .imgright,.ywzxyy .imgleft{width:45%;height:130px;margin-top:30px;}
+		
+		
  }
