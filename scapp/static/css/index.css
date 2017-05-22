@@ -180,7 +180,7 @@ body {background: white;overflow-x: hidden;}
 	.qkhb div p.sj {display:none;}
 	.qkhb .title{width:45%;}
 	.qkhb .title p {font-size: 10px;letter-spacing: 1px;}
-	.qkhb .title p.top {padding-right: 100px;}
+	.qkhb .title p.top {padding-right: 50px;}
 	#scrollobj{width:90%;margin:10px 5%;}
 	/*Ç¬¿µÐÂÎÅ*/
 	.qkxw {margin-bottom: 20px;}
@@ -203,12 +203,12 @@ body {background: white;overflow-x: hidden;}
 	#QQ{display:none;}
 	/*µ×²¿*/
 	.foot{padding-top:0;}
-	.foot p{font-size:10px;margin-top:5px;}
+	.foot p{font-size:9px;margin-top:5px;}
 	.foot .xx{margin-bottom:15px;padding-bottom:10px;width:90%;margin-left:5%;}
 
-	.foot .awm{margin-top:-80px;margin-right:0px;}
-	.foot img{width:70px;height:70px;margin-left:5px;}
-	.foot .xx font{margin-bottom:9px;width:80px;margin-left:5px;margin-right:-15px;}
+	.foot .awm{margin-top:-50px;margin-right:0px;}
+	.foot img{width:60px;height:60px;margin-left:5px;}
+	.foot .xx font{margin-bottom:9px;width:70px;margin-left:5px;margin-right:-15px;}
 	.foot .xx font.normal{margin-right:0px;}
 	.foot span{font-size:8px;line-height:20px;top:0;}
  }
