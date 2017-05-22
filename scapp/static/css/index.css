@@ -167,7 +167,7 @@ body {background: white;overflow-x: hidden;}
 	.zzjy .left {display:none;}
 	.zzjy .left img {display:none;}
 	.zzjy .right {width:90%;margin:0 5%;margin-top:-25px;}
-	.zzjy div{width:200px;margin:0 auto;}
+	.zzjy div{width:200px;margin:10px auto;}
 	.zzjy .right h3, .zzjy .right h4 {margin-left: 48px;}
 	.zzjy .right h4 {margin-bottom:30px;}
 	.zzjy p{text-align: left;}
@@ -186,7 +186,7 @@ body {background: white;overflow-x: hidden;}
 	.qkxw {margin-bottom: 20px;}
 	.qkxw p{text-align:left;}
 	.qkxw .left{width:90%;margin:0 5%;}
-	.qkxw .left div{width:125px;}
+	.qkxw .left div{width:125px;margin-top:10px;}
 	.qkxw .left h3, .qkxw .left h4 {margin-left:40px;}
 	.qkxw .news {width:100%;padding-bottom: 5px;}
 	.qkxw .date {width: 50px;height: 50px;}
@@ -197,8 +197,9 @@ body {background: white;overflow-x: hidden;}
 	.qkxw .content span.title {font-size: 11px;line-height: 25px;}
 	/*专利资质*/
 	#zlzz{height: 200px;margin-bottom:0;}
-	#zlzz .left div{width:160px;}
+	#zlzz .left div{width:160px;margin-top:10px;}
 	#zlzz h3,#zlzz h4{margin-left:35px;}
+	#zlzz div#scrollobj {margin-top: 15px;}
 	/*side*/
 	#QQ{display:none;}
 	/*µ×²¿*/
