@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>	
+	<meta charset="utf-8">
+	<title>乾康（上海）金融信息服务股份有限公司</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="Charisma, a fully featured, responsive, HTML5, Bootstrap admin template.">
+	<meta name="author" content="Muhammad Usman">
+	<link href="../../static/css/main.css" rel="stylesheet">
+	<script type="text/javascript" src="../../static/js/jquery-1.7.2.min.js"></script>
+	<script type="text/javascript" src="../../static/js/bdMap.js"></script>
+	<style type="text/css">
+	
+	</style>
+	<script type="text/javascript">
+		var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+		document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3F980a47baa3b028fee8b94644df33e9b8' type='text/javascript'%3E%3C/script%3E"));
+	
+	</script>
+</head>
+<body>
+<div class="main">
+<!--*****************************导航*****************************************-->
+	<div class="topNav">
+		<img src="../../static/img/logo.png" class="logo" onclick="window.location.href='/index' "/>
+		<ul>
+			<li><a href="/gyqk">关于乾康</a></li>					
+			<li><a href="/qkly">乾康领域</a></li>	
+			<li><a href="/qkjz">乾康家族</a></li>	
+			<li><a href="/qkxw">乾康新闻</a></li>	
+			<li class="active"><a href="/lxwm">联系我们</a></li>	
+			<li><a href="/jrqk">加入乾康</a></li>					
+		</ul>
+	</div>	
+<!--*****************************联系我们*****************************************-->
+
+	<div class="banner"></div>
+	<div class="title">
+		<img src="../../static/img/title.png" class="left"/><h3>联系我们</h3>
+		<h4>CONTACT US</h4><img src="../../static/img/title.png" class="right" style="left:115px;"/>
+	</div>
+
+<!--*****************************联系我们*****************************************-->
+	<div class="tel">		 
+		<div id="map"></div>
+		<div class="lxwm">
+			<!-- <h1>乾康（上海）金融信息服务股份有限公司</h1> -->
+			<p>乾康（上海）金融信息服务股份有限公司</p>
+			<p>电话：021-54485390</p>
+			<p>地址： 上海市徐汇区桂箐路7号3号楼801室</p>
+			<p>传真： 021-54485391</p>
+			<p>邮箱： liuxj@qkjr.com.cn</p>
+		</div> 
+	</div>
+
+	<div class="side">
+		<ul>
+			<li><a href="/lxwm_EN" ><div class="sidebox"><img src="../../static/img/side_icon03.png">切换英文</div></a></li>
+			<li id="QQ"><a href="http://wpa.qq.com/msgrd?v=3&amp;uin=1103924915&amp;site=qq&amp;menu=yes" target="_blank" ><div class="sidebox"><img src="../../static/img/side_icon04.png">QQ客服</div></a></li>
+			<li style="border:none;"><a href="javascript:goTop();" class="sidetop"><img src="../../static/img/side_icon05.png"></a></li>
+		</ul>
+	</div>
+<!--*****************************foot*****************************************-->
+	<div class="foot">
+		<span>Copyright(C)2011-2014 乾康（上海）金融信息服务股份有限公司</span><br/>
+		<span>沪ICP备13043724号</span>
+	</div>
+</div>	
+	
+	
+	
+	
+	<script type="text/javascript">
+		$(document).ready(function(){  
+			ShowMap("map",{city:'中国',addr:'上海市徐汇区桂箐路7号3号楼801室',title:'乾康（上海）金融信息服务股份有限公司',lawfirm:'',tel:'021-54485390',mapx:'',pic:'../../static/img/logo2.png',ismove:'0',piobj:'nxp'});
+			if ($(this).scrollTop() > 200) {// 滚动窗口来判断按钮显示或隐藏
+					$('.side').fadeIn(100);
+					} else {
+					$('.side').fadeOut(100);
+			}
+		});
+		//回到顶部
+		function goTop(){
+			$('html,body').animate({'scrollTop':0},600);
+		}
+	</script>
+</body>
+</html>

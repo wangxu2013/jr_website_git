@@ -1,18 +1,56 @@
 var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
 document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3F980a47baa3b028fee8b94644df33e9b8' type='text/javascript'%3E%3C/script%3E"));
 
-$(document).ready(function(){                            //主体元素
-	$(window).scroll(function(){
-		var srollPos = $(window).scrollTop();    //滚动条距顶部距离(页面超出窗口的高度)				
-		
+$(document).ready(function(){	
+	$(window).scroll(function(){//滚动条滚动后导航变透明
+		var srollPos = $(window).scrollTop(); //滚动条距顶部距离(页面超出窗口的高度)	
 		if(srollPos!="0"){
-			$(".logo").css("opacity","0.8");
-			$(".logo").css("filter","alpha(opacity=80)");
+			$(".topNav").css("opacity","0.8");
+			$(".topNav").css("filter","alpha(opacity=80)");
 		}
 		else{				
-			$(".logo").css("opacity","1");
-			$(".logo").css("filter","alpha(opacity=100)");
-		}
+			$(".topNav").css("opacity","1");
+			$(".topNav").css("filter","alpha(opacity=100)");
+		} //滚动条距顶部距离(页面超出窗口的高度)end	
+	});
+	if($(window).width()>"600" && $(window).width()<"800"){//小动画
+		$(".box_skitter").html("<ul>"+
+									"<li>"+
+										"<img src='../static/img/banner11.jpg'/>"+                        
+									"</li>"+
+									"<li>"+
+										"<img src='../static/img/banner12.jpg' /> "+                           
+									"</li>"+
+									"<li>"+
+										"<img src='../static/img/banner13.jpg'/>"+
+									"</li>"+
+								"</ul>");
+	}
+	if($(window).width()<"600"){//小动画
+		$(".box_skitter").html("<ul>"+
+									"<li>"+
+										"<img src='../static/img/banner21.jpg'/>"+                        
+									"</li>"+
+									"<li>"+
+										"<img src='../static/img/banner22.jpg' /> "+                           
+									"</li>"+
+									"<li>"+
+										"<img src='../static/img/banner23.jpg'/>"+
+									"</li>"+
+								"</ul>");
+	}
+	jQuery(".box_skitter_large").skitter({//slider动画
+		animation: "random",
+		interval: 3000,
+		numbers: false, 
+		numbers_align: "right", 
+		hideTools: false,
+		controls: false,
+		focus: false,
+		focus_position: true,
+		width_label:'100%', 
+		enable_navigation_keys: true,   
+		progressbar: false
 	});
 });
 		
@@ -25,6 +63,8 @@ function Normal(obj,src){
 	$(obj).find("img").attr("src",src+".png");
 	$(obj).css("background","#eef2f5")
 }
+
+
 function Tab(obj,src){//鼠标点击
 	$(".qkly div").attr("class","span4");
 	$(obj).attr("class","span4 active");
@@ -105,22 +145,7 @@ function hideYY(){
 	$("#yyBig").animate({marginLeft:"-190px"},"500");
 	setTimeout("$('#yySmall').animate({left:'0px'},'500')","300");
 }
-//=================================== SLIDESHOW ===================================//
-function imgs(){
-	jQuery(".box_skitter_large").skitter({
-		animation: "random",
-		interval: 3000,
-		numbers: false, 
-		numbers_align: "right", 
-		hideTools: false,
-		controls: false,
-		focus: false,
-		focus_position: true,
-		width_label:'100%', 
-		enable_navigation_keys: true,   
-		progressbar: false
-	});
-}
+
 // ****************滚动窗口来判断按钮显示或隐藏*********************
 $(window).scroll(function() {
 if ($(this).scrollTop() > 150) {

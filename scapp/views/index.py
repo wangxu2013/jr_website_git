@@ -13,6 +13,16 @@ def index():
 @app.route('/index_EN')
 def index_EN():
     return render_template("index_En.html")
+	
+# 关于乾康
+@app.route('/gyqk')
+def gyqk():
+    return render_template("gyqk/gyqk.html")
+	
+# 关于乾康
+@app.route('/gyqk_EN')
+def gyqk_EN():
+    return render_template("gyqk/gyqk_En.html")
 
 # 乾康领域
 @app.route('/qkly')
@@ -22,17 +32,7 @@ def qkly():
 # 乾康领域
 @app.route('/qkly_EN')
 def qkly_EN():
-    return render_template("qkly/qkly_EN.html")
-
-# 乾康伙伴
-@app.route('/qkhb')
-def qkhb():
-    return render_template("qkhb/qkhb.html")
-
-# 乾康伙伴
-@app.route('/qkhb_EN')
-def qkhb_EN():
-    return render_template("qkhb/qkhb_EN.html")
+    return render_template("qkly/qkly_En.html")
 
 # 乾康家族
 @app.route('/qkjz')
@@ -42,27 +42,7 @@ def qkjz():
 # 乾康家族
 @app.route('/qkjz_EN')
 def qkjz_EN():
-    return render_template("qkjz/qkjz_EN.html")
-
-# 加入乾康
-@app.route('/jrqk')
-def jrqk():
-    return render_template("jrqk/jrqk.html")
-
-# 加入乾康
-@app.route('/jrqk_EN')
-def jrqk_EN():
-    return render_template("jrqk/jrqk_EN.html")
-
-# 关于乾康
-@app.route('/gyqk')
-def gyqk():
-    return render_template("gyqk/gyqk.html")
-
-# 关于乾康
-@app.route('/gyqk_EN')
-def gyqk_EN():
-    return render_template("gyqk/gyqk_EN.html")
+    return render_template("qkjz/qkjz_En.html")
 	
 # 乾康新闻
 @app.route('/qkxw')
@@ -72,9 +52,30 @@ def qkxw():
 # 乾康新闻
 @app.route('/qkxw_EN')
 def qkxw_EN():
-    return render_template("qkxw/qkxw_EN.html")
+    return render_template("qkxw/qkxw_En.html")
+	
+# 联系我们
+@app.route('/lxwm')
+def lxwm():
+    return render_template("lxwm/lxwm.html")
+	
+# 联系我们
+@app.route('/lxwm_EN')
+def lxwm_EN():
+    return render_template("lxwm/lxwm_En.html")
 
+# 加入乾康
+@app.route('/jrqk')
+def jrqk():
+    return render_template("jrqk/jrqk.html")
 
+# 加入乾康
+@app.route('/jrqk_EN')
+def jrqk_EN():
+    return render_template("jrqk/jrqk_En.html")
+	
+	
+	
 # 管理员
 @app.route('/admin')
 def admin():

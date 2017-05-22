@@ -2,182 +2,516 @@
 <html lang="zh-cn">
 <head>	
 	<meta charset="utf-8">
-	<title>CardPay(Shanghai) Finance Consulting Co.,Ltd.</title>
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>乾康（上海）金融信息服务股份有限公司</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="description" content="Charisma, a fully featured, responsive, HTML5, Bootstrap admin template.">
 	<meta name="author" content="Muhammad Usman">
-	<link rel="SHORTCUT ICON" href="../3.ico"/>
-	<!-- 地图 -->
-	<script type="text/javascript" src="../../static/js/bdMap.js"></script>
-	<!-- The styles -->
 	<link href="../../static/css/main.css" rel="stylesheet">
-	<link href="../../static/css/imagehover.css" rel="stylesheet">
-	 <link rel="stylesheet" type="text/css" href="../../static/css/skitter.styles.css" media="all" />
-	<style type="text/css">	
-		
+	<link href="../../static/css/main_En.css" rel="stylesheet">
+	<script type="text/javascript" src="../../static/js/jquery-1.7.2.min.js"></script>
+	<style type="text/css">
+	
 	</style>
 	<script type="text/javascript">
 		var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
 		document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3F980a47baa3b028fee8b94644df33e9b8' type='text/javascript'%3E%3C/script%3E"));
+	
 	</script>
 </head>
-
-<body onload="imgs();">
+<body>
 <div class="main">
-	<!--**************************************************top***********************************************-->
-	<div class="logo" style="position:fixed;z-index:10000;">	
-		<a href="/index_EN"><img src="../../static/img/logo.png"/></a>
-		<ul class="newnav" style="margin-left:20px;z-index:10000;">
-			<li><a href="/qkly_EN">Areas</a></li>
-			<li><a href="/qkhb_EN">Partner</a></li>
-			<li><a href="/qkjz_EN">Family</a></li>
-			<li><a href="/jrqk_EN">Join Us</a></li>	
-			<li><a href="/gyqk_EN">About Us</a></li>
-			<li class="active"><a href="/qkxw_EN">News</a></li>
+<!--*****************************导航*****************************************-->
+	<div class="topNav">
+		<img src="../../static/img/logo.png" class="logo" onclick="window.location.href='/index_EN' "/>
+		<ul>
+			<li><a href="/gyqk_EN">About Us</a></li>					
+			<li><a href="/qkly_EN">Field</a></li>	
+			<li><a href="/qkjz_EN">Family</a></li>	
+			<li class="active"><a href="/qkxw_EN">News</a></li>	
+			<li><a href="/lxwm_EN">Contact Us</a></li>		
+			<li><a href="/jrqk_EN">Join Us</a></li>								
 		</ul>
+	</div>	
+	<div class="banner banner_En"></div>
+<!--*****************************乾康新闻*****************************************-->
+<div class="Tab" id="101">
+	<div class="title">
+		<img src="../../static/img/title.png" class="left"/><h3>NEWS</h3>
+		<h4>QIANKANG </h4><img src="../../static/img/title.png" class="right"/>
 	</div>
-	<!-- SLIDER -->
-	<div id="outerslider">
-		<div id="slidercontainer">
-			<section id="slider">
-			<div class="box_skitter box_skitter_large">					
-				<ul >
-					<li>
-						<img src="../../static/img/banner4_EN.jpg" alt="" style="height:100%"/>                            
-					</li>
-					<li>
-						<img src="../../static/img/banner5_EN.jpg" alt="" style="height:100%"/>                            
-					</li>          
-					<li>
-						<img src="../../static/img/banner6_EN.jpg" alt="" style="height:100%"/>                            
-					</li>    
-				</ul>
-			</div>
-			</section>
+
+	<div class="qkxw">
+		<div onclick="$('.Tab').hide();$('#xw12').show();$('html,body').scrollTop(0)">
+			<img src="../../static/img/xw/xw52.jpg"/>
+			<p>Qiankang Embrace Tencent...</p>
+		</div>
+		<div onclick="$('.Tab').hide();$('#xw11').show();$('html,body').scrollTop(0)">
+			<img src="../../static/img/xw/xw47.png"/>
+			<p>Marketing training...</p>
+		</div>
+		<div onclick="$('.Tab').hide();$('#xw8').show();$('html,body').scrollTop(0)">
+			<img src="../../static/img/xw/xw37.jpg"/>
+			<p> Qiankang Slogan brochure...</p>
+		</div>
+		<div onclick="$('.Tab').hide();$('#xw10').show();$('html,body').scrollTop(0)">
+			<img src="../../static/img/xw/xw43.png"/>
+			<p>Bank transformation...</p>
+		</div>
+		<div onclick="$('.Tab').hide();$('#xw9').show();$('html,body').scrollTop(0)">
+			<img src="../../static/img/xw/xw41.png"/>
+			<p>Industry female pioneer..</p>
+		</div>
+		<div onclick="$('.Tab').hide();$('#xw7').show();$('html,body').scrollTop(0)">
+			<img src="../../static/img/xw/xw31.png"/>
+			<p>Let the strategy land...</p>
+		</div>
+		<div onclick="$('.Tab').hide();$('#xw6').show();$('html,body').scrollTop(0)">
+			<img src="../../static/img/xw/xw30.png"/>
+			<p>Debate the championship...</p>
+		</div>
+		<div onclick="$('.Tab').hide();$('#xw5').show();$('html,body').scrollTop(0)">
+			<img src="../../static/img/xw/xw19.png"/>
+			<p>Financial circle pressure...</p>
+		</div>
+		<div onclick="$('.Tab').hide();$('#xw3').show();$('html,body').scrollTop(0)">
+			<img src="../../static/img/xw/xw10.png"/>
+			<p>Original innovation power...</p>
+		</div>
+		<div onclick="$('.Tab').hide();$('#xw4').show();$('html,body').scrollTop(0)">
+			<img src="../../static/img/xw/xw16.png"/>
+			<p>Talking about Direct Banking...</p>
+		</div>
+		<div onclick="$('.Tab').hide();$('#xw1').show();$('html,body').scrollTop(0)">
+			<img src="../../static/img/xw/xw1.png"/>
+			<p>Successfully completed the...</p>
+		</div>
+		<div onclick="$('.Tab').hide();$('#xw2').show();$('html,body').scrollTop(0)">
+			<img src="../../static/img/xw/xw5.png"/>
+			<p>Another small loan project...</p>
 		</div>
 	</div>
-	<!--**************************************************title***********************************************-->	
-	<div id="101" class="Tab">	
-		<div class="title">
-			<h1>News</h1><h2>I</h2><h3>nformation</h3>
+</div>
+	<div class="Tab" id="xw12" style="display:none;">
+		<div class="title2">
+			<h1>Qiankang embrace Tencent, to achieve multi-win!</h1>
+			<h4 class="time">Date of publication：2017-04-25</h4>
 		</div>
-		<div class="xfjrList zp">
-			<div onclick="$('.Tab').hide();$('#xw1').show();">
-				<img src="../../static/img/xw/xw1.png"/>
-				<p>The successful completion of the district project for defense</p>
-			</div>
-			<div onclick="$('.Tab').hide();$('#xw2').show();">
-				<img src="../../static/img/xw/xw5.png"/>
-				<p>Another small loan project officially launched</p>
-			</div>
+		<div class="xw">
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Recently, dry and financial chief Zhou Zhou, Jiangsu, a farmer firm, by Tencent to pay the basic platform and financial application line deputy general manager Zheng Haojian invited to Tencent company had a visit to negotiate.</p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Tencent company was established in 1998 in Shenzhen, is currently China's leading provider of integrated Internet services. Tencent's payment infrastructure platform and financial application line was established in 2015, mainly carrying Tencent's Internet financial business, Tencent is the development of financial characteristics.</p>
+			<p><img src="../../static/img/xw/xw52.jpg"/></p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Under the leadership of General Manager Zheng Haojiao, Zhou Hong, President of Kangkang and a farmer in Jiangsu, visited Tencent Building, learned about Tencent's development process, the latest strategic planning, Tencent's talent concept and product characteristics. Vivid and interesting to explain, we have a deeper understanding of Tencent enterprises.</p>
+			<p><img src="../../static/img/xw/xw53.jpg"/></p>
+			<p><img src="../../static/img/xw/xw54.jpg"/></p>
+			<p><img src="../../static/img/xw/xw55.jpg"/></p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;After a brief break, the three parties around the "joint lending, to achieve win-win" to carry out project cooperation talks. During the period, the risk assessment ability of dry and healthy was well received by the participants. After several rounds of brainstorming, the three parties reached a preliminary cooperation intention.</p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The talks, Kang Kang fully demonstrated in the field of financial wind control unique advantages. As a financial technology enterprise, Gan Kang focused on personal credit risk control, Internet banking operations, personal credit business consulting operations and other business.</p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Tencent Zheng said, is very optimistic about the future development prospects of dry and healthy, hope in the Tencent credit, virtual credit cards, small loans and other aspects of the network can have a deeper level of deep cooperation.</p>
 		</div>
+		<button class="back" onclick="$('.Tab').hide();$('#101').show();">BACK</button>
+	</div>
+	<div class="Tab" id="xw11" style="display:none;">
+		<div class="title2">
+			<h1>Deposit promotion! Shandong a farm business marketing training perfect ending!</h1>
+			<h4 class="time">Date of publication：2017-04-14</h4>
+		</div>
+		<div class="xw">
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;April 8, 2017, dry and dry Shandong, a farm business trip to carry out the "2017 second session of the client manager marketing training conference." The training mainly includes: marketing strategy, marketing team management, insurance business introduction and marketing, financial products sales precautions, sweep code to pay marketing skills, channel marketing skills and so on.</p>
+			<p><img src="../../static/img/xw/xw47.png"/></p>
+			<p class="tz">Training site</p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Attend the training activities are: in charge of the line of vice president; general manager of the retail business; the jurisdiction of the line and the branch president, vice president; customer manager at all levels.
+			   <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Invited Gan Kang chapter of the article always a one-day marketing ability training.</p>
+			<p><img src="../../static/img/xw/xw48.png"/></p>
+			<p class="tz">Zhang Qiwen on-site training</p>
+			<p><img src="../../static/img/xw/xw49.png"/></p>
+			<p class="tz">Zhang Qiwen on-site training</p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Through on-site analysis and explanation, combined with the technical characteristics of various departments, the parties have said that the effect is significant, learn something.</p>
+			<p><img src="../../static/img/xw/xw50.png"/></p>
+			<p class="tz">Training site</p>
+			<p><img src="../../static/img/xw/xw51.png"/></p>
+			<p class="tz">Training site</p>
+		</div>
+		<button class="back" onclick="$('.Tab').hide();$('#101').show();">BACK</button>
+	</div>
+	<div class="Tab" id="xw10" style="display:none;">
+		<div class="title2">
+			<h1>Economic Daily said: bank restructuring should take the initiative to embrace financial technology</h1>
+			<h4 class="time">Date of publication：2017-04-13</h4>
+		</div>
+		<div class="xw">
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>Take the initiative to embrace financial technology is the trend,</b>Traditional commercial banks to achieve the transformation of breakthrough development, it is necessary to explore the use of new technologies and innovative service and service channels to accelerate the expansion of emerging business, to achieve synergistic development of service channels and resource integration, but also with financial technology companies to build a win-win relationship , To achieve technology sharing and platform sharing, reduce duplication of waste, lay the foundation for further transformation and development.</p>
+			<p><img src="../../static/img/xw/xw16.png"/></p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Recently, listed banks have released 2016 annual operating results. In the real economic slowdown in the situation, most of the banks to maintain a steady growth trend, operating performance steadily. But in this context, the bank's various types of business development on the overall income growth has shown a different trend, which spread income gradually decreased,<b>Non-interest income contributes steadily.</b></p>
+			<p><img src="../../static/img/xw/xw43.png"/></p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;In recent years, with the advancement of interest rate market, the bank net interest income continued to decline,<b>And pull the overall profit growth of the banking industry more power from the intermediary business income.</b>The Experienced the rapid growth in recent years, part of the bank's intermediary business accounted for more than three percent, which is equivalent to the general level of international financial institutions. Data show that by the end of 2016, the Bank achieved non-interest income of 177.6 billion yuan, an increase of 21.91%, accounting for 36.72%, an increase of 6.01 percentage points.</p>
+			<p><img src="../../static/img/xw/xw44.png"/></p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Refinement, the development of various banks in the middle of the business process there are some delicate changes, some of which continue to shrink the traditional business. To promote the banking industry to further enhance the intermediary business income, it is the rapid growth of emerging intermediary business, including asset custody, mergers and acquisitions and other business development momentum of rapid development.</p>
+			<p><img src="../../static/img/xw/xw45.png"/></p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;At the same time,<b>The rise of financial technology companies is becoming more and more important to traditional financial institutions.</b>PricewaterhouseCoopers recently released the annual "Global Financial Technology Report" shows that the next three to five years, emerging financial technology companies will take away 24% of large financial institutions revenue. In view of this, the bank transformation into a new stage, to maintain profit growth must change business ideas. research shows,<b>2016 global about 50% of the financial technology investment flows to China.</b>China Banking Regulatory Commission Chairman Guo Shuqing recently delivered a speech that the Bank 3.0 era has come, to use financial technology, relying on large data, cloud computing, block chain, artificial intelligence and other new technologies, innovative service methods and processes, integration of traditional service resources, The advantages of the entire banking industry to enhance the efficiency of resource allocation to a more advanced, more flexible and more efficient response to customer needs and social needs.</p>
+			<p><img src="../../static/img/xw/xw46.png"/></p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>Take the initiative to embrace financial technology is the trend.</b>Traditional commercial banks to achieve the transformation of breakthrough development, it is necessary to explore the use of new technologies and innovative service and service channels to accelerate the expansion of emerging business, to achieve synergistic development of service channels and resource integration. Simultaneously,<b>But also and financial technology companies to build a win-win cooperation and good relations,</b>To achieve technology sharing and platform sharing, reduce duplication of waste, lay the foundation for further transformation and development. It is noteworthy that, while innovation, should also effectively guard against risks, and strive to play the Internet financial and financial science and technology should have the function.</p>
+			
+		</div>
+		<button class="back" onclick="$('.Tab').hide();$('#101').show();">BACK</button>
+	</div>
+	<div class="Tab" id="xw9" style="display:none;">
+		<div class="title2">
+			<h1>Women have aspirations, industry female pioneers</h1>
+			<h4 class="time">Date of publication：2017-04-13</h4>
+		</div>
+		<div class="xw">
+			<p><img src="../../static/img/xw/xw38.png"/></p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;April 12, 2017, the annual "Shanghai software industry industry model, service star" selection work came to an end. After the first instance and expert review, dry and healthy (Shanghai) Financial Information Services Co., Ltd. Software Development Department Ma Yinghan stand out, won the 2016 "Shanghai software industry model" title. The list of winners is public on the same day.</p>
+			<p><img src="../../static/img/xw/xw39.png"/></p>
+			<p class="tz">Awards at the conference site</p>				
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;From the original accountant registrar to the boss of today's dry and healthy software platform, she has always focused on the promotion of her own business technology, as a combat in the front line of outstanding workers, she used professional technical knowledge, standardized service , Good communication and coordination, the company colleagues and the client side of the full recognition and praise.</p>
+			<p><img src="../../static/img/xw/xw40.png"/></p>
+			<p class="tz">Awards at the conference site</p>	
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;As a core member of the team, Ma Yinghan clear customer needs, analysis of project technology positioning, data analysis as the guide, led the team R & D and on-line operation of the Kangkang Express platform, dry and healthy platform, Help banks solve the problem of large data acquisition, customer acquisition, credit assessment, process control, credit business life cycle risk control and so on.</p>
+			<p><img src="../../static/img/xw/xw41.png"/></p>
+			<p class="tz">Ma Yinghan won the award</p>
+			<p><img src="../../static/img/xw/xw42.png"/></p>
+			<p class="tz">Certificate</p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Dry and healthy (Shanghai) Financial Information Services Co., Ltd. also pay great attention to the training of employees. As a financial company, focusing on the operation and management of personal credit business and risk control, with strong professional strength, rich experience in the project and strong scientific and technological support, the formation of efficient personal credit business wind control operation system, with accurate data Mining capacity and strong scene modeling strength.</p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Gan Kang is a strategic partner of the Agricultural Bank of China Alliance, MasterCard Asia-Pacific strategic partner, a large-scale consumer electronics business strategic partner.</p>
+			
+		</div>
+		<button class="back" onclick="$('.Tab').hide();$('#101').show();">BACK</button>
 	</div>
 	<div class="Tab" id="xw1" style="display:none;">
-		<div class="title">
-			<h1>The successful completion of the district project for defense</h1>
+		<div class="title2">
+			<h1>Successful completion of district - level project application reply</h1>
 			<h4 class="time">Date of publication：2017-03-06</h4>
 		</div>
-		<div class="AboutUs xfjr xw">
-			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;In March 3, 2017, on the Internet financial products "qiankang project risk control and credit evaluation system for" through layers of approval, project review defense in Xuhui District administration building. Ma Yinghan, Liu Xuejun, and the company 's project leader attended the review meeting.</p>
+		<div class="xw">
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;March 3, 2017, dry and healthy on the "Internet financial products, wind control and credit assessment system project application" through layers of approval, in Xuhui District Administration Building project review reply. Company project leader - Ma Yinghan and Liu Xuejun, Xiong Jun participated in the assessment meeting.</p>
 			<p><img src="../../static/img/xw/xw1.png"/></p>
-			<p class="tz">Project defense site</p>				
-			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The project is based on extensive integration of the domestic authority of more than a dozen big data companies and credit data, through the top wind coverage credit lifecycle management and control technology, providing large data flow management and control decision making service driven credit risk for regional commercial banks, consumer finance, business finance, financial P2P, small loan other agencies, to help financial institutions to mining the vertical segments of the customer market, application of quantitative risk control methods of financial product innovation.</p>
+			<p class="tz">Project reply scene</p>				
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Based on the extensive integration of more than ten large data companies and credit information, this project is based on the top wind control technology of credit life cycle management, which is a regional commercial bank, consumer finance, electricity finance, P2P, Small loans and other institutions to provide large data-driven credit control process management and decision-making services to help financial institutions to tap the vertical segment of the customer market, the application of quantitative means of wind control innovative financial products.</p>
 			<p><img src="../../static/img/xw/xw2.png"/></p>
-			<p class="tz">Prior confirmation of the discussion</p>	
-			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Qiankang offers consulting services of professional operation in regional commercial banks and other financial institutions, has a very rich professional experience, provide a small micro loan / credit card business consulting, risk control system, direct banking services to nearly 50 bank customers, including Jiangsu province an agricultural firm "Rongcheng Tong" project a rural commercial bank, flexible gold project in Fujian Province, Shanxi Province Association of small and micro credit projects, accumulated through the air control credit assessment 10 billion, develop 90 line under wind control team of experts.</p>
+			<p class="tz">Confirm the confirmation before the confirmation of the discussion</p>	
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;He has a wealth of professional experience in providing professional consulting services to financial institutions such as regional commercial banks, providing small micro credit / credit card business consulting, wind control system construction, direct selling bank, etc. for nearly 50 bank customers. Service, including a rural firm in Jiangsu Province, "Rongcheng pass" project, Fujian Province, a rural bank "flexible gold" project, Shanxi Province, a subsidiary of a small loan project, the cumulative assessment of 100 million through the wind control assessment, training 90 People under the wind control expert team.</p>
 			<p><img src="../../static/img/xw/xw3.png"/></p>
-			<p class="tz">Project leader on the project content</p>
+			<p class="tz">Project leader to preach the contents of the project</p>
 			<p><img src="../../static/img/xw/xw4.png"/></p>
-			<p class="tz">Respondent to answer the project</p>
+			<p class="tz">The respondent responded to the project</p>
 		</div>
 		<button class="back" onclick="$('.Tab').hide();$('#101').show();">BACK</button>
 	</div>
 	<div class="Tab" id="xw2" style="display:none;">
-		<div class="title">
-			<h1>Another small loan project officially launched</h1>
+		<div class="title2">
+			<h1>Another small micro-loan project officially launched</h1>
 			<h4 class="time">Date of publication：2017-03-06</h4>
 		</div>
-		<div class="AboutUs xfjr xw">
-			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;In March 2, 2017, Hunan rural commercial bank small micro credit project officially started.</p>
+		<div class="xw">
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;March 2, 2017, Hunan Agricultural Bank of China small micro-loan project was officially launched.</p>
 			<p><img src="../../static/img/xw/xw5.png"/></p>
-			<p class="tz">Project launch site</p>				
-			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;At the start of the project, the bank led by the governor of the central bank on the background of small and micro loans, project requirements, the development prospects of an important speech on the small and micro loans raised new expectations. President Wang said: in the small micro credit gap under the background of the times, and qiankang financial cooperation to achieve win-win cooperation for a better future, each situation.</p>
+			<p class="tz">The project will start the scene</p>				
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;At the start of the project, Wang Zhijun, the head of the bank, made an important speech on the project background, project requirements and development prospects of the small micro-loan, and made earnest expectations for the small micro-loaners. Wang said: in the small micro-loan gap in the context of a huge era, and dry and financial cooperation, will be able to achieve win-win cooperation, create a better future situation.</p>
 			<p><img src="../../static/img/xw/xw6.png"/></p>
-			<p class="tz">Wang long speech</p>	
-			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Subsequently, the company vice president Liu Xuejun from the industry trend, occupation planning and how to do a good small micro loan account managers to share, encourage everyone to seize the current opportunity Study hard, become a good financial personnel.</p>
+			<p class="tz">Wang delivered a speech</p>	
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Subsequently, the company vice president Liu Xuejun from the industry trends, career planning and how to do a good small micro-credit account manager to share, to encourage everyone to seize the opportunity to learn, become a good financial officer.</p>
 			<p><img src="../../static/img/xw/xw7.png"/></p>
-			<p class="tz">Many participants</p>
-			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Qiankang consulting company operation Department Deputy General Manager Liu Yongan for the team construction of the participants, and the curriculum arrangement, training plan and content, disciplinary requirements for implementation. Small micro loan project training officially started!</p>
+			<p class="tz">Many people involved</p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Mr. Gan Yong, deputy general manager of the operation and management of the company conducted a team building, and on the curriculum, training programs and content, disciplinary requirements, such as publicity. Small micro loan project training began!</p>
 			<p><img src="../../static/img/xw/xw8.png"/></p>
-			<p class="tz">Participants serious attention</p>
+			<p class="tz">Attendees are seriously focused</p>
 		</div>
 		<button class="back" onclick="$('.Tab').hide();$('.XFJR').hide();$('#101').show();">BACK</button>
 	</div>
-	<!-- 切换语言 -->		
-	<div class="lanage" onclick="setLanage(this)">						
-		<img src="../../static/img/yy.png" id="yySmall" onmouseover="showYY()"/>	
-		<ul id="yyBig" onmouseleave="hideYY()">
-			<li><a href="/index"><img src="../../static/img/Ch.png"/>中文</a></li>
-			<li><a href="/index_EN"><img src="../../static/img/En.png"/>ENGLISH</a></li>
+	<div class="Tab" id="xw3" style="display:none;">
+		<div class="title2">
+			<h1>Stand up and dry together! Dry and successful completion of the original new power project roadshow</h1>
+			<h4 class="time">Date of publication：2017-03-14</h4>
+		</div>
+		<div class="xw">
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;March 8, 2017, dry and healthy completion of Caohejing Development Zone, the original new power of March project roadshow. The project is sponsored by Caohejing Xinxing Technology Development Zone Science and Technology Venture Center and Shanghai Venture Capital Industry Association. The participants are some outstanding enterprises and investors.</p>
+			<p><img src="../../static/img/xw/xw9.png"/></p>
+			<p class="tz">Wang Zhuren, the industry association delivered a speech</p>				
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Zhou always brief on the status of dry health: the current major customers for more than 30 enterprises with a certain size of the assets of the city, the City Commercial Bank, of which three for the Shanghai and Shenzhen listed companies; total assets of over 300 billion unlisted banks accounted for 1/3。
+				<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The total assets of bank customers are more than 10 trillion yuan.
+				<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;And cooperation with the cumulative credit line more than<b style="color:red">10 billion yuan</b>.</p>
+			<p><img src="../../static/img/xw/xw10.png"/></p>
+			<p class="tz">Zhou introduced the dry business</p>	
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;To cope with the difficulties and needs of the industry, dry and Kang also have unique solutions: / credit card business consulting, wind control system construction, direct marketing and other services, including Jiangsu Province, a rural firm "Rongcheng" project, Fujian Province, a commercial bank " Flexible gold "project, a small club in Shanxi Province, a small loan project, the cumulative assessment of 100 million through the wind control assessment, training 90 people under the wind control expert team.</p>
+			<p><b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1, small micro-loan operation</b></p>
+			<ul>
+				<li>Complete system of micro - credit business system</li>
+				<li>High-quality business team</li>
+				<li>Suitable for China 's national conditions to upgrade IPC micro - loan technology</li>
+			</ul>
+			<p><b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2, credit card operation</b></p>
+			<ul>
+				<li>Innovative Credit Card Product Design</li>
+				<li>Complete credit card business system</li>
+				<li>Customer Segmentation Technology Incorporated into IPC Micro - loan Theory</li>
+				<li>With more than 3 years experience in the use of multiple projects</li>
+				<li>Followed by the development of Internet banking credit card business value - added services</li>
+			</ul>
+			<p><b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3, financial technology support</b></p>
+			<ul>
+				<li>To meet the agricultural firms on the demand for financial technology</li>
+				<li>Gan Kang data from a wide range of credit assessment capabilities</li>
+				<li>Fast letter integrated credit data, providing off, anti-fraud, customer value assessment, customer credit assessment</li>
+				<li>Fast loan integration Personal credit business integrated management platform, full business process management, support multi-agency, multi-product and scene market</li>
+				<li>Mobile application, to achieve mobile office mobile operations</li>
+			</ul>
+			<p><img src="../../static/img/xw/xw11.png"/></p>
+			<p class="tz">Zhou total project publicity</p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Dry and healthy business and development prospects to attract a large number of investors concerned about the Q & A session, the investors enthusiastically asked the scene warm atmosphere.</p>
+			<p><img src="../../static/img/xw/xw12.png"/></p>
+			<p class="tz">Investors asked Zhou</p>
+			<p><img src="../../static/img/xw/xw13.png"/></p>
+			<p class="tz">Zhou asked the investor to ask</p>
+			<p><img src="../../static/img/xw/xw14.png"/></p>
+			<p class="tz">Roadshow project site</p>
+		</div>
+		<button class="back" onclick="$('.Tab').hide();$('#101').show();">BACK</button>
+	</div>
+	<div class="Tab" id="xw4" style="display:none;">
+		<div class="title2">
+			<h1>Talking about Direct Banking Business</h1>
+			<h4 class="time">Date of publication：2017-03-14</h4>
+		</div>
+		<div class="xw">
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Direct banking is a microcosm of traditional banks embracing the Internet. In the current trend of the combination of the Internet and finance has become, the financial institutions how to build a direct bank operating model? What challenges will face? We are on these issues, I am invited to direct the Secretary for direct marketing operations, senior vice president of Liu Wenxin dialogue direct marketing development.</p>
+			<p><img src="../../static/img/xw/xw15.png"/></p>
+			<p class="tz">Division I is responsible for direct sales of bank operations senior vice president Liu Wenxin</p>				
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Direct marketing bank is the Internet era came into being a new type of bank operation mode, is the Internet financial technology (FINTECH) environment under a new financial products. This business model, the bank does not rely on business outlets, do not issue physical bank cards, customers mainly through the Internet channels to obtain banking products and services, because there is no network operating costs and management costs, direct marketing banks can provide customers with more competitive deposit Loan prices and lower rates. Product standardization, more convenient operation process, by reducing operating costs feedback customers is the core value of direct marketing banks.</p>
+			<p><img src="../../static/img/xw/xw16.png"/></p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Since 2014, the rapid development of direct marketing banks, has reached more than 60. However, the development of direct marketing banks are generally faced with two problems, first of all, direct selling bank homogenization of the phenomenon is more serious, and truly non-replicable and unique direct sales of rare banks. Second, direct marketing banks and traditional banks of mobile banking, online banking between the definition of fuzzy, there is no obvious distinction, but did not highlight its due Internet innovation characteristics. After recent years of competition, most of the direct marketing banks are not a climate, both in product design and marketing and promotion of outstanding mutual gold enterprises there is no small gap, just rely on the bank's credit endorsement and mutual gold industry struggling to compete , Sustained and effective access to new customer capacity is generally inadequate. Since the "foreign war lay", "foreign war is not strong", so most of the direct marketing banks have turned to the civil war, Fortunately, the civil war finally expert, grab the customer is not difficult, through the line of customer conversion is also considered alive, but this And direct sales of banks set up at the beginning through the Internet and the mutual gold industry competition to obtain new customers far from the idea. So how to get out of such a dilemma so that direct marketing banks as soon as possible to explore a line of Internet characteristics of the development of direct marketing banks, Liu Wenxin on the following aspects to talk about personal views:</p>
+			
+			<p><b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1, drainage was received</b></p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;As the current Internet industry, the channel was mixed with the channel, there are a large number of "Wool Party", or even by means of technical means to simulate the false "customers", the prevalence of low conversion rate and high cost of the problem, the traditional mutual gold industry drainage Channels in recent years, the practice of direct marketing banks, most do not meet the direct selection of bank Internet drainage standards. Through the exploration of some banks, cooperation with large-scale electric business platform is now more effective drainage method, after these large-scale electric business platform for large data analysis, can be more accurate for banks to provide direct marketing and banking products in line with the characteristics of customers. In order to enhance the customer experience, we can try to provide the basic information of the target customers to the bank by the electric business platform. The bank will handle the system through the system and then push the marketing information to the customers. , Will greatly simplify the process of new customers registered investment, thereby enhancing the customer's sense of experience and conversion rate, and through the WeChat friends circle advertising in accordance with the target group of precision push is also an effective way to get customers.</p>
+			<p><b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2, content marketing</b></p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;At present, most of the direct marketing banks from the media (micro-public, microblogging, knowledge and APP, etc.) mostly in the form of soft text to promote their own products, not to stimulate the stock customers to read and forward the enthusiasm, which is mainly failed from Customer's point of view to consider their needs, since the vigorous development of the media is mainly based on the sense of brush (share and show off) the psychological, a high-quality article or meet people to share the psychological picture is often in the circle of friends quickly spread The Direct marketing of the bank from the media in order to get a quick recognition in its content construction as a key work to be more attention and input, only good content is worthy of the existing fans to spread, and thus play the powder and powder The role of direct marketing banks should learn from those microblogging large V and WeChat public number of large practice.</p>
+			<p><b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3, activities marketing</b></p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;How to make these customers an effective investor will be able to stimulate their activity and attention through a variety of activities, and to increase their sense of experience through ongoing activities is the focus of the activities of marketing, in the activities of marketing In the process, to be more combined with the scene marketing, with some foreign companies to cooperate, multi-dimensional to provide preferential services to customers. Use word of mouth marketing or social communication to improve brand awareness.</p>
+			<p><b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;4, product marketing</b></p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Direct marketing of the product in the design should be different from the Bank line of financial products in the brand and product promotion to customers continue to implant convenient and relatively high income concept. Low cost "and" convenience "are two important directions to promote direct marketing before, and the next trend should be" customization "and" specialization. "Delivering personalization for long tail customers or emerging customers in low cost , Customization and high value-added services, is the focus of future direct marketing banks, and this service only rely on artificial intelligence and large data to solve this direct marketing banks to strengthen cooperation with large data analysis companies and financial technology companies, To further enhance the connotation of financial technology.</p>
+			<p><img src="../../static/img/xw/xw18.jpg" id="dks"/></p>
+		</div>
+		<button class="back" onclick="$('.Tab').hide();$('#101').show();">BACK</button>
+	</div>
+	<div class="Tab" id="xw5" style="display:none;">
+		<div class="title2">
+			<h1>Inventory financial circle pressure list, you shot it?</h1>
+			<h4 class="time">Date of publication：2017-03-17</h4>
+		</div>
+		<div class="xw">
+			<p class="xwtitle">Why are financial people so much pressure?</p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;There is a long time in the financial circle of the nightmare "the magicroundabout (magic ring road)": 7 o'clock in the morning, the taxi driver in the bank downstairs waiting for you, take you home, waiting for you to go up a bath, then Bring you back to the company. This is the life of the financial circle portrayal.
+				<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Chris Roebuck, a visiting scholar at Cass Business School, has said that young people are increasingly becoming a problem in the City of London. "Because of personal ambitions or job market reasons, people are eager to seize the job opportunities, the pressure from the resulting.</p>
+			<p><img src="../../static/img/xw/xw19.png"/></p>
+			<p class="xwtitle">The financial circle of work pressure list</p>			
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;US media have made a survey, the Wall Street's work in accordance with the pressure to do a division ranking.</p>
+			
+			<p><b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1，InvestmentBanker:</b>As the pressure of the largest Wall Street work, investment banks in the pressure indicators are among the top three. The main pressure faced by investment bankers comes from the difficulty and the amount of work, especially managers and analysts.</p>
+			<p><img src="../../static/img/xw/xw20.png"/></p>
+			<p><b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2，Trader:</b>Most traders do not have to work overtime like an investment banker, but they may have a more serious and direct pressure. Their pressure is real-time instantaneous outbreak.</p>
+			<p><b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3，Risk management & compliance:</b>A few years ago, this position will not row so front. Risk and compliance income is not as high as traders and investment firms, but their stress is not small at all. Risks and compliance are only the third reason is that work is guaranteed, at present, the lack of sufficient professionals to fill the vacancies.</p>
+			<p><img src="../../static/img/xw/xw21.png"/></p>
+			
+			<p><b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;4，Wealthmanager/financialadvisor：</b>Wealth managers and financial advisors face a specific stress: dismissal is commonplace.</p>
+			<p><b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;5，Institutionalsales：</b>Any sales work is stressful. Coupled with the work of the instability and lower wages, institutional sales is a torture.</p>
+			<p><b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;6，Managementconsulting：</b>The work in the final analysis is to add endless classes, endless projects and endless experience. Consultants are always in the "start" state.</p>
+			<p><b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;7，Private equity：</b>To work in private placement, you must be very smart, very hardworking and versatile.</p>
+			<p><b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;8，Industrial coverage/researchanalyst：</b>Rich, passionate, explosive fund managers and traders rely on research analysts to work. And analysts tend to be the object of being accused. Especially at the buyer.</p>
+			<p><b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;9，Fundmanager：</b>Fund managers are also a highly tense job, but they are qualified, do not have to do heavy work, and often more money, which may allow them to take a little breath.</p>
+			<p><b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;10，Technology：</b>The pressure of technical staff is not too big, and occasionally have the boss complained that you spend less money. But there is no pressure to make money so much.</p>
+			<p><img src="../../static/img/xw/xw22.png" /></p>
+			<p class="xwtitle">Financial elite rely on decompression?</p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1, slow down the work speed. If you are overwhelmed by the intense work of the pressure, it is best to put the work immediately, slow down, easy to take a break, you may do better.</p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2, a reasonable schedule to schedule their own strict implementation of the restraint system, so that life, learning, work can be carried out regularly.</p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3, pay attention to cultivate a good attitude to strengthen psychological counseling, develop their own psychological analysis of the habit. You can consider making friends with your psychiatrist, with a view to getting their help.</p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;4, to ensure adequate sleep Do not violate the laws of nature, so that the body of the various functions of a good rest.</p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;5, the correct evaluation of their own forever to maintain a normal heart, do not make life difficult with their own, the goal set high unattainable, everything needs to do, at any time to adjust the target may not be weak behavior.</p>
+		</div>
+		<button class="back" onclick="$('.Tab').hide();$('#101').show();">BACK</button>
+	</div>
+
+	<div class="Tab" id="xw6" style="display:none;">
+		<div class="title2">
+			<h1>Hunan, a small firm in a small agricultural loan center debate contest champion freshly baked! </h1>
+			<h4 class="time">Date of publication：2017-03-27</h4>
+		</div>
+		<div class="xw">
+			<p class="xwtitle">March 24, 2017, by the dry and financial and Hunan, a farmer firm co-organized a small micro-credit center debate finals ended successfully!</p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The event focused on training the customer manager's logical thinking ability, language skills, organizational skills and teamwork ability, and achieved new breakthroughs.</p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Match to take the preliminary tournament. The first round of the staff from the micro-credit account manager, divided into eight groups, two groups of duel, a total of four debates, debate to take the principle of free debate, after a heated debate, produced a total of eight best debater, 2 group into the final finals.</p>
+			<p><img src="../../static/img/xw/xw23.png"/></p>
+			<p class="tz">Final Debate scene</p>			
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The final speech by the chairman first, to introduce the relevant background information; players with their own debates to introduce themselves, a brief introduction to the game process and rules, the debate began.</p>
+			<p><img src="../../static/img/xw/xw24.png"/></p>
+			<p class="tz">Made a statement</p>		
+			<p><img src="../../static/img/xw/xw25.png"/></p>
+			<p class="tz">Anti-side two debate defense</p>	
+			<p><img src="../../static/img/xw/xw26.png"/></p>
+			<p class="tz">Free debate</p>		
+			<p><img src="../../static/img/xw/xw27.png"/></p>
+			<p class="tz">Sum up the speech</p>	
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;After the game also increased the audience interaction, the audience can ask questions to the pros and cons, by the two sides selected players to answer. The link in the official after the end of the game, increase the game ornamental, does not affect the game results.</p>
+			<p><img src="../../static/img/xw/xw28.png"/></p>
+			<p class="tz">Ask the audience</p>	
+			<p><img src="../../static/img/xw/xw29.png"/></p>
+			<h5 id="zjs">- Finals -</h5>
+			<p id="hjtd">Winning team</p>
+			<p><img src="../../static/img/xw/xw30.png"/></p>
+			<p><img src="../../static/img/xw/xw29.png"/></p>
+		</div>
+		<button class="back" onclick="$('.Tab').hide();$('#101').show();">BACK</button>
+	</div>
+	<div class="Tab" id="xw7" style="display:none;">
+		<div class="title2">
+			<h1>Let the strategy go dry and dry in action</h1>
+			<h2>(Dry and healthy training classes started! Enterprise transformation urgent)</h2>
+			<h4 class="time">Date of publication：2017-04-06</h4>
+		</div>
+		<div class="xw">
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;On March 31, 2017, at 1:00 pm, the two-day training course of dry and healthy (Shanghai) Financial Information Service Co., Ltd. (hereinafter referred to as dry and healthy financial) was officially opened at Shanggan Finance Shanghai Headquarters. Department, the Department of Health and Garment, the Ministry of Consulting and other departments, including Shaoxing Finance CEO Zhou Bin, including more than 20 students to participate in this training.</p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Regularly organized group management training is the traditional virtues that Mangkang has retained since, aiming at combing the "action goal" of the whole enterprise through training, and discussing the outstanding problems existing in the enterprise at present and making feasible Solution, the business floor, increase the number of contracts.</p>
+			
+			<p class="xwtitle">Financial technology to make finance more simple</p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;In order to improve the "gold content" of this training, the boss of the department has also invited the famous "business senior doctor" Pan teacher, "how to cross the gap between strategy and implementation" in-depth discussion of the theme.</p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"Shocking the status quo", "analysis of corporate transformation", "how to land", "corporate image analysis", "the use of digital management tools to implement strategic transformation" ... ... Pan teacher through the five modules from the inevitable transformation of business, Corporate image in-depth profile, and concise and put forward the feasibility of the program.</p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;At the training meeting, Mr. Pan relentlessly directed the current problems of dry and healthy finance, she said, different communication style team members in the same thing on the understanding of differences, resulting in communication costs, team communication consistency is low, The company's overall operational capacity to be strengthened. "The core management needs to do the role of conversion, in order to improve the overall management support." She stressed that.</p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;As for the company's core values, consulting the implementation of the Department of Zhang Xiaona also concluded: "understand the financial, understand science and technology, product, platform, as our new slogan summed up the 'dry and healthy, so financial simpler'." Applause one.</p>
+			
+			<p class="xwtitle">Focus on the implementation of OKR company</p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Up to 4 hours and 30 minutes after the wonderful training of teachers, the dry and financial chief Zhou Bin on the core functions of the three departments once again combed: "The software development department should play is the production of the engine function, but the products and Is not the final combination of products, only important accessories; consulting implementation department is focused on processing portfolio, through the B-side users to provide products, services, good C-side users; and dry health service sector responsibilities, but only by human, the key is to create Asset capacity for Internet banking customers to provide dry and healthy research and development of financial products.</p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;In addition, in order to help the company better focus on strategic objectives, better focus on the allocation of resources, so that the team up and down with the desire, dry health from the second quarter of 2017 officially full implementation OKR (ie target and key results ), Will be quarterly for the cycle, prior to determine the quarterly goals and key results, to check the frequency of every two weeks, OKR Review.</p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Let the strategy real land, dry and healthy in action, are you ready?</p>
+			<p><img src="../../static/img/xw/xw31.png"/></p>
+			<p><img src="../../static/img/xw/xw32.png"/></p>
+			<p><img src="../../static/img/xw/xw33.png"/></p>
+			<p><img src="../../static/img/xw/xw34.png"/></p>
+			<p><img src="../../static/img/xw/xw35.png"/></p>
+			<p><img src="../../static/img/xw/xw36.png"/></p>
+		</div>
+		<button class="back" onclick="$('.Tab').hide();$('#101').show();">BACK</button>
+	</div>
+	<div class="Tab" id="xw8" style="display:none;">
+		<div class="title2">
+			<h1>Qiankang make financial simpler!</h1>
+			<h4 class="time">Date of publication：2017-04-14</h4>
+		</div>
+		<div class="xw">
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Why is this slogan? In the current society, the general public for the financial feel quite complex, more difficult to grasp the financial process, which requires innovation, is to improve efficiency, which is one thing. You make a taxi more simple, you are drops. You make shopping more simple, you are Taobao. This requires a good slogan for branding. What is that a good slogan? There are a lot of familiar Slogan word of mouth, but if asked which brand is the Slogan, many consumers often can not answer, not to talk about, through Slogan spread corporate brand connotation. "Diamond forever, a permanent pass" was regarded as the classic advertising industry, but how many users know which brand is the Slogan it? Financial brand, the brand name included in the Slogan among the positive cases such as: "safe insurance: buy insurance, buy peace", "point of melting network: mobile management, on the point of melting", which will be more favorable brand communication. Based on the above analysis, I put forward the "dry and healthy, so that the financial more simple!" The slogan, on the one hand reflects the dry and healthy brand, on the other hand, reflects the purpose of the service.</p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>Avenue to Jane.</b>Jane, meaning enrich the P Plus advanced concept in one; both things with high efficiency and efficient operation of the case; also package integrity Houde service-oriented meaning. Jane, that is dry and healthy to pursue the core concept.</p>
+			
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>Tick its complex in the dry and healthy, to its simple customers.</b>All along, we have pursued:<b>“Qiankang make financial simpler!”</b>The core concept of sincere service in the regional commercial banks and other financial institutions, to provide credit wind control consulting operations. Build OTO business model service platform.</p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>Dry and healthy is not simple, only financial simpler! As a fintech company, gathered a large number of bank wind control data experts, but also with the Internet data, based on large data platform, combined with high-tech technology, strict control for the bank risk.</b>Company high-level think-tank gathered, the existing staff of 145 people, of which more than 98 percent of higher education staff, Dr. 6 people. The company set up three years has been 17 software copyright, for nearly 50 bank customers to provide a small micro-credit, credit card consulting and wind control system construction services. Accumulated 100 yuan through the wind control assessment credit, training more than 90 people under the wind control expert team.</p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>Advanced concept, is the core of the service customers. Jun want to be successful in the heart.</b>An advanced concept is the core of corporate culture, only to maintain the concept of advanced nature to ensure the correctness of the strategic direction of an enterprise. The company has advanced four-dimensional wind control model, based on the current, look at the overall situation for the 21st century China's financial risk characteristics of a set of unique risk control solutions, these advanced concepts to ensure that the company's customer service quality.</p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>Simple and efficient, is the pursuit of health services customers. Time is money, time is value.</b>In today's rapidly developing society, the customer's time is quite valuable, we need to do is through professional technology, so that customers can work efficiently, save time for customers. Companies in the customer-centric principle, all the foothold of all services are to provide customers with the most efficient and most simple solution. The company's core strategy to guide the team and technology research and development team for different customer issues given accurate professional solutions, the complex redundancy will be left to the dry and their own, convenient and efficient solution to stay customers.</p>
+			
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>Safe and reliable, is the backbone of health services customers.</b>Recall the 2008 century financial tsunami, all people shudder. In the financial sector, risk prevention and control is definitely the last barrier. Lost the security of this security, the entire financial activities as if without a safety rope walking in the 100 meters altitude acrobatics. And Kang is the fancy of the financial in this most critical part, so it will be safe as the conduct of the conduct of the dry. So that customers can not only win the benefits and will bear the risk to a minimum.<b>乾康在手，风险无忧。</b></p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Jane is to give up, it is harvest; true simplicity not only let us back to nature, let us comprehend inclusive; your heart is created a simple, or inclusive of the world? World unbounded, mind capacity is capacity. I believe the company will be outstanding business capabilities, advanced service concept and simple service purposes standing in the 21st century a new starting point for customers to provide more efficient and convenient, satisfied with the thoughtful, sincere service to the letter.<b>Qiankang make financial simpler!</b></p>
+			
+			<p><img src="../../static/img/xw/xw37.jpg"/></p>
+		</div>
+		<button class="back" onclick="$('.Tab').hide();$('#101').show();">BACK</button>
+	</div>
+	<div class="side">
+		<ul>
+			<li><a href="/qkxw" ><div class="sidebox"><img src="../../static/img/side_icon02.png">CHINESE</div></a></li>
+			<li id="QQ"><a href="http://wpa.qq.com/msgrd?v=3&amp;uin=1103924915&amp;site=qq&amp;menu=yes" target="_blank" ><div class="sidebox"><img src="../../static/img/side_icon04.png">QQ</div></a></li>
+			<li style="border:none;"><a href="javascript:goTop();" class="sidetop"><img src="../../static/img/side_icon05.png"></a></li>
 		</ul>
-	</div>	
-	<div class="back-to-top">
-		<img src="../../static/img/back-to-top.png"/>
 	</div>
-<!--**************************************************foot***********************************************-->
-		<div class="dialog">
-			<div class="background">				
-				<form class="dialog-box">
-					<p><img class="close" src="../../static/img/close.jpg" onclick="$('.dialog').hide();"/></p>
-					<img id="bigImg"/>
-				</form>
-			</div><!--透明背景-->
-		</div><!--对话框-->
+<!--*****************************foot*****************************************-->
 	<div class="foot">
-		<span>Copyright(C)2011-2014 CardPay(Shanghai) Finance Consulting Co.,Ltd.</span><br/>
-		<span>Shanghai ICP for 13043724</span>
+		<span>Copyright(C)2011-2014 Qiankang(Shanghai) Finance Consulting Co.,Ltd.</span><br/>
+		<span>Shanghai ICP for 13043724</span>>
 	</div>
-</div>
-	<script type="text/javascript" src="../../static/js/jquery-1.7.2.min.js"></script>
-	<script type="text/javascript" src="../../static/js/script.js"></script>
-	<!-- Slider -->
-	<script type="text/javascript" src="../../static/js/jquery.easing.1.3.js"></script>
-	<script type="text/javascript" src="../../static/js/jquery.animate-colors-min.js"></script>
-	<script type="text/javascript" src="../../static/js/jquery.skitter.js"></script>
+</div>	
+	
+	<script type="text/javascript" src="../../static/js/jquery.animate-colors-min.js"></script><!-- 动画渐变背景插件-->
+	
+	
+	
 	<script type="text/javascript">
-		$(document).ready(function(){
-			$(".cgal").mouseover(function(){
-				$(this).find(".zz").show();
+		$(document).ready(function(){  
+			//加载地图
+			//ShowMap("map",{city:'上海市',addr:'上海市徐汇区桂箐路7号3号楼801室',title:'乾康（上海）金融信息服务股份有限公司',lawfirm:'',tel:'021-54485390',mapx:'',pic:'../static/img/logo2.png',ismove:'0',piobj:'nxp'});
+	
+			setTimeout("bennerDH()",500);//banner动画
+			$("#bannerDh4").mouseover(function(){//banner按钮动画
+				$("#bannerDh4").animate({backgroundColor:"rgba(34,64,116,1)"},200);
 			});
-			$(".cgal").mouseout(function(){
-				$(this).find(".zz").hide();
+			$("#bannerDh4").mouseout(function(){//banner按钮动画
+				$("#bannerDh4").animate({backgroundColor:"rgba(34,64,116,0)"},200);
 			});
-			if($(window).width()<"800"){
-				$(".box_skitter").html("<ul>"+
-											"<li>"+
-												"<img src='../../static/img/banner11_EN.jpg'/>"+                        
-											"</li>"+
-											"<li>"+
-												"<img src='../../static/img/banner12_EN.jpg' /> "+                           
-											"</li>"+
-											"<li>"+
-												"<img src='../../static/img/banner13_EN.jpg'/>"+
-											"</li>"+
-											"<li>"+
-												"<img src='../../static/img/hzhb11_En.jpg'/>"+
-											"</li>"+
-											"<li>"+
-												"<img src='../../static/img/page14_EN.jpg'/>"+
-											"</li>"+
-										"</ul>");
+			$(window).scroll(function(){
+				var srollPos = $(window).scrollTop();    //滚动条距顶部距离(页面超出窗口的高度)	
+				if(srollPos!="0"){//导航透明度
+					$(".topNav").css("opacity","0.8");
+					$(".topNav").css("filter","alpha(opacity=80)");
+				}
+				else{				
+					$(".topNav").css("opacity","1");
+					$(".topNav").css("filter","alpha(opacity=100)");
+				}
+				if(srollPos>"50"){//公司简介、公司业务
+					$("#gsjj").animate({left:"0",opacity:'1'},1000);
+					$('#gsyw1').animate({right:'0',opacity:'1'},1100);
+					$('#gsyw2').animate({right:'0',opacity:'1'},1300);
+					$('#gsyw3').animate({right:'0',opacity:'1'},1500);
+				}
+				if(srollPos>"400"){//公司理念
+					$("#gsln").animate({opacity:"1"},"slow");
+				}
+				if(srollPos>"900"){//乾康家族
+					$('#img1').animate({left:'0',opacity:'1'},1200);		
+					$('#img2').animate({left:'0',opacity:'1'},1000);		
+					$('#img3').animate({left:'0',opacity:'1'},800);	
+					$('#p1').animate({right:'0',opacity:'1'},800);		
+					$('#p2').animate({right:'0',opacity:'1'},1000);		
+					$('#p3').animate({right:'0',opacity:'1'},1200);	
+				}
+				if(srollPos>"1150"){//周总寄语
+					$('#zzjy1').animate({left:'0',opacity:'1'},1000);		
+					$('#zzjy2').animate({right:'0',opacity:'1'},1000);	
+				}
+				if(srollPos>"1600"){//合作伙伴
+					$('#hzhb1').animate({left:'0',opacity:'1'},1500);		
+					$('#hzhb2').animate({left:'0',opacity:'1'},1200);
+				}
+				if(srollPos>"1800"){//合作伙伴					
+					$('#hzhb3').animate({left:'0',opacity:'1'},1500);	
+					$('#hzhb4').animate({left:'0',opacity:'1'},1200);	
+				}
+				if(srollPos>"2200"){//乾康新闻				
+					$('#qkxw1').animate({left:'0',opacity:'1'},1000);	
+					$('#qkxw2').animate({right:'0',opacity:'1'},1000);	
+				}
+				if ($(this).scrollTop() > 200) {// 滚动窗口来判断按钮显示或隐藏
+					$('.side').fadeIn(100);
+					} else {
+					$('.side').fadeOut(100);
+				}
+			});
+			if($(window).width()<"1100"){//屏幕小于1100不展示动画
+				$(".dh").css("opacity","1");
+				$(".dh").css("filter","alpha(opacity=100)");
+				$(".dh").css("left","0");
+				$(".dh").css("right","0");
 			}
-		});	
-		function dialog(obj){
-			var src=$(obj).find(".smallImg").attr("src");			
-			$("#bigImg").attr("src",src);
-			$('.dialog').show();
+			$(".side ul li").hover(function(){
+				$(this).find(".sidebox").stop().animate({"width":"124px"},200).css({"opacity":"1","filter":"Alpha(opacity=100)","background":"#ae1c1c"})	
+			},function(){
+				$(this).find(".sidebox").stop().animate({"width":"54px"},200).css({"opacity":"0.8","filter":"Alpha(opacity=80)","background":"#000"})	
+			});
+		});
+		//回到顶部
+		function goTop(){
+			$('html,body').animate({'scrollTop':0},600);
+		}
+		function bennerDH(){//banner动画
+			$('#bannerDh1').animate({right:'0'},1200);
+			$('#bannerDh2').animate({left:'0'},1200);
+			$('#bannerDh3').animate({right:'0'},1200);
+			$('#bannerDh4').animate({left:'0'},1200);			
 		}
 	</script>
-	
 </body>
 </html>

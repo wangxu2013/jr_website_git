@@ -3,177 +3,203 @@
 <head>	
 	<meta charset="utf-8">
 	<title>乾康（上海）金融信息服务股份有限公司</title>
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="description" content="Charisma, a fully featured, responsive, HTML5, Bootstrap admin template.">
 	<meta name="author" content="Muhammad Usman">
-	<link rel="SHORTCUT ICON" href="../3.ico"/>
-	<!-- 地图 -->
-	<script type="text/javascript" src="../../static/js/bdMap.js"></script>
-	<!-- The styles -->
 	<link href="../../static/css/main.css" rel="stylesheet">
-	 <link rel="stylesheet" type="text/css" href="../../static/css/skitter.styles.css" media="all" />
-	<style type="text/css">			
-		
+	<script type="text/javascript" src="../../static/js/jquery-1.7.2.min.js"></script>
+	<style type="text/css">
+	
 	</style>
 	<script type="text/javascript">
 		var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
 		document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3F980a47baa3b028fee8b94644df33e9b8' type='text/javascript'%3E%3C/script%3E"));
+	
 	</script>
 </head>
-
-<body onload="imgs();">
+<body>
 <div class="main">
-	<!--**************************************************top***********************************************-->
-	<div class="logo" style="position:fixed;z-index:10000;">	
-		<a href="/index"><img src="../../static/img/logo.png"/></a>
-		<ul class="newnav" style="margin-left:20px;z-index:10000;">
-			<li><a href="/qkly">乾康领域</a></li>
-			<li><a href="/qkhb">乾康伙伴</a></li>
-			<li><a href="/qkjz">乾康家族</a></li>
-			<li><a href="/jrqk">加入乾康</a></li>	
-			<li class="active"><a href="/gyqk">关于乾康</a></li>			
+<!--*****************************导航*****************************************-->
+	<div class="topNav">
+		<img src="../../static/img/logo.png" class="logo" onclick="window.location.href='/index' "/>
+		<ul>
+			<li class="active"><a href="/gyqk">关于乾康</a></li>					
+			<li><a href="/qkly">乾康领域</a></li>		
+			<li><a href="/qkjz">乾康家族</a></li>	
 			<li><a href="/qkxw">乾康新闻</a></li>	
+			<li><a href="/lxwm">联系我们</a></li>
+			<li><a href="/jrqk">加入乾康</a></li>										
 		</ul>
-	</div>
-	<!-- SLIDER -->
-	<div id="outerslider">
-		<div id="slidercontainer">
-			<section id="slider">
-			<div class="box_skitter box_skitter_large">					
-				<ul >
-					<li>
-						<img src="../../static/img/banner4.jpg" alt="" style="height:100%"/>                            
-					</li>
-					<!-- <li>
-						<img src="../../static/img/banner5.jpg" alt="" style="height:100%"/>                            
-					</li>          
-					<li>
-						<img src="../../static/img/banner6.jpg" alt="" style="height:100%"/>                            
-					</li>  -->   
-				</ul>
-			</div>
-			</section>
-		</div>
-	</div>
-	<!-- END SLIDER -->	
-
-	<!--**************************************************title***********************************************-->		
+	</div>	
+<!--*****************************banner*****************************************-->	
+	<div class="banner"></div>
 	<div class="title">
-		<h1>关于乾康</h1><h2>A</h2><h3>bout us</h3>
+		<img src="../../static/img/title.png" class="left"/><h3>关于乾康</h3>
+		<h4>ABOUT QIANKANG</h4><img src="../../static/img/title.png" class="right"/>
 	</div>
-	<div class="AboutUs dh" id="dh1" style="position:relative;left:-100%;">
-		<h1>Company Profile</h1>
-		<h2>乾康金融集团</h2>
+<!--*****************************公司简介*****************************************-->	
+	<div class="AboutUs">
+		<div class="dh" id="dh1" style="position:relative;left:-100%;filter:alpha(opacity=0);opacity:0;"><font>C</font>
+		<h3>公司简介</h3>
+		<h4>ompany Profile</h4>
 		<span></span>
-		<font>
+		<p>
 			乾康（上海）金融信息服务股份有限公司专注于个人信贷业务的运营管理和风险把控，凭借雄厚的专业实力、丰富的项目经验和强大的科技支撑，形成了高效的个人信贷业务风控运营体系，拥有精准的数据挖掘能力和较强的场景建模实力。乾康是农商银行联盟的战略合作伙伴，万事达组织亚太地区战略合作伙伴，某大型电商消费金融的战略合作伙伴。
-		</font>
+		</p></div>
 	</div>
-	<div class="AboutUs qywh dh" id="dh2" style="position:relative;right:-100%;">
-		<h1>企业文化</h1>
-		<h2>CardPay Company culture</h2>
-		<span id="qywh"></span>
-		<font>
-			乾康公司多年来始终致力于信贷咨询领域，所以积累了雄厚的专业实力和项目经验。我们将助力银行：管理提升和利润提高，实现在风险可控的前提下，长期持久盈利！<br/>
-			乾康态度：专业、高效、敬业、合作、诚信、激情<br/>
-		</font>
-	</div>
-	<div id="cggs" class="dh" style="width:100%;filter:alpha(opacity=0);opacity:0;">
-		<div class="title">
-			<h1>成功故事</h1><h2>S</h2><h3>uccess stories</h3>
-		</div>
-		<div class="Success">
-			<div class="leaf">
-				<img src="../../static/img/jnnsh.png" id="1"/>
-				<img src="../../static/img/tynsh.png" id="2"/><br/>
-				<img src="../../static/img/hxyh.jpg" id="3"/>
-				<img src="../../static/img/jnyh.jpg" id="4"/>
-				<img src="../../static/img/csnsh.jpg" id="5"/>		
-				<img src="../../static/img/wxnsh.jpg" id="6"/>	<br/>
-				<img src="../../static/img/xhyh.jpg" id="7"/>
-				<img src="../../static/img/jynsh.jpg" id="8"/>
-				<img src="../../static/img/jr.jpg" id="9"/>
-				<img src="../../static/img/jy.jpg" id="10"/>
-				<img src="../../static/img/xmnsh.png" id="11" />		
-			</div>	
-			<div class="xx"> 
-				<h1>Success Stories</h1>
-				<h2>乾康金融集团成功案例</h2>
-				<p>乾康公司咨询顾问均来自国内各银行、世界五百强企业高级管理人员，具备信贷从业经历、信贷管理咨询经验、信贷专业MBA或博士以上教育背景，全部拥有国际名校教育背景以及国际金融机构或咨询机构的工作经历。</p>
-				<img src="../../static/img/sc1.jpg"/>	
+<!--*****************************企业理念*****************************************-->	
+	<div class="qyln">		
+		<div class="dh" id="dh2" style="position:relative;right:-100%;filter:alpha(opacity=0);opacity:0;">
+			
+			<div class="title1"><font>C</font>
+				<h3>企业理念</h3>
+				<h4>orporate Philosophy</h4>
 			</div>
-			<img src="../../static/img/tree.png" class="tree"/>	
+			<div class="span6">			
+				<img src="../../static/img/zy.png"/>		
+				<h1>专业</h1>
+				<h2>专业服务，品质保证</h2>
+			</div>
+			<div class="span6">
+				<img src="../../static/img/gx.png"/>	
+				<h1>高效</h1>
+				<h2>经验丰富，快速高效</h2>
+			</div>
+			<div class="span6">			
+				<img src="../../static/img/jy.png"/>		
+				<h1>敬业</h1>
+				<h2>爱岗敬业，提高自我</h2>
+			</div>
+			<div class="span6">			
+				<img src="../../static/img/hz.png"/>		
+				<h1>合作</h1>
+				<h2>团队协作，促进发展</h2>
+			</div>
+			<div class="span6">			
+				<img src="../../static/img/cx.png"/>		
+				<h1>诚信</h1>
+				<h2>诚实守信，安全可靠</h2>
+			</div>
+			<div class="span6">				
+				<img src="../../static/img/jq.png"/>	
+				<h1>激情</h1>
+				<h2>热情饱满，积极向上</h2>
+			</div>
 		</div>
-	</div>	
-	<!-- 切换语言 -->		
-	<div class="lanage" onclick="setLanage(this)">						
-		<img src="../../static/img/yy.png" id="yySmall" onmouseover="showYY()"/>	
-		<ul id="yyBig" onmouseleave="hideYY()">
-			<li><a href="/index"><img src="../../static/img/Ch.png"/>中文</a></li>
-			<li><a href="/index_EN"><img src="../../static/img/En.png"/>ENGLISH</a></li>
-		</ul>
-	</div>	
-		
-	<div class="back-to-top">
-		<img src="../../static/img/back-to-top.png"/>
 	</div>
-<!--**************************************************foot***********************************************-->
+<!--*****************************专利资质*****************************************-->
+	<div class="qktd">
+		<div class="title1"><font>P</font>
+		<h1>专利资质</h1>
+		<h2>atent qualification</h2></div>
+		<div class="dh" id="scrollobj" > 	
+			<img src="../../static/img/zz/1.jpg"/>
+			<img src="../../static/img/zz/2.jpg"/>
+			<img src="../../static/img/zz/3.jpg"/>
+			<img src="../../static/img/zz/4.jpg"/>
+			<img src="../../static/img/zz/5.jpg"/>
+		</div>
+	</div>
+<!--*****************************乾康大事记*****************************************-->	
+	<div class="qktd qkdsj">
+		<div class="title1"><font>Q</font>
+		<h1>乾康大事记</h1>
+		<h2>iankang Memorabilia</h2></div>	
+		<img class="dh" src="../../static/img/dsj.png" id="dh7" style="position:relative;left:-100%;filter:alpha(opacity=0);opacity:0;"/>		
+	</div>	
+
+<!--*****************************乾康伙伴*****************************************-->	
+	<div class="qktd qkhb">
+		<div class="title1"><font>Q</font>
+		<h1>乾康伙伴</h1>
+		<h2>iankang Pantner</h2></div>	
+		<div class="dh" id="dh8" style="position:relative;right:-100%;filter:alpha(opacity=0);opacity:0;"><div class="parner lcLeft">
+			<img src="../../static/img/hzhb1.png" onclick="window.open('http://www.profitinsight.com/')"/>
+			<p>美国PTC&nbsp;&nbsp;&nbsp;&nbsp;</p>
+		</div><div class="parner lcCenter">
+			<img class="img2" src="../../static/img/hzhb3.png" onclick="window.open('http://www.rcbda.cn/')"/>
+			<p>中国农商行联盟</p>
+		</div><div class="parner lcCenter">
+			<img class="img2" src="../../static/img/hzhb2.png" onclick="window.open('http://www.mastercard.com.cn')"/>
+			<p>MasterCard</p>
+		</div><div class="parner lcCenter">
+			<img class="img3" src="../../static/img/hzhb4.png" onclick="window.open('http://www.xhjr.net')"/>
+			<p>&nbsp;新华金控</p>
+		</div><div class="parner lcRight">
+			<img class="img4" src="../../static/img/hzhb5.png" onclick="window.open('http://www.xhjr.net')"/>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;苏宁消费金融</p>
+		</div></div>	
+	</div>
+	<div class="side">
+		<ul>
+			<li><a href="/gyqk_EN" ><div class="sidebox"><img src="../../static/img/side_icon03.png">切换英文</div></a></li>
+			<li id="QQ"><a href="http://wpa.qq.com/msgrd?v=3&amp;uin=1103924915&amp;site=qq&amp;menu=yes" target="_blank" ><div class="sidebox"><img src="../../static/img/side_icon04.png">QQ客服</div></a></li>
+			<li style="border:none;"><a href="javascript:goTop();" class="sidetop"><img src="../../static/img/side_icon05.png"></a></li>
+		</ul>
+	</div>
+<!--*****************************foot*****************************************-->
 	<div class="foot">
 		<span>Copyright(C)2011-2014 乾康（上海）金融信息服务股份有限公司</span><br/>
 		<span>沪ICP备13043724号</span>
 	</div>
-</div>
-	<script type="text/javascript" src="../../static/js/jquery-1.7.2.min.js"></script>
-	<script type="text/javascript" src="../../static/js/script.js"></script>
-	<!-- Slider -->
-	<script type="text/javascript" src="../../static/js/jquery.easing.1.3.js"></script>
-	<script type="text/javascript" src="../../static/js/jquery.animate-colors-min.js"></script>
-	<script type="text/javascript" src="../../static/js/jquery.skitter.js"></script>
+</div>	
+	
+	<script type="text/javascript" src="../../static/js/jquery.animate-colors-min.js"></script><!-- 动画渐变背景插件-->
 	<script type="text/javascript">
-		$(document).ready(function(){  
-			$("#dh1").animate({left:"0"},"slow");
-			
-			//树动画
-			var i=1
-			setInterval(function(){
-				$('.leaf').find('img').css('filter','none');
-				$('.leaf').find('img').css('-webkit-filter','grayscale(0%)');
-				$('#'+i).css('filter','gray');
-				$('#'+i).css('-webkit-filter','grayscale(100%)');
-				if(i<11)
-					i++
-				else
-					i=1
-			},1000); 
-			if($(window).width()<"800"){
-				$(".box_skitter").html("<ul>"+
-											"<li>"+
-												"<img src='../../static/img/banner11.jpg'/>"+                        
-											"</li>"+
-											
-										"</ul>");
-										
+		$(document).ready(function(){ 
+			$(window).scroll(function(){
+				var srollPos = $(window).scrollTop();    //滚动条距顶部距离(页面超出窗口的高度)	
+				if(srollPos!="0"){//导航透明度
+					$(".topNav").css("opacity","0.8");
+					$(".topNav").css("filter","alpha(opacity=80)");
+				}
+				else{				
+					$(".topNav").css("opacity","1");
+					$(".topNav").css("filter","alpha(opacity=100)");
+				}
+				if ($(this).scrollTop() > 200) {// 滚动窗口来判断按钮显示或隐藏
+					$('.side').fadeIn(100);
+					} else {
+					$('.side').fadeOut(100);
+				}
+				if(srollPos>"50"){//公司简介
+					$("#dh1").animate({left:"0",opacity:'1'},1000);
+				}
+				if(srollPos>"300"){//企业理念
+					$("#dh2").animate({right:"0",opacity:'1'},1000);
+				}
+				if(srollPos>"800"){//企业团队第一排
+					$("#dh3").animate({opacity:'1'},1000);
+					$("#dh4").animate({opacity:'1'},1000);
+				}
+				if(srollPos>"1100"){//企业团队第二排
+					$("#dh5").animate({opacity:'1'},1000);
+					$("#dh6").animate({opacity:'1'},1000);
+				}
+				if(srollPos>"1550"){//大事记
+					$("#dh7").animate({left:"0",opacity:'1'},1000);
+				}
+				if(srollPos>"1900"){//合作伙伴
+					$("#dh8").animate({right:"0",opacity:'1'},1000);
+				}
+			});
+			if($(window).width()<"1100"){//屏幕小于1100不展示动画
 				$(".dh").css("opacity","1");
 				$(".dh").css("filter","alpha(opacity=100)");
-				
 				$(".dh").css("left","0");
 				$(".dh").css("right","0");
 			}
-			else{
-				$(window).scroll(function(){
-					var srollPos = $(window).scrollTop();    //滚动条距顶部距离(页面超出窗口的高度)				
-					if(srollPos>"300"){
-						$("#dh2").animate({right:"0"},"slow");
-					}
-					if(srollPos>"600"){
-						$("#cggs").animate({opacity:"1"},"1000");
-					}
-					
-				});
-			}
+			$(".side ul li").hover(function(){
+				$(this).find(".sidebox").stop().animate({"width":"124px"},200).css({"opacity":"1","filter":"Alpha(opacity=100)","background":"#ae1c1c"})	
+			},function(){
+				$(this).find(".sidebox").stop().animate({"width":"54px"},200).css({"opacity":"0.8","filter":"Alpha(opacity=80)","background":"#000"})	
+			});
 		});
+		//回到顶部
+		function goTop(){
+			$('html,body').animate({'scrollTop':0},600);
+		}
 		
 	</script>
-	
 </body>
 </html>

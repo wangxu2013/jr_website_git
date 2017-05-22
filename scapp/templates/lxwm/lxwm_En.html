@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>	
+	<meta charset="utf-8">
+	<title>乾康（上海）金融信息服务股份有限公司</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="Charisma, a fully featured, responsive, HTML5, Bootstrap admin template.">
+	<meta name="author" content="Muhammad Usman">
+	<link href="../../static/css/main.css" rel="stylesheet">
+	<link href="../../static/css/main_En.css" rel="stylesheet">
+	<script type="text/javascript" src="../../static/js/jquery-1.7.2.min.js"></script>
+	<script type="text/javascript" src="../../static/js/bdMap_En.js"></script>
+	<style type="text/css">
+	
+	</style>
+	<script type="text/javascript">
+		var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+		document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3F980a47baa3b028fee8b94644df33e9b8' type='text/javascript'%3E%3C/script%3E"));
+	
+	</script>
+</head>
+<body>
+<div class="main">
+<!--*****************************导航*****************************************-->
+	<div class="topNav">
+		<img src="../../static/img/logo.png" class="logo" onclick="window.location.href='/index_EN' "/>
+		<ul>
+			<li><a href="/gyqk_EN">About Us</a></li>					
+			<li><a href="/qkly_EN">Field</a></li>	
+			<li><a href="/qkjz_EN">Family</a></li>	
+			<li><a href="/qkxw_EN">News</a></li>	
+			<li class="active"><a href="/lxwm_EN">Contact Us</a></li>	
+			<li><a href="/jrqk_EN">Join Us</a></li>					
+		</ul>
+	</div>	
+<!--*****************************联系我们*****************************************-->
+
+	<div class="banner banner_En"></div>
+	<div class="title">
+		<img src="../../static/img/title.png" class="left"/><h3>CONTACT</h3>
+		<h4> US</h4><img src="../../static/img/title.png" class="right" style="left:115px;"/>
+	</div>
+
+<!--*****************************联系我们*****************************************-->
+	<div class="tel">		 
+		<div id="map"></div>
+		<div class="lxwm">
+			<!-- <h1>乾康（上海）金融信息服务股份有限公司</h1> -->
+			<p>Qiankang(Shanghai) Finance Consulting Co.,Ltd.</p>
+			<p>Phone： 021-54485390</p>
+			<p>Address：Room 801,Building 3,No.7,Guiqing Road,Xuhui District,Shanghai</p>
+			<p>Fax： 021-54485391</p>
+			<p>E-mail：liuxj@qkjr.com.cn</p>
+		</div> 
+	</div>
+
+	<div class="side">
+		<ul>
+			<li><a href="/lxwm" ><div class="sidebox"><img src="../../static/img/side_icon02.png">CHINESE</div></a></li>
+			<li id="QQ"><a href="http://wpa.qq.com/msgrd?v=3&amp;uin=1103924915&amp;site=qq&amp;menu=yes" target="_blank" ><div class="sidebox"><img src="../../static/img/side_icon04.png">QQ</div></a></li>
+			<li style="border:none;"><a href="javascript:goTop();" class="sidetop"><img src="../../static/img/side_icon05.png"></a></li>
+		</ul>
+	</div>
+<!--*****************************foot*****************************************-->
+	<div class="foot">
+		<span>Copyright(C)2011-2014 Qiankang(Shanghai) Finance Consulting Co.,Ltd.</span><br/>
+		<span>Shanghai ICP for 13043724</span>
+	</div>
+</div>	
+	
+	
+	
+	
+	<script type="text/javascript">
+		$(document).ready(function(){  
+			ShowMap("map",{city:'中国',addr:'上海市徐汇区桂箐路7号3号楼801室',title:'Qiankang(Shanghai) Finance Consulting Co.,Ltd.',lawfirm:'',tel:'021-54485390',mapx:'',pic:'../../static/img/logo2.png',ismove:'0',piobj:'nxp'});
+			if ($(this).scrollTop() > 200) {// 滚动窗口来判断按钮显示或隐藏
+					$('.side').fadeIn(100);
+					} else {
+					$('.side').fadeOut(100);
+			}
+		});
+		//回到顶部
+		function goTop(){
+			$('html,body').animate({'scrollTop':0},600);
+		}
+	</script>
+</body>
+</html>

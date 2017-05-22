@@ -1,0 +1,34 @@
+.banner_En{background:url(../img/banner3_En.jpg)}
+/******index_En******/
+	#gsjj div{margin-top:-40px;}
+	.gsyw p{line-height:25px;margin-bottom:20px;}
+/******gyqk_En******/
+	.AboutUs{height:auto;padding-bottom:30px;}
+	.qkdsj h1, .qkdsj h2 { margin-left: 75px;}
+	.qkhb h1, .qkhb h2 {margin-left: 55px;}
+/******gyly_En******/
+	#qkly2 h3, #qkly2 h4 { margin-left: 190px;}
+	#qkly2,#qkly3,#qkly4 {height:auto;padding-bottom:30px;}
+/******gyjz_En******/	
+	.jyms h1, .jyms h2 {margin-left: 50px;}
+	.fzlc h1, .fzlc h2 {margin-left: 60px;}
+	.ywjs h1, .ywjs h2 { margin-left: 50px;}
+	
+/******jrqk_En******/	
+	.qkxw p{line-height:25px;}
+@media all and (min-width: 1100px) and (max-width: 1300px){
+/******index_En******/
+	#gsjj div{margin-top:-10px;}
+}
+@media all and (max-width:1100px){
+	.banner_En{background:url(../img/banner4_En.jpg)}
+	/******index_En******/
+	#gsjj div{margin-top:-10px;}
+	.qyln .span6 h2{display:none;}
+	 
+/******gyqk_En******/
+	.qkdsj .title1{width:110px;}
+	.qkdsj h1, .qkdsj h2 { margin-left: 30px;}
+	.qkhb .title1{width:100px;}
+	.qkhb h1, .qkhb h2 {margin-left: 20px;}
+}

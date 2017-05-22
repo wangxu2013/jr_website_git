@@ -94,19 +94,19 @@ function ShowMap(objname,options){
 		//marker.setAnimation(BMAP_ANIMATION_BOUNCE); //跳动的动画
 		
 		//显示窗口设置
-		var opts = {width:250,height:110,title : "<font color=green size=3>" + this._title + "</font>"} //窗口标题
+		var opts = {width:250,height:110,title : "<font color=grey size=2.5>" + this._title + "</font>"} //窗口标题
 		var infotxt="<table border='0'><tr><td valign='top'>"; //窗口内容
-		if (this._pic != ""){infotxt += "<img src='"+this._pic+"' id='picid' style='float:left;margin-right:5px;padding-top:8px;' width=50>";}
-		infotxt += "</td><td><p style='font-size:12px;line-height:16px;padding-top:8px;'>";
-		if (this._addr !=""){infotxt += "<b>地址：</b>" + this._addr + "<br/>";};
-		if (this._tel !=""){infotxt += "<b>电话：</b>" + this._tel + "<br/>";};
-		if (this._lawfirm !=""){infotxt += "<b>传真：</b>" + this._lawfirm + "<br/>";};
-		if (this._user !=""){infotxt += "<b>邮箱：</b>" + this._user + "<br/>";};
+		if (this._pic != ""){infotxt += "<img src='"+this._pic+"' id='picid' style='float:left;margin-right:5px;padding-top:8px;' width=60>";}
+		infotxt += "</td><td><p style='font-size:12px;line-height:16px;padding-top:8px;color:#888'>";
+		if (this._lawfirm !=""){infotxt += "<b>律所：</b>" + this._lawfirm + "<br/>";};
+		if (this._addr !=""){infotxt += "地址：" + this._addr + "<br/>";};
+		if (this._tel !=""){infotxt += "电话：" + this._tel + "<br/>";};
+		if (this._user !=""){infotxt += "<b>主任：</b>" + this._user + "<br/>";};
 		infotxt += "</p></td></tr></table>";
 		
 		//显示文本标题
 		var label2 = new BMap.Label(this._title,{offset:new BMap.Size(20,-15)});
-		label2.setStyle({ backgroundColor:"red", color:"white", fontSize : "12px" });
+		label2.setStyle({ backgroundColor:"#fff",borderColor:"#dddddd", boxShadow:"2px 2px #ddd",color:"#000", fontSize : "16px" ,fontFamily : "Microsoft YaHei",fontWeight: "bold",padding: "15px",marginTop: "-50px",marginLeft: "-180px"});
 		marker.setLabel(label2);
 
 		//创建信息窗口
