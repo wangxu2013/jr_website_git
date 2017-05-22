@@ -131,10 +131,10 @@ body {background: white;overflow-x: hidden;}
 	*{font-size:10px;}
 	/*µ¼º½*/
 	.topNav {height: 35px;}
-	.logo {height: 25px;margin: 5px;} 
-	.topNav ul li a {font-size: 10px;width: 60px;line-height: 35px;} 
+	.logo {height: 25px;margin: 5px 3px;} 
+	.topNav ul li a {font-size: 10px;width: 45px;line-height: 35px;} 
 	/*banner*/ 
-	.banner {margin-top: 35px;background-image: url(../img/banner1.jpg);margin-bottom: 10px;height: 250px;} 
+	.banner {margin-top: 35px;background-image: url(../img/banner1.jpg);margin-bottom: 10px;height: 200px;} 
 	.banner h1 {padding-top: 50px;font-size: 10px;} 
 	.banner h2 {font-size: 24px;line-height: 50px;letter-spacing: 2px;}
 	.banner p img {height: 18px;margin-top: 5px;}
@@ -143,8 +143,8 @@ body {background: white;overflow-x: hidden;}
 	.gsjj {width: 90%;margin-left:5%;}
 	.gsjj div{width:150px;margin:0 auto;}
 	.gsjj font {font-size: 50px;}
-	.gsjj h3 {margin-left: 35px;margin-top: -65px;font-size: 20px;line-height: 20px;}
-	.gsjj h4 {margin-left: 35px;font-size: 12px;}
+	.gsjj h3 {margin-left: 38px;margin-top: -65px;font-size: 20px;line-height: 20px;}
+	.gsjj h4 {margin-left: 38px;font-size: 12px;}
 	.gsjj p {line-height: 22px;text-align: center;}
 	/*¹«Ë¾ÒµÎñ*/
 	#gsyw1 {margin-left: 5%;}
@@ -168,7 +168,7 @@ body {background: white;overflow-x: hidden;}
 	.zzjy .left img {display:none;}
 	.zzjy .right {width:90%;margin:0 5%;margin-top:-25px;}
 	.zzjy div{width:200px;margin:0 auto;}
-	.zzjy .right h3, .zzjy .right h4 {margin-left: 45px;}
+	.zzjy .right h3, .zzjy .right h4 {margin-left: 48px;}
 	.zzjy .right h4 {margin-bottom:30px;}
 	.zzjy p{text-align: left;}
 	/*Ç¬¿µ»ï°é*/
@@ -176,11 +176,10 @@ body {background: white;overflow-x: hidden;}
 	.qkhb {background-image: url(../img/qkhb1.jpg);height: 200px;margin-top:20px;margin-bottom:0;padding-top:20px;}
 	.qkhb div {width: 17%;margin-right: 0.6%;margin-top:10px;text-align:center;}
 	.qkhb div img {height: 50px;}
-	.qkhb div p {line-height: 20px;}
+	.qkhb div p {line-height: 20px;font-size: 8px;}
 	.qkhb div p.sj {display:none;}
 	.qkhb .title{width:45%;}
-	.qkhb .title p {font-size: 12px;}
-	.qkhb .title p.top{padding-right:50px;}
+	.qkhb .title p {font-size: 10px;}
 	#scrollobj{width:90%;margin:10px 5%;}
 	/*Ç¬¿µÐÂÎÅ*/
 	.qkxw {margin-bottom: 20px;}
@@ -192,11 +191,11 @@ body {background: white;overflow-x: hidden;}
 	.qkxw .date {width: 50px;height: 50px;}
 	.qkxw .date font {font-size: 20px;line-height: 20px;margin-top:7px;}
 	.qkxw .date span {font-size: 10px;}
-	.qkxw .content {width: 80%;margin-left: 1%;}
+	.qkxw .content {width: 78%;margin-left: 1%;}
 	.qkxw .content span {font-size: 10px;line-height: 15px;}
 	.qkxw .content span.title {font-size: 11px;line-height: 25px;}
 	/*专利资质*/
-	#zlzz{height: 230px;margin-bottom:0;}
+	#zlzz{height: 200px;margin-bottom:0;}
 	#zlzz .left div{width:160px;}
 	#zlzz h3,#zlzz h4{margin-left:35px;}
 	/*side*/
@@ -204,7 +203,7 @@ body {background: white;overflow-x: hidden;}
 	/*µ×²¿*/
 	.foot{padding-top:0;}
 	.foot p{font-size:10px;margin-top:5px;}
-	.foot .xx{margin-bottom:15px;padding-bottom:10px;}
+	.foot .xx{margin-bottom:15px;padding-bottom:10px;width:90%;margin-left:5%;}
 
 	.foot .awm{margin-top:-80px;margin-right:0px;}
 	.foot img{width:70px;height:70px;margin-left:5px;}

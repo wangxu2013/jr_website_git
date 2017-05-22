@@ -256,9 +256,9 @@ body {background: white;overflow-x: hidden;}
 	/*导航*/
 	.topNav {height: 35px;}
 	.logo {height: 25px;margin: 5px;} 
-	.topNav ul li a {font-size: 10px;width: 60px;line-height: 35px;} 
+	.topNav ul li a {font-size: 10px;width: 45px;line-height: 35px;} 
 	/*banner*/ 
-	.banner {margin-top: 35px;background-image: url(../img/banner4.jpg);margin-bottom: 10px;height: 257px;} 
+	.banner {margin-top: 35px;background-image: url(../img/banner4.jpg);margin-bottom: 10px;height: 200px;} 
 	.banner h1 {padding-top: 50px;font-size: 10px;} 
 	.banner h2 {font-size: 24px;line-height: 50px;letter-spacing: 2px;}
 	.banner p img {height: 18px;margin-top: 5px;}
@@ -271,20 +271,20 @@ body {background: white;overflow-x: hidden;}
 	.title h3{font-size:18px;}
 	.title h4{font-size:10px;}
 	/*公司简介*/
-	.AboutUs{width:90%;margin-left:5%;background-size:90% 100%;height:135px;margin-bottom:20px;padding-top: 20px;}
+	.AboutUs{width:90%;margin-left:5%;background-size:90% 100%;height:auto;padding-bottom:10px;margin-bottom:20px;padding-top: 20px;}
 	.AboutUs font {font-size: 30px;margin-left: 0;}
-	.AboutUs h3 {margin-left:20px;margin-top: -45px;font-size: 14px;line-height: 12px;}
-	.AboutUs h4 {margin-left:20px;font-size: 12px;line-height:12px;}
+	.AboutUs h3 {margin-left:23px;margin-top: -45px;font-size: 14px;line-height: 12px;}
+	.AboutUs h4 {margin-left:23px;font-size: 12px;line-height:12px;}
 	.AboutUs span{margin-left: 0;width:8%;border-top:2px solid #000;margin-right:1%;vertical-align:top;margin-top:-5px;}
-	.AboutUs p{line-height:12.5px;width:81%;margin:0 10%;margin-top:-25px;}
+	.AboutUs p{line-height:20px;width:81%;margin:0 10%;margin-top:-25px;}
 	/*企业理念*/
 	.qyln{width:100%;height:270px;}
 	.qyln img{width:27%;height:220px;margin-left:5%;}
 	.qyln div{margin:0 5%;margin-top:10px;}
-	.qyln .title1{width:160px;}
+	.qyln .title1{width:165px;}
 	.qyln font {font-size: 30px;}
-	.qyln h3 {margin-left:20px;margin-top: -45px;font-size: 15px;line-height: 12px;}
-	.qyln h4 {margin-left:20px;font-size: 12px;line-height: 12px;}
+	.qyln h3 {margin-left:23px;margin-top: -45px;font-size: 15px;line-height: 12px;}
+	.qyln h4 {margin-left:23px;font-size: 12px;line-height: 12px;}
 	
 	.qyln div.span6{width:31%;margin-top:0;}
 	.qyln div.span6 img{width:40px;}
@@ -308,17 +308,17 @@ body {background: white;overflow-x: hidden;}
 	.qkdsj{width:100%;margin-left: 0;padding-top:10px;padding-bottom: 20px;}
 	.qkdsj .title1{width:170px;margin-bottom: 10px;}
 	.qkdsj h1,.qkdsj h2{margin-left:25px;}
-	.qkdsj img{width:90%;margin-left:5%;margin-top:0px;}
+	.qkdsj img{width:95%;margin-left:2.5%;margin-top:0px;}
 	/*乾康伙伴*/
 	.qkhb{padding-bottom:20px;}
 	.qkhb .title1{width:140px;margin-bottom: 10px;}
 	.qkhb h1,.qkhb h2{margin-left:25px;}
 
-	.parner p{margin-top:5px;font-size:6px;margin-bottom:-15px;margin-top:10px;}
-	.lcLeft,.lcLeft img{width:60px;}
-	.lcCenter,.lcCenter img{width:72px;}
-	.lcRight,.lcRight img{width:60px;}
-	.parner img{width:35px;margin-left: -10px;margin-top:6px;}
+	.parner p{margin-top:5px;font-size:5px;margin-bottom:-15px;margin-top:10px;}
+	.lcLeft,.lcLeft img{width:52px;}
+	.lcCenter,.lcCenter img{width:62px;}
+	.lcRight,.lcRight img{width:52px;}
+	.parner img{width:30px;margin-left: -9px;margin-top:6px;}
 	.parner img.img2{margin-left: 0px;}
 	.parner img.img3{margin-left: 0px;}
 	.parner img.img4{margin-left: 10px;}
@@ -329,18 +329,18 @@ body {background: white;overflow-x: hidden;}
 	.gsyw img {width: 100%;margin-bottom: 5px;}
 	.gsyw p {font-size: 12px;line-height: 20px;}
 	.gsyw p font {display: block;font-size: 12px;line-height: 18px;}
-	.gsyw p.zbt {padding-bottom: 10px;font-size: 10px;line-height: 12px;}
+	.gsyw p.zbt {padding-bottom: 10px;font-size: 8px;line-height: 12px;}
 	/*线上个人信贷风险控制服务商*/
-	.qkly{height:100px;margin-bottom:0px;}
+	.qkly{height:auto;padding-bottom:10px;margin-bottom:0px;}
 	.qkly h3,.qkly h4{margin-left:25px;}
 	/*互联网银行运营*/
-	#qkly2{height:190px;}
+	#qkly2{height:auto;padding-bottom:10px;}
 	#qkly2 h3,#qkly2 h4{margin-left:15px;}
 	/*个人信贷业务咨询运营*/	
-	#qkly3{height:190px;}
-	#qkly3 h3,#qkly3 h4{margin-left:20px;}
-	#qkly4{height:160px;}
-	#qkly4 h3,#qkly4 h4{margin-left:20px;}
+	#qkly3{height:auto;padding-bottom:10px;}
+	#qkly3 h3,#qkly3 h4{margin-left:23px;}
+	#qkly4{height:auto;padding-bottom:10px;}
+	#qkly4 h3,#qkly4 h4{margin-left:23px;}
 /**************************qkjz*************************************/
 	/*乾康家族*/
 	.qkjz{margin-left: 5%;width:90%;}
@@ -350,36 +350,36 @@ body {background: white;overflow-x: hidden;}
 	.qkjz div span{width:60px;font-size:10px;line-height:25px;top:12.5px;}
 	
 
-	.qkjr{height:135px;margin-bottom: 0px;}
-	.qkxx{height:115px;margin-bottom: 0px;}
-	.qkjf{height:160px;margin-bottom: 0px;}
+	.qkjr{height:auto;padding-bottom:10px;margin-bottom: 0px;}
+	.qkxx{height:auto;padding-bottom:10px;margin-bottom: 0px;}
+	.qkjf{height:auto;padding-bottom:10px;margin-bottom: 0px;}
 	/*经营模式*/
 	.jyms{margin-bottom:-40px;}
 	.jyms .title1{width:120px;}
-	.jyms h1,.jyms h2{margin-left:20px;}
-	.jyms p{width:90%;margin-left: 5%;}
+	.jyms h1,.jyms h2{margin-left:23px;}
+	.jyms p{width:90%;margin-left: 5%;line-height:20px;}
 	.jyms p img{margin-bottom: 20px;}
 	.jyms p.tip{font-size:14px;line-height: 20px;}
 	/*软件著作权*/
 	.rjzzq{width:100%;margin-left:0;padding-top:20px;margin-bottom:-20px;}
 	.rjzzq .title1{width:140px;}
-	.rjzzq h1,.rjzzq h2{margin-left: 20px;}
+	.rjzzq h1,.rjzzq h2{margin-left: 23px;}
 	
 	/*发展历程*/
 	.fzlc .title1{width:140px;}
 	.fzlc h1,.fzlc h2{margin-left: 25px;}
-	.fzlc p{width:90%;margin-left: 5%;}
-	.fzlc p img{margin-bottom:0;height:100px;margin-top:10px;}
+	.fzlc p{width:90%;margin-left: 5%;line-height:20px;}
+	.fzlc p img{margin-bottom:0;height:80px;margin-top:10px;}
 	/*业务介绍*/
 	.ywjs .title1{width:160px;}
-	.ywjs h1,.ywjs h2{margin-left: 20px;}
+	.ywjs h1,.ywjs h2{margin-left: 23px;}
 	.ywjs{background:#fff;}
 
 /**************************qkxw*************************************/
 	/*乾康新闻*/
 	.qkxw {width: 90%;margin-left:5%;margin-bottom: 20px;}
 	.qkxw img{height:60px;}
-	.qkxw div{width:27.5%;margin-right: 1%;}
+	.qkxw div{width:26%;margin-right: 1%;margin-bottom: 1%;}
 	.qkxw div p{font-size:8px;line-height:10px;}
 	.qkxw div p font{display:block;font-size:8px;}
 	/*新闻内容*/
@@ -405,7 +405,7 @@ body {background: white;overflow-x: hidden;}
 
 	.zpxx{width:90%;margin:0 5%;}	
 	.zpxx h1{line-height: 30px;font-size:15px;}
-	.zpxx p{line-height: 15px;}
+	.zpxx p{line-height: 20px;}
 
 	.back{margin-left:5%;margin-bottom: 40px;}
 	/*side*/

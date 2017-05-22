@@ -106,7 +106,7 @@ function ShowMap(objname,options){
 		
 		//显示文本标题
 		var label2 = new BMap.Label(this._title,{offset:new BMap.Size(20,-15)});
-		label2.setStyle({ backgroundColor:"#fff",borderColor:"#dddddd", boxShadow:"2px 2px #ddd",color:"#000", fontSize : "16px" ,fontFamily : "Microsoft YaHei",fontWeight: "bold",padding: "15px",marginTop: "-50px",marginLeft: "-230px"});
+		label2.setStyle({ backgroundColor:"#fff",borderColor:"#dddddd", boxShadow:"2px 2px #ddd",color:"#000", fontSize : "13px" ,fontFamily : "Microsoft YaHei",fontWeight: "bold",padding: "14px",marginTop: "-50px",marginLeft: "-190px"});
 		marker.setLabel(label2);
 
 		//创建信息窗口
