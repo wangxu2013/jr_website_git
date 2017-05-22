@@ -179,7 +179,8 @@ body {background: white;overflow-x: hidden;}
 	.qkhb div p {line-height: 20px;font-size: 8px;}
 	.qkhb div p.sj {display:none;}
 	.qkhb .title{width:45%;}
-	.qkhb .title p {font-size: 10px;}
+	.qkhb .title p {font-size: 10px;letter-spacing: 1px;}
+	.qkhb .title p.top {padding-right: 100px;}
 	#scrollobj{width:90%;margin:10px 5%;}
 	/*Ç¬¿µÐÂÎÅ*/
 	.qkxw {margin-bottom: 20px;}
