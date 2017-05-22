@@ -3,122 +3,99 @@
 <head>	
 	<meta charset="utf-8">
 	<title>乾康（上海）金融信息服务股份有限公司</title>
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="description" content="Charisma, a fully featured, responsive, HTML5, Bootstrap admin template.">
 	<meta name="author" content="Muhammad Usman">
-	<link rel="SHORTCUT ICON" href="../3.ico"/>
-	<!-- 地图 -->
-	<script type="text/javascript" src="../../static/js/bdMap.js"></script>
-	<!-- The styles -->
 	<link href="../../static/css/main.css" rel="stylesheet">
-	<link href="../../static/css/imagehover.css" rel="stylesheet">
-	 <link rel="stylesheet" type="text/css" href="../../static/css/skitter.styles.css" media="all" />
+	<script type="text/javascript" src="../../static/js/jquery-1.7.2.min.js"></script>
 	<style type="text/css">
-		.xw ul{margin-left:50px;}
+	
 	</style>
 	<script type="text/javascript">
 		var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
 		document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3F980a47baa3b028fee8b94644df33e9b8' type='text/javascript'%3E%3C/script%3E"));
+	
 	</script>
 </head>
-
-<body onload="imgs();">
+<body>
 <div class="main">
-	<!--**************************************************top***********************************************-->
-	<div class="logo" style="position:fixed;z-index:10000;">	
-		<a href="/index"><img src="../../static/img/logo.png"/></a>
-		<ul class="newnav" style="margin-left:20px;z-index:10000;">
-			<li><a href="/qkly">乾康领域</a></li>
-			<li><a href="/qkhb">乾康伙伴</a></li>
-			<li><a href="/qkjz">乾康家族</a></li>
-			<li><a href="/jrqk">加入乾康</a></li>	
-			<li><a href="/gyqk">关于乾康</a></li>
+<!--*****************************导航*****************************************-->
+	<div class="topNav">
+		<img src="../../static/img/logo.png" class="logo" onclick="window.location.href='/index' "/>
+		<ul>
+			<li><a href="/gyqk">关于乾康</a></li>					
+			<li><a href="/qkly">乾康领域</a></li>	
+			<li><a href="/qkjz">乾康家族</a></li>	
 			<li class="active"><a href="/qkxw">乾康新闻</a></li>	
+			<li><a href="/lxwm">联系我们</a></li>		
+			<li><a href="/jrqk">加入乾康</a></li>								
 		</ul>
+	</div>	
+	<div class="banner"></div>
+<!--*****************************乾康新闻*****************************************-->
+<div class="Tab" id="101">
+	<div class="title">
+		<img src="../../static/img/title.png" class="left"/><h3>乾康新闻</h3>
+		<h4>QIANKANG NEWS</h4><img src="../../static/img/title.png" class="right"/>
 	</div>
-	<!-- SLIDER -->
-	<div id="outerslider">
-		<div id="slidercontainer">
-			<section id="slider">
-			<div class="box_skitter box_skitter_large">					
-				<ul >
-					<li>
-						<img src="../../static/img/banner4.jpg" alt="" style="height:100%"/>                            
-					</li>
-					<!-- <li>
-						<img src="../../static/img/banner5.jpg" alt="" style="height:100%"/>                            
-					</li>          
-					<li>
-						<img src="../../static/img/banner6.jpg" alt="" style="height:100%"/>                            
-					</li>  -->   
-				</ul>
-			</div>
-			</section>
+
+	<div class="qkxw">
+		<div onclick="$('.Tab').hide();$('#xw12').show();$('html,body').scrollTop(0)">
+			<img src="../../static/img/xw/xw52.jpg"/>
+			<p>乾康拥抱腾讯，实现<font>多方共赢</font></p>
+		</div>
+		<div onclick="$('.Tab').hide();$('#xw11').show();$('html,body').scrollTop(0)">
+			<img src="../../static/img/xw/xw47.png"/>
+			<p>山东某农商行营销培训<font>完美落幕</font></p>
+		</div>
+		<div onclick="$('.Tab').hide();$('#xw8').show();$('html,body').scrollTop(0)">
+			<img src="../../static/img/xw/xw37.jpg"/>
+			<p>乾康金融slogan<font>宣传书</font></p>
+		</div>
+		<div onclick="$('.Tab').hide();$('#xw10').show();$('html,body').scrollTop(0)">
+			<img src="../../static/img/xw/xw43.png"/>
+			<p>银行转型应主动拥抱<font>金融科技</font></p>
+		</div>
+		<div onclick="$('.Tab').hide();$('#xw9').show();$('html,body').scrollTop(0)">
+			<img src="../../static/img/xw/xw41.png"/>
+			<p>巾帼有壮志，行业<font>女尖兵</font></p>
+		</div>
+		<div onclick="$('.Tab').hide();$('#xw7').show();$('html,body').scrollTop(0)">
+			<img src="../../static/img/xw/xw31.png"/>
+			<p>让战略落地 乾康<font>在行动</font></p>
+		</div>
+		<div onclick="$('.Tab').hide();$('#xw6').show();$('html,body').scrollTop(0)">
+			<img src="../../static/img/xw/xw30.png"/>
+			<p>辩论大赛冠军队<font>新鲜出炉</font></p>
+		</div>
+		<div onclick="$('.Tab').hide();$('#xw5').show();$('html,body').scrollTop(0)">
+			<img src="../../static/img/xw/xw19.png"/>
+			<p>盘点金融圈压力<font>排行榜</font></p>
+		</div>
+		<div onclick="$('.Tab').hide();$('#xw3').show();$('html,body').scrollTop(0)">
+			<img src="../../static/img/xw/xw10.png"/>
+			<p>原创新动力项目<font>路演成功</font></p>
+		</div>
+		<div onclick="$('.Tab').hide();$('#xw4').show();$('html,body').scrollTop(0)">
+			<img src="../../static/img/xw/xw16.png"/>
+			<p>大咖秀|浅谈直销<font>银行业务</font></p>
+		</div>
+		<div onclick="$('.Tab').hide();$('#xw1').show();$('html,body').scrollTop(0)">
+			<img src="../../static/img/xw/xw1.png"/>
+			<p>顺利完成区级项目<font>申请答辩</font></p>
+		</div>
+		<div onclick="$('.Tab').hide();$('#xw2').show();$('html,body').scrollTop(0)">
+			<img src="../../static/img/xw/xw5.png"/>
+			<p>又一小微贷项目<font>正式启动</font></p>
 		</div>
 	</div>
-	<!-- END SLIDER -->
-	<!--**************************************************title***********************************************-->	
-	<div id="101" class="Tab">	
-		<div class="title">
-			<h1>新闻动态</h1><h2>N</h2><h3>ews information</h3>
-		</div>
-		<div class="xfjrList zp">
-			<div onclick="$('.Tab').hide();$('#xw12').show();">
-				<img src="../../static/img/xw/xw52.jpg"/>
-				<p>乾康拥抱腾讯，实现多方共赢</p>
-			</div>
-			<div onclick="$('.Tab').hide();$('#xw11').show();">
-				<img src="../../static/img/xw/xw47.png"/>
-				<p>山东某农商行营销培训完美落幕</p>
-			</div>
-			<div onclick="$('.Tab').hide();$('#xw8').show();">
-				<img src="../../static/img/xw/xw37.jpg"/>
-				<p>乾康金融slogan宣传书</p>
-			</div>
-			<div onclick="$('.Tab').hide();$('#xw10').show();">
-				<img src="../../static/img/xw/xw43.png"/>
-				<p>银行转型应主动拥抱金融科技</p>
-			</div>
-			<div onclick="$('.Tab').hide();$('#xw9').show();">
-				<img src="../../static/img/xw/xw41.png"/>
-				<p>巾帼有壮志，行业女尖兵</p>
-			</div>
-			<div onclick="$('.Tab').hide();$('#xw7').show();">
-				<img src="../../static/img/xw/xw31.png"/>
-				<p>让战略落地 乾康在行动</p>
-			</div>
-			<div onclick="$('.Tab').hide();$('#xw6').show();">
-				<img src="../../static/img/xw/xw30.png"/>
-				<p>辩论大赛冠军队新鲜出炉</p>
-			</div>
-			<div onclick="$('.Tab').hide();$('#xw5').show();">
-				<img src="../../static/img/xw/xw19.png"/>
-				<p>盘点金融圈压力排行榜</p>
-			</div>
-			<div onclick="$('.Tab').hide();$('#xw3').show();">
-				<img src="../../static/img/xw/xw10.png"/>
-				<p>原创新动力项目路演成功</p>
-			</div>
-			<div onclick="$('.Tab').hide();$('#xw4').show();">
-				<img src="../../static/img/xw/xw16.png"/>
-				<p>大咖秀|浅谈直销银行业务</p>
-			</div>
-			<div onclick="$('.Tab').hide();$('#xw1').show();">
-				<img src="../../static/img/xw/xw1.png"/>
-				<p>顺利完成区级项目申请答辩</p>
-			</div>
-			<div onclick="$('.Tab').hide();$('#xw2').show();">
-				<img src="../../static/img/xw/xw5.png"/>
-				<p>又一小微贷项目正式启动</p>
-			</div>
-		</div>
-	</div>
+</div>
 	<div class="Tab" id="xw12" style="display:none;">
-		<div class="title">
+		<div class="title2">
 			<h1>乾康拥抱腾讯，实现多方共赢!</h1>
 			<h4 class="time">发表日期：2017-04-25</h4>
 		</div>
-		<div class="AboutUs xfjr xw">
+		<div class="xw">
 			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;近日，乾康金融总裁周滨携手江苏某农商行，受腾讯支付基础平台与金融应用线副总经理郑浩剑邀请，前往腾讯公司进行了参观洽谈。</p>
 			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;腾讯公司于1998年在深圳成立，是目前中国领先的互联网综合服务提供商之一。腾讯的支付基础平台和金融应用线成立于2015年，主要承载腾讯的互联网金融业务，是腾讯发展金融的特色。</p>
 			<p><img src="../../static/img/xw/xw52.jpg"/></p>
@@ -126,18 +103,18 @@
 			<p><img src="../../static/img/xw/xw53.jpg"/></p>
 			<p><img src="../../static/img/xw/xw54.jpg"/></p>
 			<p><img src="../../static/img/xw/xw55.jpg"/></p>
-			<p>短暂休息后，三方围绕“联合放贷，实现共赢”开展项目合作会谈。期间，乾康的风险评估控制能力受到了与会的一致好评。经过多轮头脑风暴，三方达成初步合作意向。</p>
-			<p>此次会谈，乾康充分展示了在金融风控领域的独到优势。作为一家金融科技企业，乾康专注于个人信贷风险控制、互联网银行运营、个人信贷业务咨询运营等业务。</p>
-			<p>腾讯郑总表示，十分看好乾康的未来发展前景，希望在腾讯征信、虚拟信用卡、网络小贷等方面能与乾康有更深层次的深度合作。</p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;短暂休息后，三方围绕“联合放贷，实现共赢”开展项目合作会谈。期间，乾康的风险评估控制能力受到了与会的一致好评。经过多轮头脑风暴，三方达成初步合作意向。</p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;此次会谈，乾康充分展示了在金融风控领域的独到优势。作为一家金融科技企业，乾康专注于个人信贷风险控制、互联网银行运营、个人信贷业务咨询运营等业务。</p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;腾讯郑总表示，十分看好乾康的未来发展前景，希望在腾讯征信、虚拟信用卡、网络小贷等方面能与乾康有更深层次的深度合作。</p>
 		</div>
 		<button class="back" onclick="$('.Tab').hide();$('#101').show();">返&nbsp;&nbsp;&nbsp;回</button>
 	</div>
 	<div class="Tab" id="xw11" style="display:none;">
-		<div class="title">
+		<div class="title2">
 			<h1>存精促进！山东某农商行营销培训完美落幕!</h1>
 			<h4 class="time">发表日期：2017-04-14</h4>
 		</div>
-		<div class="AboutUs xfjr xw">
+		<div class="xw">
 			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2017年4月8日，乾康携手山东某农商行开展了“2017年第二届客户经理营销能力培训大会”。培训内容主要包括：营销策略，营销团队管理，保险业务介绍及营销，理财产品销售注意事项，扫码支付营销技巧，渠道营销技巧等等。</p>
 			<p><img src="../../static/img/xw/xw47.png"/></p>
 			<p class="tz">培训现场</p>
@@ -156,11 +133,11 @@
 		<button class="back" onclick="$('.Tab').hide();$('#101').show();">返&nbsp;&nbsp;&nbsp;回</button>
 	</div>
 	<div class="Tab" id="xw10" style="display:none;">
-		<div class="title">
+		<div class="title2">
 			<h1>经济日报称：银行转型应主动拥抱金融科技</h1>
 			<h4 class="time">发表日期：2017-04-13</h4>
 		</div>
-		<div class="AboutUs xfjr xw">
+		<div class="xw">
 			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>主动拥抱金融科技是大势所趋，</b>传统商业银行要实现转型突围发展，既要探索利用新技术不断创新服务方式和服务渠道，加速拓展新兴业务，实现服务渠道协同发展和资源整合，还要和金融科技公司构建合作共赢的良好关系，实现技术共享和平台共享，减少重复浪费，为再一次转型发展奠定基础。</p>
 			<p><img src="../../static/img/xw/xw16.png"/></p>
 			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;近日，上市银行陆续发布2016年度经营业绩。在实体经济增速放缓的形势下，大部分银行保持了稳健增长的态势，经营业绩稳中有升。但在此背景下，银行各类业务发展对整体收入增长的贡献却呈现不同的趋势，其中息差收入逐渐下降，<b>非利息收入贡献度稳步提高。</b></p>
@@ -177,11 +154,11 @@
 		<button class="back" onclick="$('.Tab').hide();$('#101').show();">返&nbsp;&nbsp;&nbsp;回</button>
 	</div>
 	<div class="Tab" id="xw9" style="display:none;">
-		<div class="title">
+		<div class="title2">
 			<h1>巾帼有壮志，行业女尖兵</h1>
 			<h4 class="time">发表日期：2017-04-13</h4>
 		</div>
-		<div class="AboutUs xfjr xw">
+		<div class="xw">
 			<p><img src="../../static/img/xw/xw38.png"/></p>
 			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2017年4月12日，一年一度的“上海市软件行业行业标兵，服务明星”评选工作圆满落下帷幕。经过初审及专家评审环节，乾康（上海）金融信息服务股份有限公司软件开发部马颖涵脱颖而出，荣获了2016年度“上海市软件行业标兵”称号。获奖名单在同日的《文汇报》上公示。</p>
 			<p><img src="../../static/img/xw/xw39.png"/></p>
@@ -201,11 +178,11 @@
 		<button class="back" onclick="$('.Tab').hide();$('#101').show();">返&nbsp;&nbsp;&nbsp;回</button>
 	</div>
 	<div class="Tab" id="xw1" style="display:none;">
-		<div class="title">
+		<div class="title2">
 			<h1>乾康顺利完成区级项目申请答辩</h1>
 			<h4 class="time">发表日期：2017-03-06</h4>
 		</div>
-		<div class="AboutUs xfjr xw">
+		<div class="xw">
 			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2017年3月3日，乾康就《互联网金融产品风控及授信评估系统项目申请》通过层层审批，在徐汇区行政大楼进行项目评审答辩。公司项目负责人——马颖涵及刘学军、熊俊参加了评审会。</p>
 			<p><img src="../../static/img/xw/xw1.png"/></p>
 			<p class="tz">项目答辩现场</p>				
@@ -221,11 +198,11 @@
 		<button class="back" onclick="$('.Tab').hide();$('#101').show();">返&nbsp;&nbsp;&nbsp;回</button>
 	</div>
 	<div class="Tab" id="xw2" style="display:none;">
-		<div class="title">
+		<div class="title2">
 			<h1>又一小微贷项目正式启动</h1>
 			<h4 class="time">发表日期：2017-03-06</h4>
 		</div>
-		<div class="AboutUs xfjr xw">
+		<div class="xw">
 			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2017年3月2日，湖南某农商银行小微贷项目正式启动。</p>
 			<p><img src="../../static/img/xw/xw5.png"/></p>
 			<p class="tz">项目启动会现场</p>				
@@ -242,11 +219,11 @@
 		<button class="back" onclick="$('.Tab').hide();$('.XFJR').hide();$('#101').show();">返&nbsp;&nbsp;&nbsp;回</button>
 	</div>
 	<div class="Tab" id="xw3" style="display:none;">
-		<div class="title">
+		<div class="title2">
 			<h1>撸起袖子一起干！乾康成功完成原创新动力项目路演</h1>
 			<h4 class="time">发表日期：2017-03-14</h4>
 		</div>
-		<div class="AboutUs xfjr xw">
+		<div class="xw">
 			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2017年3月8日，乾康成功完成漕河泾开发区原创新动力3月项目路演。该项目由漕河泾新兴技术开发区科技创业中心与上海市创业投资行业协会主办，参与者为部分优秀企业及投资人。</p>
 			<p><img src="../../static/img/xw/xw9.png"/></p>
 			<p class="tz">行业协会王主任发表讲话</p>				
@@ -291,11 +268,11 @@
 		<button class="back" onclick="$('.Tab').hide();$('#101').show();">返&nbsp;&nbsp;&nbsp;回</button>
 	</div>
 	<div class="Tab" id="xw4" style="display:none;">
-		<div class="title">
+		<div class="title2">
 			<h1>大咖秀|浅谈直销银行业务</h1>
 			<h4 class="time">发表日期：2017-03-14</h4>
 		</div>
-		<div class="AboutUs xfjr xw">
+		<div class="xw">
 			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;直销银行是传统银行拥抱互联网的一个缩影。在当前互联网与金融的结合趋势渐成之时，金融机构如何构建直销银行运营模式？将面对哪些挑战？我们就这些问题，邀请我司负责直销银行运营管理的高级副总裁刘文新对话直销银行发展。</p>
 			<p><img src="../../static/img/xw/xw15.png"/></p>
 			<p class="tz">我司负责直销银行运营管理的高级副总裁刘文新</p>				
@@ -316,11 +293,11 @@
 		<button class="back" onclick="$('.Tab').hide();$('#101').show();">返&nbsp;&nbsp;&nbsp;回</button>
 	</div>
 	<div class="Tab" id="xw5" style="display:none;">
-		<div class="title">
+		<div class="title2">
 			<h1>盘点金融圈压力排行榜，你中枪了吗？</h1>
 			<h4 class="time">发表日期：2017-03-17</h4>
 		</div>
-		<div class="AboutUs xfjr xw">
+		<div class="xw">
 			<p class="xwtitle">金融人士何来那么多压力？</p>
 			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;金融圈里有一个流传已久的噩梦“the magicroundabout（魔法环岛路）”：早上7点钟，的士司机会在银行楼下等你，带你回家，等你上楼洗个澡，再把你带回公司。这就是金融圈人士的生活写照。
 				<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;卡斯商学院访问学者克里斯·罗巴克(ChrisRoebuck)曾表示，过劳的年轻人日益成为伦敦金融城的一个问题。“由于个人雄心或者就业市场的原因，人们非常渴望抓住工作机会，压力由此而来。</p>
@@ -353,11 +330,11 @@
 	</div>
 
 	<div class="Tab" id="xw6" style="display:none;">
-		<div class="title">
+		<div class="title2">
 			<h1>湖南某农商行小微贷中心辩论大赛冠军队新鲜出炉！！</h1>
 			<h4 class="time">发表日期：2017-03-27</h4>
 		</div>
-		<div class="AboutUs xfjr xw">
+		<div class="xw">
 			<p class="xwtitle">2017年3月24日，由乾康金融与湖南某农商行共同组织的小微贷中心辩论总决赛圆满落幕!</p>
 			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;此次活动着重培养客户经理的逻辑思考能力，语言表达能力，组织能力与团队协作能力，取得了新的突破。</p>
 			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;比赛采取初赛晋级决赛制。初赛人员由全体微贷客户经理组成，共分8小组，两两小组对决，共四辩论，辩论采取自由辩论原则，经过激烈辩论，共产生8位最佳辩手，这8位辩手将组成2小组进入最终总决赛。</p>
@@ -376,7 +353,7 @@
 			<p><img src="../../static/img/xw/xw28.png"/></p>
 			<p class="tz">现场观众提问</p>	
 			<p><img src="../../static/img/xw/xw29.png"/></p>
-			<h1 id="zjs">- 总 决 赛 -</h1>
+			<h5 id="zjs">- 总 决 赛 -</h5>
 			<p id="hjtd">获奖团队</p>
 			<p><img src="../../static/img/xw/xw30.png"/></p>
 			<p><img src="../../static/img/xw/xw29.png"/></p>
@@ -384,12 +361,12 @@
 		<button class="back" onclick="$('.Tab').hide();$('#101').show();">返&nbsp;&nbsp;&nbsp;回</button>
 	</div>
 	<div class="Tab" id="xw7" style="display:none;">
-		<div class="title">
+		<div class="title2">
 			<h1>让战略落地&nbsp;&nbsp;乾康在行动</h1>
 			<h2>（乾康培训班开课了！企业转型刻不容缓）</h2>
 			<h4 class="time">发表日期：2017-04-06</h4>
 		</div>
-		<div class="AboutUs xfjr xw">
+		<div class="xw">
 			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2017年3月31日下午1点，为期两天的乾康（上海）金融信息服务股份有限公司（简称乾康金融）管理层培训班于乾康金融上海总部正式开课，来自综合部、软件开发部、乾康金服部、咨询实施部等部门包括乾康金融总裁周滨在内的逾20名学员参加此番培训。</p>
 			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;定期举办集团管理层培训是乾康一直以来保留下来的传统美德，旨在通过培训，阶段性的梳理整个企业的“行动目标”，并就企业目前存在的突出问题进行深入探讨，制定可行性的解决方案，将业务落地，提高签约数量。</p>
 			
@@ -413,11 +390,11 @@
 		<button class="back" onclick="$('.Tab').hide();$('#101').show();">返&nbsp;&nbsp;&nbsp;回</button>
 	</div>
 	<div class="Tab" id="xw8" style="display:none;">
-		<div class="title">
+		<div class="title2">
 			<h1>乾康，让金融更简单！</h1>
 			<h4 class="time">发表日期：2017-04-14</h4>
 		</div>
-		<div class="AboutUs xfjr xw">
+		<div class="xw">
 			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;为何提出这个口号呢？在当前社会，普通大众对于金融感到颇为复杂，其金融流程更难以掌握，这就需要进行创新，就是提高效率，这其实是一回事。你让打车更简单，你就是滴滴。你让购物更简单，你就是淘宝。这就需要一个好的slogan来进行品牌宣传。那什么才是一个好的slogan？有很多耳熟能详的Slogan被口口相传，但若问及这是哪个品牌的Slogan，很多消费者往往答不上来，更不用谈，透过Slogan传播企业的品牌内涵。“钻石恒久远，一颗永留传”被奉为广告界的经典，可是，有多少网友知道这是哪个品牌的Slogan呢？金融品牌中，让品牌词包含于Slogan之中的正面案例如：“平安保险：买保险，就买平安”、“点融网：手机理财，上点融”，这将更有利品牌的传播。基于以上的分析，我提出了“乾康，让金融更简单！”该slogan，一方面体现了乾康的品牌，另一方面，体现了乾康的服务宗旨。</p>
 			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>大道至简。</b>简，意为浓缩八方先进理念于一身；既含事物运作极速高效之宗；亦包诚信厚德服务至上之意。简，即乾康奉行的核心理念。</p>
 			
@@ -433,60 +410,107 @@
 		</div>
 		<button class="back" onclick="$('.Tab').hide();$('#101').show();">返&nbsp;&nbsp;&nbsp;回</button>
 	</div>
-	<!-- 切换语言 -->		
-	<div class="lanage" onclick="setLanage(this)">						
-		<img src="../../static/img/yy.png" id="yySmall" onmouseover="showYY()"/>	
-		<ul id="yyBig" onmouseleave="hideYY()">
-			<li><a href="/index"><img src="../../static/img/Ch.png"/>中文</a></li>
-			<li><a href="/index_EN"><img src="../../static/img/En.png"/>ENGLISH</a></li>
+	<div class="side">
+		<ul>
+			<li><a href="/qkxw_EN" ><div class="sidebox"><img src="../../static/img/side_icon03.png">切换英文</div></a></li>
+			<li id="QQ"><a href="http://wpa.qq.com/msgrd?v=3&amp;uin=1103924915&amp;site=qq&amp;menu=yes" target="_blank" ><div class="sidebox"><img src="../../static/img/side_icon04.png">QQ客服</div></a></li>
+			<li style="border:none;"><a href="javascript:goTop();" class="sidetop"><img src="../../static/img/side_icon05.png"></a></li>
 		</ul>
-	</div>	
-	<div class="back-to-top">
-		<img src="../../static/img/back-to-top.png"/>
 	</div>
-<!--**************************************************foot***********************************************-->
-		<div class="dialog">
-			<div class="background">				
-				<form class="dialog-box">
-					<p><img class="close" src="../../static/img/close.jpg" onclick="$('.dialog').hide();"/></p>
-					<img id="bigImg"/>
-				</form>
-			</div><!--透明背景-->
-		</div><!--对话框-->
+<!--*****************************foot*****************************************-->
 	<div class="foot">
 		<span>Copyright(C)2011-2014 乾康（上海）金融信息服务股份有限公司</span><br/>
 		<span>沪ICP备13043724号</span>
 	</div>
-</div>
-	<script type="text/javascript" src="../../static/js/jquery-1.7.2.min.js"></script>
-	<script type="text/javascript" src="../../static/js/script.js"></script>
-	<!-- Slider -->
-	<script type="text/javascript" src="../../static/js/jquery.easing.1.3.js"></script>
-	<script type="text/javascript" src="../../static/js/jquery.animate-colors-min.js"></script>
-	<script type="text/javascript" src="../../static/js/jquery.skitter.js"></script>
+</div>	
+	
+	<script type="text/javascript" src="../../static/js/jquery.animate-colors-min.js"></script><!-- 动画渐变背景插件-->
+	
+	
+	
 	<script type="text/javascript">
-		$(document).ready(function(){
-			$(".cgal").mouseover(function(){
-				$(this).find(".zz").show();
+		$(document).ready(function(){  
+			//加载地图
+			//ShowMap("map",{city:'上海市',addr:'上海市徐汇区桂箐路7号3号楼801室',title:'乾康（上海）金融信息服务股份有限公司',lawfirm:'',tel:'021-54485390',mapx:'',pic:'../static/img/logo2.png',ismove:'0',piobj:'nxp'});
+	
+			setTimeout("bennerDH()",500);//banner动画
+			$("#bannerDh4").mouseover(function(){//banner按钮动画
+				$("#bannerDh4").animate({backgroundColor:"rgba(34,64,116,1)"},200);
 			});
-			$(".cgal").mouseout(function(){
-				$(this).find(".zz").hide();
+			$("#bannerDh4").mouseout(function(){//banner按钮动画
+				$("#bannerDh4").animate({backgroundColor:"rgba(34,64,116,0)"},200);
 			});
-			if($(window).width()<"800"){
-				$(".box_skitter").html("<ul>"+
-											"<li>"+
-												"<img src='../../static/img/banner11.jpg'/>"+                        
-											"</li>"+
-											
-										"</ul>");
+			$(window).scroll(function(){
+				var srollPos = $(window).scrollTop();    //滚动条距顶部距离(页面超出窗口的高度)	
+				if(srollPos!="0"){//导航透明度
+					$(".topNav").css("opacity","0.8");
+					$(".topNav").css("filter","alpha(opacity=80)");
+				}
+				else{				
+					$(".topNav").css("opacity","1");
+					$(".topNav").css("filter","alpha(opacity=100)");
+				}
+				if(srollPos>"50"){//公司简介、公司业务
+					$("#gsjj").animate({left:"0",opacity:'1'},1000);
+					$('#gsyw1').animate({right:'0',opacity:'1'},1100);
+					$('#gsyw2').animate({right:'0',opacity:'1'},1300);
+					$('#gsyw3').animate({right:'0',opacity:'1'},1500);
+				}
+				if(srollPos>"400"){//公司理念
+					$("#gsln").animate({opacity:"1"},"slow");
+				}
+				if(srollPos>"900"){//乾康家族
+					$('#img1').animate({left:'0',opacity:'1'},1200);		
+					$('#img2').animate({left:'0',opacity:'1'},1000);		
+					$('#img3').animate({left:'0',opacity:'1'},800);	
+					$('#p1').animate({right:'0',opacity:'1'},800);		
+					$('#p2').animate({right:'0',opacity:'1'},1000);		
+					$('#p3').animate({right:'0',opacity:'1'},1200);	
+				}
+				if(srollPos>"1150"){//周总寄语
+					$('#zzjy1').animate({left:'0',opacity:'1'},1000);		
+					$('#zzjy2').animate({right:'0',opacity:'1'},1000);	
+				}
+				if(srollPos>"1600"){//合作伙伴
+					$('#hzhb1').animate({left:'0',opacity:'1'},1500);		
+					$('#hzhb2').animate({left:'0',opacity:'1'},1200);
+				}
+				if(srollPos>"1800"){//合作伙伴					
+					$('#hzhb3').animate({left:'0',opacity:'1'},1500);	
+					$('#hzhb4').animate({left:'0',opacity:'1'},1200);	
+				}
+				if(srollPos>"2200"){//乾康新闻				
+					$('#qkxw1').animate({left:'0',opacity:'1'},1000);	
+					$('#qkxw2').animate({right:'0',opacity:'1'},1000);	
+				}
+				if ($(this).scrollTop() > 200) {// 滚动窗口来判断按钮显示或隐藏
+					$('.side').fadeIn(100);
+					} else {
+					$('.side').fadeOut(100);
+				}
+			});
+			if($(window).width()<"1100"){//屏幕小于1100不展示动画
+				$(".dh").css("opacity","1");
+				$(".dh").css("filter","alpha(opacity=100)");
+				$(".dh").css("left","0");
+				$(".dh").css("right","0");
 			}
-		});	
-		function dialog(obj){
-			var src=$(obj).find(".smallImg").attr("src");			
-			$("#bigImg").attr("src",src);
-			$('.dialog').show();
+			$(".side ul li").hover(function(){
+				$(this).find(".sidebox").stop().animate({"width":"124px"},200).css({"opacity":"1","filter":"Alpha(opacity=100)","background":"#ae1c1c"})	
+			},function(){
+				$(this).find(".sidebox").stop().animate({"width":"54px"},200).css({"opacity":"0.8","filter":"Alpha(opacity=80)","background":"#000"})	
+			});
+		});
+		//回到顶部
+		function goTop(){
+			$('html,body').animate({'scrollTop':0},600);
+		}
+		function bennerDH(){//banner动画
+			$('#bannerDh1').animate({right:'0'},1200);
+			$('#bannerDh2').animate({left:'0'},1200);
+			$('#bannerDh3').animate({right:'0'},1200);
+			$('#bannerDh4').animate({left:'0'},1200);			
 		}
 	</script>
-	
 </body>
 </html>

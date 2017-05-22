@@ -6,16 +6,10 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="description" content="Charisma, a fully featured, responsive, HTML5, Bootstrap admin template.">
 	<meta name="author" content="Muhammad Usman">
-	<link rel="SHORTCUT ICON" href="3.ico"/>
-	<link href="../static/css/main.css" rel="stylesheet">
-	
-	<link rel="stylesheet" type="text/css" href="../static/css/skitter.styles.css" media="all" />
+	<link href="../static/css/index.css" rel="stylesheet">
+	<script type="text/javascript" src="../static/js/jquery-1.7.2.min.js"></script>
 	<style type="text/css">
-		
-		#scrollobj{width:90%;white-space:nowrap;overflow:hidden;} 
-		#scrollobj img{width:15%;margin-right:1%;}
-		.qkly{width:100%;margin-top:-1px;}
-		.qkly .span4{width:33.3%;}
+	
 	</style>
 	<script type="text/javascript">
 		var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
@@ -23,78 +17,53 @@
 	
 	</script>
 </head>
-
-<body onload="imgs();">
-	<div class="main">
-	<!--**************************************************top***********************************************-->
-		<div class="logo" style="position:fixed;z-index:10000;">	
-			<a href="/index"><img src="../static/img/logo.png"/></a>
-			<ul class="newnav" style="margin-left:20px;z-index:10000;">
-				<!-- <li class="active"><a href="/">网站首页</a></li> -->
-				<li><a href="/qkly">乾康领域</a></li>	
-				<li><a href="/qkhb">乾康伙伴</a></li>	
-				<li><a href="/qkjz">乾康家族</a></li>	
-				<li><a href="/jrqk">加入乾康</a></li>				
-				<li><a href="/gyqk">关于乾康</a></li>				
-				<li><a href="/qkxw">乾康新闻</a></li>	
-				<!--<li><a href="/gsjj">关于我们</a></li>
-				<!-- <li><a href="/ygfc">员工风采</a></li> 
-				<li><a href="/zpxx">招聘信息</a></li>-->
-			</ul>
-		</div>
-		
-		<div id="outerslider">
-        	<div id="slidercontainer">
-            	<section id="slider">
-                <div class="box_skitter box_skitter_large">					
-                    <ul>
-                        <li>
-                            <img src="../static/img/banner1.jpg"/>                            
-                        </li>
-						<!-- <li>
-                            <img src="../static/img/banner2.jpg"/>                            
-                        </li>
-                        <li>
-                            <img src="../static/img/banner3.jpg"/>
-                        </li>
-                        <li>
-                            <img src="../static/img/hzhb1.jpg"/>
-                        </li>
-                        <li>
-                            <img src="../static/img/page4.jpg"/>
-                        </li> -->
-                    </ul>
-                </div>
-                </section>
-            </div>
-        </div>
-        <!-- END SLIDER -->
-		
-		<!--**************************************************content***********************************************-->
-		<div class="qkly">
-			<div class="span4" onmouseover="Hover(this,'../static/img/101')" onmouseout="Normal(this,'../static/img/101')"  onclick="window.location.href='/qkly'">
-				<img src="../static/img/101.png"/>		
-				<h1>联合信贷<br/><span>JOINT<br/>CREDIT<br/>BUSINESS</span></h1>
-			</div>
-			<div class="span4" onmouseover="Hover(this,'../static/img/102')" onmouseout="Normal(this,'../static/img/102')"  onclick="window.location.href='/qkly'">
-				<img src="../static/img/102.png"/>	
-				<h1>个人金融业务咨询运营<br/><span>PERSONAL<br/> FINANCIAL<br/>SERVICES</span></h1>
-			</div>
-			<div class="span4" onmouseover="Hover(this,'../static/img/103')" onmouseout="Normal(this,'../static/img/103')"  onclick="window.location.href='/qkly'">
-				<img src="../static/img/103.png"/>			
-				<h1>远程授信评估平台<br/><span>REMOTE <br/>CREDIT<br/>EVALUATION</span></h1>
-			</div>
-		</div>
-		<div class="qkjt">
-			<h1><img src="../static/img/title1.png"/>乾康金融<img src="../static/img/title2.png"/></h1>
-			<h2>FINTECH</h2>
-			<p>乾康（上海）金融信息服务股份有限公司专注于个人信贷业务的运营管理和风险把控，凭借雄厚的专业实力、丰富的项目经验和强大的科技支撑，形成了高效的个人信贷业务风控运营体系，拥有精准的数据挖掘能力和较强的场景建模实力。乾康是农商银行联盟的战略合作伙伴，万事达组织亚太地区战略合作伙伴，某大型电商消费金融的战略合作伙伴。</p>
-			<a href="/gyqk" class="button">查看详情</a>
-		</div>
-		<div class="qkkh dh" id="qkkh" style="filter:alpha(opacity=0);opacity:0;">
-			<h1>雄厚实力 服务周到</h1>
-			<h2>POWERFUL GOOD SERVICE</h2>
-			
+<body>
+<div class="main">
+<!--*****************************导航*****************************************-->
+	<div class="topNav">
+		<img src="../static/img/logo.png" class="logo"/>
+		<ul>
+			<li><a href="/gyqk">关于乾康</a></li>					
+			<li><a href="/qkly">乾康领域</a></li>		
+			<li><a href="/qkjz">乾康家族</a></li>	
+			<li><a href="/qkxw">乾康新闻</a></li>	
+			<li><a href="/lxwm">联系我们</a></li>	
+			<li><a href="/jrqk">加入乾康</a></li>				
+		</ul>
+	</div>	
+<!--*****************************banner*****************************************-->	
+	<div class="banner">
+		<h1 id="bannerDh1" style="position:relative;right:-100%;">科技、金融、简单</h1>
+		<h2 id="bannerDh2" style="position:relative;left:-100%;">乾康，让金融更简单!</h2>
+		<p id="bannerDh3" style="position:relative;right:-100%;"><img src="../static/img/logo1.png"/></p>
+		<!-- <div id="bannerDh4" style="position:relative;left:-100%;" onclick="window.location.href='lxwm/lxwm.html'">联系我们</div> -->
+	</div>
+<!--*****************************公司简介*****************************************-->	
+	<div class="gsjj dh" id="gsjj" style="position:relative;left:-100%;filter:alpha(opacity=0);opacity:0;" onclick="window.location.href='/gyqk'">
+		<div><font>C</font>
+		<h3>公司简介</h3>
+		<h4>ompany Profile</h4></div>
+		<p>乾康（上海）金融信息服务股份有限公司专注于个人信贷业务的运营管理和风险把控，凭借雄厚的专业实力、丰富的项目经验和强大的科技支撑，形成了高效的个人信贷业务风控运营体系，拥有精准的数据挖掘能力和较强的场景建模实力。乾康是农商银行联盟的战略合作伙伴，万事达组织亚太地区战略合作伙伴，某大型电商消费金融的战略合作伙伴。</p>
+	</div>
+<!--*****************************公司业务*****************************************-->		
+	<div class="gsyw dh" id="gsyw1" style="position:relative;right:-100%;filter:alpha(opacity=0);opacity:0;" onclick="window.location.href='/qkly'">
+		<img src="../static/img/yw1.jpg"/>
+		<p>线上个人信贷风险<font>控制服务商</font></p>
+		<p class="zbt">Online personal credit<br/>risk control</p>
+	</div>
+	<div class="gsyw dh" id="gsyw2" style="position:relative;right:-100%;filter:alpha(opacity=0);opacity:0;" onclick="window.location.href='/qkly'">
+		<img src="../static/img/yw2.jpg"/>
+		<p>互联网银行<font>运营</font></p>
+		<p class="zbt">Internet banking<br/>operations</p>
+	</div>
+	<div class="gsyw dh" id="gsyw3" style="position:relative;right:-100%;filter:alpha(opacity=0);opacity:0;" onclick="window.location.href='/qkly'">
+		<img src="../static/img/yw3.jpg"/>
+		<p>个人信贷业务<font>咨询运营</font></p>
+		<p class="zbt">Personal credit business<br/>consulting operations</p>
+	</div>
+<!--*****************************公司理念*****************************************-->
+	<div class="qyln">		
+		<div class="dh" id="gsln" style="filter:alpha(opacity=0);opacity:0;" onclick="window.location.href='/gyqk'">
 			<div class="span6">			
 				<img src="../static/img/zy.png"/>		
 				<h1>专业</h1>
@@ -106,7 +75,7 @@
 				<h2>经验丰富，快速高效</h2>
 			</div>
 			<div class="span6">			
-				<img src="../static/img/jyy.png"/>		
+				<img src="../static/img/jy.png"/>		
 				<h1>敬业</h1>
 				<h2>爱岗敬业，提高自我</h2>
 			</div>
@@ -126,231 +95,303 @@
 				<h2>热情饱满，积极向上</h2>
 			</div>
 		</div>
-		<div class="qkjz qkjt dh" id="qkjz" style="filter:alpha(opacity=0);opacity:0;">			
-			<h1><img src="../static/img/title1.png"/>乾康家族<img src="../static/img/title2.png"/></h1>
-			<h2 style="color: #9abefc;">FAMILY</h2>
-			<div class="zgs">
-				<img src="../static/img/sc10.jpg"/>
-				<span>				
-					<img src="../static/img/logo1.png"  style="width:6.25em;height:3.75em;"/>
-					<h2>乾康金融信息服务<font class="hh">股份有限公司</font></h2>
-					<a href="/qkjz">了解更多</a>
-				</span>
-			</div>
-			<div class="zgs" id="xxjs">
-				<span>
-					<img src="../static/img/LOGO2.png" style="width:3.75em;height:3.75em;"/>
-					<h2>乾康信息技术<font class="hh">有限公司</font></h2>
-					<a href="/qkjz">了解更多</a>
-				</span>
-				<img src="../static/img/sc20.jpg"/>
-			</div>
-			<div class="zgs">
-				<img src="../static/img/sc21.png"/>
-				<span>
-					<img src="../static/img/LOGO3.png" style="width:3.75em;height:3.75em;"/>
-					<h2>乾康金服信息技术<font class="hh">有限公司</font></h2>
-					<a href="/qkjz">了解更多</a>
-				</span>
-			</div>
-		</div>
-		<div class="qkkh cggs dh" id="cggs" style="filter:alpha(opacity=0);opacity:0;">
-			<h1>成功故事</h1>
-			<h2>SUCCESS STORIES</h2>
-			<p>乾康公司咨询顾问均来自国内各银行、世界五百强企业高级管理人员，具备信贷从业经历、信贷管理咨询经验、信贷专业MBA或博士以上教育背景，全部拥有国际名校教育背景以及国际金融机构或咨询机构的工作经历，与部分知名银行有过密切合作。</p>
-			
-			<!--<span class="prev" onclick="$('#scrollobj').animate({scrollLeft:'0'},'slow')"></span>
-			<span class="next" onclick="$('#scrollobj').animate({scrollLeft:'0'},'slow')"></span>-->
-			<div id="scrollobj"> 	
-				<img src="../static/img/jnnsh.png"/>
-				<img src="../static/img/tynsh.png"/>
-				<img src="../static/img/hxyh.jpg"/>
-				<img src="../static/img/jnyh.jpg"/>
-				<img src="../static/img/csnsh.jpg"/>		
-				<img src="../static/img/wxnsh.jpg"/>	
-				<img src="../static/img/xhyh.jpg"/>
-				<img src="../static/img/jynsh.jpg"/>
-				<img src="../static/img/jr.jpg"/>
-				<img src="../static/img/jy.jpg"/>
-				<img src="../static/img/xmnsh.png"/>	
-			</div>				
-		</div>
-		<!--<div class="qkkh qkjz" id="qkjz" style="filter:alpha(opacity=0);opacity:0;">
-			<h1>乾康家族</h1>
-			<h2>CARDPAY FAMILY</h2>
-			<img src="../static/img/start.png"/>
-			<div class="sgz">
-				<span><img src="../static/img/rl.png"/>&nbsp;2011年</span>
-			</div>
-			<div class="sgz">
-				<span><img src="../static/img/rl.png"/>&nbsp;2012年</span>
-			</div>
-			<div class="sgz">
-				<span><img src="../static/img/rl.png"/>&nbsp;2013年</span>
-			</div>
-			<div class="sgz">
-				<span><img src="../static/img/rl.png"/>&nbsp;2014年</span>
-			</div><br/>
-			<div class="czlc" style="margin-left:60px;">
-				<font>2011.02</font>
-				<font class="sj">乾康信息技术有限公司成立</font>
-				<font>2011.06</font>
-				<font class="sj">公司搬迁</font>
-				<font>2011.06</font>
-				<font class="sj">公司员工超过50人</font>
-			</div>			
-			<div class="czlc">
-				<font>2011.02</font>
-				<font class="sj">乾康信息技术有限公司成立</font>
-				<font>2011.06</font>
-				<font class="sj">公司客户超过200人</font>
-				<font>2011.06</font>
-				<font class="sj">公司搬迁</font>
-			</div>			
-			<div class="czlc">
-				<font>2011.02</font>
-				<font class="sj">乾康信息技术有限公司成立</font>
-				<font>2011.06</font>
-				<font class="sj">公司搬迁</font>
-				<font>2011.06</font>
-				<font class="sj">公司搬迁</font>
-			</div>			
-			<div class="czlc">
-				<font>2011.02</font>
-				<font class="sj">乾康信息技术有限公司成立</font>
-				<font>2011.06</font>
-				<font class="sj">公司搬迁</font>
-				<font>2011.06</font>
-				<font class="sj">公司搬迁</font>
-			</div>
-		</div>
-		-->
-		<div class="qkjt qkhb dh" id="qkhb" style="width:100%;margin-left:0;filter:alpha(opacity=0);opacity:0;">		
-			<h1><img src="../static/img/title1.png"/>乾康伙伴<img src="../static/img/title2.png"/></h1>
-			<h2>PANTNER</h2>
-			<div class="parner lcLeft">
-				<img src="../static/img/hzhb1.png" onclick="window.open('http://www.profitinsight.com/')"/>
-				<p>美国PTC&nbsp;&nbsp;&nbsp;&nbsp;</p>
-			</div><div class="parner lcCenter">
-				<img src="../static/img/hzhb3.png" onclick="window.open('http://www.rcbda.cn/')"/>
-				<p>中国农商行联盟</p>
-			</div><div class="parner lcCenter">
-				<img src="../static/img/hzhb2.png" onclick="window.open('http://www.mastercard.com.cn')"/>
-				<p>MasterCard</p>
-			</div><div class="parner lcRight">
-				<img src="../static/img/hzhb4.png" onclick="window.open('http://www.xhjr.net')"/>
-				<p>&nbsp;&nbsp;&nbsp;&nbsp;新华金控</p>
-			</div><br/>	
-			<img src="../static/img/dsj.png" id="dsj"/>
-			<!-- <div class="parner lcL">
-				<span>与PTC达成战略<br/>合作协议<br/>
-				<font>2013年</font></span>
-			</div><div class="parner lcC">
-				<span>成为中国农商行联<br/>盟唯一公司观察员<br/>
-				<font>2013年</font></span>
-			</div><div class="parner lcC">
-				<span>MasterCard(亚<br/>太)战略合作伙伴<br/>
-				<font>2014年</font></span>
-			</div><div class="parner lcC">
-				<span>与中国农商联盟<br/>签署战略合作协议<br/>
-				<font>2015年</font></span>
-			</div><div class="parner lcR">
-				<span>与新华金控签署<br/>战略合作协议<br/>
-				<font>2015年</font></span>
-			</div> -->
-		</div>
-	<!--**************************************************foot***********************************************-->
-		<!-- 切换语言 -->		
-		<div class="lanage" onclick="setLanage(this)">						
-			<img src="../static/img/yy.png" id="yySmall" onmouseover="showYY()"/>	
-			<ul id="yyBig" onmouseleave="hideYY()">
-				<li><a href="/index"><img src="../static/img/Ch.png"/>中文</a></li>
-				<li><a href="/index_EN"><img src="../static/img/En.png"/>ENGLISH</a></li>
-			</ul>
-		</div>
-		<div class="back-to-top">
-			<img src="../static/img/back-to-top.png"/>
-		</div>
-		<div class="foot">
-			<div class="xx">
-				<p style="line-height:2em;font-size:16px;">乾康（上海）金融信息服务股份有限公司</p>				
-				<p>地址： 上海市徐汇区桂箐路7号3号楼801室</p>		
-				<p>电话： 021-54485390</p>
-				<p>传真： 021-54485391</p>
-				<p>邮箱： liuxj@qkjr.com.cn</p>
-				<!--<ul>
-					<li>相关链接：</li>
-					<li><a href="">个人金融业务管理平台</a></li>
-					<li><a href="">消费金融业务平台</a></li>
-					<li><a href="">供应链金融业务平台</a></li>
-					<li><a href="">资金管理平台</a></li>
-				</ul>-->
-				<p class="awm"><img src="../static/img/2wm2.png" /><img src="../static/img/2wm.png" /></p>
-				<font>- 关注微信 -</font><font>- 关注微博-</font>
-			</div><br/>
-			<span>Copyright(C)2011-2014 乾康（上海）金融信息服务股份有限公司</span><br/>
-			<span>沪ICP备13043724号</span>
-		</div>		
 	</div>
-	<script type="text/javascript" src="../static/js/jquery-1.7.2.min.js"></script>
-	<script type="text/javascript" src="../static/js/script.js"></script>
-	<!-- Slider -->
-	<script type="text/javascript" src="../static/js/jquery.easing.1.3.js"></script>
-	<script type="text/javascript" src="../static/js/jquery.animate-colors-min.js"></script>
-	<script type="text/javascript" src="../static/js/jquery.skitter.js"></script>
+<!--*****************************乾康家族*****************************************-->
+	<div class="qkjz" id="qkjz" onclick="window.location.href='/qkjz'">
+		<div id="qkjz1">
+			<img class="dh" src="../static/img/qkjz11.png" id="img1" style="position:relative;left:-100%;filter:alpha(opacity=0);opacity:0;"/>
+			<p class="dh" id="p1" style="position:relative;right:-100%;filter:alpha(opacity=0);opacity:0;">乾康金融信息服务<br/>股份有限公司</p>
+		</div>
+		<div>
+			<img class="dh" src="../static/img/qkjz12.png" id="img2" style="position:relative;left:-100%;filter:alpha(opacity=0);opacity:0;"/>
+			<p class="dh" id="p2" style="position:relative;right:-100%;filter:alpha(opacity=0);opacity:0;">乾康信息技术<br/>有限公司</p>
+		</div>
+		<div>
+			<img class="dh" src="../static/img/qkjz13.png" id="img3" style="position:relative;left:-100%;filter:alpha(opacity=0);opacity:0;"/>
+			<p class="dh" id="p3" style="position:relative;right:-100%;filter:alpha(opacity=0);opacity:0;">乾康金服信息技术<br/>有限公司</p>
+		</div>
+	</div>
+<!--*****************************周总寄语*****************************************-->
+	<div class="zzjy">
+		<div class="left dh" id="zzjy1" style="position:relative;left:-100%;filter:alpha(opacity=0);opacity:0;">
+			<img src="../static/img/zc.jpg"/>
+		</div>
+		<div class="gsjj right dh" id="zzjy2" style="position:relative;right:-100%;filter:alpha(opacity=0);opacity:0;">
+			<div><font>M</font>
+			<h3>周总致辞</h3>
+			<h4>essage From Mr Zhou</h4></div>
+			<p>致全体员工：</p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;乾康公司的愿景是以乾康公司的技术和服务为和谐社会的建设和发展，人与人之间的信任度提升做出我们的贡献。</p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;在社会经济高速发展的过程中，因为信息的不对称以及在一些社会商业活动中存在的不诚信现象加大了交易成本，同时中华民族传统的重信守诺的良好美德收到冲击。而我们运用数据技术以及对于金融行业充分的内在逻辑的认识，为众多金融机构提供高效的技术信用评估，通过我们的努力，让金融更简单。</p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;公司的发展离不开乾康人的共同努力，在发展过程中，我们秉承专业的工匠精神，为理想愿意付出艰辛的努力。同时希望乾康的平台能为更多的有理想、抱负，有高度社会责任感的青年才俊提供实现其人生理想与目标的机会。</p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;在乾康发展的道路上，希望我们的公司是在业内具有高度美誉度的公司，为国家诚信社会的建立贡献我们的力量！</p>
+		
+			<p style="text-align:right;">乾康（上海）金融信息股份有限公司&nbsp;&nbsp;&nbsp;&nbsp;</p>
+			<p style="text-align:right;">董事长：周滨&nbsp;&nbsp;&nbsp;&nbsp;</p>
+		</div>
+	</div>
+
+<!--*****************************乾康伙伴*****************************************-->
+	<div class="qkhb" onclick="window.location.href='/gyqk'">
+		<div class="title">
+			<p class="top">------PARTNER</p>
+			<p>合作伙伴-------</p>
+		</div><br/>
+		<div class="dh" id="hzhb1" style="position:relative;left:-100%;filter:alpha(opacity=0);opacity:0;">
+			<img src="../static/img/hzhb1.png"/>
+			<p>美国PTC</p>
+		</div>
+		<div class="dh" id="hzhb2" style="position:relative;left:-100%;filter:alpha(opacity=0);opacity:0;">
+			<img src="../static/img/hzhb2.png"/>
+			<p>MasterCard</p>
+		</div>
+		<div class="dh" id="hzhb3" style="position:relative;left:-100%;filter:alpha(opacity=0);opacity:0;">
+			<img src="../static/img/hzhb3.png"/>
+			<p>中国农商行联盟</p>
+		</div>
+		<div class="dh" id="hzhb4" style="position:relative;left:-100%;filter:alpha(opacity=0);opacity:0;">
+			<img src="../static/img/hzhb4.png"/>
+			<p>新华金控</p>
+		</div>
+		<div class="dh" id="hzhb5" style="position:relative;left:-100%;filter:alpha(opacity=0);opacity:0;">
+			<img src="../static/img/hzhb5.png"/>
+			<p>苏宁消费金融</p>
+		</div>
+		<div id="scrollobj1"> 	
+			<img src="../static/img/jnnsh.png"/>
+			<img src="../static/img/tynsh.png"/>
+			<img src="../static/img/hxyh.jpg"/>
+			<img src="../static/img/jnyh.jpg"/>
+			<img src="../static/img/csnsh.jpg"/>		
+			<img src="../static/img/wxnsh.jpg"/>	
+			<img src="../static/img/xhyh.jpg"/>
+			<img src="../static/img/jynsh.jpg"/>
+			<img src="../static/img/jy.jpg"/>
+			<img src="../static/img/xmnsh.png"/>	
+		</div>	
+	</div>
+<!--*****************************乾康新闻*****************************************-->
+	<div class="qkxw">
+		<div class="gsjj left dh" id="qkxw1" style="position:relative;left:-100%;filter:alpha(opacity=0);opacity:0;" onclick="window.location.href='/qkxw'">
+			<div><font>N</font>
+			<h3>乾康新闻</h3>
+			<h4>ews</h4></div>			
+			<p class="news">
+				<span class="date">
+					<font>25</font>
+					<span>2016-04</span>
+				</span>
+				<span class="content">
+					<span class="title">乾康拥抱腾讯，实现多方共赢</span>
+					<span> 近日，乾康金融总裁周滨携手江苏某农商行，受腾讯支付基础平台与金融应用线副总经理郑浩......</span>
+				</span>
+			</p>
+			<p class="news">
+				<span class="date">
+					<font>14</font>
+					<span>2016-04</span>
+				</span>
+				<span class="content">
+					<span class="title">存精促进！山东某农商行营销培训完美落幕！</span>
+					<span> 2017年4月8日，乾康携手山东某农商行开展了“2017年第二届客户经理营销能力培训大会”。</span>
+				</span>
+			</p>
+			<p class="news">
+				<span class="date">
+					<font>14</font>
+					<span>2016-04</span>
+				</span>
+				<span class="content">
+					<span class="title">乾康，让金融更简单！</span>
+					<span> 为何提出这个口号呢？在当前社会，普通大众对于金融感到颇为复杂，其金融流程更难以掌握......</span>
+				</span>
+			</p>
+			<p class="news">
+				<span class="date">
+					<font>13</font>
+					<span>2016-04</span>
+				</span>
+				<span class="content">
+					<span class="title">经济日报称：银行转型应主动拥抱金融科技</span>
+					<span>主动拥抱金融科技是大势所趋，传统商业银行要实现转型突围发展，既要探索利用新技术不断创新......</span>
+				</span>
+			</p>
+			<p class="news">
+				<span class="date">
+					<font>13</font>
+					<span>2016-04</span>
+				</span>
+				<span class="content">
+					<span class="title">巾帼有壮志，行业女尖兵</span>
+					<span>2017年4月12日，一年一度的“上海市软件行业行业标兵，服务明星”评选工作圆满落下帷幕。......</span>
+				</span>
+			</p>
+			<p class="news">
+				<span class="date">
+					<font>06</font>
+					<span>2016-04</span>
+				</span>
+				<span class="content">
+					<span class="title">让战略落地  乾康在行动</span>
+					<span>2017年3月31日下午1点，为期两天的乾康（上海）金融信息服务股份有限公司（简称乾康金融）......</span>
+				</span>
+			</p>
+			<p class="news">
+				<span class="date">
+					<font>27</font>
+					<span>2016-03</span>
+				</span>
+				<span class="content">
+					<span class="title">湖南某农商行小微贷中心辩论大赛冠军队新鲜出炉!</span>
+					<span>2017年3月24日，由乾康金融与湖南某农商行共同组织的小微贷中心辩论总决赛圆满落幕!......</span>
+				</span>
+			</p>
+			<p class="news">
+				<span class="date">
+					<font>17</font>
+					<span>2016-03</span>
+				</span>
+				<span class="content">
+					<span class="title">盘点金融圈压力排行榜，你中枪了吗？</span>
+					<span>金融人士何来那么多压力？金融圈里有一个流传已久的噩梦“the magicroundabout（魔法环岛路）......</span>
+				</span>
+			</p>
+		</div>
+		
+<!-- <div class="right dh" id="qkxw2" style="position:relative;right:-100%;filter:alpha(opacity=0);opacity:0;">
+			<img src="../static/img/zzjy.jpg"/>
+		</div> -->
+	</div>
+	<!--*****************************专利资质*****************************************-->
+	<div class="qkxw" id="zlzz" onclick="window.location.href='/gyqk'">
+		<div class="gsjj left" >
+			<div><font>P</font>
+			<h3 style="color:#fff">专利资质</h3>
+			<h4>atent qualification</h4></div>	
+			<div class="dh" id="scrollobj" style="filter:alpha(opacity=0);opacity:0;"> 	
+				<img src="../static/img/zz/1.jpg"/>
+				<img src="../static/img/zz/2.jpg"/>
+				<img src="../static/img/zz/3.jpg"/>
+				<img src="../static/img/zz/4.jpg"/>
+				<img src="../static/img/zz/5.jpg"/>
+			</div>	
+		</div>
+	</div>
+	<div class="side">
+		<ul>
+			<li><a href="/index_EN" ><div class="sidebox"><img src="../static/img/side_icon03.png">切换英文</div></a></li>
+			<li id="QQ"><a href="http://wpa.qq.com/msgrd?v=3&amp;uin=1103924915&amp;site=qq&amp;menu=yes" target="_blank" ><div class="sidebox"><img src="../static/img/side_icon04.png">QQ客服</div></a></li>
+			<li style="border:none;"><a href="javascript:goTop();" class="sidetop"><img src="../static/img/side_icon05.png"></a></li>
+		</ul>
+	</div>
+<!--*****************************foot*****************************************-->
+	<div class="foot">
+		<div class="xx">
+			<p style="line-height:2em;font-size:16px;">乾康（上海）金融信息服务股份有限公司</p>				
+			<p>地址： 上海市徐汇区桂箐路7号3号楼801室</p>		
+			<p>电话： 021-54485390</p>
+			<p>传真： 021-54485391</p>
+			<p>邮箱： liuxj@qkjr.com.cn</p>
+			<!--<ul>
+				<li>相关链接：</li>
+				<li><a href="">个人金融业务管理平台</a></li>
+				<li><a href="">消费金融业务平台</a></li>
+				<li><a href="">供应链金融业务平台</a></li>
+				<li><a href="">资金管理平台</a></li>
+			</ul>-->
+			<p class="awm"><img src="../static/img/2wm2.png" /><img src="../static/img/2wm.png" /></p>
+			<font>- 关注微信 -</font><font class="normal">- 关注微博-</font>
+		</div><br/>
+		<span>Copyright(C)2011-2014 乾康（上海）金融信息服务股份有限公司</span><br/>
+		<span>沪ICP备13043724号</span>
+	</div>	
+	
+
+</div>	
+	
+	<script type="text/javascript" src="../static/js/jquery.animate-colors-min.js"></script><!-- 动画渐变背景插件-->
+	
+	
+	
 	<script type="text/javascript">
-		$(document).ready(function(){                            //主体元素
+		$(document).ready(function(){  
+			//加载地图
+			//ShowMap("map",{city:'上海市',addr:'上海市徐汇区桂箐路7号3号楼801室',title:'乾康（上海）金融信息服务股份有限公司',lawfirm:'',tel:'021-54485390',mapx:'',pic:'../static/img/logo2.png',ismove:'0',piobj:'nxp'});
+	
+			setTimeout("bennerDH()",500);//banner动画
+			$("#bannerDh4").mouseover(function(){//banner按钮动画
+				$("#bannerDh4").animate({backgroundColor:"rgba(255,255,255,1)"},200);
+				$("#bannerDh4").animate({color:"rgb(0,0,0)"},200);
+			});
+			$("#bannerDh4").mouseout(function(){//banner按钮动画
+				$("#bannerDh4").animate({backgroundColor:"rgba(255,255,255,0)"},200);
+				$("#bannerDh4").animate({color:"rgb(255,255,255)"},200);
+			});
 			$(window).scroll(function(){
-				var srollPos = $(window).scrollTop();    //滚动条距顶部距离(页面超出窗口的高度)				
-				if(srollPos>"400"){
-					$("#qkkh").animate({opacity:"1"},"slow");
-				}
-				if(srollPos>"600"){
-					$("#qkjz").animate({opacity:"1"},"slow");
-				}
-				if(srollPos>"1100"){
-					$("#cggs").animate({opacity:"1"},"slow");
-				}
-				if(srollPos>"1400"){
-					$("#qkhb").animate({opacity:"1"},"slow");
-				}
-				if(srollPos!="0"){
-					$(".logo").css("opacity","0.8");
-					$(".logo").css("filter","alpha(opacity=80)");
+				var srollPos = $(window).scrollTop();    //滚动条距顶部距离(页面超出窗口的高度)	
+				if(srollPos!="0"){//导航透明度
+					$(".topNav").css("opacity","0.8");
+					$(".topNav").css("filter","alpha(opacity=80)");
 				}
 				else{				
-					$(".logo").css("opacity","1");
-					$(".logo").css("filter","alpha(opacity=100)");
+					$(".topNav").css("opacity","1");
+					$(".topNav").css("filter","alpha(opacity=100)");
+				}
+				if(srollPos>"50"){//公司简介、公司业务
+					$("#gsjj").animate({left:"0",opacity:'1'},1000);
+					$('#gsyw1').animate({right:'0',opacity:'1'},1100);
+					$('#gsyw2').animate({right:'0',opacity:'1'},1300);
+					$('#gsyw3').animate({right:'0',opacity:'1'},1500);
+				}
+				if(srollPos>"400"){//公司理念
+					$("#gsln").animate({opacity:"1"},"slow");
+				}
+				if(srollPos>"900"){//乾康家族
+					$('#img1').animate({left:'0',opacity:'1'},1200);		
+					$('#img2').animate({left:'0',opacity:'1'},1000);		
+					$('#img3').animate({left:'0',opacity:'1'},800);	
+					$('#p1').animate({right:'0',opacity:'1'},800);		
+					$('#p2').animate({right:'0',opacity:'1'},1000);		
+					$('#p3').animate({right:'0',opacity:'1'},1200);	
+				}
+				if(srollPos>"1150"){//周总寄语
+					$('#zzjy1').animate({left:'0',opacity:'1'},1000);		
+					$('#zzjy2').animate({right:'0',opacity:'1'},1000);		
+				}
+				if(srollPos>"1800"){//合作伙伴
+					$('#hzhb1').animate({left:'0',opacity:'1'},1400);		
+					$('#hzhb2').animate({left:'0',opacity:'1'},1200);
+					$('#hzhb3').animate({left:'0',opacity:'1'},1000);	
+					$('#hzhb4').animate({left:'0',opacity:'1'},800);		
+					$('#hzhb5').animate({left:'0',opacity:'1'},600);
+				}
+				if(srollPos>"2200"){//乾康新闻				
+					$('#qkxw1').animate({left:'0',opacity:'1'},1000);	
+					$('#qkxw2').animate({right:'0',opacity:'1'},1000);	
+				}
+				if(srollPos>"2700"){//专利资质				
+					$('#scrollobj').animate({opacity:'1'},1000);	
+				}
+				if ($(this).scrollTop() > 200) {// 滚动窗口来判断按钮显示或隐藏
+					$('.side').fadeIn(100);
+					} else {
+					$('.side').fadeOut(100);
 				}
 			});
-			if($(window).width()<"800"){
-				$(".box_skitter").html("<ul>"+
-											"<li>"+
-												"<img src='../static/img/banner11.jpg'/>"+                        
-											"</li>"+
-											/*"<li>"+
-												"<img src='../static/img/banner12.jpg' /> "+                           
-											"</li>"+
-											"<li>"+
-												"<img src='../static/img/banner13.jpg'/>"+
-											"</li>"+
-											"<li>"+
-												"<img src='../static/img/hzhb11.jpg'/>"+
-											"</li>"+
-											"<li>"+
-												"<img src='../static/img/page14.jpg'/>"+
-											"</li>"+*/
-										"</ul>");
-											
+			if($(window).width()<"1100"){//屏幕小于1100不展示动画
 				$(".dh").css("opacity","1");
 				$(".dh").css("filter","alpha(opacity=100)");
+				$(".dh").css("left","0");
+				$(".dh").css("right","0");
 			}
-			else{
-				$("#slidercontainer").css("height","416px")
-				$(".box_skitter_large").css("height","416px")
-			}
+			$(".side ul li").hover(function(){
+				$(this).find(".sidebox").stop().animate({"width":"124px"},200).css({"opacity":"1","filter":"Alpha(opacity=100)","background":"#ae1c1c"})	
+			},function(){
+				$(this).find(".sidebox").stop().animate({"width":"54px"},200).css({"opacity":"0.8","filter":"Alpha(opacity=80)","background":"#000"})	
+			});
+			
 			setInterval(function(){
-				var obj=document.getElementById('scrollobj')
+				var obj=document.getElementById('scrollobj1')
 				var text="<img src='../static/img/jnnsh.png'/> "+
 							"<img src='../static/img/tynsh.png'/> "+
 							"<img src='../static/img/hxyh.jpg'/> "+
@@ -359,7 +400,6 @@
 							"<img src='../static/img/wxnsh.jpg'/> "+	
 							"<img src='../static/img/xhyh.jpg'/> "+
 							"<img src='../static/img/jynsh.jpg'/> "+
-							"<img src='../static/img/jr.jpg'/> "+
 							"<img src='../static/img/jy.jpg'/> "+
 							"<img src='../static/img/xmnsh.png'/> "				
 				//obj.innerHTML += text;
@@ -371,7 +411,16 @@
 				
 			},20); 
 		});
-		
+		//回到顶部
+		function goTop(){
+			$('html,body').animate({'scrollTop':0},600);
+		}
+		function bennerDH(){//banner动画
+			$('#bannerDh1').animate({right:'0'},1200);
+			$('#bannerDh2').animate({left:'0'},1200);
+			$('#bannerDh3').animate({right:'0'},1200);
+			$('#bannerDh4').animate({left:'0'},1200);			
+		}
 	</script>
 </body>
 </html>

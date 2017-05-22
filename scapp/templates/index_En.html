@@ -2,20 +2,14 @@
 <html lang="zh-cn">
 <head>	
 	<meta charset="utf-8">
-	<title>CardPay(Shanghai) Finance Consulting Co.,Ltd.</title>
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>乾康（上海）金融信息服务股份有限公司</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="description" content="Charisma, a fully featured, responsive, HTML5, Bootstrap admin template.">
 	<meta name="author" content="Muhammad Usman">
-	<link rel="SHORTCUT ICON" href="3.ico"/>
-
-	<!-- The styles -->
-	<link href="../static/css/main.css" rel="stylesheet">
-	 <link rel="stylesheet" type="text/css" href="../static/css/skitter.styles.css" media="all" />
+	<link href="../static/css/index.css" rel="stylesheet">
+	<link href="../static/css/main_En.css" rel="stylesheet">
+	<script type="text/javascript" src="../static/js/jquery-1.7.2.min.js"></script>
 	<style type="text/css">
-		#scrollobj{width:90%;white-space:nowrap;overflow:hidden;} 
-		#scrollobj img{width:15%;margin-right:1%;}
-		.qkly{width:100%;margin-top:-1px;}
-		.qkly .span4{width:33.3%;}
 	</style>
 	<script type="text/javascript">
 		var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
@@ -23,73 +17,50 @@
 	
 	</script>
 </head>
-
-<body onload="imgs();">
-	<div class="main">
-	<!--**************************************************top***********************************************-->
-		<div class="logo" style="position:fixed;z-index:10000;">	
-			<a href="/index_EN"><img src="../static/img/logo.png"/></a>
-			<ul class="newnav" style="margin-left:20px;z-index:10000;">
-				<li><a href="/qkly_EN">Areas</a></li>	
-				<li><a href="/qkhb_EN">Partner</a></li>	
-				<li><a href="/qkjz_EN">Family</a></li>	
-				<li><a href="/jrqk_EN">Join Us</a></li>				
-				<li><a href="/gyqk_EN">About Us</a></li>
-				<li><a href="/qkxw_EN">News</a></li>		
-			</ul>
-		</div>
-		
-		<div id="outerslider">
-        	<div id="slidercontainer">
-            	<section id="slider">
-                <div class="box_skitter box_skitter_large">					
-                    <ul>
-                        <li>
-                            <img src="../static/img/banner1_EN.jpg" alt="" style="width:100%"/>                            
-                        </li>
-						<li>
-                            <img src="../static/img/banner2_EN.jpg" alt="" style="width:100%"/>                            
-                        </li>
-                        <li>
-                            <img src="../static/img/banner3_EN.jpg" alt="" style="width:100%"/>
-                        </li>
-                        <li>
-                            <img src="../static/img/hzhb1_En.jpg" alt="" style="height:100%"/>
-                        </li>
-                        <li>
-                            <img src="../static/img/page4_En.jpg" alt="" style="height:100%"/>
-                        </li>
-                    </ul>
-                </div>
-                </section>
-            </div>
-        </div>
-        <!-- END SLIDER -->
-		
-		<!--**************************************************content***********************************************-->
-		<div class="qkly">
-			<div class="span4" onmouseover="Hover(this,'../static/img/101')" onmouseout="Normal(this,'../static/img/101')"  onclick="window.location.href='/qkly_EN'">
-				<img src="../static/img/101.png"/>		
-				<h1>INTERNET CONSUMER<br/><span>FINANCE</span></h1>
-			</div>
-			<div class="span4" onmouseover="Hover(this,'../static/img/102')" onmouseout="Normal(this,'../static/img/102')"  onclick="window.location.href='/qkly_EN'">
-				<img src="../static/img/102.png"/>	
-				<h1>PERSONAL FINANCIAL <br/><span>SERVICES</span></h1>
-			</div>
-			<div class="span4" onmouseover="Hover(this,'../static/img/103')" onmouseout="Normal(this,'../static/img/103')"  onclick="window.location.href='/qkly_EN'">
-				<img src="../static/img/103.png"/>			
-				<h1>REMOTE CREDIT<br/><span>EVALUATION</span></h1>
-			</div>
-		</div>
-		<div class="qkjt">
-			<h1><img src="../static/img/title1.png"/>CARDPAY<img src="../static/img/title2.png"/></h1>
-			<h2>ABOUT US</h2>
-			<p>CardPay Financial Group is a focus on the financial sector as well as professional management consulting services operator implementation. Group's main business is to provide personal financial services consulting and operations of banks and other financial institutions, banking and financial help to achieve the construction of the Internet platform to create business models OTO financial services platform.</p>
-			<a href="/gyqk_EN" class="button">MORE</a>
-		</div>
-		<div class="qkkh dh" id="qkkh" style="filter:alpha(opacity=0);opacity:0;">
-			<h1>GOOD SERVICE</h1>
-			<h2>POWERFUL</h2>
+<body>
+<div class="main">
+<!--*****************************导航*****************************************-->
+	<div class="topNav">
+		<img src="../static/img/logo.png" class="logo"/>
+		<ul>
+			<li><a href="/gyqk_EN">About Us</a></li>					
+			<li><a href="/qkly_EN">Field</a></li>		
+			<li><a href="/qkjz_EN">Family</a></li>	
+			<li><a href="/qkxw_EN">News</a></li>	
+			<li><a href="/lxwm_EN">Contact Us</a></li>	
+			<li><a href="/jrqk_EN">Join Us</a></li>				
+		</ul>
+	</div>	
+<!--*****************************banner*****************************************-->	
+	<div class="banner">
+		<h1 id="bannerDh1" style="position:relative;right:-100%;">Technology, Finance, Simple</h1>
+		<h2 id="bannerDh2" style="position:relative;left:-100%;">Make financial simpler!</h2>
+		<p id="bannerDh3" style="position:relative;right:-100%;"><img src="../static/img/logo1.png"/></p>
+		<!-- <div id="bannerDh4" style="position:relative;left:-100%;" onclick="window.location.href='lxwm/lxwm.html'">联系我们</div> -->
+	</div>
+<!--*****************************公司简介*****************************************-->	
+	<div class="gsjj dh" id="gsjj" style="position:relative;left:-100%;filter:alpha(opacity=0);opacity:0;" onclick="window.location.href='gyqk/gyqk_En.html'">
+		<div><font>C</font>
+		<h3>About Us</h3>
+		<h4>ompany Profile</h4></div>
+		<p>Qiankang finance focus on the operation and management of personal credit business and risk control, with strong professional strength, rich experience in the project and a strong scientific and technological support, the formation of an efficient personal...... </p>
+	</div>
+<!--*****************************公司业务*****************************************-->		
+	<div class="gsyw dh" id="gsyw1" style="position:relative;right:-100%;filter:alpha(opacity=0);opacity:0;" onclick="window.location.href='/qkly_EN'">
+		<img src="../static/img/yw1.jpg"/>
+		<p>Online personal credit<br/>risk control</p>
+	</div>
+	<div class="gsyw dh" id="gsyw2" style="position:relative;right:-100%;filter:alpha(opacity=0);opacity:0;" onclick="window.location.href='/qkly_EN'">
+		<img src="../static/img/yw2.jpg"/>
+		<p>Internet banking<br/>operations</p>
+	</div>
+	<div class="gsyw dh" id="gsyw3" style="position:relative;right:-100%;filter:alpha(opacity=0);opacity:0;" onclick="window.location.href='/qkly_EN'">
+		<img src="../static/img/yw3.jpg"/>
+		<p>Personal credit business consulting...</p>
+	</div>
+<!--*****************************公司理念*****************************************-->
+	<div class="qyln">		
+		<div class="dh" id="gsln" style="filter:alpha(opacity=0);opacity:0;" onclick="window.location.href='gyqk/gyqk_En.html'">
 			<div class="span6">			
 				<img src="../static/img/zy.png"/>		
 				<h1>Profession</h1>
@@ -98,12 +69,12 @@
 			<div class="span6">
 				<img src="../static/img/gx.png"/>	
 				<h1>Efficient</h1>
-				<h2>Experienced, fast and<br/>efficient</h2>
+				<h2>Experienced, fast and efficient</h2>
 			</div>
 			<div class="span6">			
-				<img src="../static/img/jyy.png"/>		
+				<img src="../static/img/jy.png"/>		
 				<h1>Dedicated</h1>
-				<h2>Dedication, <br/>improve self</h2>
+				<h2>Dedication, improve self</h2>
 			</div>
 			<div class="span6">			
 				<img src="../static/img/hz.png"/>		
@@ -115,168 +86,309 @@
 				<h1>Integrity</h1>
 				<h2>Honest and trustworthy safe and reliable</h2>
 			</div>
-			<div class="span6" style="margin-right:0;">				
+			<div class="span6">				
 				<img src="../static/img/jq.png"/>	
 				<h1>Enthusiasm</h1>
-				<h2>Full of enthusiasm, <br/>and positive</h2>
+				<h2>Full of enthusiasm,and positive</h2>
 			</div>
 		</div>
-		<div class="qkjt qkjz dh" id="qkjz" style="filter:alpha(opacity=0);opacity:0;">	
-			<h1><img src="../static/img/title1.png"/>FAMILY<img src="../static/img/title2.png"/></h1>
-			<h2 style="color: #9abefc;">SUBSIDIARY</h2>
-			<div class="zgs">
-				<img src="../static/img/sc10.jpg"/>
-				<span>
-					<img src="../static/img/logo1.png" style="width:6.25em;height:3.75em;"/><h2>CardPay Finance</h2>
-				<a href="/qkjz_EN">MORE</a></span>
-			</div><div class="zgs" id="xxjs">
-				<span><img src="../static/img/LOGO2.png" style="width:3.75em;height:3.75em;"/><h2>CardPay Info Tech</h2>
-				<a href="/qkjz_EN">MORE</a></span>
-				<img src="../static/img/sc20.jpg"/>
-			</div><div class="zgs">
-				<img src="../static/img/sc21.png"/>
-				<span><img src="../static/img/LOGO3.png" style="width:3.75em;height:3.75em;"/><h2>QianKangJinFu(Beijing)</h2>
-				<a href="/qkjz_EN">MORE</a></span>
-			</div>
+	</div>
+<!--*****************************乾康家族*****************************************-->
+	<div class="qkjz" id="qkjz" onclick="window.location.href='/qkjz_EN'">
+		<div id="qkjz1">
+			<img class="dh" src="../static/img/qkjz11.png" id="img1" style="position:relative;left:-100%;filter:alpha(opacity=0);opacity:0;"/>
+			<p class="dh" id="p1" style="position:relative;right:-100%;filter:alpha(opacity=0);opacity:0;">Qiankang Finance</p>
 		</div>
-		<div class="qkkh cggs dh" id="cggs" style="filter:alpha(opacity=0);opacity:0;">
-			<h1>SUCCESS CASE</h1>
-			<h2>SUCCESS STORIES</h2>
-			<p>Dry Kang consultants are from domestic banks, Fortune 500 company executives, with finance industry experience, financial consulting experience in management, finance MBA or PhD in higher education background, all with international elite educational background as well as international financial institutions or work experience advisory bodies, and some well-known banks have had close cooperation.</p>
-			
-			<!--<span class="prev" onclick="$('.cgimg').animate({marginLeft:'60px'},'slow')"></span>
-			<span class="next" onclick="$('.cgimg').animate({marginLeft:'-573px'},'slow')"></span>	-->
-			<div id="scrollobj"> 					
-				<img src="../static/img/jnnsh.png" id="1"/>
-				<img src="../static/img/tynsh.png" id="2"/>
-				<img src="../static/img/hxyh.jpg" id="3"/>
-				<img src="../static/img/jnyh.jpg" id="4"/>
-				<img src="../static/img/csnsh.jpg" id="5"/>		
-				<img src="../static/img/wxnsh.jpg" id="6"/>	
-				<img src="../static/img/xhyh.jpg" id="7"/>
-				<img src="../static/img/jynsh.jpg" id="8"/>
-				<img src="../static/img/jr.jpg" id="9"/>
-				<img src="../static/img/jy.jpg" id="10"/>
-				<img src="../static/img/xmnsh.png" id="11" />	
-			</div>				
+		<div>
+			<img class="dh" src="../static/img/qkjz12.png" id="img2" style="position:relative;left:-100%;filter:alpha(opacity=0);opacity:0;"/>
+			<p class="dh" id="p2" style="position:relative;right:-100%;filter:alpha(opacity=0);opacity:0;">Qiankang Info Tech</p>
+		</div>
+		<div>
+			<img class="dh" src="../static/img/qkjz13.png" id="img3" style="position:relative;left:-100%;filter:alpha(opacity=0);opacity:0;"/>
+			<p class="dh" id="p3" style="position:relative;right:-100%;filter:alpha(opacity=0);opacity:0;">QianKang JinFu</p>
+		</div>
+	</div>
+<!--*****************************周总寄语*****************************************-->
+	<div class="zzjy">
+		<div class="left dh" id="zzjy1" style="position:relative;left:-100%;filter:alpha(opacity=0);opacity:0;">
+			<img src="../static/img/zc.jpg"/>
+		</div>
+		<div class="gsjj right dh" id="zzjy2" style="position:relative;right:-100%;filter:alpha(opacity=0);opacity:0;">
+			<div><font>M</font>
+			<h3>Speech</h3>
+			<h4>essage From Mr Zhou</h4></div>
+			<p>To all employees:</p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Qiankang's vision is to make our contribution to the construction and development of harmonious society and the trust between people.</p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;In the process of rapid socio-economic development, because of the asymmetry of information and the existence of dishonesty in some social business activities, the transaction cost is increased, and the good virtues of the traditional tradition of the Chinese nation are shocked. And we use data technology and the financial industry for the full understanding of the inherent logic of many financial institutions to provide efficient technical credit assessment, through our efforts to make financial simpler.</p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The development of the company can not be separated from the joint efforts of qiankang people in the development process, we uphold the spirit of professional craftsmen, for the ideal willing to pay hard work. At the same time hope that the platform can be more for the ideal, ambition, a high sense of social responsibility to provide young people to achieve their ideal and goals of life opportunities.</p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;In the development of the road on the dry, we hope that the company is in the industry with a high reputation of the company, for the establishment of the integrity of the community to contribute our strength!</p>
+		
+			<p style="text-align:right;">Qiankang Finance&nbsp;&nbsp;&nbsp;&nbsp;</p>
+			<p style="text-align:right;">Chairman of the board:Zhou Bin&nbsp;&nbsp;&nbsp;&nbsp;</p>
+		</div>
+	</div>
+
+<!--*****************************乾康伙伴*****************************************-->
+	<div class="qkhb" onclick="window.location.href='gyqk/gyqk_En.html'">
+		<div class="title">
+			<p class="top">------Cooperation</p>
+			<p>Partner-------</p>
+		</div><br/>
+		<div class="dh" id="hzhb1" style="position:relative;left:-100%;filter:alpha(opacity=0);opacity:0;">
+			<img src="../static/img/hzhb1.png"/>
+			<p>PTC</p>
+		</div>
+		<div class="dh" id="hzhb2" style="position:relative;left:-100%;filter:alpha(opacity=0);opacity:0;">
+			<img src="../static/img/hzhb2.png"/>
+			<p>MasterCard</p>
+		</div>
+		<div class="dh" id="hzhb3" style="position:relative;left:-100%;filter:alpha(opacity=0);opacity:0;">
+			<img src="../static/img/hzhb3.png"/>
+			<p>Agricultural</p>
+		</div>
+		<div class="dh" id="hzhb4" style="position:relative;left:-100%;filter:alpha(opacity=0);opacity:0;">
+			<img src="../static/img/hzhb4.png"/>
+			<p>XINHUA</p>
+		</div>
+		<div class="dh" id="hzhb5" style="position:relative;left:-100%;filter:alpha(opacity=0);opacity:0;">
+			<img src="../static/img/hzhb5.png"/>
+			<p>SUNING</p>
+		</div>
+		<div id="scrollobj1"> 	
+			<img src="../static/img/jnnsh.png"/>
+			<img src="../static/img/tynsh.png"/>
+			<img src="../static/img/hxyh.jpg"/>
+			<img src="../static/img/jnyh.jpg"/>
+			<img src="../static/img/csnsh.jpg"/>		
+			<img src="../static/img/wxnsh.jpg"/>	
+			<img src="../static/img/xhyh.jpg"/>
+			<img src="../static/img/jynsh.jpg"/>
+			<img src="../static/img/jy.jpg"/>
+			<img src="../static/img/xmnsh.png"/>	
+		</div>	
+	</div>
+<!--*****************************乾康新闻*****************************************-->
+	<div class="qkxw">
+		<div class="gsjj left dh" id="qkxw1" style="position:relative;left:-100%;filter:alpha(opacity=0);opacity:0;" onclick="window.location.href='/qkxw_EN'">
+			<div><font>N</font>
+			<h3>Qiankang</h3>
+			<h4>ews</h4></div>			
+			<p class="news">
+				<span class="date">
+					<font>25</font>
+					<span>2016-04</span>
+				</span>
+				<span class="content">
+					<span class="title">Gan Kang embrace Tencent, to achieve multi-win</span>
+					<span> Recently, dry and financial chief Zhou Zhou, Jiangsu, a farmer firm, by Tencent to pay......</span>
+				</span>
+			</p>
+			<p class="news">
+				<span class="date">
+					<font>14</font>
+					<span>2016-04</span>
+				</span>
+				<span class="content">
+					<span class="title">Deposit promotion! Shandong a farm business ......</span>
+					<span> April 8, 2017, dry and dry Shandong, a farm business trip to carry out the "2017 second......</span>
+				</span>
+			</p>
+			<p class="news">
+				<span class="date">
+					<font>14</font>
+					<span>2016-04</span>
+				</span>
+				<span class="content">
+					<span class="title">Qiangkang,make financial simpler!</span>
+					<span> Why is this slogan? In the current society, the general public is quite complicated for......</span>
+				</span>
+			</p>
+			<p class="news">
+				<span class="date">
+					<font>13</font>
+					<span>2016-04</span>
+				</span>
+				<span class="content">
+					<span class="title">Economic Daily said: bank restructuring should......</span>
+					<span>Take the initiative to embrace the trend of financial technology is the trend, the......</span>
+				</span>
+			</p>
+			<p class="news">
+				<span class="date">
+					<font>13</font>
+					<span>2016-04</span>
+				</span>
+				<span class="content">
+					<span class="title">Women have aspirations, industry female pioneers</span>
+					<span>April 12, 2017, the annual "Shanghai software industry industry model, service star".......</span>
+				</span>
+			</p>
+			<p class="news">
+				<span class="date">
+					<font>06</font>
+					<span>2016-04</span>
+				</span>
+				<span class="content">
+					<span class="title">Let the strategy go dry and dry in action</span>
+					<span>On March 31, 2017, at 1:00 pm, two days of dry and healthy (Shanghai) Financial.......</span>
+				</span>
+			</p>
+			<p class="news">
+				<span class="date">
+					<font>27</font>
+					<span>2016-03</span>
+				</span>
+				<span class="content">
+					<span class="title">Hunan, a small firm in a small agricultural loan......</span>
+					<span>March 24, 2017, by the dry and financial and Hunan, a farmer firm co-organized......</span>
+				</span>
+			</p>
+			<p class="news">
+				<span class="date">
+					<font>17</font>
+					<span>2016-03</span>
+				</span>
+				<span class="content">
+					<span class="title">Inventory financial circle pressure list, you shot it?</span>
+					<span>Why are financial people so much pressure? There is a long time in the financial......</span>
+				</span>
+			</p>
 		</div>
 		
-		<div class="qkjt qkhb dh" id="qkhb" style="width:100%;margin-left:0;filter:alpha(opacity=0);opacity:0;">	
-			<h1><img src="../static/img/title1.png"/>PANTNER<img src="../static/img/title2.png"/></h1>
-			<h2>COOPERATION</h2>
-			<div class="parner lcLeft">
-				<img src="../static/img/hzhb1.png" onclick="window.open('http://www.profitinsight.com/')"/>
-				<p>PTC&nbsp;&nbsp;&nbsp;&nbsp;</p>
-			</div><div class="parner lcCenter">
-				<img src="../static/img/hzhb3.png" onclick="window.open('http://www.rcbda.cn/')"/>
-				<p>Agricultural</p>
-			</div><div class="parner lcCenter">
-				<img src="../static/img/hzhb2.png" onclick="window.open('http://www.mastercard.com.cn')"/>
-				<p>MasterCard</p>
-			</div><div class="parner lcRight">
-				<img src="../static/img/hzhb4.png" onclick="window.open('http://www.xhjr.net')"/>
-				<p>&nbsp;&nbsp;&nbsp;&nbsp;XINHUA</p>
-			</div><br/>	
-			<div class="parner lcL">
-				<span>Cooperation Agreement with <br/>PTC<br/>
-				<font>2013</font></span>
-			</div><div class="parner lcC">
-				<span>Agricultural only league<br/> observers<br/>
-				<font>2013</font></span>
-			</div><div class="parner lcC">
-				<span>MasterCard Strategic<br/> Partner<br/>
-				<font>2014</font></span>
-			</div><div class="parner lcC">
-				<span>Signed an agreement with Agricultural<br/>
-				<font>2015</font></span>
-			</div><div class="parner lcR">
-				<span>Agreement with Xinhua Financial Holding<br/>
-				<font>2015</font></span>
-			</div>
-		</div>
-	<!--**************************************************foot***********************************************-->
-		<!-- 切换语言 -->		
-		<div class="lanage" onclick="setLanage(this)">						
-			<img src="../static/img/yy.png" id="yySmall" onmouseover="showYY()"/>	
-			<ul id="yyBig" onmouseleave="hideYY()">
-				<li><a href="/index"><img src="../static/img/Ch.png"/>中文</a></li>
-				<li><a href="/index_EN"><img src="../static/img/En.png"/>ENGLISH</a></li>
-			</ul>
-		</div>
-		<div class="back-to-top">
-			<img src="../static/img/back-to-top.png"/>
-		</div>
-		<div class="foot">
-			<div class="xx">
-				<p style="line-height:2em;font-size:1.8em;">CardPay(Shanghai) Finance Consulting Co.,Ltd.</p>				
-				<p>Address：Room 801,Building 3,No.7,Guiqing Road,Xuhui District,Shanghai </p>		
-				<p>Pone： 021-54485390 </p>
-				<p>Fax： 021-54485391</p>
-				<p>E-mail：liuxj@qkjr.com.cn</p>
-				<!--<ul>
-					<li>Related Links:</li>
-					<li><a href="">Personal Finance</a></li>
-					<li><a href="">Consumer Finance</a></li>
-					<li><a href="">Supply Chain Finance</a></li>
-					<li><a href="">Funds Management</a></li>
-				</ul>-->
-				<img src="../static/img/2wm.png" />
-				<font>— WeChat —</font>
-			</div><br/>
-			<span>Copyright(C)2011-2014 CardPay(Shanghai) Finance Consulting Co.,Ltd.</span><br/>
-			<span>Shanghai ICP for 13043724</span>
-		</div>		
+<!-- <div class="right dh" id="qkxw2" style="position:relative;right:-100%;filter:alpha(opacity=0);opacity:0;">
+			<img src="../static/img/zzjy.jpg"/>
+		</div> -->
 	</div>
-	<script type="text/javascript" src="../static/js/jquery-1.7.2.min.js"></script>
-	<script type="text/javascript" src="../static/js/script.js"></script>
-	<!-- Slider -->
-	<script type="text/javascript" src="../static/js/jquery.easing.1.3.js"></script>
-	<script type="text/javascript" src="../static/js/jquery.animate-colors-min.js"></script>
-	<script type="text/javascript" src="../static/js/jquery.skitter.js"></script>
+	<!--*****************************专利资质*****************************************-->
+	<div class="qkxw" id="zlzz" onclick="window.location.href='gyqk/gyqk_En.html'">
+		<div class="gsjj left" >
+			<div><font>P</font>
+			<h3 style="color:#fff">Qiankang</h3>
+			<h4>atent qualification</h4></div>	
+			<div class="dh" id="scrollobj" style="filter:alpha(opacity=0);opacity:0;"> 	
+				<img src="../static/img/zz/1.jpg"/>
+				<img src="../static/img/zz/2.jpg"/>
+				<img src="../static/img/zz/3.jpg"/>
+				<img src="../static/img/zz/4.jpg"/>
+				<img src="../static/img/zz/5.jpg"/>
+			</div>	
+		</div>
+	</div>
+	<div class="side">
+		<ul>
+			<li><a href="index.html" ><div class="sidebox"><img src="../static/img/side_icon02.png">CHINESE</div></a></li>
+			<li id="QQ"><a href="http://wpa.qq.com/msgrd?v=3&amp;uin=1103924915&amp;site=qq&amp;menu=yes" target="_blank" ><div class="sidebox"><img src="../static/img/side_icon04.png">QQ</div></a></li>
+			<li style="border:none;"><a href="javascript:goTop();" class="sidetop"><img src="../static/img/side_icon05.png"></a></li>
+		</ul>
+	</div>
+<!--*****************************foot*****************************************-->
+	<div class="foot">
+		<div class="xx">
+			<p style="line-height:2em;font-size:16px;">Qiankang(Shanghai) Finance Consulting Co.,Ltd.</p>				
+			<p>Address：Room 801,Building 3,No.7,Guiqing Road,Xuhui District,Shanghai</p>		
+			<p>Phone： 021-54485390</p>
+			<p>Fax： 021-54485391</p>
+			<p>E-mail：liuxj@qkjr.com.cn</p>
+			<!--<ul>
+				<li>相关链接：</li>
+				<li><a href="">个人金融业务管理平台</a></li>
+				<li><a href="">消费金融业务平台</a></li>
+				<li><a href="">供应链金融业务平台</a></li>
+				<li><a href="">资金管理平台</a></li>
+			</ul>-->
+			<p class="awm"><img src="../static/img/2wm2.png" /><img src="../static/img/2wm.png" /></p>
+			<font>- WeChat -</font><font class="normal">- Weibo-</font>
+		</div><br/>
+		<span>Copyright(C)2011-2014 Qiankang(Shanghai) Finance Consulting Co.,Ltd.</span><br/>
+		<span>Shanghai ICP for 13043724</span>
+	</div>	
+	
+
+</div>	
+	
+	<script type="text/javascript" src="../static/js/jquery.animate-colors-min.js"></script><!-- 动画渐变背景插件-->
+	
+	
+	
 	<script type="text/javascript">
-		$(document).ready(function(){                            //主体元素
+		$(document).ready(function(){  
+			//加载地图
+			//ShowMap("map",{city:'上海市',addr:'上海市徐汇区桂箐路7号3号楼801室',title:'乾康（上海）金融信息服务股份有限公司',lawfirm:'',tel:'021-54485390',mapx:'',pic:'../static/img/logo2.png',ismove:'0',piobj:'nxp'});
+	
+			setTimeout("bennerDH()",500);//banner动画
+			$("#bannerDh4").mouseover(function(){//banner按钮动画
+				$("#bannerDh4").animate({backgroundColor:"rgba(255,255,255,1)"},200);
+				$("#bannerDh4").animate({color:"rgb(0,0,0)"},200);
+			});
+			$("#bannerDh4").mouseout(function(){//banner按钮动画
+				$("#bannerDh4").animate({backgroundColor:"rgba(255,255,255,0)"},200);
+				$("#bannerDh4").animate({color:"rgb(255,255,255)"},200);
+			});
 			$(window).scroll(function(){
-				var srollPos = $(window).scrollTop();    //滚动条距顶部距离(页面超出窗口的高度)				
-				if(srollPos>"500"){
-					$("#qkkh").animate({opacity:"1"},"slow");
+				var srollPos = $(window).scrollTop();    //滚动条距顶部距离(页面超出窗口的高度)	
+				if(srollPos!="0"){//导航透明度
+					$(".topNav").css("opacity","0.8");
+					$(".topNav").css("filter","alpha(opacity=80)");
 				}
-				if(srollPos>"950"){
-					$("#qkjz").animate({opacity:"1"},"slow");
+				else{				
+					$(".topNav").css("opacity","1");
+					$(".topNav").css("filter","alpha(opacity=100)");
 				}
-				if(srollPos>"1350"){
-					$("#cggs").animate({opacity:"1"},"slow");
+				if(srollPos>"50"){//公司简介、公司业务
+					$("#gsjj").animate({left:"0",opacity:'1'},1000);
+					$('#gsyw1').animate({right:'0',opacity:'1'},1100);
+					$('#gsyw2').animate({right:'0',opacity:'1'},1300);
+					$('#gsyw3').animate({right:'0',opacity:'1'},1500);
 				}
-				if(srollPos>"1800"){
-					$("#qkhb").animate({opacity:"1"},"slow");
+				if(srollPos>"400"){//公司理念
+					$("#gsln").animate({opacity:"1"},"slow");
+				}
+				if(srollPos>"900"){//乾康家族
+					$('#img1').animate({left:'0',opacity:'1'},1200);		
+					$('#img2').animate({left:'0',opacity:'1'},1000);		
+					$('#img3').animate({left:'0',opacity:'1'},800);	
+					$('#p1').animate({right:'0',opacity:'1'},800);		
+					$('#p2').animate({right:'0',opacity:'1'},1000);		
+					$('#p3').animate({right:'0',opacity:'1'},1200);	
+				}
+				if(srollPos>"1150"){//周总寄语
+					$('#zzjy1').animate({left:'0',opacity:'1'},1000);		
+					$('#zzjy2').animate({right:'0',opacity:'1'},1000);		
+				}
+				if(srollPos>"1800"){//合作伙伴
+					$('#hzhb1').animate({left:'0',opacity:'1'},1400);		
+					$('#hzhb2').animate({left:'0',opacity:'1'},1200);
+					$('#hzhb3').animate({left:'0',opacity:'1'},1000);	
+					$('#hzhb4').animate({left:'0',opacity:'1'},800);		
+					$('#hzhb5').animate({left:'0',opacity:'1'},600);
+				}
+				if(srollPos>"2200"){//乾康新闻				
+					$('#qkxw1').animate({left:'0',opacity:'1'},1000);	
+					$('#qkxw2').animate({right:'0',opacity:'1'},1000);	
+				}
+				if(srollPos>"2700"){//专利资质				
+					$('#scrollobj').animate({opacity:'1'},1000);	
+				}
+				if ($(this).scrollTop() > 200) {// 滚动窗口来判断按钮显示或隐藏
+					$('.side').fadeIn(100);
+					} else {
+					$('.side').fadeOut(100);
 				}
 			});
-			if($(window).width()<"800"){
-				$(".box_skitter").html("<ul>"+
-											"<li>"+
-												"<img src='../static/img/banner11_EN.jpg'/>"+                        
-											"</li>"+
-											"<li>"+
-												"<img src='../static/img/banner12_EN.jpg' /> "+                           
-											"</li>"+
-											"<li>"+
-												"<img src='../static/img/banner13_EN.jpg'/>"+
-											"</li>"+
-											"<li>"+
-												"<img src='../static/img/hzhb11_En.jpg'/>"+
-											"</li>"+
-											"<li>"+
-												"<img src='../static/img/page14_EN.jpg'/>"+
-											"</li>"+
-										"</ul>");
+			if($(window).width()<"1100"){//屏幕小于1100不展示动画
 				$(".dh").css("opacity","1");
 				$(".dh").css("filter","alpha(opacity=100)");
+				$(".dh").css("left","0");
+				$(".dh").css("right","0");
 			}
-			else{
-				$("#slidercontainer").css("height","416px")
-				$(".box_skitter_large").css("height","416px")
-			}
+			$(".side ul li").hover(function(){
+				$(this).find(".sidebox").stop().animate({"width":"124px"},200).css({"opacity":"1","filter":"Alpha(opacity=100)","background":"#ae1c1c"})	
+			},function(){
+				$(this).find(".sidebox").stop().animate({"width":"54px"},200).css({"opacity":"0.8","filter":"Alpha(opacity=80)","background":"#000"})	
+			});
+			
 			setInterval(function(){
-				var obj=document.getElementById('scrollobj')
+				var obj=document.getElementById('scrollobj1')
 				var text="<img src='../static/img/jnnsh.png'/> "+
 							"<img src='../static/img/tynsh.png'/> "+
 							"<img src='../static/img/hxyh.jpg'/> "+
@@ -285,7 +397,6 @@
 							"<img src='../static/img/wxnsh.jpg'/> "+	
 							"<img src='../static/img/xhyh.jpg'/> "+
 							"<img src='../static/img/jynsh.jpg'/> "+
-							"<img src='../static/img/jr.jpg'/> "+
 							"<img src='../static/img/jy.jpg'/> "+
 							"<img src='../static/img/xmnsh.png'/> "				
 				//obj.innerHTML += text;
@@ -297,7 +408,16 @@
 				
 			},20); 
 		});
-		
+		//回到顶部
+		function goTop(){
+			$('html,body').animate({'scrollTop':0},600);
+		}
+		function bennerDH(){//banner动画
+			$('#bannerDh1').animate({right:'0'},1200);
+			$('#bannerDh2').animate({left:'0'},1200);
+			$('#bannerDh3').animate({right:'0'},1200);
+			$('#bannerDh4').animate({left:'0'},1200);			
+		}
 	</script>
 </body>
 </html>

@@ -3,267 +3,192 @@
 <head>	
 	<meta charset="utf-8">
 	<title>乾康（上海）金融信息服务股份有限公司</title>
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="description" content="Charisma, a fully featured, responsive, HTML5, Bootstrap admin template.">
 	<meta name="author" content="Muhammad Usman">
-	<link rel="SHORTCUT ICON" href="../3.ico"/>
-	
-	
-	<!-- The styles -->
-	<!-- 地图 -->
-	<script type="text/javascript" src="../../static/js/bdMap.js"></script>
-	<!-- The styles -->
 	<link href="../../static/css/main.css" rel="stylesheet">
-	<link href="../../static/css/imagehover.css" rel="stylesheet">
-	 <link rel="stylesheet" type="text/css" href="../../static/css/skitter.styles.css" media="all" />
-	<style type="text/css">	
-		
+	<script type="text/javascript" src="../../static/js/jquery-1.7.2.min.js"></script>
+	<style type="text/css">
+	
 	</style>
 	<script type="text/javascript">
 		var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
 		document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3F980a47baa3b028fee8b94644df33e9b8' type='text/javascript'%3E%3C/script%3E"));
+	
 	</script>
 </head>
-
-<body onload="imgs();">
+<body>
 <div class="main">
-	<!--**************************************************top***********************************************-->
-	<div class="logo" style="position:fixed;z-index:10000;">	
-		<a href="/index"><img src="../../static/img/logo.png"/></a>
-		<ul class="newnav" style="margin-left:20px;z-index:10000;">
-			<li class="active"><a href="/qkly">乾康领域</a></li>
-			<li><a href="/qkhb">乾康伙伴</a></li>
-			<li><a href="/qkjz">乾康家族</a></li>
-			<li><a href="/jrqk">加入乾康</a></li>	
-			<li><a href="/gyqk">关于乾康</a></li>
+<!--*****************************导航*****************************************-->
+	<div class="topNav">
+		<img src="../../static/img/logo.png" class="logo" onclick="window.location.href='/index' "/>
+		<ul>
+			<li><a href="/gyqk">关于乾康</a></li>					
+			<li class="active"><a href="/qkly">乾康领域</a></li>		
+			<li><a href="/qkjz">乾康家族</a></li>	
 			<li><a href="/qkxw">乾康新闻</a></li>	
-		</ul>
-	</div>
-	<!-- SLIDER -->
-	<div id="outerslider">
-		<div id="slidercontainer">
-			<section id="slider">
-			<div class="box_skitter box_skitter_large">					
-				<ul >
-					<li>
-						<img src="../../static/img/banner4.jpg" alt="" style="height:100%"/>                            
-					</li>
-					<!-- <li>
-						<img src="../../static/img/banner5.jpg" alt="" style="height:100%"/>                            
-					</li>          
-					<li>
-						<img src="../../static/img/banner6.jpg" alt="" style="height:100%"/>                            
-					</li> -->    
-				</ul>
-			</div>
-			</section>
-		</div>
-	</div>
-	<!-- END SLIDER -->		
-	<div class="qkly" id="qkly" onmouseleave="resetTab()">
-		<div class="span4 active" onclick="Tab(this,'101')" onmouseover="Tab3(this,'101')" id="Tab101">
-			<img src="../../static/img/101_h.png"/>		
-			<h1>联合信贷<br/><span>JOINT CREDIT<br/>WITH<br/>LOCAL BANKS</span></h1>
-		</div>
-		<div class="span4" onclick="Tab(this,'102')" onmouseover="Tab3(this,'102')" id="Tab102">
-			<img src="../../static/img/102.png"/>	
-			<h1>个人金融业务咨询运营<br/><span>PERSONAL<br/>FINANCIAL<br/>SERVICES</span></h1>
-		</div>
-		<div class="span4" onclick="Tab(this,'103')" onmouseover="Tab3(this,'103')" id="Tab103">
-			<img src="../../static/img/103.png"/>		
-			<h1>远程授信评估平台<br/><span>REMOTE<br/>CREDIT<br/>EVALUATION</span></h1>
-		</div>
-	</div>
-	<!--**************************************************title***********************************************-->	
-	<div id="101" class="Tab">	
-		<div class="title">
-			<h1>联合信贷</h1><h2>J</h2><h3>oint credit with local banks</h3>
-		</div>
-		<div class="AboutUs xfjr ywzxyy dh">	
-			<img src="../../static/img/3.jpg" id="img1"/>
-			<h1 class="tip">一、关于联合信贷</h1>
-			<p>联合信贷是中小银行小额信用贷款的发展方向，通过将电商金融平台资金与数据接入乾康的联合信贷系统，与银行信贷系统紧密连接，解决了银行授信体系与外部金融平台嫁接的难题。</p>
-		</div>
-		<div class="AboutUs xfjr ywzxyy dh" id="dh1" style="position:relative;right:-100%;">	
-			<img src="../../static/img/11.jpg" id="img2"/>
-			<h1 class="tip">二、联合信贷的价值</h1>
-			<p><b>解决中小银行的何种难题</b><br/>
-				1、传统小额信用贷款人力成本重、单位产出低、利润难以覆盖。<br/>
-				2、由于中小银行科技力量薄弱，对单家银行来说，系统的研发成本高。<br/>
-				3、小额贷获客难度高，风险高。<br/>
-				4、中小银行存贷比畸形。<br/>
-			</p>
-			<p><b>解决非银行持牌金融机构的何种难题</b><br/>
-				1、解决了电商集团在全国范围内将消费金融业务落地的问题。<br/>
-				2、为消费金融公司引入了银行低成本资金，提高了资金杠杆，分散了贷款风险。
-			</p>
-		</div>
-		<div class="AboutUs xfjr ywzxyy dh" id="dh2" style="position:relative;left:-100%;">	
-			<img src="../../static/img/qkys.jpg" id="img3" />
-			<h1>三、乾康联合信贷的优势</h1>
-			<p>
-				1、	我司拥有大量的中小银行客户，并驻场运营信贷业务，2/3项目开展2年以上业绩优异，深入银行核心层面。<br/>
-				2、	我司与某电商集团消费金融公司多领域战略合作，共同研发消费金融反欺诈模型、转化获客模型，并在信贷平台中充分应用。<br/>
-				3、	乾康的联合信贷平台提供了双方都认可的前置大数据风控系统，解决了银行风控体系与外部金融平台嫁接的难题。 <br/>
-			</p>
-		</div>
-		<div class="AboutUs xfjr" id="dh3" style="text-align:center;" style="filter:alpha(opacity=0);opacity:0;">
-			<img src="../../static/img/lhdk.png" id="img4"/>
-		</div>
-	</div>
-	
-	<div id="102" class="Tab" style="display:none;">
-		<div class="title">
-			<h1>个人信贷业务咨询运营</h1><h2>P</h2><h3>ersonal financial services</h3>
-		</div>
-		<div class="AboutUs xfjr ywzxyy">	
-			<img src="../../static/img/sc8.jpg" class="imgright"/>	
-			<h1>一、微小贷款业务咨询、运营</h1>
-			<p>乾康公司的微小贷款咨询运营业务是基于IPC微贷应用技术，总结多家银行小微贷业务运营中的先进实战经验，在此基础上，经过深入研究、总结提炼，形成独具本土特色的，涵盖客户识别、风险控制、全流程管理的乾康小微贷款业务体系。<br/>乾康公司创新了客户经理分层管理体系、客户网络化维护模式、以及高效的绩效评估考核办法、责任清晰奖惩准确的责任管理体系。<br/><br/><br/></p>
-		</div>
-		<div class="AboutUs xfjr ywzxyy dh" id="dh21" style="position:relative;right:-100%;">	
-			<img src="../../static/img/sc9.jpg" class="imgleft" />
-			<h1>二、信用卡业务咨询、运营</h1>
-			<p>乾康金融提供全方位的信用卡业务咨询、运营。信用卡业务发展战略咨询；信用卡中心管理架构、业务体系咨询；信用卡业务产品创新设计咨询；信用卡业务综合风险管理策略咨询，完善的风险防控体系；信用卡中心管理能力和营销能力建设；信用卡业务运营，咨询的基础上进一步进行实施咨询成果，与银行共享收益。
-		</p>
-		</div>
-		<div class="AboutUs xfjr ywzxyy dh" id="dh22" style="position:relative;left:-100%;">	
-			<img src="../../static/img/sc10.jpg" class="imgright" />
-			<h1>三、个人金融业务管理和营销能力培养</h1>
-			<p>乾康(上海)提高金融业务核心竞争力及可持续发展能力，保证个人金融业务的全面开展及顺利进行，培养一支具有独立开展业务、有效控制风险、深入开拓市场、出色完成业绩的高素质核心队伍。</p>
-		</div>
-	</div>
-	<div id="103" class="Tab" style="display:none;">
-		<div class="title">
-			<h1>远程授信评估平台</h1><h2>R</h2><h3>emote credit evaluation</h3>
-		</div>
-		<div class="AboutUs" id="sxpt" style="background-image:url(../../static/img/sc5.jpg);">	
-			<h2 style="margin-top:30px;">《乾康金融远程授信平台》</h2>
-			<span></span>
-			<font style="width:37.5%">
-				《乾康金融远程授信平台》提供给了授信专家在线进行授信评估的远程授信平台，有效整合授信专家资源，精准防控授信风险。按照风险特性匹配专项授信专家，灵活的授信评估和审核审批模式，实现对授信专家的业务能力和风险控制管理。
-			</font>			
-		</div>
-		<div class="AboutUs qywh dh" id="dh33" style="background-image:url(../../static/img/sc2.jpg);position:relative;right:-100%;">
-			<h1>授信评估模型</h1>
-			<h2>Credit Evaluation Model</h2>
-			<span></span>
-			<font>
-				乾康金融《授信评估模型》基于对个人金融业务的信用授信策略，以评估主体的还款能力、企业经营状况、所有者（经营者）道德品质、所有者（经营者）生活状态等多维度为基点，线下和先上数据相结合，以独特的算法建模，同时引入大数据，数据挖掘和分析，对评估主体进行精准资信评估。
-
-			</font>
-		</div>
-	</div>		
-	
-	<!-- 切换语言 -->		
-	<div class="lanage" onclick="setLanage(this)">						
-		<img src="../../static/img/yy.png" id="yySmall" onmouseover="showYY()"/>	
-		<ul id="yyBig" onmouseleave="hideYY()">
-			<li><a href="/index"><img src="../../static/img/Ch.png"/>中文</a></li>
-			<li><a href="/index_EN"><img src="../../static/img/En.png"/>ENGLISH</a></li>
+			<li><a href="/lxwm">联系我们</a></li>	
+			<li><a href="/jrqk">加入乾康</a></li>									
 		</ul>
 	</div>	
-	<div class="back-to-top">
-		<img src="../../static/img/back-to-top.png"/>
+<!--*****************************banner*****************************************-->	
+	
+	<div class="banner"></div>
+	<div class="Tab" id="100">
+		<div class="title">
+			<img src="../../static/img/title.png" class="left"/><h3>乾康领域</h3>
+			<h4>QIANKANG FIELD</h4><img src="../../static/img/title.png" class="right"/>
+		</div>
+		<div class="gsyw dh" id="gsyw1" onclick="$('.Tab').hide();$('#101').show();">
+			<img src="../../static/img/yw1.jpg"/>
+			<p>线上个人信贷风险<font>控制服务商</font></p>
+			<p class="zbt">Online personal credit<br/>risk control</p>
+		</div>
+		<div class="gsyw dh" id="gsyw2" onclick="$('.Tab').hide();$('#102').show();">
+			<img src="../../static/img/yw2.jpg"/>
+			<p>互联网银行<font>运营</font></p>
+			<p class="zbt">Internet banking<br/>operations</p>
+		</div>
+		<div class="gsyw dh" id="gsyw3" onclick="$('.Tab').hide();$('#103').show();">
+			<img src="../../static/img/yw3.jpg"/>
+			<p>个人信贷业务<font>咨询运营</font></p>
+			<p class="zbt">Personal credit business<br/>consulting operations</p>
+		</div>
 	</div>
-<!--**************************************************foot***********************************************-->
-		<div class="dialog">
-			<div class="background">				
-				<form class="dialog-box">
-					<p><img class="close" src="../../static/img/close.jpg" onclick="$('.dialog').hide();"/></p>
-					<img id="bigImg"/>
-				</form>
-			</div><!--透明背景-->
-		</div><!--对话框-->
+	<div class="Tab" id="101" style="display:none;">
+		<div class="title">
+			<img src="../../static/img/title.png" class="left"/><h3>乾康领域</h3>
+			<h4>QIANKANG FIELD</h4><img src="../../static/img/title.png" class="right"/>
+		</div> 
+		<!--*****************************线上个人信贷风险控制服务商*****************************************-->	
+		<div class="AboutUs qkly">
+			<div><font>O</font>
+			<h3>线上个人信贷风险控制服务商</h3>
+			<h4>nline personal credit risk control</h4>
+			<span></span>
+			<p>基于银行数据和大数据的深度挖掘和分析，实现个人信贷的资信审核、授信评估、贷后监控的全生命周期综合风险控制。</p></div>
+			
+		</div>
+		<div class="qktd qkdsj fzlc" id="qkly1">
+			<p><img src="../../static/img/20.jpg"/>
+			<img src="../../static/img/21.jpg"/>
+			<img src="../../static/img/23.jpg" style="margin-right:0;"/></p>			
+		</div>	
+		<button class="back" onclick="$('.Tab').hide();$('#100').show();">返&nbsp;&nbsp;&nbsp;回</button>
+	</div>
+	<div class="Tab" id="102" style="display:none;">
+		<div class="title">
+			<img src="../../static/img/title.png" class="left"/><h3>乾康领域</h3>
+			<h4>QIANKANG FIELD</h4><img src="../../static/img/title.png" class="right"/>
+		</div>
+		<!--*****************************互联网银行运营*****************************************-->	
+		<div class="AboutUs qkly" id="qkly2">
+			<div><font>I</font>
+			<h3>互联网银行运营</h3>
+			<h4>nternet banking operations</h4>
+			<span></span>
+			<p>乾康金服是一家专注于为银行等金融机构提供数据化的网络信贷解决方案，线上风控模型搭建，以及直销银行战略咨询、业务咨询、技术咨询、产品研发设计、业务实施落地运营等服务并基于成熟的技术平台为银行提供全业务生命周期的风险控制的一站式直销银行综合服务商。公司聚集了一大批在互联网金融行业资深的专业运营管理人员，通过专业化的内容营销、活动营销和产品营销，以线上线下相结合的方式为直销银行打造持续获客的能力，同时利用公司外围战略合作伙伴（苏宁消费金融、微众银行等大型互联网平台）提供的资源，为所服务的直销银行在互联网信贷和风控体系搭建方面持续提供专业化的服务。</p></div>
+		</div>
+		<div class="qktd qkdsj fzlc" id="img22">
+			<p><img src="../../static/img/18.jpg"/>
+			<img src="../../static/img/19.jpg"/>
+			<img src="../../static/img/22.jpg" style="margin-right:0;"/></p>			
+		</div>	
+			
+		<button class="back" onclick="$('.Tab').hide();$('#100').show();">返&nbsp;&nbsp;&nbsp;回</button>
+		
+	</div>
+
+	<div class="Tab" id="103" style="display:none;">
+		<div class="title">
+			<img src="../../static/img/title.png" class="left"/><h3>乾康领域</h3>
+			<h4>QIANKANG FIELD</h4><img src="../../static/img/title.png" class="right"/>
+		</div>
+		<!--*****************************个人信贷业务咨询运营*****************************************-->	
+		<div class="AboutUs qkly" id="qkly3">
+			<div><font>P</font>
+			<h3>个人信贷业务咨询运营</h3>
+			<h4>ersonal credit business consulting operations</h4></div>
+			<span></span>
+			<p>一、小微贷款<br/>乾康金融的小微贷款咨询运营业务在深入研究IPC微贷应用技术及总结提炼小微贷款业务运营经验基础之上，导入先进的数据系统，打破传统的经验传承式咨询方式，形成独具特色的，涵盖产品设计、客户识别、风险控制、全流程管理的乾康小微贷款业务体系。<br/>
+			乾康金融独创的咨询、运营模式能够帮助银行有效提高小微贷款业务核心竞争力及可持续发展能力，保证小微贷款业务的全面顺利开展，同时极大地提升团队管理效率，培养一支具有深入开拓市场、有效控制风险的高素质队伍，快速实现业务盈利。
+			</p>
+		</div>
+		<div class="qktd qkdsj fzlc" id="img22">
+			<p><img src="../../static/img/sc38.jpg"/>
+			<img src="../../static/img/sc39.jpg"/>
+			<img src="../../static/img/sc40.jpg" style="margin-right:0;"/></p>			
+		</div>	
+		<!--*****************************个人信贷业务咨询运营*****************************************-->	
+		<div class="AboutUs qkly dh" id="qkly4" style="position:relative;left:-100%;filter:alpha(opacity=0);opacity:0;">
+			<div><font>P</font>
+			<h3>个人信贷业务咨询运营</h3>
+			<h4>ersonal credit business consulting operations</h4></div>
+			<span></span>
+			<p>二、信用卡<br/>乾康金融以信用卡全生命周期七大模块为理论指导，以场景化产品设计为导向，兼顾传统高收益业务，依托现代化信息技术系统，为银行提供全方位的信用卡业务及运营咨询服务，主要包含信用卡业务发展战略咨询、信用卡中心搭建及管理咨询、信用卡业务综合风险管理咨询、信用卡创新产品设计咨询、信用卡中心管理能力及营销能力建设、信用卡业务运营咨询等。
+			</p>
+		</div>
+		<div class="qktd qkdsj fzlc dh" id="img33" style="filter:alpha(opacity=0);opacity:0;">
+			<p><img src="../../static/img/11.jpg"/>
+			<img src="../../static/img/15.jpg"/>
+			<img src="../../static/img/17.jpg" style="margin-right:0;"/></p>			
+		</div>	
+		<button class="back" onclick="$('.Tab').hide();$('#100').show();">返&nbsp;&nbsp;&nbsp;回</button>
+			
+	</div>
+	<div class="side">
+		<ul>
+			<li><a href="/qkly_EN" ><div class="sidebox"><img src="../../static/img/side_icon03.png">切换英文</div></a></li>
+			<li id="QQ"><a href="http://wpa.qq.com/msgrd?v=3&amp;uin=1103924915&amp;site=qq&amp;menu=yes" target="_blank" ><div class="sidebox"><img src="../../static/img/side_icon04.png">QQ客服</div></a></li>
+			<li style="border:none;"><a href="javascript:goTop();" class="sidetop"><img src="../../static/img/side_icon05.png"></a></li>
+		</ul>
+	</div>
+<!--*****************************foot*****************************************-->
 	<div class="foot">
 		<span>Copyright(C)2011-2014 乾康（上海）金融信息服务股份有限公司</span><br/>
 		<span>沪ICP备13043724号</span>
 	</div>
-</div>
-	<script type="text/javascript" src="../../static/js/jquery-1.7.2.min.js"></script>
-	<script type="text/javascript" src="../../static/js/script.js"></script>
-	<!-- Slider -->
-	<script type="text/javascript" src="../../static/js/jquery.easing.1.3.js"></script>
-	<script type="text/javascript" src="../../static/js/jquery.animate-colors-min.js"></script>
-	<script type="text/javascript" src="../../static/js/jquery.skitter.js"></script>
+</div>	
+	
+	<script type="text/javascript" src="../../static/js/jquery.animate-colors-min.js"></script><!-- 动画渐变背景插件-->
+	
+	
+	
 	<script type="text/javascript">
-		$(document).ready(function(){
-			$(".cgal").mouseover(function(){
-				$(this).find(".zz").show();
+		$(document).ready(function(){  
+			$(window).scroll(function(){
+				var srollPos = $(window).scrollTop();    //滚动条距顶部距离(页面超出窗口的高度)	
+				if($("#103").css("display")!="none"){
+					if(srollPos>"550"){//公司简介
+						$("#qkly4").animate({left:'0',opacity:'1'},1000);
+					}
+					if(srollPos>"1050"){//公司简介
+						$("#img33").animate({opacity:'1'},1000);
+					}
+				}
 			});
-			$(".cgal").mouseout(function(){
-				$(this).find(".zz").hide();
-			});
-			
-			if($(window).width()<"800"){
-				$(".box_skitter").html("<ul>"+
-											"<li>"+
-												"<img src='../../static/img/banner11.jpg'/>"+                        
-											"</li>"+
-											
-										"</ul>");
-				
+			if($(window).width()<"1100"){//屏幕小于1100不展示动画
 				$(".dh").css("opacity","1");
 				$(".dh").css("filter","alpha(opacity=100)");
-				
 				$(".dh").css("left","0");
 				$(".dh").css("right","0");
 			}
-			else{
-				$(window).scroll(function(){
-					var srollPos = $(window).scrollTop();    //滚动条距顶部距离(页面超出窗口的高度)	
-					if($("#101").css("display")!="none"){
-						if(srollPos>"1100"){
-							$("#dh3").animate({opacity:"1"},"1000");
-						}
-						else{							
-							$("#dh3").css("opacity","0");
-							$("#dh3").css("filter","alpha(opacity=0)");
-							if(srollPos>"700"){
-								$("#dh2").animate({left:"0"},"slow");
-							}
-							else{
-								$("#dh2").css("left","-100%")
-								if(srollPos>"250"){
-									$("#dh1").animate({right:"0"},"slow");
-								}
-								else{
-									$("#dh1").css("right","-100%");
-								}
-							}
-						}
-					}	
-					if($("#102").css("display")!="none"){
-						if(srollPos>"600"){
-							$("#dh22").animate({left:"0"},"slow");
-						}
-						else{
-							$("#dh22").css("left","-100%");
-							if(srollPos>"300"){
-								$("#dh21").animate({right:"0"},"slow");
-							}
-							else{
-								$("#dh21").css("right","-100%")
-							}
-						}
-					}
-					if($("#103").css("display")!="none"){
-						if(srollPos>"500"){
-							$("#dh33").animate({right:"0"},"slow");
-						}
-						else{
-							$("#dh33").css("right","-100%")
-						}
-					}				
-				});
-			}
-		});	
-		function dialog(obj){
-			var src=$(obj).find(".smallImg").attr("src");			
-			$("#bigImg").attr("src",src);
-			$('.dialog').show();
+			$(".side ul li").hover(function(){
+				$(this).find(".sidebox").stop().animate({"width":"124px"},200).css({"opacity":"1","filter":"Alpha(opacity=100)","background":"#ae1c1c"})	
+			},function(){
+				$(this).find(".sidebox").stop().animate({"width":"54px"},200).css({"opacity":"0.8","filter":"Alpha(opacity=80)","background":"#000"})	
+			});
+		});
+		//回到顶部
+		function goTop(){
+			$('html,body').animate({'scrollTop':0},600);
+		}
+		function bennerDH(){//banner动画
+			$('#bannerDh1').animate({right:'0'},1200);
+			$('#bannerDh2').animate({left:'0'},1200);
+			$('#bannerDh3').animate({right:'0'},1200);
+			$('#bannerDh4').animate({left:'0'},1200);			
 		}
 	</script>
-	
 </body>
 </html>

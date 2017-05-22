@@ -3,60 +3,37 @@
 <head>	
 	<meta charset="utf-8">
 	<title>乾康（上海）金融信息服务股份有限公司</title>
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="description" content="Charisma, a fully featured, responsive, HTML5, Bootstrap admin template.">
 	<meta name="author" content="Muhammad Usman">
-	<link rel="SHORTCUT ICON" href="../3.ico"/>
-	<!-- 地图 -->
-	<script type="text/javascript" src="../../static/js/bdMap.js"></script>
-	<!-- The styles -->
 	<link href="../../static/css/main.css" rel="stylesheet">
-	<link href="../../static/css/imagehover.css" rel="stylesheet">
-	 <link rel="stylesheet" type="text/css" href="../../static/css/skitter.styles.css" media="all" />
-	<style type="text/css">			
+	<script type="text/javascript" src="../../static/js/jquery-1.7.2.min.js"></script>
+	<script type="text/javascript" src="../../static/js/bdMap.js"></script>
+	<style type="text/css">
+	
 	</style>
 	<script type="text/javascript">
 		var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
 		document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3F980a47baa3b028fee8b94644df33e9b8' type='text/javascript'%3E%3C/script%3E"));
+	
 	</script>
 </head>
-
-<body onload="imgs();">
+<body>
 <div class="main">
-	<!--**************************************************top***********************************************-->
-	<div class="logo" style="position:fixed;z-index:10000;">	
-		<a href="/index"><img src="../../static/img/logo.png"/></a>
-		<ul class="newnav" style="margin-left:20px;z-index:10000;">
-			<li><a href="/qkly">乾康领域</a></li>
-			<li><a href="/qkhb">乾康伙伴</a></li>
-			<li><a href="/qkjz">乾康家族</a></li>
-			<li class="active"><a href="/jrqk">加入乾康</a></li>	
-			<li><a href="/gyqk">关于乾康</a></li>
+<!--*****************************导航*****************************************-->
+	<div class="topNav">
+		<img src="../../static/img/logo.png" class="logo" onclick="window.location.href='/index' "/>
+		<ul>
+			<li><a href="/gyqk">关于乾康</a></li>					
+			<li><a href="/qkly">乾康领域</a></li>	
+			<li><a href="/qkjz">乾康家族</a></li>	
 			<li><a href="/qkxw">乾康新闻</a></li>	
+			<li><a href="/lxwm">联系我们</a></li>	
+			<li class="active"><a href="/jrqk">加入乾康</a></li>					
 		</ul>
-	</div>
-	<!-- SLIDER -->
-	<div id="outerslider">
-		<div id="slidercontainer">
-			<section id="slider">
-			<div class="box_skitter box_skitter_large">					
-				<ul >
-					<li>
-						<img src="../../static/img/banner4.jpg" alt="" style="height:100%"/>                            
-					</li>
-					<!-- <li>
-						<img src="../../static/img/banner5.jpg" alt="" style="height:100%"/>                            
-					</li>          
-					<li>
-						<img src="../../static/img/banner6.jpg" alt="" style="height:100%"/>                            
-					</li>  -->   
-				</ul>
-			</div>
-			</section>
-		</div>
-	</div>
-	<!-- END SLIDER -->		
-	<div class="qkly" onmouseleave="resetTab2()">
+	</div>	
+	<div class="banner"></div>
+	<div class="jrqkTab" onmouseleave="resetTab2()">
 		<div class="span33 active" onclick="Tab2(this,'101')" onmouseover="Tab4(this,'101')" id="Tab101">	
 			<h1>上海<br/><font>SHANG HAI</font></h1>
 		</div>
@@ -70,12 +47,13 @@
 			<h1>西安<br/><font>XI AN</font></h1>
 		</div>
 	</div>
-	<!--**************************************************title***********************************************-->	
+<!--*****************************联系我们*****************************************-->
 	<div id="101" class="Tab">	
 		<div class="title">
-			<h1>上海</h1><h2>S</h2><h3>hang hai</h3>
+			<img src="../../static/img/title.png" class="left"/><h3>上海</h3>
+			<h4>SHANG HAI</h4><img src="../../static/img/title.png" class="right" style="left:115px;"/>
 		</div>
-		<div class="xfjrList zp">
+		<div class="qkxw">
 			<div onclick="$('.Tab').hide();$('#zp1').show();">
 				<img src="../../static/img/zp/zp1.jpg"/>
 				<p>web前端开发工程师</p>
@@ -100,9 +78,9 @@
 				<img  src="../../static/img/zp/zp6.jpg"/>
 				<p>银行项目销售经理</p>
 			</div>
-			<div onclick="">
+			<div onclick="$('.Tab').hide();$('#zp7').show();">
 				<img  src="../../static/img/zp/zp7.jpg"/>
-				<p>互联网咨询项目经理</p>
+				<p>银行项目销售</p>
 			</div>
 			<div onclick="$('.Tab').hide();$('#zp8').show();">
 				<img  src="../../static/img/zp/zp8.jpg"/>
@@ -111,10 +89,10 @@
 		</div>
 	</div>
 	<div class="Tab" id="zp1" style="display:none;">
-		<div class="title">
-			<h1>web前端开发工程师</h1><h2>W</h2><h3>eb engineer</h3>
+		<div class="title2">
+			<h1>web前端开发工程师</h1>
 		</div>
-		<div class="AboutUs xfjr">
+		<div class="zpxx">
 			<h1 class="tip">岗位职责：</h1>
 			<p>1、根据产品设计需求，配合后台开发人员实现产品界面和功能，维护及优化前端页面性能；</p>
 			<p>2、制作或协助制作各种页面组件或页面模版；</p>
@@ -131,10 +109,10 @@
 		<button class="back" onclick="$('.Tab').hide();$('#101').show();">返&nbsp;&nbsp;&nbsp;回</button>
 	</div>
 	<div class="Tab" id="zp2" style="display:none;">
-		<div class="title">
-			<h1>JAVA软件开发工程师</h1><h2>J</h2><h3>ava engineer</h3>
+		<div class="title2">
+			<h1>JAVA软件开发工程师</h1>
 		</div>
-		<div class="AboutUs xfjr">
+		<div class="zpxx">
 			<h1 class="tip">岗位职责：</h1>
 			<p>1、参与核心产品研发和项目上线；</p>
 			<p>2、配合研发主管，参与公司系统平台及项目整体设计、并负责完成代码研发；</p>
@@ -151,13 +129,13 @@
 			<p>6、熟悉软件开发技术文档资料的编写规范和代码书写规范，具有规范的开发文档写作能力；</p>
 			<p>7、具备责任心、优秀的团队沟通与协作能力、能承受一定的工作压力。</p>			
 		</div>
-		<button class="back" onclick="$('.Tab').hide();$('.XFJR').hide();$('#101').show();">返&nbsp;&nbsp;&nbsp;回</button>
+		<button class="back" onclick="$('.Tab').hide();$('#101').show();">返&nbsp;&nbsp;&nbsp;回</button>
 	</div>
 	<div class="Tab" id="zp3" style="display:none;">
-		<div class="title">
-			<h1>信用卡项目经理</h1><h2>C</h2><h3>redit card manager</h3>
+		<div class="title2">
+			<h1>信用卡项目经理</h1>
 		</div>
-		<div class="AboutUs xfjr">
+		<div class="zpxx">
 			<h1 class="tip">岗位职责：</h1>
 			<p>1、对银行信用卡业务熟悉，组织项目实施全过程，能够带领团队充分协作，共同完成整个项目任务；</p>
 			<p>2、对整个项目全程跟踪，把控项目周期，质量，维护客户关系；</p>
@@ -170,13 +148,13 @@
 			<p>4、有信用卡团队、小微贷团队、保险直营团队管理经验者优先考虑；</p>
 			<p>5、能适应出差。</p>
 		</div>
-		<button class="back" onclick="$('.Tab').hide();$('.XFJR').hide();$('#101').show();">返&nbsp;&nbsp;&nbsp;回</button>
+		<button class="back" onclick="$('.Tab').hide();$('#101').show();">返&nbsp;&nbsp;&nbsp;回</button>
 	</div>
 	<div class="Tab" id="zp4" style="display:none;">
-		<div class="title">
-			<h1>银行项目助理（需出差）</h1><h2>B</h2><h3>ank project assistant</h3>
+		<div class="title2">
+			<h1>银行项目助理（需出差）</h1>
 		</div>
-		<div class="AboutUs xfjr">
+		<div class="zpxx">
 			<h1 class="tip">岗位职责：</h1>
 			<p>1、协助项目经理做好区域银行的小微贷及信用卡业务的技术支持工作。</p>
 			<p>2、配合项目经理组织、实施、跟进项目的全过程，共同完成整个项目任务。</p>
@@ -189,13 +167,13 @@
 			<p>4、有信用卡团队、小微贷团队、咨询公司、数据分析等经验者优先。</p>
 			<p>5、能够适应出差（公司提供住宿、差旅费报销）。</p>
 		</div>
-		<button class="back" onclick="$('.Tab').hide();$('.XFJR').hide();$('#101').show();">返&nbsp;&nbsp;&nbsp;回</button>
+		<button class="back" onclick="$('.Tab').hide();$('#101').show();">返&nbsp;&nbsp;&nbsp;回</button>
 	</div>
 	<div class="Tab" id="zp5" style="display:none;">
-		<div class="title">
-			<h1>客户经理助理（资金业务方向）</h1><h2>A</h2><h3>ssistant account manager</h3>
+		<div class="title2">
+			<h1>客户经理助理（资金业务方向）</h1>
 		</div>
-		<div class="AboutUs xfjr">
+		<div class="zpxx">
 			<h1 class="tip">岗位职责：</h1>
 			<p>1、维护资金市场目标客户；</p>
 			<p>2、维护与银行客户的良好合作关系，包括商务拜访、业务撮合、业务接待等；</p>
@@ -210,13 +188,13 @@
 			<p>6、具备良好的团队协作精神和个人奉献精神；</p>
 			<p>7、能适应出差，有相关工作经验者优先考虑（如：银行、基金、证券、保险等金融相关企业工作经验者）。</p>
 		</div>
-		<button class="back" onclick="$('.Tab').hide();$('.XFJR').hide();$('#101').show();">返&nbsp;&nbsp;&nbsp;回</button>
+		<button class="back" onclick="$('.Tab').hide();$('#101').show();">返&nbsp;&nbsp;&nbsp;回</button>
 	</div>
 	<div class="Tab" id="zp6" style="display:none;">
-		<div class="title">
-			<h1>银行项目销售经理</h1><h2>B</h2><h3>ank project sales manager</h3>
+		<div class="title2">
+			<h1>银行项目销售经理</h1>
 		</div>
-		<div class="AboutUs xfjr">
+		<div class="zpxx">
 			<h1 class="tip">岗位职责：</h1>
 			<p>1、对银行客户进行公司产品销售运作，包括计划、组织、进度控制；</p>
 			<p>2、协助销售总监设置销售目标、销售模式、销售战略、销售预算和奖励计划；</p>
@@ -229,13 +207,13 @@
 			<p>4、具备较强的市场分析、营销、推广能力和良好的人际沟通、协调能力，分析和解决问题的能力；</p>
 			<p>5、有较强的事业心，具备一定的领导能力。</p>
 		</div>
-		<button class="back" onclick="$('.Tab').hide();$('.XFJR').hide();$('#101').show();">返&nbsp;&nbsp;&nbsp;回</button>
+		<button class="back" onclick="$('.Tab').hide();$('#101').show();">返&nbsp;&nbsp;&nbsp;回</button>
 	</div>
 	<div class="Tab" id="zp7" style="display:none;">
-		<div class="title">
-			<h1>银行项目销售</h1><h2>B</h2><h3>ank project saler</h3>
+		<div class="title2">
+			<h1>银行项目销售</h1>
 		</div>
-		<div class="AboutUs xfjr">
+		<div class="zpxx">
 			<h1 class="tip">岗位职责：</h1>
 			<p>1、销售人员职位，在上级的领导和监督下定期完成量化的工作要求，并能独立处理和解决所分配的任务；</p>
 			<p>2、签定销售合同，指导、协调、审核与销售服务有关的帐目和记录等事务；</p>
@@ -247,13 +225,13 @@
 			<p>3、具有较强的沟通能力，组织、协调能力和团队协作能力；</p>
 			<p>4、具有很强的上进心，形象佳。</p>
 		</div>
-		<button class="back" onclick="$('.Tab').hide();$('.XFJR').hide();$('#101').show();">返&nbsp;&nbsp;&nbsp;回</button>
+		<button class="back" onclick="$('.Tab').hide();$('#101').show();">返&nbsp;&nbsp;&nbsp;回</button>
 	</div>
 	<div class="Tab" id="zp8" style="display:none;">
-		<div class="title">
-			<h1>培训运营总监（负责人）</h1><h2>T</h2><h3>raining operations director</h3>
+		<div class="title2">
+			<h1>培训运营总监（负责人）</h1>
 		</div>
-		<div class="AboutUs xfjr">
+		<div class="zpxx">
 			<h1 class="tip">岗位职责：</h1>
 			<p>1、设计培训部的日常运营流程，负责培训项目的整体推广、招生工作；</p>
 			<p>2、负责培训课程在市场的营销及渠道开发、推广、课程优化等；</p>
@@ -267,13 +245,14 @@
 			<p>4、有良好的沟通能力和组织管理能力，具备紧急应对处理临时突发状况的能力；</p>
 			<p>5、能够接受新的信息，接受新的挑战。</p>
 		</div>
-		<button class="back" onclick="$('.Tab').hide();$('.XFJR').hide();$('#101').show();">返&nbsp;&nbsp;&nbsp;回</button>
+		<button class="back" onclick="$('.Tab').hide();$('#101').show();">返&nbsp;&nbsp;&nbsp;回</button>
 	</div>
 	<div id="102" class="Tab" style="display:none;">
 		<div class="title">
-			<h1>北京</h1><h2>B</h2><h3>ei jing</h3>
+			<img src="../../static/img/title.png" class="left"/><h3>北京</h3>
+			<h4>BEI JIN</h4><img src="../../static/img/title.png" class="right" style="left:115px;"/>
 		</div>
-		<div class="xfjrList zp">
+		<div class="qkxw">
 			<div onclick="$('.Tab').hide();$('#zp9').show();">
 				<img src="../../static/img/zp/zp9.jpg"/>
 				<p>消费金融咨询总监</p>
@@ -290,17 +269,17 @@
 				<img  src="../../static/img/zp/zp6.jpg"/>
 				<p>银行项目销售经理</p>
 			</div>
-			<div onclick="">
+			<div onclick="$('.Tab').hide();$('#zp13').show();">
 				<img  src="../../static/img/zp/zp7.jpg"/>
 				<p>互联网咨询项目经理</p>
 			</div>
 		</div>
 	</div>
 	<div class="Tab" id="zp9" style="display:none;">
-		<div class="title">
-			<h1>消费金融咨询总监</h1><h2>C</h2><h3>onsumer finance consulting director</h3>
+		<div class="title2">
+			<h1>消费金融咨询总监</h1>
 		</div>
-		<div class="AboutUs xfjr">
+		<div class="zpxx">
 			<h1 class="tip">岗位职责：</h1>
 			<p>1、行业研究：根据公司消费金融领域咨询战略，研究消费金融业务领先实践，转化成为公司知识资产；</p>
 			<p>2、产品研发：带领咨询顾问团队编制并持续优化消费金融系列解决方案，为公司运营团队、技术团队提供支持；</p>
@@ -316,13 +295,13 @@
 			<p>6、普通话标准，举止行为亲和得体，幽默感，沟通能力强。</p>
 
 		</div>
-		<button class="back" onclick="$('.Tab').hide();$('.XFJR').hide();$('#102').show();">返&nbsp;&nbsp;&nbsp;回</button>
+		<button class="back" onclick="$('.Tab').hide();$('#102').show();">返&nbsp;&nbsp;&nbsp;回</button>
 	</div>
 	<div class="Tab" id="zp10" style="display:none;">
-		<div class="title">
-			<h1>信用卡项目经理</h1><h2>C</h2><h3>redit card manager</h3>
+		<div class="title2">
+			<h1>信用卡项目经理</h1>
 		</div>
-		<div class="AboutUs xfjr">
+		<div class="zpxx">
 			<h1 class="tip">岗位职责：</h1>
 			<p>1、对银行信用卡业务熟悉，组织项目实施全过程，能够带领团队充分协作，共同完成整个项目任务；</p>
 			<p>2、对整个项目全程跟踪，把控项目周期，质量，维护客户关系；</p>
@@ -335,13 +314,13 @@
 			<p>4、有信用卡团队、小微贷团队、保险直营团队管理经验者优先考虑；</p>
 			<p>5、能适应出差。</p>
 		</div>
-		<button class="back" onclick="$('.Tab').hide();$('.XFJR').hide();$('#102').show();">返&nbsp;&nbsp;&nbsp;回</button>
+		<button class="back" onclick="$('.Tab').hide();$('#102').show();">返&nbsp;&nbsp;&nbsp;回</button>
 	</div>
 	<div class="Tab" id="zp11" style="display:none;">
-		<div class="title">
-			<h1>银行项目助理（需出差）</h1><h2>B</h2><h3>ank project assistant</h3>
+		<div class="title2">
+			<h1>银行项目助理（需出差）</h1>
 		</div>
-		<div class="AboutUs xfjr">
+		<div class="zpxx">
 			<h1 class="tip">岗位职责：</h1>
 			<p>1、协助项目经理做好区域银行的小微贷及信用卡业务的技术支持工作。</p>
 			<p>2、配合项目经理组织、实施、跟进项目的全过程，共同完成整个项目任务。</p>
@@ -354,13 +333,13 @@
 			<p>4、有信用卡团队、小微贷团队、咨询公司、数据分析等经验者优先。</p>
 			<p>5、能够适应出差（公司提供住宿、差旅费报销）。</p>
 		</div>
-		<button class="back" onclick="$('.Tab').hide();$('.XFJR').hide();$('#102').show();">返&nbsp;&nbsp;&nbsp;回</button>
+		<button class="back" onclick="$('.Tab').hide();$('#102').show();">返&nbsp;&nbsp;&nbsp;回</button>
 	</div>
 	<div class="Tab" id="zp12" style="display:none;">
-		<div class="title">
-			<h1>银行项目销售经理</h1><h2>B</h2><h3>ank project sales manager</h3>
+		<div class="title2">
+			<h1>银行项目销售经理</h1>
 		</div>
-		<div class="AboutUs xfjr">
+		<div class="zpxx">
 			<h1 class="tip">岗位职责：</h1>
 			<p>1、对银行客户进行公司产品销售运作，包括计划、组织、进度控制；</p>
 			<p>2、协助销售总监设置销售目标、销售模式、销售战略、销售预算和奖励计划；</p>
@@ -376,10 +355,10 @@
 		<button class="back" onclick="$('.Tab').hide();$('.XFJR').hide();$('#102').show();">返&nbsp;&nbsp;&nbsp;回</button>
 	</div>
 	<div class="Tab" id="zp13" style="display:none;">
-		<div class="title">
-			<h1>银行项目销售</h1><h2>B</h2><h3>ank project saler</h3>
+		<div class="title2">
+			<h1>银行项目销售</h1>
 		</div>
-		<div class="AboutUs xfjr">
+		<div class="zpxx">
 			<h1 class="tip">岗位职责：</h1>
 			<p>1、销售人员职位，在上级的领导和监督下定期完成量化的工作要求，并能独立处理和解决所分配的任务；</p>
 			<p>2、签定销售合同，指导、协调、审核与销售服务有关的帐目和记录等事务；</p>
@@ -395,9 +374,10 @@
 	</div>
 	<div id="103" class="Tab" style="display:none;">
 		<div class="title">
-			<h1>常州</h1><h2>C</h2><h3>hang zhou</h3>
+			<img src="../../static/img/title.png" class="left"/><h3>常州</h3>
+			<h4>CHANG ZHOU</h4><img src="../../static/img/title.png" class="right" style="left:115px;"/>
 		</div>
-		<div class="xfjrList zp">
+		<div class="qkxw">
 			<div onclick="$('.Tab').hide();$('#zp14').show();">
 				<img src="../../static/img/zp/zp2.jpg"/>
 				<p>JAVA软件开发工程师</p>
@@ -405,10 +385,10 @@
 		</div>
 	</div>	
 	<div class="Tab" id="zp14" style="display:none;">
-		<div class="title">
-			<h1>JAVA软件开发工程师</h1><h2>J</h2><h3>ava engineer</h3>
+		<div class="title2">
+			<h1>JAVA软件开发工程师</h1>
 		</div>
-		<div class="AboutUs xfjr">
+		<div class="zpxx">
 			<h1 class="tip">岗位职责：</h1>
 			<p>1、负责公司现有产品模块开发，上线实施部署；</p>
 			<p>2、根据规范编写相应文档；</p>
@@ -426,9 +406,10 @@
 	</div>	
 	<div id="104" class="Tab" style="display:none;">
 		<div class="title">
-			<h1>西安</h1><h2>X</h2><h3>i an</h3>
+			<img src="../../static/img/title.png" class="left"/><h3>西安</h3>
+			<h4>XI AN</h4><img src="../../static/img/title.png" class="right" style="left:115px;"/>
 		</div>
-		<div class="xfjrList zp">
+		<div class="qkxw">
 			<div onclick="$('.Tab').hide();$('#zp15').show();">
 				<img src="../../static/img/zp/zp2.jpg"/>
 				<p>JAVA软件开发工程师</p>
@@ -436,10 +417,10 @@
 		</div>
 	</div>	
 	<div class="Tab" id="zp15" style="display:none;">
-		<div class="title">
-			<h1>JAVA软件开发工程师</h1><h2>J</h2><h3>ava engineer</h3>
+		<div class="title2">
+			<h1>JAVA软件开发工程师</h1>
 		</div>
-		<div class="AboutUs xfjr">
+		<div class="zpxx">
 			<h1 class="tip">岗位职责：</h1>
 			<p>1、公司核心软件系统的研发以及实施部署；</p>
 			<p>2、根据规范编写相应文档；</p>
@@ -459,60 +440,57 @@
 		</div>
 		<button class="back" onclick="$('.Tab').hide();$('.XFJR').hide();$('#104').show();">返&nbsp;&nbsp;&nbsp;回</button>
 	</div>	
-	<!-- 切换语言 -->		
-	<div class="lanage" onclick="setLanage(this)">						
-		<img src="../../static/img/yy.png" id="yySmall" onmouseover="showYY()"/>	
-		<ul id="yyBig" onmouseleave="hideYY()">
-			<li><a href="/index"><img src="../../static/img/Ch.png"/>中文</a></li>
-			<li><a href="/index_EN"><img src="../../static/img/En.png"/>ENGLISH</a></li>
+	<div class="side">
+		<ul>
+			<li><a href="/jrqk_EN" ><div class="sidebox"><img src="../../static/img/side_icon03.png">切换英文</div></a></li>
+			<li id="QQ"><a href="http://wpa.qq.com/msgrd?v=3&amp;uin=1103924915&amp;site=qq&amp;menu=yes" target="_blank" ><div class="sidebox"><img src="../../static/img/side_icon04.png">QQ客服</div></a></li>
+			<li style="border:none;"><a href="javascript:goTop();" class="sidetop"><img src="../../static/img/side_icon05.png"></a></li>
 		</ul>
-	</div>	
-	<div class="back-to-top">
-		<img src="../../static/img/back-to-top.png"/>
 	</div>
-<!--**************************************************foot***********************************************-->
-		<div class="dialog">
-			<div class="background">				
-				<form class="dialog-box">
-					<p><img class="close" src="../../static/img/close.jpg" onclick="$('.dialog').hide();"/></p>
-					<img id="bigImg"/>
-				</form>
-			</div><!--透明背景-->
-		</div><!--对话框-->
+<!--*****************************foot*****************************************-->
 	<div class="foot">
 		<span>Copyright(C)2011-2014 乾康（上海）金融信息服务股份有限公司</span><br/>
 		<span>沪ICP备13043724号</span>
 	</div>
-</div>
-	<script type="text/javascript" src="../../static/js/jquery-1.7.2.min.js"></script>
-	<script type="text/javascript" src="../../static/js/script.js"></script>
-	<!-- Slider -->
-	<script type="text/javascript" src="../../static/js/jquery.easing.1.3.js"></script>
-	<script type="text/javascript" src="../../static/js/jquery.animate-colors-min.js"></script>
-	<script type="text/javascript" src="../../static/js/jquery.skitter.js"></script>
+</div>	
+	
+	
+	
+	
 	<script type="text/javascript">
-		$(document).ready(function(){
-			$(".cgal").mouseover(function(){
-				$(this).find(".zz").show();
-			});
-			$(".cgal").mouseout(function(){
-				$(this).find(".zz").hide();
-			});
-			if($(window).width()<"800"){
-				$(".box_skitter").html("<ul>"+
-											"<li>"+
-												"<img src='../../static/img/banner11.jpg'/>"+                        
-											"</li>"+
-											
-										"</ul>");
+		$(document).ready(function(){  
+			ShowMap("map",{city:'上海市',addr:'上海市徐汇区桂箐路7号3号楼801室',title:'乾康（上海）金融信息服务股份有限公司',lawfirm:'',tel:'021-54485390',mapx:'',pic:'../../static/img/logo2.png',ismove:'0',piobj:'nxp'});
+			if ($(this).scrollTop() > 200) {// 滚动窗口来判断按钮显示或隐藏
+					$('.side').fadeIn(100);
+					} else {
+					$('.side').fadeOut(100);
 			}
-		});	
-		function dialog(obj){
-			var src=$(obj).find(".smallImg").attr("src");			
-			$("#bigImg").attr("src",src);
-			$('.dialog').show();
+		});
+		//回到顶部
+		function goTop(){
+			$('html,body').animate({'scrollTop':0},600);
+		}
+		function Tab2(obj,src){
+			$(".jrqkTab div").attr("class","span33");
+			$(obj).attr("class","span33 active");	
+			$(".Tab").hide();
+			$("#"+src).show();
+		}
+		function Tab4(obj,src){
+			$(".jrqkTab div").attr("class","span33");
+			$(obj).attr("class","span33 active");	
+		}
+		function resetTab2(){//鼠标离开
+			for(i=101;i<105;i++){
+				if($("#"+i).css("display")=="block"){
+					$("#Tab"+i).attr("class","span33 active");
+				}
+				else{
+					$("#Tab"+i).attr("class","span33");
+					
+				}
+			}	
 		}
 	</script>
-	
 </body>
 </html>

@@ -2,62 +2,39 @@
 <html lang="zh-cn">
 <head>	
 	<meta charset="utf-8">
-	<title>CardPay(Shanghai) Finance Consulting Co.,Ltd.</title>
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>乾康（上海）金融信息服务股份有限公司</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="description" content="Charisma, a fully featured, responsive, HTML5, Bootstrap admin template.">
 	<meta name="author" content="Muhammad Usman">
-	<link rel="SHORTCUT ICON" href="../3.ico"/>
-	<!-- 地图 -->
-	<script type="text/javascript" src="../../static/js/bdMap.js"></script>
-	<!-- The styles -->
 	<link href="../../static/css/main.css" rel="stylesheet">
-	<link href="../../static/css/imagehover.css" rel="stylesheet">
-	 <link rel="stylesheet" type="text/css" href="../../static/css/skitter.styles.css" media="all" />
-	<style type="text/css">	
-		
+	<link href="../../static/css/main_En.css" rel="stylesheet">
+	<script type="text/javascript" src="../../static/js/jquery-1.7.2.min.js"></script>
+	<script type="text/javascript" src="../../static/js/bdMap.js"></script>
+	<style type="text/css">
+	
 	</style>
 	<script type="text/javascript">
 		var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
 		document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3F980a47baa3b028fee8b94644df33e9b8' type='text/javascript'%3E%3C/script%3E"));
+	
 	</script>
 </head>
-
-<body onload="imgs();">
+<body>
 <div class="main">
-	<!--**************************************************top***********************************************-->
-	<div class="logo" style="position:fixed;z-index:10000;">	
-		<a href="/index_EN"><img src="../../static/img/logo.png"/></a>
-		<ul class="newnav" style="margin-left:20px;z-index:10000;">
-			<li><a href="/qkly_EN">Areas</a></li>
-			<li><a href="/qkhb_EN">Partner</a></li>
-			<li><a href="/qkjz_EN">Family</a></li>
-			<li class="active"><a href="/jrqk_EN">Join Us</a></li>	
-			<li><a href="/gyqk_EN">About Us</a></li>
+<!--*****************************导航*****************************************-->
+	<div class="topNav">
+		<img src="../../static/img/logo.png" class="logo" onclick="window.location.href='/index_EN' "/>
+		<ul>
+			<li><a href="/gyqk_EN">About Us</a></li>					
+			<li><a href="/qkly_EN">Field</a></li>	
+			<li><a href="/qkjz_EN">Family</a></li>	
 			<li><a href="/qkxw_EN">News</a></li>	
+			<li><a href="/lxwm_EN">Contact Us</a></li>	
+			<li class="active"><a href="/jrqk_EN">Join Us</a></li>					
 		</ul>
-	</div>
-	<!-- SLIDER -->
-	<div id="outerslider">
-		<div id="slidercontainer">
-			<section id="slider">
-			<div class="box_skitter box_skitter_large">					
-				<ul >
-					<li>
-						<img src="../../static/img/banner4_EN.jpg" alt="" style="height:100%"/>                            
-					</li>
-					<li>
-						<img src="../../static/img/banner5_EN.jpg" alt="" style="height:100%"/>                            
-					</li>          
-					<li>
-						<img src="../../static/img/banner6_EN.jpg" alt="" style="height:100%"/>                            
-					</li>    
-				</ul>
-			</div>
-			</section>
-		</div>
-	</div>
-	<!-- END SLIDER -->		
-	<div class="qkly" onmouseleave="resetTab2()">
+	</div>	
+	<div class="banner banner_En"></div>
+	<div class="jrqkTab" onmouseleave="resetTab2()">
 		<div class="span33 active" onclick="Tab2(this,'101')" onmouseover="Tab4(this,'101')" id="Tab101">	
 			<h1>SHANG HAI<br/><font>上海</font></h1>
 		</div>
@@ -71,51 +48,52 @@
 			<h1>XI AN<br/><font>西安</font></h1>
 		</div>
 	</div>
-	<!--**************************************************title***********************************************-->	
+<!--*****************************联系我们*****************************************-->
 	<div id="101" class="Tab">	
 		<div class="title">
-			<h1>SHANG HAI</h1><h2>R</h2><h3>ecruitment information</h3>
+			<img src="../../static/img/title.png" class="left"/><h3>Recruitment</h3>
+			<h4>SHANG HAI</h4><img src="../../static/img/title.png" class="right" style="left:115px;"/>
 		</div>
-		<div class="xfjrList zp">
+		<div class="qkxw">
 			<div onclick="$('.Tab').hide();$('#zp1').show();">
 				<img src="../../static/img/zp/zp1.jpg"/>
-				<p style="line-height:1.5em">Web front-end development engineers</p>
+				<p>Web front-end development engineers</p>
 			</div>
 			<div onclick="$('.Tab').hide();$('#zp2').show();">
 				<img src="../../static/img/zp/zp2.jpg"/>
-				<p style="line-height:1.5em">The JAVA software development engineer</p>
+				<p>The JAVA software development engineer</p>
 			</div>
 			<div onclick="$('.Tab').hide();$('#zp3').show();">
 				<img  src="../../static/img/zp/zp3.jpg"/>
-				<p style="line-height:1.5em">Credit card project<br/> manager</p>
+				<p>Credit card project<br/> manager</p>
 			</div>
 			<div onclick="$('.Tab').hide();$('#zp4').show();">
 				<img  src="../../static/img/zp/zp4.jpg"/>
-				<p style="line-height:1.5em">Bank project assistant <br/>(travel)</p>
+				<p>Bank project assistant <br/>(travel)</p>
 			</div>
 			<div onclick="$('.Tab').hide();$('#zp5').show();">
 				<img  src="../../static/img/zp/zp5.jpg"/>
-				<p style="line-height:1.5em">Customer manager business direction</p>
+				<p>Customer manager business direction</p>
 			</div>
 			<div onclick="$('.Tab').hide();$('#zp6').show();">
 				<img  src="../../static/img/zp/zp6.jpg"/>
-				<p style="line-height:1.5em">Bank project sales<br/> manager</p>
+				<p>Bank project sales<br/> manager</p>
 			</div>
-			<div onclick="">
+			<div onclick="$('.Tab').hide();$('#zp7').show();">
 				<img  src="../../static/img/zp/zp7.jpg"/>
-				<p style="line-height:1.5em">Internet Consulting Project Manager</p>
+				<p>Internet Consulting Project Manager</p>
 			</div>
 			<div onclick="$('.Tab').hide();$('#zp8').show();">
 				<img  src="../../static/img/zp/zp8.jpg"/>
-				<p style="line-height:1.5em">Training director of operations (head)</p>
+				<p>Training director of operations (head)</p>
 			</div>
 		</div>
 	</div>
 	<div class="Tab" id="zp1" style="display:none;">
-		<div class="title">
-			<h1>Web front-end development</h1><h2>E</h2><h3>ngineers</h3>
+		<div class="title2">
+			<h1>Web front-end development engineers</h1>
 		</div>
-		<div class="AboutUs xfjr">
+		<div class="zpxx">
 			<h1 class="tip">Job responsibilities:</h1>
 			<p>1, according to the requirements of product design, with the background developers implement product interface and function, maintain and optimize the performance of the front page;</p>
 			<p>2, make or assist in making all kinds of page components or page template;</p>
@@ -132,10 +110,10 @@
 		<button class="back" onclick="$('.Tab').hide();$('#101').show();">BACK</button>
 	</div>
 	<div class="Tab" id="zp2" style="display:none;">
-		<div class="title">
-			<h1>The JAVA software development</h1><h2>E</h2><h3>ngineer</h3>
+		<div class="title2">
+			<h1>The JAVA software development engineer</h1>
 		</div>
-		<div class="AboutUs xfjr">
+		<div class="zpxx">
 			<h1 class="tip">Job responsibilities:</h1>
 			<p>1, participate in the core product development and project launch;</p>
 			<p>2, cooperate with r&d director, responsible for the overall design, system platform and research and development and is responsible for the complete code;</p>
@@ -152,13 +130,13 @@
 			<p>6, familiar with software development technical documentation written specification and code writing standards, with the development of specification documents writing ability;</p>
 			<p>7, have sense of responsibility, good communication and team cooperation ability, can bear certain work pressure.</p>			
 		</div>
-		<button class="back" onclick="$('.Tab').hide();$('.XFJR').hide();$('#101').show();">BACK</button>
+		<button class="back" onclick="$('.Tab').hide();$('#101').show();">BACK</button>
 	</div>
 	<div class="Tab" id="zp3" style="display:none;">
-		<div class="title">
-			<h1>Credit card project manager</h1><h2>R</h2><h3>ecruitment information</h3>
+		<div class="title2">
+			<h1>Credit card project manager recruitment information</h1>
 		</div>
-		<div class="AboutUs xfjr">
+		<div class="zpxx">
 			<h1 class="tip">Job responsibilities:</h1>
 			<p>1, familiar with bank credit card business, the organization the whole process of project implementation, can lead the team to good collaboration, common to complete the whole project tasks;</p>
 			<p>2, for the whole project follow-up, controls the project cycle, quality, maintain customer relationship;</p>
@@ -171,13 +149,13 @@
 			<p>4, have team, small micro credit CARDS, insurance marketing team management experience is preferred;</p>
 			<p>5, can adapt to travel.</p>
 		</div>
-		<button class="back" onclick="$('.Tab').hide();$('.XFJR').hide();$('#101').show();">BACK</button>
+		<button class="back" onclick="$('.Tab').hide();$('#101').show();">BACK</button>
 	</div>
 	<div class="Tab" id="zp4" style="display:none;">
-		<div class="title">
-			<h1>Bank project assistant (travel)</h1><h2>R</h2><h3>ecruitment information</h3>
+		<div class="title2">
+			<h1>Bank project assistant (travel) recruitment information</h1>
 		</div>
-		<div class="AboutUs xfjr">
+		<div class="zpxx">
 			<h1 class="tip">Job responsibilities:</h1>
 			<p>1, assist project manager to be small regional bank loans and credit card business support work.</p>
 			<p>2, cooperate with project manager to organize and implement and follow up the whole process of the project and complete the whole project tasks together.</p>
@@ -190,13 +168,13 @@
 			<p>4, have a credit card team, small micro credit team, consulting firms, such as data analysis experience is preferred.</p>
 			<p>5, can adapt to business trip (company provide accommodation, travel expenses).</p>
 		</div>
-		<button class="back" onclick="$('.Tab').hide();$('.XFJR').hide();$('#101').show();">BACK</button>
+		<button class="back" onclick="$('.Tab').hide();$('#101').show();">BACK</button>
 	</div>
 	<div class="Tab" id="zp5" style="display:none;">
-		<div class="title">
-			<h1>Customer manager assistant business </h1><h2>D</h2><h3>irection</h3>
+		<div class="title2">
+			<h1>Customer manager assistant business direction</h1>
 		</div>
-		<div class="AboutUs xfjr">
+		<div class="zpxx">
 			<h1 class="tip">Job responsibilities:</h1>
 			<p>1, maintain capital market target customers;</p>
 			<p>2, maintain the good relationship with bank customers, including business visit, business matching, business reception, etc.;</p>
@@ -211,13 +189,13 @@
 			<p>6, have good teamwork spirit and personal dedication;</p>
 			<p>7, can adapt to business, relevant working experience is preferred, such as Banks, funds, securities, insurance and other financial companies working experience).</p>
 		</div>
-		<button class="back" onclick="$('.Tab').hide();$('.XFJR').hide();$('#101').show();">BACK</button>
+		<button class="back" onclick="$('.Tab').hide();$('#101').show();">BACK</button>
 	</div>
 	<div class="Tab" id="zp6" style="display:none;">
-		<div class="title">
-			<h1>Bank project sales manager</h1><h2>R</h2><h3>ecruitment information</h3>
+		<div class="title2">
+			<h1>Bank project sales manager recruitment information</h1>
 		</div>
-		<div class="AboutUs xfjr">
+		<div class="zpxx">
 			<h1 class="tip">Job responsibilities:</h1>
 			<p>1, bank customers for the company product sales operation, including planning, organizing, scheduling control;</p>
 			<p>2, assist sales director to set sales targets and sales model, sales strategies, sales budgets and incentive plans;</p>
@@ -230,13 +208,13 @@
 			<p>4, with strong market analysis, marketing, promotion ability and good interpersonal communication, coordination, analysis and problem solving skills;</p>
 			<p>5, a strong dedication to work, have a certain leadership ability.</p>
 		</div>
-		<button class="back" onclick="$('.Tab').hide();$('.XFJR').hide();$('#101').show();">BACK</button>
+		<button class="back" onclick="$('.Tab').hide();$('#101').show();">BACK</button>
 	</div>
 	<div class="Tab" id="zp7" style="display:none;">
-		<div class="title">
-			<h1>Bank project sales</h1><h2>R</h2><h3>ecruitment information</h3>
+		<div class="title2">
+			<h1>Bank project sales recruitment information</h1>
 		</div>
-		<div class="AboutUs xfjr">
+		<div class="zpxx">
 			<h1 class="tip">Job responsibilities:</h1>
 			<p>1, sales staff position, under the leadership and supervision of the superior finish quantified work requirements periodically, and be able to handle and solve the assigned tasks independently;</p>
 			<p>2, sign the sales contract, guidance, coordination, review and sales service accounts and records and other related affairs;</p>
@@ -248,13 +226,13 @@
 			<p>3, have strong ability of communication, organization, coordination ability and team cooperation ability;</p>
 			<p>4, have a strong desire to do better, the image better.</p>
 		</div>
-		<button class="back" onclick="$('.Tab').hide();$('.XFJR').hide();$('#101').show();">BACK</button>
+		<button class="back" onclick="$('.Tab').hide();$('#101').show();">BACK</button>
 	</div>
 	<div class="Tab" id="zp8" style="display:none;">
-		<div class="title">
-			<h1>Training director of</h1><h2>O</h2><h3>perations</h3>
+		<div class="title2">
+			<h1>Training director of operations</h1>
 		</div>
-		<div class="AboutUs xfjr">
+		<div class="zpxx">
 			<h1 class="tip">Job responsibilities:</h1>
 			<p>1, design training department daily operation process, is responsible for overall promotion, admissions training programs;</p>
 			<p>2, responsible for the training course in the market development, promotion, marketing and channel course optimization, etc.;</p>
@@ -268,40 +246,41 @@
 			<p>4, good communication ability and organization and management ability, have the ability to deal with the temporary emergency emergency response;</p>
 			<p>5, can accept the new information, new challenges to accept.</p>
 		</div>
-		<button class="back" onclick="$('.Tab').hide();$('.XFJR').hide();$('#101').show();">BACK</button>
+		<button class="back" onclick="$('.Tab').hide();$('#101').show();">BACK</button>
 	</div>
 	<div id="102" class="Tab" style="display:none;">
 		<div class="title">
-			<h1>BEI JING</h1><h2>R</h2><h3>ecruitment information</h3>
+			<img src="../../static/img/title.png" class="left"/><h3>Recruitment</h3>
+			<h4>BEI JIN</h4><img src="../../static/img/title.png" class="right" style="left:115px;"/>
 		</div>
-		<div class="xfjrList zp">
+		<div class="qkxw">
 			<div onclick="$('.Tab').hide();$('#zp9').show();">
 				<img src="../../static/img/zp/zp9.jpg"/>
-				<p style="line-height:1.5em">Consumer financial advisory director</p>
+				<p>Consumer financial advisory director</p>
 			</div>
 			<div onclick="$('.Tab').hide();$('#zp10').show();">
 				<img src="../../static/img/zp/zp3.jpg"/>
-				<p style="line-height:1.5em;">Credit card project<br/> manager</p>
+				<p>Credit card project<br/> manager</p>
 			</div>
 			<div onclick="$('.Tab').hide();$('#zp11').show();">
 				<img  src="../../static/img/zp/zp4.jpg"/>
-				<p style="line-height:1.5em;">Bank project assistant<br/> (travel)</p>
+				<p>Bank project assistant<br/> (travel)</p>
 			</div>
 			<div onclick="$('.Tab').hide();$('#zp12').show();">
 				<img  src="../../static/img/zp/zp6.jpg"/>
-				<p style="line-height:1.5em;">Bank project sales<br/> manager</p>
+				<p>Bank project sales<br/> manager</p>
 			</div>
-			<div onclick="">
+			<div onclick="$('.Tab').hide();$('#zp13').show();">
 				<img  src="../../static/img/zp/zp7.jpg"/>
-				<p style="line-height:1.5em;">Internet Consulting Project Manager</p>
+				<p>Internet Consulting Project Manager</p>
 			</div>
 		</div>
 	</div>
 	<div class="Tab" id="zp9" style="display:none;">
-		<div class="title">
-			<h1>Consumer financial advisory</h1><h2>D</h2><h3>irector</h3>
+		<div class="title2">
+			<h1>Consumer financial advisory director</h1>
 		</div>
-		<div class="AboutUs xfjr">
+		<div class="zpxx">
 			<h1 class="tip">Job responsibilities:</h1>
 			<p>1, industry research, according to the consumer finance sector consulting company strategy, research leading consumer finance business practice, knowledge assets into a company;</p>
 			<p>2, product research and development: lead the consultant team establishment and continuous optimization of consumer finance series solutions, operations team and technical team to provide support for the company;</p>
@@ -317,13 +296,13 @@
 			<p>6, standard mandarin, behavior and decent, sense of humor, good communication skills.</p>
 
 		</div>
-		<button class="back" onclick="$('.Tab').hide();$('.XFJR').hide();$('#102').show();">BACK</button>
+		<button class="back" onclick="$('.Tab').hide();$('#102').show();">BACK</button>
 	</div>
 	<div class="Tab" id="zp10" style="display:none;">
-		<div class="title">
-			<h1>Credit card project manager</h1><h2>R</h2><h3>ecruitment information</h3>
+		<div class="title2">
+			<h1>Credit card project manager recruitment information</h1>
 		</div>
-		<div class="AboutUs xfjr">
+		<div class="zpxx">
 			<h1 class="tip">Job responsibilities:</h1>
 			<p>1, familiar with bank credit card business, the organization the whole process of project implementation, can lead the team to good collaboration, common to complete the whole project tasks;</p>
 			<p>2, for the whole project follow-up, controls the project cycle, quality, maintain customer relationship;</p>
@@ -336,13 +315,13 @@
 			<p>4, have team, small micro credit CARDS, insurance marketing team management experience is preferred;</p>
 			<p>5, can adapt to travel.</p>
 		</div>
-		<button class="back" onclick="$('.Tab').hide();$('.XFJR').hide();$('#102').show();">BACK</button>
+		<button class="back" onclick="$('.Tab').hide();$('#102').show();">BACK</button>
 	</div>
 	<div class="Tab" id="zp11" style="display:none;">
-		<div class="title">
-			<h1>Bank project assistant (travel)</h1><h2>R</h2><h3>ecruitment information</h3>
+		<div class="title2">
+			<h1>Bank project assistant (travel) recruitment information</h1>
 		</div>
-		<div class="AboutUs xfjr">
+		<div class="zpxx">
 			<h1 class="tip">Job responsibilities:</h1>
 			<p>1, assist project manager to be small regional bank loans and credit card business support work.</p>
 			<p>2, cooperate with project manager to organize and implement and follow up the whole process of the project and complete the whole project tasks together.</p>
@@ -355,13 +334,13 @@
 			<p>4, have a credit card team, small micro credit team, consulting firms, such as data analysis experience is preferred.</p>
 			<p>5, can adapt to business trip (company provide accommodation, travel expenses).</p>
 		</div>
-		<button class="back" onclick="$('.Tab').hide();$('.XFJR').hide();$('#102').show();">BACK</button>
+		<button class="back" onclick="$('.Tab').hide();$('#102').show();">BACK</button>
 	</div>
 	<div class="Tab" id="zp12" style="display:none;">
-		<div class="title">
-			<h1>Bank project sales manager</h1><h2>R</h2><h3>ecruitment information</h3>
+		<div class="title2">
+			<h1>Bank project sales manager recruitment information</h1>
 		</div>
-		<div class="AboutUs xfjr">
+		<div class="zpxx">
 			<h1 class="tip">Job responsibilities:</h1>
 			<p>1, bank customers for the company product sales operation, including planning, organizing, scheduling control;</p>
 			<p>2, assist sales director to set sales targets and sales model, sales strategies, sales budgets and incentive plans;</p>
@@ -377,10 +356,10 @@
 		<button class="back" onclick="$('.Tab').hide();$('.XFJR').hide();$('#102').show();">BACK</button>
 	</div>
 	<div class="Tab" id="zp13" style="display:none;">
-		<div class="title">
-			<h1>Bank project sales</h1><h2>R</h2><h3>ecruitment information</h3>
+		<div class="title2">
+			<h1>Bank project sales recruitment information</h1>
 		</div>
-		<div class="AboutUs xfjr">
+		<div class="zpxx">
 			<h1 class="tip">Job responsibilities:</h1>
 			<p>1, sales staff position, under the leadership and supervision of the superior finish quantified work requirements periodically, and be able to handle and solve the assigned tasks independently;</p>
 			<p>2, sign the sales contract, guidance, coordination, review and sales service accounts and records and other related affairs;</p>
@@ -396,20 +375,21 @@
 	</div>
 	<div id="103" class="Tab" style="display:none;">
 		<div class="title">
-			<h1>CHANG ZHOU</h1><h2>R</h2><h3>ecruitment information</h3>
+			<img src="../../static/img/title.png" class="left"/><h3>Recruitment</h3>
+			<h4>CHANG ZHOU</h4><img src="../../static/img/title.png" class="right" style="left:115px;"/>
 		</div>
-		<div class="xfjrList zp">
+		<div class="qkxw">
 			<div onclick="$('.Tab').hide();$('#zp14').show();">
 				<img src="../../static/img/zp/zp2.jpg"/>
-				<p style="line-height:1.5em;">The JAVA software development engineer</p>
+				<p>The JAVA software development engineer</p>
 			</div>
 		</div>
 	</div>	
 	<div class="Tab" id="zp14" style="display:none;">
-		<div class="title">
-			<h1>The JAVA software development</h1><h2>E</h2><h3>ngineer</h3>
+		<div class="title2">
+			<h1>The JAVA software development engineer</h1>
 		</div>
-		<div class="AboutUs xfjr">
+		<div class="zpxx">
 			<h1 class="tip">Job responsibilities:</h1>
 			<p>1, responsible for the company's existing product module development, on-line implementation;</p>
 			<p>2, according to the standard written document accordingly;</p>
@@ -427,20 +407,21 @@
 	</div>	
 	<div id="104" class="Tab" style="display:none;">
 		<div class="title">
-			<h1>XI AN</h1><h2>R</h2><h3>ecruitment information</h3>
+			<img src="../../static/img/title.png" class="left"/><h3>Recruitment</h3>
+			<h4>XI AN</h4><img src="../../static/img/title.png" class="right" style="left:115px;"/>
 		</div>
-		<div class="xfjrList zp">
+		<div class="qkxw">
 			<div onclick="$('.Tab').hide();$('#zp15').show();">
 				<img src="../../static/img/zp/zp2.jpg"/>
-				<p style="line-height:1.5em;">The JAVA software development engineer</p>
+				<p>The JAVA software development engineer</p>
 			</div>
 		</div>
 	</div>	
 	<div class="Tab" id="zp15" style="display:none;">
-		<div class="title">
-			<h1>The JAVA software development</h1><h2>E</h2><h3>ngineer</h3>
+		<div class="title2">
+			<h1>The JAVA software development engineer</h1>
 		</div>
-		<div class="AboutUs xfjr">
+		<div class="zpxx">
 			<h1 class="tip">Job responsibilities:</h1>
 			<p>1, the company's core software system development and implementation;</p>
 			<p>2, according to the standard written document accordingly;</p>
@@ -460,71 +441,57 @@
 		</div>
 		<button class="back" onclick="$('.Tab').hide();$('.XFJR').hide();$('#104').show();">BACK</button>
 	</div>	
-	<!-- 切换语言 -->		
-	<div class="lanage" onclick="setLanage(this)">						
-		<img src="../../static/img/yy.png" id="yySmall" onmouseover="showYY()"/>	
-		<ul id="yyBig" onmouseleave="hideYY()">
-			<li><a href="/index"><img src="../../static/img/Ch.png"/>中文</a></li>
-			<li><a href="/index_EN"><img src="../../static/img/En.png"/>ENGLISH</a></li>
+	<div class="side">
+		<ul>
+			<li><a href="/jrqk" ><div class="sidebox"><img src="../../static/img/side_icon02.png">CHINESE</div></a></li>
+			<li id="QQ"><a href="http://wpa.qq.com/msgrd?v=3&amp;uin=1103924915&amp;site=qq&amp;menu=yes" target="_blank" ><div class="sidebox"><img src="../../static/img/side_icon04.png">QQ</div></a></li>
+			<li style="border:none;"><a href="javascript:goTop();" class="sidetop"><img src="../../static/img/side_icon05.png"></a></li>
 		</ul>
-	</div>	
-	<div class="back-to-top">
-		<img src="../../static/img/back-to-top.png"/>
 	</div>
-<!--**************************************************foot***********************************************-->
-		<div class="dialog">
-			<div class="background">				
-				<form class="dialog-box">
-					<p><img class="close" src="../../static/img/close.jpg" onclick="$('.dialog').hide();"/></p>
-					<img id="bigImg"/>
-				</form>
-			</div><!--透明背景-->
-		</div><!--对话框-->
+<!--*****************************foot*****************************************-->
 	<div class="foot">
 		<span>Copyright(C)2011-2014 CardPay(Shanghai) Finance Consulting Co.,Ltd.</span><br/>
 		<span>Shanghai ICP for 13043724</span>
 	</div>
-</div>
-	<script type="text/javascript" src="../../static/js/jquery-1.7.2.min.js"></script>
-	<script type="text/javascript" src="../../static/js/script.js"></script>
-	<!-- Slider -->
-	<script type="text/javascript" src="../../static/js/jquery.easing.1.3.js"></script>
-	<script type="text/javascript" src="../../static/js/jquery.animate-colors-min.js"></script>
-	<script type="text/javascript" src="../../static/js/jquery.skitter.js"></script>
+</div>	
+	
+	
+	
+	
 	<script type="text/javascript">
-		$(document).ready(function(){
-			$(".cgal").mouseover(function(){
-				$(this).find(".zz").show();
-			});
-			$(".cgal").mouseout(function(){
-				$(this).find(".zz").hide();
-			});
-			if($(window).width()<"800"){
-				$(".box_skitter").html("<ul>"+
-											"<li>"+
-												"<img src='../../static/img/banner11_EN.jpg'/>"+                        
-											"</li>"+
-											"<li>"+
-												"<img src='../../static/img/banner12_EN.jpg' /> "+                           
-											"</li>"+
-											"<li>"+
-												"<img src='../../static/img/banner13_EN.jpg'/>"+
-											"</li>"+
-											"<li>"+
-												"<img src='../../static/img/hzhb11_En.jpg'/>"+
-											"</li>"+
-											"<li>"+
-												"<img src='../../static/img/page14_EN.jpg'/>"+
-											"</li>"+
-										"</ul>");
+		$(document).ready(function(){  
+			ShowMap("map",{city:'上海市',addr:'上海市徐汇区桂箐路7号3号楼801室',title:'乾康（上海）金融信息服务股份有限公司',lawfirm:'',tel:'021-54485390',mapx:'',pic:'../../static/img/logo2.png',ismove:'0',piobj:'nxp'});
+			if ($(this).scrollTop() > 200) {// 滚动窗口来判断按钮显示或隐藏
+					$('.side').fadeIn(100);
+					} else {
+					$('.side').fadeOut(100);
 			}
-		});	
-		function dialog(obj){
-			var src=$(obj).find(".smallImg").attr("src");			
-			$("#bigImg").attr("src",src);
-			$('.dialog').show();
+		});
+		//回到顶部
+		function goTop(){
+			$('html,body').animate({'scrollTop':0},600);
+		}
+		function Tab2(obj,src){
+			$(".jrqkTab div").attr("class","span33");
+			$(obj).attr("class","span33 active");	
+			$(".Tab").hide();
+			$("#"+src).show();
+		}
+		function Tab4(obj,src){
+			$(".jrqkTab div").attr("class","span33");
+			$(obj).attr("class","span33 active");	
+		}
+		function resetTab2(){//鼠标离开
+			for(i=101;i<105;i++){
+				if($("#"+i).css("display")=="block"){
+					$("#Tab"+i).attr("class","span33 active");
+				}
+				else{
+					$("#Tab"+i).attr("class","span33");
+					
+				}
+			}	
 		}
 	</script>
-	
 </body>
 </html>
