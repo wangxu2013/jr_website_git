@@ -48,7 +48,7 @@ body {background: white;overflow-x: hidden;}
 	.qkjz div p {color: rgb(255, 255, 255);font-size: 20px;}
 	/*ÖÜ×Ü¼ÄÓï*/
 	.zzjy {float: left;width: 100%;}
-	.zzjy .left {display: inline-block;width: 220px;height:170px;position: relative;margin-left:62%;background: rgb(30, 36, 50);}
+	.zzjy .left {display: inline-block;width: 220px;height:170px;position: relative;margin-left:62%;background: #c2c2c2;}
 	.zzjy .left img {margin-left: -15px;margin-top:10px;height: 150px;}
 	.zzjy .right {display: inline-block;width: 60%;float: none;margin:0 20%;cursor:default;margin-top:-150px;}
 	.zzjy .right h3, .zzjy .right h4 {margin-left: 12%;}
@@ -143,7 +143,7 @@ body {background: white;overflow-x: hidden;}
 	.gsjj {width: 90%;margin-left:5%;}
 	.gsjj div{width:150px;margin:0 auto;}
 	.gsjj font {font-size: 50px;}
-	.gsjj h3 {margin-left: 38px;margin-top: -65px;font-size: 20px;line-height: 20px;}
+	.gsjj h3 {margin-left: 38px;margin-top: -60px;font-size: 20px;line-height: 20px;}
 	.gsjj h4 {margin-left: 38px;font-size: 12px;}
 	.gsjj p {line-height: 22px;text-align: center;}
 	/*¹«Ë¾ÒµÎñ*/
