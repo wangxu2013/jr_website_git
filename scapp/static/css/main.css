@@ -13,7 +13,7 @@ body {background: white;overflow-x: hidden;}
 	.topNav .active a{background:url(../img/newnavActive.png) bottom center;}
 	.topNav .active a:hover{background:url(../img/newnavActive.png) bottom center;}
 	/*banner*/
-	.banner {margin-top: 60px;background: url(../img/banner3.jpg) 50% 50% no-repeat rgb(0, 0, 0);margin-bottom: 20px;width: 100%;height:400px;max-width: 1370px;}
+	.banner {margin-top: 60px;background: url(../img/banner5.jpg) 50% 50% no-repeat rgb(0, 0, 0);margin-bottom: 20px;width: 100%;height:316px;max-width: 1350px;}
 	
 	
 /**************************gyqk*************************************/
@@ -258,7 +258,7 @@ body {background: white;overflow-x: hidden;}
 	.logo {height: 25px;margin: 5px;} 
 	.topNav ul li a {font-size: 10px;width: 45px;line-height: 35px;} 
 	/*banner*/ 
-	.banner {margin-top: 35px;background-image: url(../img/banner4.jpg);margin-bottom: 10px;height: 200px;} 
+	.banner {margin-top: 35px;background-image: url(../img/banner6.jpg);margin-bottom: 10px;height: 146px;} 
 	.banner h1 {padding-top: 50px;font-size: 10px;} 
 	.banner h2 {font-size: 24px;line-height: 50px;letter-spacing: 2px;}
 	.banner p img {height: 18px;margin-top: 5px;}
