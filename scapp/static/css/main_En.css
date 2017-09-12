@@ -21,9 +21,10 @@
 /******index_En******/
 	#gsjj div{margin-top:-10px;}
 }
-@media all and (max-width:1100px){
+@media all and (max-width:1100px){	
+	.banner h2{font-size:24px;}
 	.topNav ul li a {font-size: 7px;}
-	.banner_En{background:url(../img/banner6_EN.jpg) 50% 50%;}
+	.banner_En{background:url(../img/banner6_En.jpg) 50% 50%;}
 	/******index_En******/
 	#gsjj div{margin-top:-10px;}
 	.qyln .span6 h2{display:none;}
