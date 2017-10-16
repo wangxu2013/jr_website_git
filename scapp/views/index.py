@@ -60,9 +60,9 @@ def jrj():
     return render_template("qkxw/jrj.html")	
 		
 # 金融家
-@app.route('/jrj1')
-def jrj1():
-    return render_template("qkxw/jrj/1.pdf")	
+@app.route('/jrj15')
+def jrj15():
+    return render_template("qkxw/15.pdf")	
 	
 # 联系我们
 @app.route('/lxwm')
