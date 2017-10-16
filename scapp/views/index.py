@@ -58,6 +58,11 @@ def qkxw_EN():
 @app.route('/jrj')
 def jrj():
     return render_template("qkxw/jrj.html")	
+		
+# 金融家
+@app.route('/jrj1')
+def jrj1():
+    return render_template("jrj/1.pdf")	
 	
 # 联系我们
 @app.route('/lxwm')
