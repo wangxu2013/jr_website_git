@@ -62,7 +62,7 @@ def jrj():
 # 金融家
 @app.route('/jrj1')
 def jrj1():
-    return render_template("jrj/1.pdf")	
+    return render_template("qkxw/jrj/1.pdf")	
 	
 # 联系我们
 @app.route('/lxwm')
