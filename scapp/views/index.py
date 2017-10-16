@@ -54,6 +54,11 @@ def qkxw():
 def qkxw_EN():
     return render_template("qkxw/qkxw_En.html")
 	
+# 金融家
+@app.route('/jrj')
+def jrj():
+    return render_template("qkxw/jrj.html")	
+	
 # 联系我们
 @app.route('/lxwm')
 def lxwm():
