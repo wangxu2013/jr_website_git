@@ -62,7 +62,13 @@ def jrj():
 # 金融家15*************
 @app.route('/jrj15')
 def jrj15():
-    return render_template("qkxw/jrj15.pdf")	
+    with open('qkxw/jrj15.pdf', 'rb') as static_file:
+        binary_pdf = static_file.read()
+        response = make_response(binary_pdf)
+        response.headers['Content-Type'] = 'application/pdf'
+        response.headers['Content-Disposition'] = \
+            'inline; filename=%s.pdf' % 'yourfilename'
+        return response
 	
 # 联系我们
 @app.route('/lxwm')
