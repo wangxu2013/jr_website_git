@@ -1,66 +1,311 @@
-<html><head>
-	<meta charset="UTF-8">
-	<title>乾康金融家</title>
-	<style type="text/css">
-		h1{font-family:微软雅黑;font-size:25px;color:rgb(34,64,114);}
-		body{background:#ddd}
-		ul li{list-style-type:circle;line-height:25px;}
-		a{text-decoration:none;font-family:微软雅黑;color:gray;}
-		ul li.active a{color:#f36367;}
-		.lightbox{
-			position: fixed;
-		    top: 0px;
-		    left: 0px;
-		    height: 100%;
-		    width: 100%;
-		    z-index: 7;
-		    opacity: 0.3;
-		    display: block;
-		    background-color: rgb(0, 0, 0);
-		    display: none;
-		}
-		.pop,iframe{
-			position: absolute;
-		    right:0;
-		    top:0;
-			bottom:0;
-			width: 80%;
-			height:100%;
-		    z-index: 9;
-		}
-	</style>
-	
-</head>
-<body style="overflow-y:hidden;">
-	<h1>乾康金融家列表</h1>
-	<ul>		
-		<li class="active"><a href="../../static/img/jrj/15.pdf" target="pdfContainer">乾康金融家2017(3)</a></li>
-		<li><a href="../../static/img/jrj/14.pdf" target="pdfContainer">乾康金融家2017(2)</a></li>
-		<li><a href="../../static/img/jrj/13.pdf" target="pdfContainer">乾康金融家2017(1)</a></li>
-		<li><a href="../../static/img/jrj/12.pdf" target="pdfContainer">乾康金融家2016(4)</a></li>
-		<li><a href="../../static/img/jrj/11.pdf" target="pdfContainer">乾康金融家2016(3)</a></li>
-		<li><a href="../../static/img/jrj/10.pdf" target="pdfContainer">乾康金融家2016(2)</a></li>
-		<li><a href="../../static/img/jrj/9.pdf" target="pdfContainer">乾康金融家2016(1)</a></li>
-		<li><a href="../../static/img/jrj/8.pdf" target="pdfContainer">乾康金融家2015(4)</a></li>
-		<li><a href="../../static/img/jrj/7.pdf" target="pdfContainer">乾康金融家2015(3)</a></li>
-		<li><a href="../../static/img/jrj/6.pdf" target="pdfContainer">乾康金融家2015(2)</a></li>
-		<li><a href="../../static/img/jrj/5.pdf" target="pdfContainer">乾康金融家2015(1)</a></li>
-		<li><a href="../../static/img/jrj/4.pdf" target="pdfContainer">乾康金融家2014(4)</a></li>
-		<li><a href="../../static/img/jrj/3.pdf" target="pdfContainer">乾康金融家2014(3)</a></li>
-		<li><a href="../../static/img/jrj/2.pdf" target="pdfContainer">乾康金融家2014(2)</a></li>
-		<li><a href="../../static/img/jrj/1.pdf" target="pdfContainer">乾康金融家2014(1)</a></li>
-	</ul>
-	<div class="lightbox" id="lightbox"></div>
-	<iframe src="../../static/img/jrj/15.pdf" frameborder="0" id="pdfContainer" name="pdfContainer"></iframe>
-
-</body>
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>	
+	<meta charset="utf-8">
+	<title>乾康（上海）金融信息服务股份有限公司</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="Charisma, a fully featured, responsive, HTML5, Bootstrap admin template.">
+	<meta name="author" content="Muhammad Usman">
+	<link href="../../static/css/main.css" rel="stylesheet">
 	<script type="text/javascript" src="../../static/js/jquery-1.7.2.min.js"></script>
+	<style type="text/css">
+	
+	</style>
+	<script type="text/javascript">
+		var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+		document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3F980a47baa3b028fee8b94644df33e9b8' type='text/javascript'%3E%3C/script%3E"));
+	
+	</script>
+</head>
+<body>
+<div class="main">
+<!--*****************************导航*****************************************-->
+	<div class="topNav">
+		<img src="../../static/img/logo.png" class="logo" onclick="window.location.href='/index' "/>
+		<ul>
+			<li><a href="/gyqk">关于乾康</a></li>					
+			<li><a href="/qkly">乾康领域</a></li>	
+			<li><a href="/qkjz">乾康家族</a></li>	
+			<li class="active"><a href="/qkxw">乾康新闻</a></li>	
+			<li><a href="/lxwm">联系我们</a></li>		
+			<li><a href="/jrqk">加入乾康</a></li>								
+		</ul>
+	</div>	
+	<div class="banner"></div>
+<!--*****************************乾康新闻*****************************************-->
+<div class="Tab" id="101">
+	<div class="title">
+		<img src="../../static/img/title.png" class="left"/><h3>乾康新闻</h3>
+		<h4>QIANKANG NEWS</h4><img src="../../static/img/title.png" class="right"/>
+	</div>
+
+	<div class="qkxw">
+		<div onclick="$('.Tab').hide();$('#xw15').show();$('html,body').scrollTop(0)">
+			<img src="../../static/img/jrj/15/jrj15.png"/>
+			<p>乾康金融家<font>2017(3)</font></p>
+		</div>
+		<div onclick="$('.Tab').hide();$('#xw14').show();$('html,body').scrollTop(0)">
+			<img src="../../static/img/jrj/14/jrj14.png"/>
+			<p>乾康金融家<font>2017(2)</font></p>
+		</div>
+		<div onclick="$('.Tab').hide();$('#xw13').show();$('html,body').scrollTop(0)">
+			<img src="../../static/img/jrj/13/jrj13.png"/>
+			<p>乾康金融家<font>2017(1)</font></p>
+		</div>
+	</div>
+</div>
+	<div class="Tab" id="xw15" style="display:none;">
+		<div class="title2">
+			<h1>乾康金融家2017(3)</h1>
+			<h4 class="time">发表日期：2017-09-29</h4>
+		</div>
+		<div class="xw jrj">
+			<p><img src="../../static/img/jrj/15/0001.jpg"/></p>
+			<p><img src="../../static/img/jrj/15/0002.jpg"/></p>
+			<p><img src="../../static/img/jrj/15/0003.jpg"/></p>
+			<p><img src="../../static/img/jrj/15/0004.jpg"/></p>
+			<p><img src="../../static/img/jrj/15/0005.jpg"/></p>
+			<p><img src="../../static/img/jrj/15/0006.jpg"/></p>
+			<p><img src="../../static/img/jrj/15/0007.jpg"/></p>
+			<p><img src="../../static/img/jrj/15/0008.jpg"/></p>
+			<p><img src="../../static/img/jrj/15/0009.jpg"/></p>
+			<p><img src="../../static/img/jrj/15/0010.jpg"/></p>
+			<p><img src="../../static/img/jrj/15/0011.jpg"/></p>
+			<p><img src="../../static/img/jrj/15/0012.jpg"/></p>
+			<p><img src="../../static/img/jrj/15/0013.jpg"/></p>
+			<p><img src="../../static/img/jrj/15/0014.jpg"/></p>
+			<p><img src="../../static/img/jrj/15/0015.jpg"/></p>
+			<p><img src="../../static/img/jrj/15/0016.jpg"/></p>
+			<p><img src="../../static/img/jrj/15/0017.jpg"/></p>
+			<p><img src="../../static/img/jrj/15/0018.jpg"/></p>
+			<p><img src="../../static/img/jrj/15/0019.jpg"/></p>
+			<p><img src="../../static/img/jrj/15/0020.jpg"/></p>
+			<p><img src="../../static/img/jrj/15/0021.jpg"/></p>
+			<p><img src="../../static/img/jrj/15/0022.jpg"/></p>
+			<p><img src="../../static/img/jrj/15/0023.jpg"/></p>
+			<p><img src="../../static/img/jrj/15/0024.jpg"/></p>
+			<p><img src="../../static/img/jrj/15/0025.jpg"/></p>
+			<p><img src="../../static/img/jrj/15/0026.jpg"/></p>
+			<p><img src="../../static/img/jrj/15/0027.jpg"/></p>
+			<p><img src="../../static/img/jrj/15/0028.jpg"/></p>
+			<p><img src="../../static/img/jrj/15/0029.jpg"/></p>
+			<p><img src="../../static/img/jrj/15/0030.jpg"/></p>
+			<p><img src="../../static/img/jrj/15/0031.jpg"/></p>
+			<p><img src="../../static/img/jrj/15/0032.jpg"/></p>
+			<p><img src="../../static/img/jrj/15/0033.jpg"/></p>
+			<p><img src="../../static/img/jrj/15/0034.jpg"/></p>
+			<p><img src="../../static/img/jrj/15/0035.jpg"/></p>
+			<p><img src="../../static/img/jrj/15/0036.jpg"/></p>
+			<p><img src="../../static/img/jrj/15/0037.jpg"/></p>
+			<p><img src="../../static/img/jrj/15/0038.jpg"/></p>
+			<p><img src="../../static/img/jrj/15/0039.jpg"/></p>
+			<p><img src="../../static/img/jrj/15/0040.jpg"/></p>
+			<p><img src="../../static/img/jrj/15/0041.jpg"/></p>
+			<p><img src="../../static/img/jrj/15/0042.jpg"/></p>
+			<p><img src="../../static/img/jrj/15/0043.jpg"/></p>
+			<p><img src="../../static/img/jrj/15/0044.jpg"/></p>
+			<p><img src="../../static/img/jrj/15/0045.jpg"/></p>
+			<p><img src="../../static/img/jrj/15/0046.jpg"/></p>
+			<p><img src="../../static/img/jrj/15/0047.jpg"/></p>
+			<p><img src="../../static/img/jrj/15/0048.jpg"/></p>
+			<p><img src="../../static/img/jrj/15/0049.jpg"/></p>
+			<p><img src="../../static/img/jrj/15/0050.jpg"/></p>
+		</div>
+		<button class="back" onclick="$('.Tab').hide();$('#101').show();">返&nbsp;&nbsp;&nbsp;回</button>
+	</div>
+	<div class="Tab" id="xw14" style="display:none;">
+		<div class="title2">
+			<h1>乾康金融家2017(2)</h1>
+			<h4 class="time">发表日期：2017-06-29</h4>
+		</div>
+		<div class="xw jrj">
+			<p><img src="../../static/img/jrj/14/0001.jpg"/></p>
+			<p><img src="../../static/img/jrj/14/0002.jpg"/></p>
+			<p><img src="../../static/img/jrj/14/0003.jpg"/></p>
+			<p><img src="../../static/img/jrj/14/0004.jpg"/></p>
+			<p><img src="../../static/img/jrj/14/0005.jpg"/></p>
+			<p><img src="../../static/img/jrj/14/0006.jpg"/></p>
+			<p><img src="../../static/img/jrj/14/0007.jpg"/></p>
+			<p><img src="../../static/img/jrj/14/0008.jpg"/></p>
+			<p><img src="../../static/img/jrj/14/0009.jpg"/></p>
+			<p><img src="../../static/img/jrj/14/0010.jpg"/></p>
+			<p><img src="../../static/img/jrj/14/0011.jpg"/></p>
+			<p><img src="../../static/img/jrj/14/0012.jpg"/></p>
+			<p><img src="../../static/img/jrj/14/0013.jpg"/></p>
+			<p><img src="../../static/img/jrj/14/0014.jpg"/></p>
+			<p><img src="../../static/img/jrj/14/0015.jpg"/></p>
+			<p><img src="../../static/img/jrj/14/0016.jpg"/></p>
+			<p><img src="../../static/img/jrj/14/0017.jpg"/></p>
+			<p><img src="../../static/img/jrj/14/0018.jpg"/></p>
+			<p><img src="../../static/img/jrj/14/0019.jpg"/></p>
+			<p><img src="../../static/img/jrj/14/0020.jpg"/></p>
+			<p><img src="../../static/img/jrj/14/0021.jpg"/></p>
+			<p><img src="../../static/img/jrj/14/0022.jpg"/></p>
+			<p><img src="../../static/img/jrj/14/0023.jpg"/></p>
+			<p><img src="../../static/img/jrj/14/0024.jpg"/></p>
+			<p><img src="../../static/img/jrj/14/0025.jpg"/></p>
+			<p><img src="../../static/img/jrj/14/0026.jpg"/></p>
+			<p><img src="../../static/img/jrj/14/0027.jpg"/></p>
+			<p><img src="../../static/img/jrj/14/0028.jpg"/></p>
+			<p><img src="../../static/img/jrj/14/0029.jpg"/></p>
+			<p><img src="../../static/img/jrj/14/0030.jpg"/></p>
+			<p><img src="../../static/img/jrj/14/0031.jpg"/></p>
+			<p><img src="../../static/img/jrj/14/0032.jpg"/></p>
+			<p><img src="../../static/img/jrj/14/0033.jpg"/></p>
+			<p><img src="../../static/img/jrj/14/0034.jpg"/></p>
+			<p><img src="../../static/img/jrj/14/0035.jpg"/></p>
+			<p><img src="../../static/img/jrj/14/0036.jpg"/></p>
+			<p><img src="../../static/img/jrj/14/0037.jpg"/></p>
+			<p><img src="../../static/img/jrj/14/0038.jpg"/></p>
+			<p><img src="../../static/img/jrj/14/0039.jpg"/></p>
+			<p><img src="../../static/img/jrj/14/0040.jpg"/></p>
+		</div>
+		<button class="back" onclick="$('.Tab').hide();$('#101').show();">返&nbsp;&nbsp;&nbsp;回</button>
+	</div>
+	<div class="Tab" id="xw13" style="display:none;">
+		<div class="title2">
+			<h1>乾康金融家2017(1)</h1>
+			<h4 class="time">发表日期：2017-03-29</h4>
+		</div>
+		<div class="xw jrj">
+			<p><img src="../../static/img/jrj/13/0001.jpg"/></p>
+			<p><img src="../../static/img/jrj/13/0002.jpg"/></p>
+			<p><img src="../../static/img/jrj/13/0003.jpg"/></p>
+			<p><img src="../../static/img/jrj/13/0004.jpg"/></p>
+			<p><img src="../../static/img/jrj/13/0005.jpg"/></p>
+			<p><img src="../../static/img/jrj/13/0006.jpg"/></p>
+			<p><img src="../../static/img/jrj/13/0007.jpg"/></p>
+			<p><img src="../../static/img/jrj/13/0008.jpg"/></p>
+			<p><img src="../../static/img/jrj/13/0009.jpg"/></p>
+			<p><img src="../../static/img/jrj/13/0010.jpg"/></p>
+			<p><img src="../../static/img/jrj/13/0011.jpg"/></p>
+			<p><img src="../../static/img/jrj/13/0012.jpg"/></p>
+			<p><img src="../../static/img/jrj/13/0013.jpg"/></p>
+			<p><img src="../../static/img/jrj/13/0014.jpg"/></p>
+			<p><img src="../../static/img/jrj/13/0015.jpg"/></p>
+			<p><img src="../../static/img/jrj/13/0016.jpg"/></p>
+			<p><img src="../../static/img/jrj/13/0017.jpg"/></p>
+			<p><img src="../../static/img/jrj/13/0018.jpg"/></p>
+			<p><img src="../../static/img/jrj/13/0019.jpg"/></p>
+			<p><img src="../../static/img/jrj/13/0020.jpg"/></p>
+			<p><img src="../../static/img/jrj/13/0021.jpg"/></p>
+			<p><img src="../../static/img/jrj/13/0022.jpg"/></p>
+			<p><img src="../../static/img/jrj/13/0023.jpg"/></p>
+			<p><img src="../../static/img/jrj/13/0024.jpg"/></p>
+			<p><img src="../../static/img/jrj/13/0025.jpg"/></p>
+			<p><img src="../../static/img/jrj/13/0026.jpg"/></p>
+			<p><img src="../../static/img/jrj/13/0027.jpg"/></p>
+			<p><img src="../../static/img/jrj/13/0028.jpg"/></p>
+			<p><img src="../../static/img/jrj/13/0029.jpg"/></p>
+			<p><img src="../../static/img/jrj/13/0030.jpg"/></p>
+			<p><img src="../../static/img/jrj/13/0031.jpg"/></p>
+			<p><img src="../../static/img/jrj/13/0032.jpg"/></p>
+			<p><img src="../../static/img/jrj/13/0033.jpg"/></p>
+			<p><img src="../../static/img/jrj/13/0034.jpg"/></p>
+		</div>
+		<button class="back" onclick="$('.Tab').hide();$('#101').show();">返&nbsp;&nbsp;&nbsp;回</button>
+	</div>
+	<div class="side">
+		<ul>
+			<li><a href="/qkxw_EN" ><div class="sidebox"><img src="../../static/img/side_icon03.png">切换英文</div></a></li>
+			<li id="QQ"><a href="http://wpa.qq.com/msgrd?v=3&amp;uin=1103924915&amp;site=qq&amp;menu=yes" target="_blank" ><div class="sidebox"><img src="../../static/img/side_icon04.png">QQ客服</div></a></li>
+			<li style="border:none;"><a href="javascript:goTop();" class="sidetop"><img src="../../static/img/side_icon05.png"></a></li>
+		</ul>
+	</div>
+<!--*****************************foot*****************************************-->
+	<div class="foot">
+		<span>Copyright(C)2011-2014 乾康（上海）金融信息服务股份有限公司</span><br/>
+		<span>沪ICP备13043724号</span>
+	</div>
+</div>	
+	
+	<script type="text/javascript" src="../../static/js/jquery.animate-colors-min.js"></script><!-- 动画渐变背景插件-->
+	
+	
+	
 	<script type="text/javascript">
 		$(document).ready(function(){  
-			$("ul li").click(function(){
-				$("ul li").attr("class","");
-				$(this).attr("class","active");
-			})
-		})
+			//加载地图
+			//ShowMap("map",{city:'上海市',addr:'上海市徐汇区桂箐路7号3号楼801室',title:'乾康（上海）金融信息服务股份有限公司',lawfirm:'',tel:'021-54485390',mapx:'',pic:'../static/img/logo2.png',ismove:'0',piobj:'nxp'});
+	
+			setTimeout("bennerDH()",500);//banner动画
+			$("#bannerDh4").mouseover(function(){//banner按钮动画
+				$("#bannerDh4").animate({backgroundColor:"rgba(34,64,116,1)"},200);
+			});
+			$("#bannerDh4").mouseout(function(){//banner按钮动画
+				$("#bannerDh4").animate({backgroundColor:"rgba(34,64,116,0)"},200);
+			});
+			$(window).scroll(function(){
+				var srollPos = $(window).scrollTop();    //滚动条距顶部距离(页面超出窗口的高度)	
+				if(srollPos!="0"){//导航透明度
+					$(".topNav").css("opacity","0.8");
+					$(".topNav").css("filter","alpha(opacity=80)");
+				}
+				else{				
+					$(".topNav").css("opacity","1");
+					$(".topNav").css("filter","alpha(opacity=100)");
+				}
+				if(srollPos>"50"){//公司简介、公司业务
+					$("#gsjj").animate({left:"0",opacity:'1'},1000);
+					$('#gsyw1').animate({right:'0',opacity:'1'},1100);
+					$('#gsyw2').animate({right:'0',opacity:'1'},1300);
+					$('#gsyw3').animate({right:'0',opacity:'1'},1500);
+				}
+				if(srollPos>"400"){//公司理念
+					$("#gsln").animate({opacity:"1"},"slow");
+				}
+				if(srollPos>"900"){//乾康家族
+					$('#img1').animate({left:'0',opacity:'1'},1200);		
+					$('#img2').animate({left:'0',opacity:'1'},1000);		
+					$('#img3').animate({left:'0',opacity:'1'},800);	
+					$('#p1').animate({right:'0',opacity:'1'},800);		
+					$('#p2').animate({right:'0',opacity:'1'},1000);		
+					$('#p3').animate({right:'0',opacity:'1'},1200);	
+				}
+				if(srollPos>"1150"){//周总寄语
+					$('#zzjy1').animate({left:'0',opacity:'1'},1000);		
+					$('#zzjy2').animate({right:'0',opacity:'1'},1000);	
+				}
+				if(srollPos>"1600"){//合作伙伴
+					$('#hzhb1').animate({left:'0',opacity:'1'},1500);		
+					$('#hzhb2').animate({left:'0',opacity:'1'},1200);
+				}
+				if(srollPos>"1800"){//合作伙伴					
+					$('#hzhb3').animate({left:'0',opacity:'1'},1500);	
+					$('#hzhb4').animate({left:'0',opacity:'1'},1200);	
+				}
+				if(srollPos>"2200"){//乾康新闻				
+					$('#qkxw1').animate({left:'0',opacity:'1'},1000);	
+					$('#qkxw2').animate({right:'0',opacity:'1'},1000);	
+				}
+				if ($(this).scrollTop() > 200) {// 滚动窗口来判断按钮显示或隐藏
+					$('.side').fadeIn(100);
+					} else {
+					$('.side').fadeOut(100);
+				}
+			});
+			if($(window).width()<"1100"){//屏幕小于1100不展示动画
+				$(".dh").css("opacity","1");
+				$(".dh").css("filter","alpha(opacity=100)");
+				$(".dh").css("left","0");
+				$(".dh").css("right","0");
+			}
+			$(".side ul li").hover(function(){
+				$(this).find(".sidebox").stop().animate({"width":"124px"},200).css({"opacity":"1","filter":"Alpha(opacity=100)","background":"#ae1c1c"})	
+			},function(){
+				$(this).find(".sidebox").stop().animate({"width":"54px"},200).css({"opacity":"0.8","filter":"Alpha(opacity=80)","background":"#000"})	
+			});
+		});
+		//回到顶部
+		function goTop(){
+			$('html,body').animate({'scrollTop':0},600);
+		}
+		function bennerDH(){//banner动画
+			$('#bannerDh1').animate({right:'0'},1200);
+			$('#bannerDh2').animate({left:'0'},1200);
+			$('#bannerDh3').animate({right:'0'},1200);
+			$('#bannerDh4').animate({left:'0'},1200);			
+		}
 	</script>
+</body>
 </html>
